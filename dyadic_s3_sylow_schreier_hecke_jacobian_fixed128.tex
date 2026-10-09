@@ -1,0 +1,810 @@
+% Version fixed128 standalone insertion, fully integrated into the mother TeX.
+% New non-pro-2 residual S_3 sector, integral Schreier transfer, Hecke
+% projector, and a coefficient-specific full marked Jacobian Smith certificate.
+
+\subsection{The first non-pro-$2$ residual sector: tame $S_3$, Schreier,
+Hecke, and a native integral Jacobian certificate}
+\label{subsec:dyadic-s3-schreier-hecke}
+
+The strict Nielsen bridge of
+Theorem~\ref{thm:dyadic-tame-jacobian-fox-splitting}
+assumes that the \emph{entire} residual image is pro-$2$.
+The smallest honest test outside that domain is the tame
+$S_3=\mathrm{GL}_2(\mathbf F_2)$ quotient of $G_{\mathbf Q_2}$.
+For this quotient the Sylow preimage has odd index three
+but is nonnormal.  We give its actual coset words,
+integral transfer and Hecke identities, and a nontrivial
+second-degree coefficient calculation.  The comparison is
+at the coefficient level; no uniform full-group
+resolution is inferred from the two marked relators.
+
+Put $\Gamma=G_{\mathbf Q_2}$, choose
+$\alpha^3=2$, and define
+\[
+F=\mathbf Q_2(\alpha),\qquad
+L=F(\zeta_3).
+\]
+Let $\pi:\Gamma\twoheadrightarrow S_3$ be the
+permutation action on the three cubic roots,
+and write $N=\ker\pi$.  Choose compatible tame
+Roe--Turturean generators $\sigma,\tau$ whose
+images are a transposition $s$ and a $3$-cycle $u$:
+$sus^{-1}=u^{-1}=u^2$.
+The wild marked generators $x_0,x_1$
+map to $1$ in this tame quotient.
+Take the Sylow subgroup $S=\langle s\rangle$
+and $H=\pi^{-1}(S)=G_F$, so that
+\[
+[\Gamma:H]=3,\qquad [H:N]=2.
+\]
+
+\begin{theorem}[A concrete non-pro-$2$ integral residual carrier]
+\label{thm:dyadic-s3-integral-sector}
+The extension $F/\mathbf Q_2$ is totally
+and tamely ramified of degree $3$;
+$L/F$ is unramified quadratic, and
+$\operatorname{Gal}(L/\mathbf Q_2)\simeq S_3$.
+On the standard integral rank-two
+representation $T=\mathbf Z_2^2$, the
+chosen images act by
+\begin{equation}\label{eq:dyadic-s3-integral-matrices}
+\boxed{\quad
+\rho_T(\sigma)=
+S_0=\begin{pmatrix}0&1\\1&0\end{pmatrix},
+\qquad
+\rho_T(\tau)=
+U_0=\begin{pmatrix}-1&-1\\1&0\end{pmatrix},
+\qquad
+\rho_T(x_0)=\rho_T(x_1)=I_2.
+\quad}
+\end{equation}
+They satisfy $S_0^2=U_0^3=I_2$ and
+$S_0U_0S_0^{-1}=U_0^2$.
+Reduction modulo $2$ gives the faithful
+natural representation
+$\bar\rho_T:\Gamma\twoheadrightarrow
+\mathrm{GL}_2(\mathbf F_2)$,
+whose image is \emph{not} a $2$-group,
+while $\rho_T(H)=\langle S_0\rangle$
+is a $2$-group.
+
+The complete integral cohomology ledgers
+in degrees zero through two are
+\begin{equation}\label{eq:dyadic-s3-natural-cohom-ledger}
+\boxed{
+\begin{array}{c|ccc}
+ &H^0(-,T)&H^1(-,T)&H^2(-,T)\\ \hline
+ \Gamma&0&\mathbf Z_2^{\,2}&0\\
+ H&\mathbf Z_2&\mathbf Z_2^{\,7}&\mathbf F_2 .
+\end{array}}
+\end{equation}
+Consequently the integral Sylow transfer
+idempotent
+\begin{equation}\label{eq:dyadic-s3-sylow-idempotent}
+e_H=\tfrac13\,\operatorname{res}_H^\Gamma
+\operatorname{cor}_H^\Gamma
+\end{equation}
+annihilates $H^0(H,T)$ and $H^2(H,T)$.
+On $H^1(H,T)\cong\mathbf Z_2^7$
+it is an actual integral projection
+onto a free rank-two summand, with
+free rank-five kernel.
+\end{theorem}
+
+\begin{proof}
+The polynomial $X^3-2$ is Eisenstein
+at $2$, so $F/\mathbf Q_2$ has degree
+three and ramification index three.
+Because this index is odd, the
+ramification is tame.  The polynomial
+$X^2+X+1$ is irreducible modulo $2$;
+its root $\zeta_3$ generates the
+unramified quadratic extension.
+The Galois closure is thus a
+six-element tame extension with the
+usual $S_3$ action.
+The matrices in
+\eqref{eq:dyadic-s3-integral-matrices}
+satisfy the displayed finite-group
+relations, and their reductions
+generate $\mathrm{GL}_2(\mathbf F_2)$.
+They define the standard integral
+permutation-difference lattice.
+
+For the cohomology computation put
+$V=T\otimes_{\mathbf Z_2}\mathbf Q_2$ and
+$D=T^\vee(1)\otimes_{\mathbf Z_2}
+(\mathbf Q_2/\mathbf Z_2)$.
+The wild inertia $W$ acts trivially
+on $T$ because $\rho_T$ is tame.
+Its cyclotomic image contains $-1$
+(and in fact the entire cyclotomic
+pro-$2$ image), so
+$D^W=D[2]=T^\vee/2T^\vee$.
+The finite residual $S_3$ action
+on $T^\vee/2$ has no nonzero
+invariants: the $3$-cycle $U_0$
+has no eigenvalue $1$ modulo $2$.
+Integral local Tate duality
+therefore gives $H^2(\Gamma,T)=0$.
+For $H$, the representation is
+unramified quadratic, and
+$(T^\vee/2)^{\langle S_0\rangle}$
+is one-dimensional, giving
+$H^2(H,T)\cong\mathbf F_2$.
+
+The fixed lattices are
+$T^\Gamma=0$ and
+$T^H=\mathbf Z_2(1,1)^t$.
+The local Euler--Poincar\'e rank
+formula \cite{NSW} gives
+\[
+\operatorname{rank}_{\mathbf Z_2}H^1(\Gamma,T)=2,
+\qquad
+\operatorname{rank}_{\mathbf Z_2}H^1(H,T)=2[ F:\mathbf Q_2]+1=7.
+\]
+These groups have no $2$-primary
+torsion.  Indeed the invariants in
+$V/T$ are zero for $\Gamma$, since
+$(T/2T)^\Gamma=0$; for $H$ the
+invariants $(V/T)^H$ are the full
+diagonal $\mathbf Q_2/\mathbf Z_2$
+and are already the image of $V^H$.
+The long exact sequence for
+$0\to T\to V\to V/T\to0$
+therefore introduces no torsion in
+$H^1$.
+This proves
+\eqref{eq:dyadic-s3-natural-cohom-ledger}.
+Finally $3$ is a unit in
+$\mathbf Z_2$, and the standard
+restriction--corestriction identity
+makes \eqref{eq:dyadic-s3-sylow-idempotent}
+a derived idempotent whose image is
+$R\Gamma(\Gamma,T)$.
+Its actions in degrees zero, one
+and two follow from the ledger
+and the splitting of finitely
+generated free $\mathbf Z_2$-modules.
+\end{proof}
+
+\begin{theorem}[Finite nonnormal Schreier table and corestriction]
+\label{thm:dyadic-s3-schreier-corestriction}
+Choose right-coset representatives
+$t_0=1,t_1=\tau,t_2=\tau^2$
+for $H\backslash\Gamma$.
+Write
+\[
+t_i g=h_{i,g}\,t_{j(i,g)},\qquad
+h_{i,g}\in H,
+\]
+where $j(i,g)$ is determined by the
+right $S_3$-coset action.
+Then the complete Schreier data
+for the four marked generators are
+\begin{equation}\label{eq:dyadic-s3-schreier-table}
+\boxed{
+\begin{array}{c|ccc}
+g& i=0&i=1&i=2\\ \hline
+\sigma&
+(0,\sigma)&(2,\sigma)&(1,\sigma\tau^3)\\
+\tau&
+(1,1)&(2,1)&(0,\tau^3)\\
+x_j&
+(0,x_j)&(1,\tau x_j\tau^{-1})&
+(2,\tau^2x_j\tau^{-2}),\quad j=0,1 .
+\end{array}}
+\end{equation}
+An entry $(k,h)$ means $j(i,g)=k$
+and $h_{i,g}=h$.
+In particular a finite profinite
+Schreier generating system for $H$
+consists of
+\[
+\sigma,\ \tau^3,\quad
+\tau^i x_j\tau^{-i}
+\quad(i=0,1,2,\ j=0,1).
+\]
+There are eight displayed
+generators after removal of trivial
+and repeated Schreier words.
+The six wild conjugates have
+pro-$2$ normal closure, while the
+tame element $\tau^3$ has pro-odd
+order.  Thus $\tau^3$ maps to $1$
+under $H\twoheadrightarrow P_H=H(2)$.
+
+For any continuous $H$-cocycle
+$c\in Z^1(H,T)$, the corestriction
+is represented on marked generators
+by the finite coset formula
+\begin{equation}\label{eq:dyadic-s3-transfer-one}
+(\operatorname{cor}_H^\Gamma c)(g)
+=\sum_{i=0}^{2}
+  \rho_T(t_i)^{-1}c(h_{i,g}).
+\end{equation}
+For the specific rank-two $S_3$
+module \eqref{eq:dyadic-s3-integral-matrices}
+this simplifies \emph{exactly} to
+\begin{equation}\label{eq:dyadic-s3-transfer-simplified}
+\boxed{
+\begin{aligned}
+(\operatorname{cor}c)(\sigma)&=0,\\
+(\operatorname{cor}c)(\tau)&=0,\\
+(\operatorname{cor}c)(x_j)
+ &=\sum_{i=0}^{2} U_0^{-i}
+   c(\tau^i x_j\tau^{-i}),
+ \qquad j=0,1 .
+\end{aligned}}
+\end{equation}
+This is an integral formula, with
+no average or division by $2$;
+the normalized Sylow projector
+divides by the odd index $3$ only
+\emph{after} corestriction.
+
+The analogous higher-degree bar
+corestriction is obtained by tracking
+successive coset indices:
+\begin{equation}\label{eq:dyadic-s3-transfer-all-arity}
+(\operatorname{cor}c)(g_1,\dots,g_n)
+=\sum_{i=0}^2\rho_T(t_i)^{-1}
+c\!\left(h_{i,g_1},
+h_{j(i,g_1),g_2},\ldots,
+h_{j(i,g_1\cdots g_{n-1}),g_n}\right).
+\end{equation}
+It is compatible with the normalized
+bar differential and hence realizes
+the usual corestriction on
+cohomology; this is \emph{not}
+by itself a finite Demu\v{s}kin
+Fox change-of-basis formula.
+\end{theorem}
+
+\begin{proof}
+The tame relation is
+$\sigma^{-1}\tau\sigma=\tau^2$,
+so $\tau^i\sigma=\sigma\tau^{2i}$
+as an exact profinite word identity.
+Reducing $2i$ modulo $3$ against
+the chosen coset representatives
+gives the first line of
+\eqref{eq:dyadic-s3-schreier-table};
+the second and third lines follow
+from right multiplication by
+$\tau$ and by a wild generator
+with trivial residual $S_3$ image.
+The Schreier rewriting theorem for
+finite-index open profinite subgroups
+gives the displayed generating
+system; the normal closure of the
+wild conjugates is contained in
+the marked wild pro-$2$ subgroup,
+and it is pro-$2$.
+The element $\tau^3$ lies in tame
+inertia, of pro-odd order, so its
+image in the maximal pro-$2$
+quotient of $H$ is trivial.
+
+The standard bar corestriction for
+right-coset representatives is
+\eqref{eq:dyadic-s3-transfer-all-arity}.
+For degree one the crossed-cocycle
+identity and
+$h_{i,g_1g_2}=
+h_{i,g_1}h_{j(i,g_1),g_2}$
+show directly that its output is
+a $\Gamma$-cocycle, proving
+\eqref{eq:dyadic-s3-transfer-one}.
+The same identity gives the bar
+chain-map formula in every degree.
+
+Because the action of $\tau^3$
+on $T$ is trivial and its closed
+cyclic group has pro-odd order,
+every continuous crossed
+homomorphism $H\to T$ vanishes on
+$\tau^3$.  Therefore the
+$\sigma$-column of the table gives
+\[
+(\operatorname{cor}c)(\sigma)
+=(I+U_0^{-1}+U_0^{-2})c(\sigma)=0,
+\]
+using $I+U_0+U_0^2=0$.
+The $\tau$ column gives zero, and
+the two wild columns give exactly
+\eqref{eq:dyadic-s3-transfer-simplified}.
+\end{proof}
+
+\begin{theorem}[The index-three integral Hecke--Sylow polynomial]
+\label{thm:dyadic-s3-hecke-sylow-polynomial}
+On $R\Gamma(H,T)$ define
+\begin{equation}\label{eq:dyadic-s3-hecke-operator}
+\mathsf A=\operatorname{res}_H^\Gamma
+\operatorname{cor}_H^\Gamma,
+\qquad
+\mathsf T_{\rm Hk}=\mathsf A-I.
+\end{equation}
+These operators obey, as derived
+endomorphisms (and hence in every
+cohomological degree),
+\begin{equation}\label{eq:dyadic-s3-hecke-minpoly}
+\boxed{\qquad
+\mathsf A^2=3\mathsf A,\qquad
+\mathsf T_{\rm Hk}^2=
+\mathsf T_{\rm Hk}+2I,\qquad
+e_H=\frac{I+\mathsf T_{\rm Hk}}3.
+\qquad}
+\end{equation}
+The nonidentity term also has
+the exact Mackey double-coset
+description
+\begin{equation}\label{eq:dyadic-s3-double-coset-hecke}
+\mathsf T_{\rm Hk}=
+\operatorname{cor}_N^H\circ
+(\tau)_*\circ
+\operatorname{res}_N^H,
+\qquad N=\ker\pi,
+\end{equation}
+where $(\tau)_*$ is conjugation on
+the normal subgroup $N$, together
+with its prescribed action on $T$.
+Both the restriction and the
+corestriction through $N$ are
+integrally defined: no division
+by $[H:N]=2$ occurs.
+
+For the coefficient lattice $T$,
+the two eigensummands selected by
+$e_H$ have the following precise
+meaning:
+\[
+\begin{array}{c|ccc}
+& H^0(H,T)&H^1(H,T)&H^2(H,T)\\ \hline
+\operatorname{im}e_H&0&\mathbf Z_2^2&0\\
+\ker e_H&\mathbf Z_2&\mathbf Z_2^5&\mathbf F_2.
+\end{array}
+\]
+Thus the genuine non-pro-$2$
+descent kills a torsion top Fox
+class even though the index-three
+operator itself remains integral.
+\end{theorem}
+
+\begin{proof}
+The standard cohomological identity
+$\operatorname{cor}\operatorname{res}
+=3I$ implies
+$\mathsf A^2=3\mathsf A$.
+Substituting $\mathsf T_{\rm Hk}=\mathsf A-I$
+gives the displayed quadratic
+polynomial and projector formula.
+In the finite residual quotient,
+$S=\langle s\rangle$ has precisely
+two double cosets in $S_3$:
+$S$ and $SuS$.  The latter
+has intersection
+$S\cap uSu^{-1}=\{1\}$,
+whose inverse image in $\Gamma$
+is exactly $N$.
+The Mackey restriction--corestriction
+formula therefore yields
+\eqref{eq:dyadic-s3-double-coset-hecke}.
+All maps are defined before
+inverting $2$ and require no
+normality of $H$.
+The final table follows from
+Theorem~\ref{thm:dyadic-s3-integral-sector}
+and the idempotent's identification
+with $R\Gamma(\Gamma,T)$.
+\end{proof}
+
+\begin{theorem}[The first non-pro-$2$ integral adjoint cohomology ledger]
+\label{thm:dyadic-s3-adjoint-local-cohomology}
+Retain the integral $S_3$ lattice $T$
+and put
+\[
+M=\operatorname{ad}T
+=\operatorname{End}_{\mathbf Z_2}(T),
+\qquad \bar M=M/2M.
+\]
+The cohomology of $\Gamma=G_{\mathbf Q_2}$
+is
+\begin{equation}\label{eq:dyadic-s3-adjoint-integral-ledger}
+\boxed{\quad
+H^0(\Gamma,M)=\mathbf Z_2,\qquad
+H^1(\Gamma,M)=\mathbf Z_2^{\,5},\qquad
+H^2(\Gamma,M)=\mathbf F_2.
+\quad}
+\end{equation}
+Its mod-$2$ cohomology dimensions are
+\begin{equation}\label{eq:dyadic-s3-adjoint-mod2-ledger}
+\boxed{\quad
+\bigl(\dim H^0,\dim H^1,\dim H^2\bigr)
+(\Gamma,\bar M)=(1,6,1).
+\quad}
+\end{equation}
+The tame order-three averaging operator
+is integral on both $T$ and $M$:
+\begin{equation}\label{eq:dyadic-s3-tame-averaging}
+\Pi_{\rm tame}^T
+=\tfrac13(I+U_0+U_0^2)=0,\qquad
+\Pi_{\rm tame}^M(A)
+=\tfrac13\sum_{j=0}^2U_0^jAU_0^{-j}.
+\end{equation}
+The second projector has image
+$\mathbf Z_2[U_0]$ of rank two;
+conjugation by $S_0$ fixes exactly
+the scalar rank-one submodule.
+\end{theorem}
+
+\begin{proof}
+Over $\mathbf F_2$, the natural
+representation of $S_3=\mathrm{GL}_2(\mathbf F_2)$
+is absolutely irreducible and its
+endomorphism centralizer consists
+only of scalars.  Consequently
+$M^\Gamma=\mathbf Z_2 I$ and
+$\bar M^\Gamma=\mathbf F_2 I$.
+As in Theorem~\ref{thm:dyadic-s3-integral-sector},
+wild inertia acts trivially on $M$
+but has cyclotomic image containing
+$-1$.  Therefore the invariants in
+\[
+M^\vee(1)\otimes_{\mathbf Z_2}
+(\mathbf Q_2/\mathbf Z_2)
+\]
+are precisely the $S_3$-invariants
+of $M^\vee/2M^\vee$.
+The trace pairing identifies the
+latter with $\bar M$;
+it has one-dimensional invariant
+space.  Integral local Tate duality
+gives $H^2(\Gamma,M)\cong\mathbf F_2$.
+Rational local Euler--Poincar\'e
+gives
+$\operatorname{rank}H^1(\Gamma,M)
+=4+\operatorname{rank}H^0(\Gamma,M)=5$.
+
+There is no torsion in $H^1$:
+if an invariant class in
+$(M\otimes\mathbf Q_2)/M$
+has denominator $2^n$, its
+numerator modulo $2$ is
+$S_3$-invariant and hence scalar.
+Subtracting an appropriate
+rational scalar matrix reduces
+the denominator; iteration shows
+that all these invariants come
+from $(M\otimes\mathbf Q_2)^\Gamma$.
+The coefficient long exact
+sequence then forces
+$H^1(\Gamma,M)$ to be torsion-free.
+The mod-$2$ Euler formula with
+$\dim H^0=\dim H^2=1$ gives
+$\dim H^1=4+1+1=6$.
+
+Finally $U_0$ has
+$U_0^2+U_0+I=0$, and
+$3\in\mathbf Z_2^\times$,
+so the displayed tame averages
+are genuine integral projectors.
+The centralizer of $U_0$ in
+$M_2(\mathbf Z_2)$ is
+$\mathbf Z_2[U_0]$ because its
+minimal polynomial is irreducible
+modulo $2$.  Conjugation by
+$S_0$ sends $U_0$ to $U_0^2$;
+its fixed part is exactly
+$\mathbf Z_2 I$.
+\end{proof}
+
+\begin{theorem}[Explicit full-marked $8\times16$ integral Jacobian certificate]
+\label{thm:dyadic-s3-marked-adjoint-jacobian}
+Use the full Roe--Turturean
+$\Gamma$-presentation of
+Theorem~\ref{thm:dyadic-q2-marked-word-jet-solver}
+and the integral residual lift
+\eqref{eq:dyadic-s3-integral-matrices}.
+Let
+\begin{equation}\label{eq:dyadic-s3-marked-adjoint-complex}
+\mathcal J^\bullet_{S_3}(M):
+\quad
+M\xrightarrow{d^0} M^{4}
+\xrightarrow{d^1} M^{2}
+\end{equation}
+be the completed marked two-relation
+Jacobian complex at this lift.
+Its differentials are the principal
+cocycle differential and the first
+derivatives of the literal tame/wild
+marked matrix relations.
+In the row-major basis
+$(E_{11},E_{12},E_{21},E_{22})$
+of $M$, order source variables by
+$(\sigma,\tau,x_0,x_1)$
+and target relation matrices by
+(tame, wild).  Then the reduction
+of $d^1$ modulo $2$ is the
+\emph{actual} following $8\times16$
+matrix:
+\begin{equation}\label{eq:dyadic-s3-jacobian-mod2-matrix}
+\boxed{\ \!
+{\renewcommand{\arraystretch}{0.95}
+\setlength{\arraycolsep}{2.5pt}
+\begin{array}{rrrr|rrrr|rrrr|rrrr}
+1&1&0&1&1&1&0&0&0&0&0&0&0&0&0&0\\
+0&1&1&0&1&0&0&1&0&0&0&0&0&0&0&0\\
+1&0&1&1&0&0&1&0&0&0&0&0&0&0&0&0\\
+1&1&0&1&0&1&0&1&0&0&0&0&0&0&0&0\\ \hline
+0&0&0&0&1&1&1&0&0&0&0&0&1&1&1&1\\
+0&0&0&0&1&0&0&1&0&0&0&0&1&0&1&1\\
+0&0&0&0&1&0&0&1&0&0&0&0&1&1&0&1\\
+0&0&0&0&0&1&1&1&0&0&0&0&1&1&1&1
+\end{array}}\ \! } .
+\end{equation}
+Its rank is $7$, and its
+left nullspace is generated by
+\begin{equation}\label{eq:dyadic-s3-jacobian-left-null}
+\ell=(1,0,0,1\mid1,0,0,1),
+\end{equation}
+the sum of the two matrix traces.
+
+More strongly, the genuine
+\emph{integral} Jacobian has
+Smith invariant factors
+\begin{equation}\label{eq:dyadic-s3-jacobian-smith}
+\boxed{\quad
+\operatorname{SNF}_{\mathbf Z_2}(d^1)
+=\operatorname{diag}
+(1,1,1,1,1,1,1,2)
+\quad}
+\end{equation}
+with eight additional zero
+source columns.
+An explicit finite-precision
+certificate is obtained as follows:
+work in
+$\bigl(\mathbf Z/4[\varepsilon]/
+(\varepsilon^2)\bigr)$, use the
+left variations
+\[
+\rho_\varepsilon(g)
+=(I+\varepsilon A_g)\rho_T(g),
+\quad g\in\{\sigma,\tau,x_0,x_1\},
+\]
+set $\sigma^{\omega_2}=\sigma$,
+and evaluate
+$(x_i\tau)^{\omega_2}=(x_i\tau)^9$.
+In the resulting $8\times16$
+Jacobian modulo $4$, the
+$8\times8$ minor formed by the
+one-based columns
+\begin{equation}\label{eq:dyadic-s3-jacobian-minor-columns}
+\boxed{\qquad
+\{1,2,5,6,9,13,14,15\}
+\qquad}
+\end{equation}
+has determinant congruent to $2$
+modulo $4$.  Together with
+the rank-seven reduction
+\eqref{eq:dyadic-s3-jacobian-mod2-matrix},
+this proves
+\eqref{eq:dyadic-s3-jacobian-smith}.
+
+The preceding degree-zero map
+has mod-$2$ rank three.
+Consequently the entire marked
+complex has the integral cohomology
+\begin{equation}\label{eq:dyadic-s3-marked-cochain-ledger}
+H^0(\mathcal J_{S_3})=\mathbf Z_2,\qquad
+H^1(\mathcal J_{S_3})=\mathbf Z_2^5,\qquad
+H^2(\mathcal J_{S_3})=\mathbf F_2.
+\end{equation}
+It is homotopy equivalent, after
+finite integral row/column reduction,
+to the finite elementary complex
+\begin{equation}\label{eq:dyadic-s3-marked-smith-model}
+\boxed{\quad
+\mathbf Z_2[0]\ \oplus\
+\mathbf Z_2^{\,5}[-1]\ \oplus\
+\bigl[\mathbf Z_2
+\xrightarrow{\ 2\ }\mathbf Z_2\bigr]_{[1,2]} .
+\quad}
+\end{equation}
+In particular, the full marked
+two-relator coefficient Jacobian
+is \emph{cohomologically complete}
+for this specified integral
+$S_3$ \emph{adjoint} representation.
+It is not asserted to be a
+projective group resolution over
+$\mathbf Z_2[[\Gamma]]$.
+\end{theorem}
+
+\begin{proof}
+The residual group action on
+$\operatorname{ad}\bar T$ is
+conjugation by the two matrices
+$S_0,U_0$.  In the dual-number
+ring modulo $2$, every lift
+of a matrix with residual order
+three has $2$-primary exponent
+at most two; its $\omega_2$
+projection is therefore its third
+power.  Modulo $4$ the corresponding
+exponent divides four, so the
+CRT exponent $9$, congruent to $1$
+modulo $4$ and $0$ modulo $3$,
+computes its $\omega_2$ projection.
+For the residual order-two matrix
+$S_0$, the whole lift is pro-$2$,
+so its $\omega_2$ projection is
+itself.  These are finite instances
+of the integral binomial theorem
+\ref{thm:dyadic-omega2-power-formula}.
+
+Substitute these powers into the
+literal auxiliary words
+$\sigma_2,u_i,d_0,z_0,c_0,g_0,
+d_g,h_c,h_0$
+of Roe--Turturean, and differentiate
+the two relation matrices with
+respect to the sixteen standard
+left tangent directions
+$A_g=E_{ij}$.
+This gives exactly
+\eqref{eq:dyadic-s3-jacobian-mod2-matrix};
+a direct row elimination yields
+rank seven.
+The displayed $\ell$ annihilates
+every column, so the left
+nullspace is exactly one-dimensional.
+Performing the same calculation
+modulo $4$ with exponent $9$
+gives the minor specified by
+\eqref{eq:dyadic-s3-jacobian-minor-columns},
+of determinant $2$ modulo $4$.
+Since all $8\times8$ minors
+vanish modulo $2$ but at least one
+has valuation exactly one,
+the invariant factors are seven
+units followed by a single factor
+of valuation one.  This proves
+\eqref{eq:dyadic-s3-jacobian-smith}.
+
+The principal-cocycle map has
+kernel equal to the scalar
+centralizer $M^\Gamma=\mathbf Z_2$;
+its mod-$2$ reduction has kernel
+$\mathbf F_2$, so $d^0$ has
+three unit invariant factors.
+By $d^1d^0=0$ and integral
+elementary divisors, the image
+of $d^0$ is a saturated rank-three
+submodule of $\ker d^1$.
+Therefore $H^1$ is free of
+rank $16-8-3=5$, while $H^2$
+is the cokernel $\mathbf F_2$.
+The degree-zero invariant
+space is $\mathbf Z_2$.
+Removing the seven unit
+degree-one--two summands and
+three unit degree-zero--one
+summands proves the homotopy
+normal form
+\eqref{eq:dyadic-s3-marked-smith-model}.
+\end{proof}
+
+\begin{corollary}[Coefficient-specific comparison with the Sylow--Fox carrier]
+\label{cor:dyadic-s3-adjoint-smith-sylow-comparison}
+For the rank-four coefficient
+$M=\operatorname{ad}T$ of
+Theorem~\ref{thm:dyadic-s3-adjoint-local-cohomology},
+both the full marked coefficient
+Jacobian
+$\mathcal J^\bullet_{S_3}(M)$ and
+the all-Sylow Fox retract
+$\operatorname{Im}(e_H)$ are bounded
+perfect integral complexes
+with cohomology
+$(\mathbf Z_2,\mathbf Z_2^5,\mathbf F_2)$
+in degrees $(0,1,2)$.
+They are therefore isomorphic in
+$D(\mathbf Z_2)$ and can be
+connected by an integral
+chain-homotopy equivalence
+\emph{after choices of Smith
+reduction and a top-degree
+Tate-dual generator}.
+The degree-zero and degree-one
+identifications are canonically
+fixed by invariants and evaluation
+of actual framed deformations.
+The top-degree identification
+may be normalized by the
+mod-$2$ trace obstruction
+\eqref{eq:dyadic-s3-jacobian-left-null}
+and local Tate duality.
+
+This removes the \emph{existence}
+and integer-divisor gap for
+a direct finite coefficient
+comparison in the first
+non-pro-$2$ adjoint sector.
+It does \emph{not} supply a
+canonical strict marked-word
+chain map to the chosen five-
+generator Fox resolution of $P_H$,
+nor does it establish a
+presentation-independent
+second-syzygy theorem for
+all non-pro-$2$ residual sectors.
+\end{corollary}
+
+\begin{proof}
+Theorem~\ref{thm:dyadic-s3-marked-adjoint-jacobian}
+gives the explicit integral Smith
+model of the marked complex.
+The all-Sylow retract computes
+$R\Gamma(\Gamma,M)$ by
+Theorem~\ref{thm:all-sylow-transfer}.
+Its cohomology is computed in
+Theorem~\ref{thm:dyadic-s3-adjoint-local-cohomology}.
+Over the discrete valuation
+ring $\mathbf Z_2$, any bounded
+perfect complex admits finite
+elementary-divisor decompositions,
+with its homotopy type determined
+by its cohomology modules in each
+degree.  Hence its finite
+perfect representatives may be
+reduced to the same elementary
+complex
+\eqref{eq:dyadic-s3-marked-smith-model},
+which gives an integral chain
+homotopy equivalence after the
+chosen reductions.
+The actual cocycle relation
+follows from the marked
+presentation and residual
+pro-$2$ automaticity
+(Theorem~\ref{thm:marked-residual-strictification}),
+while local Tate duality selects
+a nonzero generator of the
+one-dimensional top torsion.
+No explicit universal
+Schreier-to-minimal-Fox basis is
+constructed by this argument,
+explaining the stated limitation.
+\end{proof}
+
+\begin{warning}[What the $S_3$ computation does not prove]
+\label{warn:dyadic-s3-syzygy-scope}
+The Schreier table gives finite
+words in the full group, and
+the all-arity bar transfer is
+an exact integral operation.
+Turning those ten raw
+Schreier-word entries into a
+canonical minimal dyadic
+Demu\v{s}kin basis for
+$P_H=G_{\mathbf Q_2(\sqrt[3]2)}(2)$,
+with the necessary
+integral relation syzygies and
+an explicit multiplicative
+chain comparison, is a
+strictly stronger problem.
+The $S_3$ natural and adjoint
+coefficient results close their
+own cohomology, Hecke and
+Smith-normal-form ledgers,
+not the general non-pro-$2$
+full-word resolution problem.
+The existence of the
+all-Sylow derived atlas
+remains unconditional and is
+not upgraded here to a
+uniform full-group projective
+Fox resolution.
+\end{warning}
