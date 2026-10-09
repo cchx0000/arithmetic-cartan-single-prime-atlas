@@ -1,0 +1,1819 @@
+% Fixed135: General odd-index (rather than solely index three) Fox compiler
+% for the marked Roe--Turturean G_Q2 source, a new index-five numerical
+% source, strict cross-Sylow chain transitivity, explicit first Nielsen
+% overlap homotopy, and a base-field coinduction corollary.
+
+\subsection{Odd-index marked Schreier--Fox compilation and
+strict cross-cover coherence}
+\label{subsec:dyadic-f135-odd-sylow-compiler}
+
+The fixed133--fixed134 strict Fox--Shapiro bridge
+was proved by explicit Nielsen transformations for
+one index-three nonnormal cover.  The structural
+reason it works is more general: an odd-index
+open subgroup of $G_{\mathbf Q_2}$ necessarily
+contains the entire normal pro-$2$ wild
+subgroup.  This makes the original
+Roe--Turturean \emph{marked} quotient
+universality stable under finite
+wreath induction from such a subgroup.
+The resulting pro-$2$ Schreier presentation
+has exactly one more relation than its
+augmentation-Fox rank.  Burnside--Nielsen
+elimination then supplies a
+group-level, integral finite-jet compiler,
+without guessing a standard Demu\v{s}kin
+word in advance.
+
+Write
+\[
+\Gamma=G_{\mathbf Q_2},\qquad
+W=\overline{\langle\!\langle
+x_0,x_1\rangle\!\rangle}_{\Gamma},
+\]
+for the distinguished wild normal
+pro-$2$ subgroup in the verified marked
+Roe--Turturean source
+\cite{RoeTurtureanGQ2}.
+The four marked generators are
+$(\sigma,\tau,x_0,x_1)$ and the
+two relators are
+$(r_t,r_w)$, where
+\[
+r_t=\sigma^{-1}\tau\sigma\tau^{-2},
+\qquad
+r_w=h_0u_1^{-1}x_1^\sigma c_0.
+\]
+As throughout the previous versions,
+the requirement that $W$ be pro-$2$
+is an \emph{additional marked
+finite-quotient condition}, not
+a consequence of the two naked words.
+All statements below retain it.
+
+\begin{lemma}[Odd index automatically absorbs wild inertia]
+\label{lem:dyadic-f135-odd-index-wild-core}
+Let $H\subset\Gamma$ be any open
+subgroup of odd index
+\[
+m=[\Gamma:H].
+\]
+Then
+\begin{equation}\label{eq:dyadic-f135-wild-in-core}
+\boxed{\qquad
+W\subseteq\operatorname{Core}_{\Gamma}(H)
+=\bigcap_{g\in\Gamma}gHg^{-1}.
+\qquad}
+\end{equation}
+In particular, in the finite
+permutation action on the $m$
+cosets $H\backslash\Gamma$,
+the images of $x_0,x_1$
+are trivial.  No normality of
+$H$ is assumed.
+\end{lemma}
+
+\begin{proof}
+Let $P$ be the finite image of
+$\Gamma$ in the permutation group
+of the cosets, and let $S\subset P$
+be the stabilizer of the chosen
+coset.  Its index is $m$, which
+is odd.  Hence $S$ contains
+a Sylow $2$-subgroup of $P$.
+The image $\bar W$ of $W$ is
+a normal finite $2$-subgroup
+of $P$; every normal $2$-subgroup
+is contained in every Sylow
+$2$-subgroup.  Thus
+$\bar W\subset S$.
+Normality of $\bar W$ also gives
+$\bar W\subseteq pSp^{-1}$
+for every $p\in P$.
+Therefore it lies in the core
+of $S$, which is the kernel of
+the permutation action.
+Pulling back to $\Gamma$
+proves \eqref{eq:dyadic-f135-wild-in-core}.
+\end{proof}
+
+\begin{theorem}[Uniform marked odd-index pro-$2$ Schreier presentation]
+\label{thm:dyadic-f135-uniform-pro2-schreier}
+Let $H\subset\Gamma$ be
+open of odd index $m$,
+and let $F/\mathbf Q_2$
+be its finite fixed field,
+so $[F:\mathbf Q_2]=m$.
+Choose an ordered right
+Schreier transversal
+\[
+\mathscr T=(t_0=1,t_1,\ldots,t_{m-1})
+\quad\text{for }H\backslash\Gamma,
+\]
+written in the marked generators.
+The indexed Schreier cover
+of the \emph{two marked words}
+$(r_t,r_w)$ has
+\begin{equation}\label{eq:dyadic-f135-cover-cell-counts}
+\boxed{
+\begin{array}{c|ccc}
+\text{cell degree}&0&1&2\\ \hline
+\text{number}&m&4m&2m.
+\end{array}}
+\end{equation}
+Contract a spanning tree
+of its coset graph.
+There remain
+\begin{equation}\label{eq:dyadic-f135-cover-pro2-counts}
+\boxed{\quad
+d=3m+1\ \text{Schreier generators},
+\qquad r=2m\ \text{indexed relators}.
+\quad}
+\end{equation}
+Let $\mathscr P_H$ be the
+pro-$2$ group defined by
+these completed
+Reidemeister--Schreier
+relators, with
+all profinite powers
+rewritten in its
+pro-$2$ quotients.
+Then there is a
+canonical isomorphism
+of pro-$2$ groups
+\begin{equation}\label{eq:dyadic-f135-marked-wreath-universality}
+\boxed{\qquad
+\mathscr P_H\simeq H(2)=G_F(2).
+\qquad}
+\end{equation}
+It holds for
+\emph{every} odd-index
+$H$, tame or wild,
+normal or nonnormal.
+The assertion depends
+on the original
+\emph{marked wild}
+pro-$2$ condition
+of Roe--Turturean;
+it does not treat
+their two naked
+full-group relators
+as a complete
+unmarked presentation.
+
+The indexed
+Schreier relator
+words and their
+completed Fox
+derivatives admit a
+terminating algorithm
+at every fixed finite
+pro-$2$ quotient or
+coefficient-jet
+precision.  The
+algorithm is:
+compute the finite
+coset transition
+table; perform
+literal word rewriting
+on its $m$ cosets;
+replace each
+profinite $\omega_2$
+power by its
+compatible finite
+CRT exponent
+in the chosen
+finite wreath quotient;
+then evaluate the
+resulting words
+in the finite
+pro-$2$ stage.
+\end{theorem}
+
+\begin{proof}
+Schreier's index
+formula for an open
+subgroup of the free
+profinite group
+on four generators
+gives $1+m(4-1)=3m+1$
+free generators after
+contracting a coset
+spanning tree.
+The normal subgroup
+generated by two
+relators in the
+ambient free profinite
+group restricts to
+the closed normal
+subgroup generated
+by their $m$ coset
+conjugates.
+This gives the cell
+and relation counts
+as formal Schreier
+data.
+
+The point is to
+prove that the
+additional \emph{marked}
+wild condition induces
+no unnoticed extra
+relations in the
+maximal pro-$2$
+quotient of $H$.
+Put $\mathcal F$ for the
+free profinite group on
+the four marked
+letters, and let
+$\mathcal E$ be the
+preimage in $\mathcal F$
+of $H$, an open
+subgroup of index $m$.
+The permutation
+homomorphism from
+$\mathcal F$ to its
+finite coset-action
+image $\Omega$ has
+point stabilizer
+corresponding to
+$\mathcal E$.
+By
+Lemma~\ref{lem:dyadic-f135-odd-index-wild-core},
+both wild letters
+have trivial
+permutation action.
+
+Let $Q$ be an
+arbitrary finite
+$2$-group.
+Every homomorphism
+from $H$ to $Q$
+annihilates the
+two original
+indexed relators;
+therefore it gives
+a homomorphism from
+the formal pro-$2$
+Schreier relator
+quotient $\mathscr P_H$.
+Conversely, start
+with \emph{any}
+homomorphism
+$\psi:\mathcal E\to Q$
+annihilating the
+two sets of $m$
+indexed relators.
+The finite
+wreath-induction
+construction
+associated to
+the transversal
+gives a continuous
+homomorphism
+\begin{equation}\label{eq:dyadic-f135-wreath-extension}
+\mathcal F\longrightarrow
+Q^m\rtimes\Omega,
+\end{equation}
+whose marked
+relation values
+vanish in every
+coset coordinate:
+this is exactly
+what the indexed
+Schreier relations
+assert.
+Both wild
+generator images
+belong to the
+normal base group
+$Q^m$, since
+their permutation
+parts are trivial.
+Their full normal
+closure in the
+finite image is
+therefore a
+$2$-group.
+Hence the induced
+finite quotient is
+\emph{admissible}
+for the actual
+Roe--Turturean
+marked presentation.
+It factors through
+$\Gamma$, and its
+restriction to $H$,
+evaluated in the
+distinguished coset
+coordinate, is
+the original $\psi$.
+
+Thus the finite
+$2$-group quotient
+functors of
+$\mathscr P_H$
+and $H$ agree,
+including their
+marked source
+maps.  Taking
+inverse limits
+proves
+\eqref{eq:dyadic-f135-marked-wreath-universality}.
+Finite CRT
+representatives
+of $\omega_2$
+are compatible
+in successive
+finite wreath
+quotients, giving
+the stated
+finite-stage
+source-word and
+Fox algorithm.
+\end{proof}
+
+\begin{theorem}[The universal $2m-1$ integral Nielsen pivot compiler]
+\label{thm:dyadic-f135-primitive-pivot-compiler}
+Retain an odd-index
+$H=G_F\subset\Gamma$
+as above.
+The local maximal
+pro-$2$ group
+$P_F=H(2)$ is
+a Demu\v{s}kin group
+of minimal generator
+rank
+\begin{equation}\label{eq:dyadic-f135-local-rank}
+\boxed{\qquad
+d_{\min}=[F:\mathbf Q_2]+2=m+2,
+\qquad r_{\min}=1.
+\qquad}
+\end{equation}
+Let $J_{\mathrm{aug}}$
+be the $2m\times(3m+1)$
+\emph{mod-$2$
+augmentation Fox matrix}
+of the completed
+Schreier relators from
+Theorem~\ref{thm:dyadic-f135-uniform-pro2-schreier}.
+Then
+\begin{equation}\label{eq:dyadic-f135-fox-augmentation-rank}
+\boxed{\qquad
+\operatorname{rank}_{\mathbf F_2}
+J_{\mathrm{aug}}
+=(3m+1)-(m+2)=2m-1.
+\qquad}
+\end{equation}
+In particular,
+there is a
+$(2m-1)\times(2m-1)$
+Fox minor which is
+a unit modulo $2$,
+and it can be
+\emph{found
+deterministically}
+by finite
+$\mathbf F_2$
+Gaussian elimination.
+
+Choose $2m-1$
+independent relators
+and $2m-1$
+original free
+generators giving
+such a unit minor.
+Replace those
+generators by
+the selected
+\emph{actual
+completed relator
+words}.
+Together with
+the remaining
+$m+2$ generators
+they form a
+free pro-$2$ basis.
+After this single
+primitive Nielsen
+change, delete the
+$2m-1$ generator
+letters which are
+now defining
+relations.  The
+result is a genuine
+one-relator minimal
+presentation
+\begin{equation}\label{eq:dyadic-f135-general-minimal-relation}
+\boxed{\quad
+P_F\cong
+\langle z_1,\ldots,z_{m+2}
+\mid\mathscr R_F\rangle_{\mathrm{pro}-2}.
+\quad}
+\end{equation}
+The relator
+$\mathscr R_F$ and
+the inverse Nielsen
+word map are
+\emph{computable
+at every finite
+pro-$2$ quotient
+and Zassenhaus
+word jet}.
+They need not be
+single finite
+ordinary words
+or canonical under
+a change of
+Schreier transversal.
+
+For every complete
+finite projective
+coefficient module
+$B$ whose
+$H$ action
+factors through
+$P_F$, these
+genuine group
+transformations
+induce an
+\emph{integral
+Fox cochain}
+equivalence
+\begin{equation}\label{eq:dyadic-f135-uniform-cochain-cancellation}
+\boxed{
+\begin{aligned}
+C_{\mathrm{cover}}^\bullet(H,B)
+\cong {}&
+C_{\mathrm{Fox}}^\bullet(P_F,B)\\
+&\oplus
+[B^{m-1}\xrightarrow{I}B^{m-1}]_{[0,1]}\\
+&\oplus
+[B^{2m-1}\xrightarrow{I}B^{2m-1}]_{[1,2]} .
+\end{aligned}}
+\end{equation}
+The term
+$C_{\mathrm{Fox}}^\bullet(P_F,B)$
+is the genuine
+$(1,m+2,1)$
+completed Demu\v{s}kin
+resolution.
+The degree-wise
+ranks of the
+two sides of
+\eqref{eq:dyadic-f135-uniform-cochain-cancellation}
+are exactly
+$(m,4m,2m)$.
+
+Consequently the
+indexed covering
+cochain complex
+computes
+\begin{equation}\label{eq:dyadic-f135-uniform-schreier-rgamma}
+\boxed{\quad
+C_{\mathrm{cover}}^\bullet(H,B)
+\simeq
+R\Gamma(H,B)
+\quad\text{in degrees }0,1,2,
+\quad}
+\end{equation}
+compatibly with
+complete derived
+coefficient base
+change and
+all chosen
+Fox presentation
+transitions.
+No global canonical
+minimal basis is
+required.
+\end{theorem}
+
+\begin{proof}
+Since $F/\mathbf Q_2$
+is finite and
+$\mu_2\subset F$,
+local Demu\v{s}kin
+theory
+\cite{NSW,LabuteClassification}
+gives
+$d(H(2))=[F:\mathbf Q_2]+2=m+2$
+and one minimal
+defining relation.
+The mod-two trivial
+coefficient differential
+$d^0$ in any
+pro-$2$ presentation
+is zero; its
+$H^1$ is the
+annihilator of the
+augmented relator
+row matrix.
+Theorem~\ref{thm:dyadic-f135-uniform-pro2-schreier}
+identifies the
+Schreier relator
+quotient with
+$H(2)$, so its
+first-cohomology
+dimension is
+$m+2$.
+Rank-nullity
+proves
+\eqref{eq:dyadic-f135-fox-augmentation-rank}.
+
+Gaussian elimination
+selects a unit
+$(2m-1)$-minor.
+The chosen
+$2m-1$ relator
+words have
+linearly independent
+images in the
+Frattini quotient
+of the free
+pro-$2$ group
+of rank $3m+1$.
+The remaining
+$m+2$ original
+generators can
+be selected to
+complete those
+vectors to a
+basis.
+The free
+pro-$2$ Burnside
+basis theorem
+and Hopficity
+then make the
+corresponding
+continuous
+endomorphism
+of the free
+pro-$2$ group
+an automorphism.
+In its new
+generators the
+selected relators
+are \emph{literally
+generator letters}.
+Killing those
+letters with
+their defining
+relations leaves
+the unique
+unselected
+relator, giving
+\eqref{eq:dyadic-f135-general-minimal-relation}.
+This is a
+pro-$2$
+Tietze--Nielsen
+calculation, not
+a mere Smith
+equivalence of
+numeric matrices.
+
+For the Fox
+cochain complex,
+the two edges
+of each selected
+tree link provide
+primitive
+vertex--edge
+unit differentials;
+there are
+$m-1$ of them.
+The completed
+Fox chain rule
+sends each
+pro-$2$ Nielsen
+automorphism
+to an invertible
+completed
+group-ring
+Jacobian.
+After the
+selected relation
+words have become
+generator letters,
+each relation
+face has a
+\emph{literal}
+unit Fox derivative
+in that coordinate.
+Elementary
+source, relation
+and face
+row operations
+therefore split
+the $2m-1$
+degree-one--two
+contractible
+pairs, before
+or after
+evaluating
+in $B$.
+The remaining
+three-term Fox
+complex is
+the minimal
+one-relator
+Demu\v{s}kin
+complex.
+Its exactness
+over
+$\mathbf Z_2[[P_F]]$
+is the standard
+pro-$2$
+Poincar\'e
+duality resolution.
+
+Finally every
+continuous pro-$2$
+word computation
+in the chosen
+group can be
+evaluated modulo
+each finite
+Zassenhaus
+quotient.
+The selected
+basis automorphism
+acts bijectively
+on the compatible
+finite quotient
+system, so the
+inverse can be
+computed by
+finite lifting
+at each requested
+precision.
+The Fox
+derivatives are
+continuous and
+the pivot matrices
+invert over the
+completed local
+group algebra
+because their
+augmentation
+determinants
+are odd units.
+This proves the
+claimed
+recursive effectivity
+and derived
+coefficient
+compatibility.
+\end{proof}
+
+\begin{theorem}[Strict odd-index Fox--Shapiro completeness on every residual sector]
+\label{thm:dyadic-f135-full-marked-all-residual-completeness}
+Let $A$ be a complete
+Noetherian local
+$\mathbf Z_2$-algebra
+with finite residue
+field of characteristic
+two, and let
+$B$ be a finite
+projective $A$-module
+with continuous
+$\Gamma=G_{\mathbf Q_2}$
+action.
+Let $\bar\rho_B(\Gamma)$
+be its finite
+residual image,
+choose a Sylow
+$2$-subgroup
+$S$ of that
+image, and set
+\begin{equation}\label{eq:dyadic-f135-residual-sylow-preimage}
+H=\bar\rho_B^{-1}(S),
+\qquad
+m=[\Gamma:H]
+=[\bar\rho_B(\Gamma):S].
+\end{equation}
+Then $m$ is odd,
+$W\subseteq H$,
+and the
+continuous $H$
+action on $B$
+factors through
+the pro-$2$
+group $H(2)$.
+
+Let
+\[
+\mathcal J_\Gamma^\bullet(B):
+\qquad
+B\longrightarrow B^{4}
+\longrightarrow B^2
+\]
+be the \emph{literal
+Roe--Turturean
+two-marked-relator}
+coefficient Fox
+complex,
+with its
+profinite $\omega_2$
+powers evaluated
+in the complete
+coefficient
+representation.
+Put
+\[
+V=\operatorname{Coind}_H^\Gamma(B|_H)
+\simeq B\otimes_{\mathbf Z_2}
+\mathbf Z_2[H\backslash\Gamma].
+\]
+With a chosen
+coset trivialization,
+let
+\begin{equation}\label{eq:dyadic-f135-odd-coset-projector}
+\boxed{\quad
+P_H=\frac1m\mathbf1_m\mathbf1_m^t,
+\qquad
+P_H^2=P_H.
+\quad}
+\end{equation}
+Its induced
+endomorphisms on
+$V,V^4,V^2$
+commute \emph{strictly}
+with the two
+Fox differentials,
+and the
+coinduced
+Schreier complex
+splits into
+strict integral
+cochain summands:
+\begin{equation}\label{eq:dyadic-f135-uniform-coinduced-splitting}
+\boxed{
+\begin{aligned}
+\mathcal J_\Gamma^\bullet(V)
+&\cong
+C_{\mathrm{cover}}^\bullet(H,B)\\
+&\cong
+\mathcal J_\Gamma^\bullet(B)
+\oplus
+\mathcal J_\Gamma^\bullet
+\left(B\otimes\ker(\mathbf1_m^t)\right).
+\end{aligned}}
+\end{equation}
+The first summand
+is the image of
+$P_H$ in every
+cochain degree,
+and represents the
+actual derived
+residual Sylow
+projector
+$\frac1m\operatorname{res}
+\operatorname{cor}$.
+For this \emph{arbitrary}
+residual coefficient
+representation
+$B$ one therefore has
+\begin{equation}\label{eq:dyadic-f135-universal-coefficient-rgamma}
+\boxed{\qquad
+\mathcal J_\Gamma^\bullet(B)
+\simeq
+R\Gamma(\Gamma,B)
+\qquad
+\text{in }D(A).
+\qquad}
+\end{equation}
+The equivalence is
+compatible with
+complete derived
+coefficient base
+change and the
+strict transitive
+coset-projection
+changes below.
+
+This gives a
+single fixed
+\emph{four-generator,
+two-marked-relator}
+\emph{coefficient
+compiler}
+for \emph{every}
+finite-projective
+continuous
+$2$-adic
+representation
+of $G_{\mathbf Q_2}$,
+not only the
+$S_3$ residual
+sector of fixed134.
+It does \emph{not}
+assert that the
+two naked relations
+alone present
+$G_{\mathbf Q_2}$,
+or that their
+formal two-face
+group-algebra
+complex is a
+universal
+finite free
+$\mathbf Z_2[[\Gamma]]$
+resolution independent
+of the marked
+wild condition.
+\end{theorem}
+
+\begin{proof}
+The congruence
+kernel of
+$\mathrm{GL}_A(B)$
+over its finite
+residue image
+is pro-$2$:
+its successive
+finite quotients
+are additive
+matrix groups
+over residue
+characteristic
+two.
+The residual
+$H$ image is
+the chosen
+Sylow $2$-group.
+Thus the full
+$H$ image on
+$B$ is an
+extension of
+pro-$2$ groups,
+hence pro-$2$,
+and factors through
+$H(2)$.
+The subgroup has
+odd index
+and contains
+the normal wild
+group by
+Lemma~\ref{lem:dyadic-f135-odd-index-wild-core}.
+
+Coinduction
+is finite
+because $H$
+has finite
+index.  A
+given $\Gamma$
+action on $B$
+trivializes the
+coinduced module
+as the tensor
+product of
+$B$ and the
+right-coset
+permutation
+module.
+The constant
+coset line and
+augmentation
+kernel split
+over $A$ because
+$m$ is a unit.
+The constant
+embedding and
+the normalized
+average are
+$\Gamma$-equivariant,
+so their idempotent
+$P_H$ commutes
+with all
+completed Fox
+coefficient
+operations.
+This proves
+the strict
+cochain splitting
+in
+\eqref{eq:dyadic-f135-uniform-coinduced-splitting}.
+
+The left
+coinduced
+complex is
+the actual
+indexed
+Schreier covering
+cochain complex
+by the
+Fox--Shapiro
+chain rule.
+Theorems~\ref{thm:dyadic-f135-uniform-pro2-schreier}
+and~\ref{thm:dyadic-f135-primitive-pivot-compiler}
+show that it
+is a finite
+Fox resolution
+of $H(2)$,
+plus explicit
+contractible
+pairs.
+Hence it
+computes
+$R\Gamma(H,B)$.
+Shapiro's lemma
+identifies the
+latter with
+$R\Gamma(\Gamma,V)$.
+The constant
+direct summand
+of the coinduced
+object corresponds
+to the ordinary
+restriction map
+$R\Gamma(\Gamma,B)
+\to R\Gamma(H,B)$,
+while the
+sum map corresponds
+to corestriction.
+Consequently its
+normalized
+projector is
+$\frac1m
+\operatorname{res}
+\operatorname{cor}$.
+This is an
+integral
+idempotent with
+image
+$R\Gamma(\Gamma,B)$
+since
+$\operatorname{cor}
+\operatorname{res}=m$.
+
+The same
+idempotent
+splits the
+\emph{literal
+marked coefficient
+complex}
+$\mathcal J_\Gamma^\bullet(V)$
+as
+$\mathcal J_\Gamma^\bullet(B)$
+plus the augmentation
+factor.
+The image
+is therefore
+identified
+with
+$R\Gamma(\Gamma,B)$,
+proving
+\eqref{eq:dyadic-f135-universal-coefficient-rgamma}.
+Every step is
+defined over
+the complete
+coefficient ring
+using only odd
+index inverses,
+pro-$2$ Fox
+Nielsen transformations
+and completed
+coefficient
+base change.
+\end{proof}
+
+\begin{corollary}[One fixed marked $\mathbf Q_2$ compiler for every dyadic local field]
+\label{cor:dyadic-f135-all-finite-extensions-coinduced}
+Let $K/\mathbf Q_2$
+be \emph{any} finite
+extension, not
+necessarily of odd
+degree or Galois.
+Let $A$ and
+$B$ be as in
+Theorem~\ref{thm:dyadic-f135-full-marked-all-residual-completeness},
+but let $B$ carry a
+continuous $G_K$
+action.
+Put
+\[
+n=[K:\mathbf Q_2],
+\qquad
+V_K=\operatorname{Coind}_{G_K}^{G_{\mathbf Q_2}}B.
+\]
+Then $V_K$
+is finite projective
+over $A$ of rank
+$n\operatorname{rank}_A B$,
+and the same fixed
+Roe--Turturean
+four-generator,
+two-marked-relator
+cochain formulas
+provide
+\begin{equation}\label{eq:dyadic-f135-all-k-via-q2-marked}
+\boxed{\quad
+\mathcal J_{G_{\mathbf Q_2}}^\bullet(V_K)
+\simeq
+R\Gamma(G_{\mathbf Q_2},V_K)
+\simeq
+R\Gamma(G_K,B).
+\quad}
+\end{equation}
+Thus the fixed
+marked source
+computes \emph{every}
+dyadic local
+coefficient cohomology
+object in three
+finite cochain
+degrees, without
+asserting a
+uniform explicit
+four-generator
+word presentation
+of each
+$G_K$.
+The local-field
+coset data and
+the induced
+transport matrices
+are extra finite
+inputs, not a
+new intrinsic
+group presentation
+of $G_K$.
+\end{corollary}
+
+\begin{proof}
+Finite-index
+coinduction from
+$G_K$ to
+$G_{\mathbf Q_2}$
+preserves finite
+projective
+coefficient modules
+and continuity.
+Apply
+Theorem~\ref{thm:dyadic-f135-full-marked-all-residual-completeness}
+to $V_K$,
+then the
+continuous
+finite-index
+Shapiro lemma
+to recover
+$R\Gamma(G_K,B)$.
+The index
+$n$ need
+not be odd:
+the odd-index
+Sylow restriction
+is selected
+\emph{after}
+the coefficient
+module $V_K$
+has been
+coinduced to
+$G_{\mathbf Q_2}$.
+\end{proof}
+
+\begin{theorem}[Strict independence of different odd-index Fox covers]
+\label{thm:dyadic-f135-cross-sylow-strict-coherence}
+Fix a complete
+residual coefficient
+module $B$ as above,
+and let
+$H_1,H_2,\ldots$
+be \emph{any}
+odd-index open
+subgroups on which
+$B$ has pro-$2$
+image.
+For each $H_i$,
+write
+\[
+C_i^\bullet
+=C_{\mathrm{cover}}^\bullet(H_i,B),
+\quad
+\iota_i:\mathcal J_\Gamma^\bullet(B)\to C_i^\bullet,
+\quad
+p_i:C_i^\bullet\to\mathcal J_\Gamma^\bullet(B)
+\]
+for the strict
+constant-coset
+embedding and
+normalized average,
+so $p_i\iota_i=I$.
+Define the
+marked-to-marked
+comparison for
+two different
+covers by
+\begin{equation}\label{eq:dyadic-f135-cover-change-operations}
+\boxed{\qquad
+\Phi_{ji}:=\iota_jp_i:
+C_i^\bullet\longrightarrow C_j^\bullet.
+\qquad}
+\end{equation}
+Then \emph{on the
+nose as cochain maps}
+\begin{equation}\label{eq:dyadic-f135-strict-transitive-odd-covers}
+\boxed{
+\begin{aligned}
+\Phi_{kj}\Phi_{ji}&=\Phi_{ki},\\
+\Phi_{ij}\Phi_{ji}
+&=\iota_i p_i=:E_i,\\
+E_i^2&=E_i.
+\end{aligned}}
+\end{equation}
+Thus the projected
+direct summands
+$\operatorname{im}E_i$
+are canonically
+strictly isomorphic,
+and \emph{all}
+higher overlap
+associators for
+these projected
+coefficient
+carriers are
+identity maps.
+No intersection
+$H_i\cap H_j$
+is required;
+indeed, such an
+intersection
+need not have
+odd index.
+
+There is also a
+first explicit
+\emph{minimal-Fox
+overlap homotopy}.
+Choose for each
+$i$ the integral
+Fox cancellations of
+Theorem~\ref{thm:dyadic-f135-primitive-pivot-compiler},
+as a strong
+deformation
+retract
+\[
+F_i^\bullet
+\ \substack{\xrightarrow{\ j_i\ }\\[-1ex]
+\xleftarrow[\ q_i\ ]{}}\ 
+C_i^\bullet,
+\qquad
+q_i j_i=I,\quad
+I-j_iq_i=d h_i+h_i d,
+\]
+where $F_i$ is the
+chosen minimal
+Demu\v{s}kin
+Fox complex
+for $H_i$,
+including the
+appropriate
+coefficient module.
+Define
+\begin{equation}\label{eq:dyadic-f135-minimal-fox-overlap-maps}
+T_{ji}:=q_j\Phi_{ji}j_i:
+F_i^\bullet\longrightarrow F_j^\bullet.
+\end{equation}
+For every triple
+the explicitly
+given degree-minus-one
+map
+\begin{equation}\label{eq:dyadic-f135-first-fox-overlap-homotopy}
+\boxed{\quad
+\mathfrak H_{kji}
+=q_k\Phi_{kj}h_j\Phi_{ji}j_i
+\quad}
+\end{equation}
+satisfies
+\begin{equation}\label{eq:dyadic-f135-minimal-fox-homotopy-identity}
+\boxed{\quad
+T_{ki}-T_{kj}T_{ji}
+=d\mathfrak H_{kji}
++\mathfrak H_{kji}d.
+\quad}
+\end{equation}
+All such
+comparisons and
+homotopies are
+integral,
+base-change
+compatible on
+the chosen
+finite Fox gauges,
+and recursively
+computable at
+every finite
+coefficient/word
+precision.
+The strict
+projector layer
+requires \emph{no}
+higher fillers;
+at the chosen
+minimal-Fox
+gauges the
+displayed $\mathfrak H$
+is the first
+nontrivial
+coherence correction.
+The complete
+all-arity
+noncanonical
+minimal-Fox
+higher-coherence
+calculus remains
+separate from
+the strict
+projector assertion.
+\end{theorem}
+
+\begin{proof}
+All $\iota_i$
+and $p_i$
+are strict
+cochain maps,
+and $p_i\iota_i=I$.
+Thus
+\[
+\Phi_{kj}\Phi_{ji}
+=\iota_k(p_j\iota_j)p_i
+=\iota_kp_i=\Phi_{ki}.
+\]
+The same
+multiplication
+gives the
+idempotent and
+inverse
+identities.
+These are
+exact equalities
+of matrices
+on cochain
+degrees $0,1,2$,
+independent of
+the odd indices
+and transversals.
+No common
+subgroup is used.
+
+For the minimal
+Fox gauges,
+the actual
+Tietze/Schreier
+unit cancellations
+give strong
+deformation
+retracts with
+the displayed
+homotopies.
+Their overlap
+maps compose as
+\[
+T_{kj}T_{ji}
+=q_k\Phi_{kj}
+(j_jq_j)\Phi_{ji}j_i.
+\]
+Substitute
+$j_jq_j=I-dh_j-h_jd$.
+Strict
+transitivity of
+$\Phi$ and
+the cochain-map
+identities of
+$q,j,\Phi$
+then show
+\[
+T_{ki}-T_{kj}T_{ji}
+=d(q_k\Phi_{kj}h_j\Phi_{ji}j_i)
++(q_k\Phi_{kj}h_j\Phi_{ji}j_i)d,
+\]
+which is
+\eqref{eq:dyadic-f135-minimal-fox-homotopy-identity}.
+Each $h_i$
+is constructed
+using inverse
+unit Fox pivots
+and free
+pro-$2$ basis
+changes;
+its finite-stage
+matrix entries
+are therefore
+effective and
+$2$-integral.
+\end{proof}
+
+\begin{theorem}[A new independent index-five tame source certificate]
+\label{thm:dyadic-f135-index-five-exact-certificate}
+Put
+\[
+F_5=\mathbf Q_2(\sqrt[5]2),
+\quad
+L_5=F_5(\zeta_5),
+\quad
+\Gamma=G_{\mathbf Q_2}.
+\]
+The extension $F_5/\mathbf Q_2$
+is totally tamely ramified
+of degree five, while
+$\zeta_5$ generates the
+unramified degree-four
+extension.  Its Galois
+closure has the
+non-pro-$2$ tame
+quotient
+\begin{equation}\label{eq:dyadic-f135-index-five-quotient}
+\boxed{\quad
+\operatorname{Gal}(L_5/\mathbf Q_2)
+\simeq C_5\rtimes_{2}C_4,
+\qquad
+[\,\Gamma:G_{F_5}\,]=5.
+\quad}
+\end{equation}
+The associated
+Sylow preimage
+$H_5=G_{F_5}$
+has a three-term
+Schreier cover
+with ranks
+$(5,20,10)$,
+and its minimal
+pro-$2$
+Demu\v{s}kin quotient
+has seven generators
+and one relator.
+
+Let $\Sigma,\Upsilon\in
+M_5(\mathbf Z_2)$
+be the exact
+permutation matrices
+for the coset
+actions
+\[
+\Sigma_{ij}
+=\delta_{j,\,2i\bmod5},
+\qquad
+\Upsilon_{ij}
+=\delta_{j,\,i+1\bmod5},
+\quad
+0\le i,j<5.
+\]
+Then
+$\Sigma^{-1}\Upsilon\Sigma=\Upsilon^2$,
+$\Sigma^4=\Upsilon^5=I_5$.
+Put
+\begin{equation}\label{eq:dyadic-f135-index-five-norm}
+N_5=\sum_{j=0}^4\Upsilon^j,
+\qquad
+P_5=\frac15N_5
+=\frac15\mathbf1_5\mathbf1_5^t .
+\end{equation}
+On the coinduced
+trivial coefficient
+module $\mathbf Z_2^5$,
+the \emph{literal}
+marked full-source
+degree-one Fox row is
+\begin{equation}\label{eq:dyadic-f135-index-five-fox-blocks}
+\boxed{
+\begin{aligned}
+d^1_{\mathrm{tame}}(a,b)
+&=\Sigma^{-1}(\Upsilon-I)a+
+   (\Sigma^{-1}-I-\Upsilon)b,\\
+d^1_{\mathrm{wild}}(b,c,d)
+&=(\Sigma^{-2}+2I)P_5b\\
+&\quad+
+\bigl((\Sigma^{-2}+3I)P_5-2I\bigr)c\\
+&\quad+
+(\Sigma^{-1}-P_5)d .
+\end{aligned}}
+\end{equation}
+After multiplying
+the five wild
+face rows by
+the odd $2$-adic
+unit $5$,
+the resulting
+\emph{integer}
+$10\times20$
+matrix is
+\begin{equation}\label{eq:dyadic-f135-index-five-scaled-jacobian}
+\boxed{
+\mathsf J_5=
+\begin{pmatrix}
+\Sigma^{-1}(\Upsilon-I)&
+\Sigma^{-1}-I-\Upsilon&
+0&0\\
+0&(\Sigma^{-2}+2I)N_5&
+(\Sigma^{-2}+3I)N_5-10I&
+5\Sigma^{-1}-N_5
+\end{pmatrix}.
+}
+\end{equation}
+It has
+$\mathbf F_2$-rank nine.
+Two explicit
+integer determinant
+witnesses, with
+rows and columns
+numbered from one,
+are
+\begin{equation}\label{eq:dyadic-f135-index-five-minors}
+\boxed{
+\begin{aligned}
+\det(\mathsf J_5[
+\{1,\dots,9\},
+\{1,2,3,4,6,16,17,18,19\}])
+&=-125,\\
+\det(\mathsf J_5[
+\{1,\dots,10\},
+\{1,2,3,4,6,16,17,18,19,11\}])
+&=-1250 .
+\end{aligned}}
+\end{equation}
+Thus the complete
+$\mathbf Z_2$-Smith
+invariant list is
+\begin{equation}\label{eq:dyadic-f135-index-five-smith}
+\boxed{\qquad
+\operatorname{SNF}_{\mathbf Z_2}
+(\mathsf J_5)
+=(1,1,1,1,1,1,1,1,1,2).
+\qquad}
+\end{equation}
+The ten face
+rows possess
+exactly nine
+primitive
+relation--edge
+directions and one
+$2$-primary top
+class.  By the
+general primitive
+Nielsen compiler,
+the actual
+minimal group
+presentation has
+seven generators
+and one relation,
+with
+\[
+H^2(G_{F_5},\mathbf Z_2)
+\cong\mathbf Z/2\mathbf Z.
+\]
+This is the first
+independent higher-index
+test of the general
+odd-index theorem,
+not a restatement
+of the index-three
+$S_3$ case.
+\end{theorem}
+
+\begin{proof}
+The polynomial
+$X^5-2$ is
+Eisenstein at
+two.  The
+multiplicative
+order of $2$
+modulo $5$
+is four, so
+$\mathbf Q_2(\zeta_5)$
+is unramified
+of degree four,
+disjoint from
+the totally ramified
+degree-five
+extension.
+This gives
+the tame metacyclic
+Galois group and
+the index-five
+Sylow complement.
+
+In the affine
+semidirect extension
+of the five-sheet
+permutation module
+by the tame quotient,
+the element $\Sigma$
+has $2$-power
+residual order four,
+so its $\omega_2$
+projection is itself.
+The element
+$\Upsilon$ has
+odd residual order
+five, and the
+$\omega_2$
+projection of
+$(\Upsilon,v)$
+is the pure
+translation
+$(I,P_5v)$.
+In particular,
+for the marked
+wild letter $x_j$
+with residual
+permutation identity,
+\[
+(x_j\tau)^{\omega_2}
+=(I,P_5(c_j+b))
+\]
+in affine coordinates.
+The auxiliary wild
+words then give
+\[
+d_0=P_5b+(P_5-I)c,\qquad
+g_0=\sigma_2^2
+\quad\text{with
+linear part }\Sigma^2.
+\]
+The remaining
+commutators of
+pure translations
+vanish.
+The wild
+derivative is
+therefore
+\[
+(\Sigma^{-2}+I)c+
+(\Sigma^{-2}+3I)d_0
+-P_5(b+d)
++\Sigma^{-1}d,
+\]
+which simplifies
+to
+\eqref{eq:dyadic-f135-index-five-fox-blocks}.
+The tame
+derivative follows
+from
+$r_t=\sigma^{-1}\tau
+\sigma\tau^{-2}$.
+Multiplying
+the wild rows by
+five gives
+\eqref{eq:dyadic-f135-index-five-scaled-jacobian}.
+
+Finite
+$\mathbf F_2$
+row reduction
+gives rank nine.
+Computing the
+two displayed
+minors by
+integer
+Gaussian/Bareiss
+elimination gives
+$-125$ and
+$-1250$.
+The first is odd,
+so the first nine
+Smith factors
+are units.
+Every full
+$10\times10$
+minor is even
+because the
+mod-two rank
+is nine;
+the second
+displayed minor
+has valuation
+one.
+Hence the final
+Smith factor is
+exactly two,
+as claimed.
+The same conclusion
+follows from
+Theorem~\ref{thm:dyadic-f135-primitive-pivot-compiler}
+and the local
+$q(F_5)=2$
+Demu\v{s}kin
+classification,
+but the two
+integer witnesses
+supply an
+independent
+finite algebra
+audit.
+\end{proof}
+
+\begin{corollary}[Further tame indices and the sharp remaining boundary]
+\label{cor:dyadic-f135-tame-indices-and-scope}
+For any odd
+integer $m>1$
+such that
+the multiplicative
+order
+$f=\operatorname{ord}_m(2)$
+is a power of two,
+the tame
+Galois closure
+of
+$\mathbf Q_2(\sqrt[m]2)$
+has quotient
+\[
+C_m\rtimes_2 C_f
+\]
+with a Sylow-$2$
+complement of
+index $m$.
+The odd-index
+Fox compiler
+applies to its
+degree-$m$
+field with
+cell ranks
+$(m,4m,2m)$,
+minimal Demu\v{s}kin
+generator rank
+$m+2$, and
+$2m-1$
+unit relation
+directions.
+The integer
+index examples
+$m=3,5,15,17$
+have been
+independently
+checked through
+modulo-four
+unit-pivot
+elimination:
+their augmented
+$2m\times4m$
+Fox matrices
+have mod-two
+rank $2m-1$
+and one surviving
+Smith factor
+of valuation one.
+
+The group-level
+compiler and
+odd-index
+constant-coset
+projector are
+therefore no
+longer restricted
+to the $S_3$
+residual quotient.
+What remains
+\emph{strictly
+stronger} is
+a single
+presentation-independent
+minimal Fox
+basis functor
+with canonical
+all-arity
+higher homotopies
+for general
+dyadic fields.
+The present
+version gives
+coefficientwise
+uniform
+cohomological
+completeness
+and strict
+coherent
+\emph{projected}
+cover changes,
+with an explicit
+first
+minimal-Fox
+overlap homotopy;
+it does not
+assert a global
+closed ordinary-word
+minimal gauge.
+\end{corollary}
+
+\begin{proof}
+The tame
+quotient is the
+semidirect
+group generated
+by an odd-order
+inertia element
+$\tau$ of order
+$m$ and a
+Frobenius element
+$\sigma$ of
+order
+$f=\operatorname{ord}_m(2)$,
+with
+$\sigma^{-1}\tau
+\sigma=\tau^2$.
+When $f$ is a
+power of two,
+the Frobenius
+complement is
+a Sylow-$2$
+subgroup and
+has odd index $m$.
+Apply
+Theorems~\ref{thm:dyadic-f135-uniform-pro2-schreier},
+\ref{thm:dyadic-f135-primitive-pivot-compiler},
+and
+\ref{thm:dyadic-f135-full-marked-all-residual-completeness}.
+The four
+finite matrix
+checks are
+recorded in the
+reproducible
+modulo-four
+unit-pivot
+certificate
+for this
+version.
+The difference
+between
+strict projected
+coherence and
+canonical all-arity
+minimal gauge
+is explained by
+Theorem~\ref{thm:dyadic-f135-cross-sylow-strict-coherence}.
+\end{proof}
+
+\begin{warning}[The marked wild condition remains essential]
+\label{warn:dyadic-f135-not-naked-full-relators}
+The two full-group
+Roe--Turturean
+words $(r_t,r_w)$
+are \emph{not}
+assumed to
+present the
+absolute Galois
+group as a bare
+unmarked
+two-relator
+profinite quotient.
+The crucial
+step in the
+uniform odd-index
+proof is the
+finite wreath
+argument, which
+shows that
+induced finite
+$2$-group
+quotients are
+admissible
+\emph{because}
+the wild
+generator images
+lie in the normal
+$2$-group base.
+Without this
+fact there is
+no reason for
+the $2m$
+Schreier word
+relations alone
+to present $H(2)$.
+Similarly, the
+coefficientwise
+completeness
+of the literal
+two-face Fox
+complex is not
+a claim of a
+fixed full-group
+projective
+$\mathbf Z_2[[\Gamma]]$
+resolution
+independent of
+residual-sector
+and marked
+normal-closure
+input.
+
+The equality
+of projected
+odd-index
+cochains is
+\emph{strict},
+but the
+minimal-Fox
+Nielsen gauges
+are chosen,
+not canonical.
+The displayed
+triple-overlap
+homotopy is
+a concrete
+finite-level
+coherence step,
+not a proof of
+every higher
+arity in one
+preferred
+closed form.
+\end{warning}
