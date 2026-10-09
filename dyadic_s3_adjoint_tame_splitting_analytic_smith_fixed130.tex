@@ -1,0 +1,692 @@
+% Fixed130 complete independent insertion.
+% Analytic 2-integral splitting of ad(T) on the genuine tame S3
+% sector; strict elementary chain reductions and Hecke top obstruction.
+
+\subsection{Tame-idempotent splitting and an analytic integral
+adjoint Fox--Smith certificate in the $S_3$ sector}
+\label{subsec:dyadic-s3-adjoint-tame-splitting}
+
+The coefficient-specific matrix computation in
+Theorem~\ref{thm:dyadic-s3-marked-adjoint-jacobian}
+admits a stronger structural proof.  For the fixed
+integral $S_3$ representation $T=\mathbf Z_2^2$,
+the adjoint module $\operatorname{End}(T)$
+has a canonical order-three tame idempotent.
+Its invariant and noninvariant summands are
+both explicitly rank two, and the latter
+is \emph{integrally isomorphic} to the natural
+coefficient representation treated by
+Theorem~\ref{thm:dyadic-s3-natural-strict-retract}.
+The invariant summand is an induced
+unramified-quadratic permutation lattice.
+This splits the full $8\times16$ marked
+Jacobian \emph{before} elementary reduction,
+giving a symbolic proof of its unique
+factor $2$ and an actual generator
+of the top obstruction.
+
+Write, as in \eqref{eq:dyadic-s3-integral-matrices},
+\[
+S=\begin{pmatrix}0&1\\1&0\end{pmatrix},
+\qquad
+U=\begin{pmatrix}-1&-1\\1&0\end{pmatrix},
+\quad
+M=\operatorname{End}_{\mathbf Z_2}(T).
+\]
+Let $\operatorname{Ad}_g(A)=gAg^{-1}$.
+The order-three averaging operator is
+\begin{equation}\label{eq:dyadic-s3-adjoint-tame-projector}
+\boxed{\quad
+\Pi_0=\tfrac13
+\bigl(I+\operatorname{Ad}_U+
+\operatorname{Ad}_{U^2}\bigr),\quad
+M_0=\operatorname{im}\Pi_0,\quad
+M_1=\ker\Pi_0.
+\quad}
+\end{equation}
+The idempotent commutes with $\operatorname{Ad}_S$,
+because $SUS^{-1}=U^2$; it also commutes
+with the whole fixed $S_3$ action since
+$\langle U\rangle\triangleleft S_3$.
+
+\begin{theorem}[A unimodular tame splitting of $\operatorname{ad}T$]
+\label{thm:dyadic-s3-adjoint-unimodular-splitting}
+Define two $2$-adic integral matrices
+\begin{equation}\label{eq:dyadic-s3-adjoint-vw-matrices}
+ V=(I-\Pi_0)E_{12}
+ =\frac13\begin{pmatrix}-1&1\\2&1\end{pmatrix},
+ \qquad
+ W=SVS^{-1}
+ =\frac13\begin{pmatrix}1&2\\1&-1\end{pmatrix}.
+\end{equation}
+Then
+\begin{equation}\label{eq:dyadic-s3-adjoint-basis}
+\boxed{\quad
+M_0=\mathbf Z_2 U\oplus\mathbf Z_2 U^2,
+\qquad
+M_1=\mathbf Z_2 V\oplus\mathbf Z_2 W,
+\qquad
+M=M_0\oplus M_1.
+\quad}
+\end{equation}
+In the row-major basis
+$(E_{11},E_{12},E_{21},E_{22})$,
+the change-of-basis matrix with
+columns $(U,U^2,V,W)$ is
+\begin{equation}\label{eq:dyadic-s3-adjoint-unimodular-basis}
+\mathsf B=
+\begin{pmatrix}
+-1&0&-1/3&1/3\\
+-1&1&1/3&2/3\\
+1&-1&2/3&1/3\\
+0&-1&1/3&-1/3
+\end{pmatrix},
+\qquad
+\boxed{\det\mathsf B=1\in\mathbf Z_2^\times}.
+\end{equation}
+The $S_3$ action is, in these
+two ordered rank-two blocks,
+\begin{equation}\label{eq:dyadic-s3-adjoint-s3-block-actions}
+\begin{array}{c|cc}
+& M_0:(U,U^2)&M_1:(V,W)\\ \hline
+\operatorname{Ad}_U
+&I_2&
+\begin{pmatrix}-1&-1\\1&0\end{pmatrix}\\[6pt]
+\operatorname{Ad}_S
+&\begin{pmatrix}0&1\\1&0\end{pmatrix}&
+\begin{pmatrix}0&1\\1&0\end{pmatrix}.
+\end{array}
+\end{equation}
+Consequently, as \emph{actual
+integral} $\mathbf Z_2[S_3]$-modules,
+\begin{equation}\label{eq:dyadic-s3-adjoint-induced-plus-natural}
+\boxed{\quad
+\operatorname{ad}T
+\cong M_0\oplus M_1
+\cong
+\operatorname{Ind}_{G_{K_2}}^\Gamma\mathbf Z_2
+\oplus T,
+\qquad K_2=\mathbf Q_2(\zeta_3).
+\quad}
+\end{equation}
+Here the induction is from the
+index-two normal subgroup $G_{K_2}$
+and uses its two cosets as a
+\emph{permutation lattice};
+it is not induction from the
+index-three subgroup $H$.
+\end{theorem}
+
+\begin{proof}
+The operator $\Pi_0$ is the
+standard Reynolds idempotent
+for the normal order-three
+subgroup; $3$ is invertible in
+$\mathbf Z_2$.  Its invariant
+part is the centralizer
+$\mathbf Z_2[U]$, which is free
+of rank two with basis $(U,U^2)$
+because $U^2+U+I=0$.
+Evaluating $(I-\Pi_0)E_{12}$
+gives the displayed $V$ and $W$.
+The row-major matrix of these
+four vectors is
+\eqref{eq:dyadic-s3-adjoint-unimodular-basis}.
+Multiplying its last two
+columns by $3$ gives an
+integer matrix of determinant $9$;
+hence $\det\mathsf B=9/9=1$.
+Thus $(U,U^2,V,W)$ is a
+$\mathbf Z_2$ basis, and the
+projector proves the direct sum
+\eqref{eq:dyadic-s3-adjoint-basis}.
+
+Conjugation by $S$ swaps
+$U$ and $U^2$, and swaps $V,W$
+by definition.  Conjugation by
+$U$ fixes its centralizer
+and, by direct multiplication,
+\[
+ UVU^{-1}=-V+W,\qquad
+ UWU^{-1}=-V.
+\]
+These are exactly the two
+matrices in
+\eqref{eq:dyadic-s3-adjoint-s3-block-actions}.
+The $M_1$ matrices are precisely
+the natural representation
+\eqref{eq:dyadic-s3-integral-matrices};
+the $M_0$ matrices describe the
+permutation action on the two
+cosets of the normal subgroup
+$\langle U\rangle$.
+The preimage of $\langle U\rangle$
+in $\Gamma$ is $G_{K_2}$,
+so this permutation lattice is
+$\operatorname{Ind}_{G_{K_2}}^\Gamma
+\mathbf Z_2$.
+This proves the integral
+module isomorphism.
+\end{proof}
+
+\begin{theorem}[An analytic proof of the fixed128 adjoint Smith factors]
+\label{thm:dyadic-s3-adjoint-analytic-smith}
+In the coefficient basis
+\eqref{eq:dyadic-s3-adjoint-basis}
+the complete full-marked
+three-term adjoint \emph{coefficient}
+complex of fixed128 is the direct
+sum of a $M_0$ complex and the
+norm-zero natural complex on $M_1$.
+The latter is the strict
+$M_1[-1]$ retract of
+Theorem~\ref{thm:dyadic-s3-natural-strict-retract}
+via the canonical identification
+$M_1\cong T$.
+
+On the tame-invariant rank-two block
+$M_0$ choose $S_M=\begin{psmallmatrix}
+0&1\\1&0\end{psmallmatrix}$ in
+the $(U,U^2)$ basis.
+Since $\tau$ acts trivially
+and $x_0,x_1$ act trivially,
+the full marked differentials are
+\begin{equation}\label{eq:dyadic-s3-tame-invariant-differentials}
+\boxed{
+\begin{aligned}
+d_0^0(v)
+&=((S_M-I)v,\ 0,\ 0,\ 0),\\
+d_0^1(a,b,c,d)
+&=\bigl((S_M-2I)b,\
+  3b+2c+(S_M-I)d\bigr).
+\end{aligned}}
+\end{equation}
+The operator $L=S_M-2I$ has
+determinant $3$ and is a
+$\mathbf Z_2$-unit.
+The strict invertible target
+change
+\begin{equation}\label{eq:dyadic-s3-tame-invariant-row-change}
+(u,w)\longmapsto
+(u,w-3L^{-1}u)
+\end{equation}
+changes the degree-one
+differential to
+\begin{equation}\label{eq:dyadic-s3-tame-invariant-split-d1}
+d_0^1(a,b,c,d)
+\longmapsto
+\bigl(Lb,\ 2c+(S_M-I)d\bigr).
+\end{equation}
+It therefore splits off the
+contractible tame block
+$M_0\xrightarrow{L}M_0$
+in degrees $1$ and $2$,
+leaving the three-generator
+integral Fox complex
+\begin{equation}\label{eq:dyadic-s3-tame-invariant-fox-core}
+\boxed{\quad
+M_0\xrightarrow{(S_M-I,0,0)^t}M_0^3
+\xrightarrow{(a,c,d)\mapsto
+2c+(S_M-I)d}M_0.
+\quad}
+\end{equation}
+
+Put
+\[
+e=(1,0)^t,\qquad
+e_+=(1,1)^t,\qquad
+f=(-1,1)^t=(S_M-I)e.
+\]
+Both $(e_+,e)$ and $(f,e)$
+are unimodular bases of $M_0$.
+The following elementary
+unit operations are sufficient
+to reduce
+\eqref{eq:dyadic-s3-tame-invariant-fox-core}:
+\begin{enumerate}[label=\textnormal{(\roman*)}]
+\item $e\mapsto f$ in $d^0$
+splits off a degree-zero--one
+unit pair, leaving $e_+$
+as a generator of $H^0$;
+\item the input $d=e$ maps
+to $f$ in degree two,
+giving one degree-one--two
+unit pair;
+\item $c=e$ maps to $2e$
+modulo the image of $f$,
+giving one surviving
+two-primary elementary
+pair $\mathbf Z_2\xrightarrow{2}\mathbf Z_2$;
+\item the remaining three
+degree-one coordinates
+are freely generated
+by a $\sigma$-value $e$,
+by $(c,d)=(f,-2e)$,
+and by $(c,d)=(0,e_+)$.
+\end{enumerate}
+Thus the tame-invariant block has
+the strict finite homotopy type
+\begin{equation}\label{eq:dyadic-s3-tame-invariant-elementary}
+\boxed{\quad
+\mathcal J^\bullet(M_0)
+\simeq_{\mathbf Z_2}
+\mathbf Z_2[0]\oplus
+\mathbf Z_2^3[-1]\oplus
+[\mathbf Z_2\xrightarrow{2}
+ \mathbf Z_2]_{[1,2]}.
+\quad}
+\end{equation}
+Together with
+$\mathcal J^\bullet(M_1)\simeq M_1[-1]$,
+the full adjoint marked complex has
+the \emph{analytically derived}
+integral elementary form
+\begin{equation}\label{eq:dyadic-s3-adjoint-elementary-from-tame}
+\boxed{\quad
+\mathcal J^\bullet_\Gamma(M)
+\simeq_{\mathbf Z_2}
+\mathbf Z_2[0]\oplus
+\mathbf Z_2^5[-1]\oplus
+[\mathbf Z_2\xrightarrow{2}
+ \mathbf Z_2]_{[1,2]}.
+\quad}
+\end{equation}
+In particular its degree-one
+Jacobian has \emph{seven unit
+Smith factors and exactly one
+factor of $2$}, recovering
+\eqref{eq:dyadic-s3-jacobian-smith}
+without extracting a numerical
+mod-$4$ minor.  Its degree-zero
+Jacobian has three unit factors,
+and its cohomology is precisely
+\[
+(H^0,H^1,H^2)(\Gamma,M)=
+(\mathbf Z_2,\mathbf Z_2^5,\mathbf F_2).
+\]
+\end{theorem}
+
+\begin{proof}
+All marked differential matrices
+are linear in the coefficient
+representation, so the
+$\mathbf Z_2[S_3]$ splitting
+of Theorem~\ref{thm:dyadic-s3-adjoint-unimodular-splitting}
+gives a strict splitting of
+their cochain complex.
+On $M_1$, the exact identity
+$I+\operatorname{Ad}_U+
+\operatorname{Ad}_{U^2}=0$
+gives the natural norm-zero
+proof of fixed129, with its
+explicit strong contraction.
+
+On $M_0$, the affine coefficient
+action of $\tau$ is trivial.
+For arbitrary crossed-derivation
+values $(a,b,c,d)$,
+the tame relation gives
+$(S_M-2I)b$.  In the wild
+relation the pro-$2$ projections
+of $x_i\tau$ act as the identity
+on each translation, so
+$u_i=x_i\tau$,
+$d_0=d_g=\tau$, and
+$c_0=h_c=1$.  Since
+$g_0=\sigma^2$ has trivial
+linear part on $M_0$,
+conjugation of a translation
+by $g_0$ is trivial.
+Thus
+$h_0=2c+4b$,
+while $u_1^{-1}x_1^\sigma$
+adds $-d-b+S_M^{-1}d$.
+As $S_M^{-1}=S_M$,
+the wild differential is
+$3b+2c+(S_M-I)d$,
+proving
+\eqref{eq:dyadic-s3-tame-invariant-differentials}.
+The row change
+\eqref{eq:dyadic-s3-tame-invariant-row-change}
+then cancels the tame unit.
+The remaining three-generator
+complex is literally the
+pro-$2$ marked Fox cochain
+complex of
+Theorem~\ref{thm:dyadic-strict-nielsen-fox-chain}
+in these coefficients.
+
+For the elementary reduction,
+$(S_M-I)e=f$ and
+$(S_M-I)e_+=0$.
+The image of $d^0$ is the
+primitive rank-one line
+$\mathbf Z_2 f$ in the
+$\sigma$ coordinate, so
+one integral unit pair splits.
+In degree one the $d=e$
+coordinate maps to the
+primitive target vector $f$.
+Eliminating that row changes
+the image of $c=e$ to
+$2e$ in the complementary
+free target quotient.
+The other input coordinates
+give exactly the three free
+cocycles listed in (iv),
+as can be checked by
+$2c+(S_M-I)d=0$.
+All changes use unimodular
+$\mathbf Z_2$ bases; this
+proves
+\eqref{eq:dyadic-s3-tame-invariant-elementary}.
+The direct sum with $M_1[-1]$
+then gives
+\eqref{eq:dyadic-s3-adjoint-elementary-from-tame}.
+Counting its cancelled
+degree-one--two blocks gives
+two tame units plus one
+Fox unit from $M_0$, and
+four unit degree-one--two
+blocks from $M_1$, hence
+seven units and the
+remaining factor $2$.
+The degree-zero--one units
+are one from $M_0$ and
+two from $M_1$, hence three.
+\end{proof}
+
+\begin{corollary}[Complete marked adjoint cocycle and obstruction coordinates]
+\label{cor:dyadic-s3-adjoint-explicit-h1-h2}
+In the marked $S_3$ coefficient basis
+$(U,U^2,V,W)$, every class in
+$H^1(\Gamma,\operatorname{ad}T)$ has
+a unique representative modulo
+coboundaries of the form
+\begin{equation}\label{eq:dyadic-s3-adjoint-normalized-cocycles}
+\boxed{
+\begin{aligned}
+c(\sigma)&=\lambda e\in M_0,\\
+c(\tau)&=0,\\
+c(x_0)&=\mu f+t,\\
+c(x_1)&=-2\mu e+\nu e_++2S_M t,
+\end{aligned}
+\qquad
+\lambda,\mu,\nu\in\mathbf Z_2,\quad
+t\in M_1\cong\mathbf Z_2^2.
+}
+\end{equation}
+Here $e,e_+,f$ are the vectors
+in the $(U,U^2)$ basis from
+Theorem~\ref{thm:dyadic-s3-adjoint-analytic-smith},
+while $S_M$ acts by the same swap
+matrix on either block.
+The parameters
+$(\lambda,\mu,\nu,t)$ form
+an exact integral
+$\mathbf Z_2^5$ basis
+of the global adjoint
+$H^1$.
+
+The top adjoint cohomology
+has exactly one nonzero
+$\mathbf F_2$ class:
+in the reduced $M_0$
+Fox target it is represented
+by $e$ modulo
+$2M_0+(S_M-I)M_0$.
+The ordinary matrix trace
+maps this class to
+$\operatorname{tr}(U)=-1$
+modulo two, hence
+gives its canonical
+nonzero scalar detector.
+The trace annihilates
+$M_1$ and therefore
+locates the top
+obstruction \emph{entirely}
+in the tame-invariant
+summand $M_0$.
+\end{corollary}
+
+\begin{proof}
+The unit tame row forces
+$c(\tau)=0$ for an actual
+cocycle in either summand.
+On $M_1$, the strong
+normalization of
+Theorem~\ref{thm:dyadic-s3-natural-strict-retract}
+gives $(c(\sigma),c(x_0),c(x_1))
+=(0,t,2S_Mt)$.
+On $M_0$, the reduced Fox
+equation $2c+(S_M-I)d=0$
+forces $c=\mu f$ and
+$d=-2\mu e+\nu e_+$.
+The $\sigma$ coordinate is
+defined modulo the primitive
+coboundary line $\mathbf Z_2 f$,
+and so has the unique
+representative $\lambda e$.
+These descriptions produce
+the displayed five parameters.
+The top Fox quotient is
+\[
+M_0/(2M_0+(S_M-I)M_0)
+\cong\mathbf F_2,
+\]
+generated by $e$.
+On $M_0=\mathbf Z_2[U]$,
+matrix trace sends $U$ and
+$U^2$ to $-1$, hence
+annihilates $(S_M-I)M_0$,
+and also annihilates
+$2M_0$ modulo two.
+Its value on $e=U$
+is nonzero.  Since the
+matrices $V,W$ are traceless,
+the detector vanishes on
+$M_1$ and proves the
+final assertion.
+\end{proof}
+
+\begin{theorem}[Integral Shapiro decomposition and top-degree Hecke selection]
+\label{thm:dyadic-s3-adjoint-shapiro-hecke}
+Put $K_2=\mathbf Q_2(\zeta_3)$,
+$F=\mathbf Q_2(\sqrt[3]2)$,
+$L=FK_2$, and let
+$N=G_L\subset H=G_F\subset\Gamma$.
+For the fixed $S_3$ action on
+$M=\operatorname{ad}T$,
+the module decomposition of
+Theorem~\ref{thm:dyadic-s3-adjoint-unimodular-splitting}
+gives the following
+\emph{integral} Shapiro and
+restriction identifications:
+\begin{equation}\label{eq:dyadic-s3-adjoint-shapiro-global-h}
+\boxed{
+\begin{aligned}
+R\Gamma(\Gamma,M_0)&\simeq
+R\Gamma(G_{K_2},\mathbf Z_2),\\
+R\Gamma(\Gamma,M_1)&\simeq
+R\Gamma(\Gamma,T),\\
+R\Gamma(H,M_0)&\simeq
+R\Gamma(N,\mathbf Z_2),\\
+R\Gamma(H,M_1)&\simeq
+R\Gamma(N,\mathbf Z_2).
+\end{aligned}}
+\end{equation}
+The cohomology ledgers are
+\begin{equation}\label{eq:dyadic-s3-adjoint-shapiro-ledgers}
+\begin{array}{c|ccc}
+& H^0&H^1&H^2\\ \hline
+\Gamma,M_0&\mathbf Z_2&\mathbf Z_2^3&\mathbf F_2\\
+\Gamma,M_1&0&\mathbf Z_2^2&0\\
+H,M_0&\mathbf Z_2&\mathbf Z_2^7&\mathbf F_2\\
+H,M_1&\mathbf Z_2&\mathbf Z_2^7&\mathbf F_2 .
+\end{array}
+\end{equation}
+The index-three Sylow idempotent
+$e_H=\tfrac13\operatorname{res}\operatorname{cor}$
+preserves $M_0\oplus M_1$ and
+acts on $H^2(H,M)$ as
+\begin{equation}\label{eq:dyadic-s3-adjoint-top-hecke-projection}
+\boxed{\quad
+H^2(H,M)=\mathbf F_2\oplus\mathbf F_2,
+\qquad
+e_H^{(2)}=
+\begin{pmatrix}1&0\\0&0\end{pmatrix}
+\quad}
+\end{equation}
+with the first coordinate
+the tame-invariant component.
+Likewise its degree-one
+image/kernel decomposition is
+\[
+\begin{array}{c|cc}
+&\operatorname{rank}\operatorname{im}e_H&
+\operatorname{rank}\ker e_H\\ \hline
+H^1(H,M_0)&3&4\\
+H^1(H,M_1)&2&5.
+\end{array}
+\]
+Thus the one surviving global
+two-primary obstruction in
+fixed128 is the
+\emph{odd-index restriction}
+of the trivial-coefficient
+obstruction over
+$K_2=\mathbf Q_2(\zeta_3)$,
+while the entire top class
+from the natural $M_1$
+summand is killed by
+the Hecke/Sylow projector.
+\end{theorem}
+
+\begin{proof}
+The first two Shapiro identities
+follow directly from
+\eqref{eq:dyadic-s3-adjoint-induced-plus-natural}.
+On restriction to $H$,
+the generator $\sigma$ acts
+on both $M_0$ and $M_1$
+by the swap matrix, while
+the wild generators act
+trivially.  The index-two
+kernel of this action
+inside $H$ is $N=G_L$.
+Thus each restricted module
+is the permutation-induced
+lattice $\operatorname{Ind}_N^H
+\mathbf Z_2$, proving the
+remaining two Shapiro identities.
+The degree-one
+and degree-two cohomology
+of a trivial integral
+$\mathbf Z_2$ lattice
+over a dyadic local
+absolute Galois group
+is given by local class
+field theory and Tate
+duality:
+\[
+H^0(G_D,\mathbf Z_2)=\mathbf Z_2,
+\quad H^1(G_D,\mathbf Z_2)
+=\mathbf Z_2^{[D:\mathbf Q_2]+1},
+\quad H^2(G_D,\mathbf Z_2)=\mathbf F_2
+\]
+for $D=K_2,L$, since
+both contain exactly $\mu_2$
+among the $2$-power roots
+of unity.  Combined with
+the natural-$T$ calculation
+of fixed128, these give
+\eqref{eq:dyadic-s3-adjoint-shapiro-ledgers}.
+
+For $M_0$ the ordinary Mackey
+identification
+\[
+\operatorname{Res}_H^\Gamma
+\operatorname{Ind}_{G_{K_2}}^\Gamma
+\mathbf Z_2
+\simeq
+\operatorname{Ind}_N^H\mathbf Z_2
+\]
+holds because $H G_{K_2}=\Gamma$
+and $H\cap G_{K_2}=N$.
+Under Shapiro, restriction
+$\Gamma\to H$ becomes
+the usual restriction
+$G_{K_2}\to N=G_L$.
+Since $[L:K_2]=3$ and
+$3$ is a unit modulo $2$,
+this restriction is an
+isomorphism on the
+one-dimensional
+$H^2(-,\mathbf Z_2)$:
+its local Tate-dual
+effect is multiplication
+by the odd degree three
+on the $\mu_2$ invariant.
+Thus the idempotent
+acts as identity on
+the first $H^2$ component.
+For $M_1$, global
+$H^2(\Gamma,M_1)=0$ by
+the norm-zero calculation,
+so the same idempotent
+annihilates the second
+$H^2$ component.
+This gives
+\eqref{eq:dyadic-s3-adjoint-top-hecke-projection}.
+The degree-one ranks follow
+from the Shapiro ledger
+and the usual
+$\operatorname{cor}\operatorname{res}=3$
+splitting, separately on
+each summand.
+\end{proof}
+
+\begin{warning}[Scope of the analytic tame decomposition]
+\label{warn:dyadic-s3-adjoint-tame-splitting-scope}
+The tame projector $\Pi_0$
+splits the \emph{fixed}
+$S_3$ adjoint coefficient
+lattice and any family
+whose entire coefficient
+action preserves the
+normal $C_3$-isotypic
+decomposition.  On an
+arbitrary universal framed
+deformation of
+$\bar\rho:G_{\mathbf Q_2}\to
+\mathrm{GL}_2(\mathbf F_2)$,
+the wild generator matrices
+need not commute with $\Pi_0$.
+Therefore the decomposition
+must \emph{not} be asserted
+as an equivariant direct
+sum on the full deformation
+ring without additional
+tame-isotypic invariance
+hypotheses.
+
+The analytic computation
+upgrades fixed128 from
+a numerical Smith
+certificate to explicit
+integral cochain
+elementary divisors
+and a top-degree Hecke
+selection \emph{for this
+specific adjoint lattice}.
+It does not select
+canonical minimal generators
+of the rank-five
+Demu\v{s}kin group
+$G_F(2)$, or give
+the universal Schreier
+relation-syzygy chain
+isomorphism required
+for arbitrary non-pro-$2$
+residual families.
+\end{warning}
