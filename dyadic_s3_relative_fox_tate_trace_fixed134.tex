@@ -1,0 +1,1239 @@
+% Fixed134 substantive insert:
+% exact twisted and untwisted marked Fox matrices, integral H2 trace,
+% the degree-shifted Fox Bockstein, mod-four Wu class, and odd-index-3
+% restriction compatibility.  This does not assert general full-group
+% projective Fox completeness outside the two rank-one coefficients.
+
+\subsection{Integral Fox--Tate trace on the three Schreier relation faces}
+\label{subsec:dyadic-f134-relative-fox-tate}
+
+The group-level seven-generator, three-relator
+Schreier presentation of
+Theorem~\ref{thm:dyadic-f133-schreier-pro2-presentation}
+carries a previously hidden source-owned
+\emph{top-cell trace}.  Its unweighted
+sum over the three wild relator cells
+simultaneously detects ordinary
+two-torsion and the cyclotomic integral
+fundamental class.  More importantly,
+for the selected index-three extension
+$F/\mathbf Q_2$, its interaction with
+restriction is an exact multiplication
+by $3$, not only an abstract
+local-duality statement.
+No chosen inverse of the
+pro-$2$ Nielsen automorphism
+is needed to read out these two
+top-degree classes.
+
+Put $P_F=G_F(2)$, with
+$F=\mathbf Q_2(\sqrt[3]2)$, and retain
+the three relators $R_i$ and
+the ordered seven generators
+\[
+(s,a_0,a_1,a_2,v_0,v_1,v_2)
+\]
+of
+\eqref{eq:dyadic-f133-seven-three-presentation}.
+There are two coefficient systems:
+the trivial $\mathbf Z_2$
+and the integral cyclotomic
+module $\mathbf Z_2(1)$.
+Write $\vartheta:P_F\to\mathbf Z_2^\times$
+for the canonical orientation.
+By the fully marked
+Roe--Turturean reciprocity
+normalization \cite{RoeTurtureanGQ2},
+\begin{equation}\label{eq:dyadic-f134-orientation-values}
+\boxed{
+\vartheta(s)=1,\qquad
+\vartheta(a_i)=-1,\qquad
+\vartheta(v_i)=-\frac13
+\quad(i=0,1,2).
+}
+\end{equation}
+These values come from
+$\vartheta(\sigma)=\vartheta(\tau)=1$,
+$\vartheta(x_0)=-1$ and
+$\vartheta(x_1)=-1/3$.
+They descend to the seven-generator
+Schreier quotient and identify
+the cyclotomic character of $G_F(2)$.
+
+\begin{lemma}[Twisted completed Fox rule for the Schreier cube roots]
+\label{lem:dyadic-f134-twisted-cubic-fox}
+Let $D$ be a continuous
+$\vartheta$-crossed
+derivation into
+$\mathbf Z_2(\vartheta)$,
+so that
+\[
+D(gh)=D(g)+\vartheta(g)D(h).
+\]
+For an element $w$
+whose cyclotomic
+value $\vartheta(w)$
+is the indicated
+unit, the continuous
+$1/3$ power obeys
+\begin{equation}\label{eq:dyadic-f134-cuberoot-fox-factors}
+\boxed{
+\begin{array}{c|c|c}
+\vartheta(w)&\vartheta(w^{1/3})&
+D(w^{1/3})/D(w)\\ \hline
+-1&-1&1\\
+-1/27&-1/3&9/7
+\end{array}}
+\end{equation}
+where the ratio denotes
+the scalar multiplying
+\emph{every} generator's
+Fox contribution, not a
+division by a possibly
+zero cocycle value.
+For the actual
+Schreier packets,
+\[
+D(u_{0,i})=D(a_i a_{i+1}a_{i+2}),\qquad
+D(u_{1,i})=
+\frac97D(v_i v_{i+1}v_{i+2}).
+\]
+All coefficients are
+integral in $\mathbf Z_2$.
+\end{lemma}
+
+\begin{proof}
+For an integer $n\ge1$,
+\[
+D(w^n)=
+(1+\vartheta(w)+\cdots+
+\vartheta(w)^{n-1})D(w).
+\]
+Both sides extend
+continuously to
+$n\in\mathbf Z_2$.
+For $n=1/3$, if
+$\vartheta(w)\ne1$,
+the multiplier is
+\[
+\frac{\vartheta(w)^{1/3}-1}
+{\vartheta(w)-1}.
+\]
+For $\vartheta(w)=-1$
+the continuous $1/3$ power
+is again $-1$,
+and the ratio is $1$.
+For $\vartheta(w)=-1/27$
+its unique $1/3$ power
+in $1+4\mathbf Z_2$
+is $-1/3$, giving
+\[
+\frac{-1/3-1}{-1/27-1}
+=\frac97.
+\]
+The numerator/denominator
+interpretation is legitimate
+as a scalar identity
+over $\mathbf Q_2$, and
+the result belongs to
+$\mathbf Z_2$.
+The corresponding
+packet cyclotomic values
+are the products of the
+three marked generator
+values from
+\eqref{eq:dyadic-f134-orientation-values}.
+\end{proof}
+
+\begin{theorem}[The complete three-face Fox matrices in both integral twists]
+\label{thm:dyadic-f134-exact-two-fox-matrices}
+Let
+$\mathcal C_{\rm Sch}^\bullet(P_F,B)$
+be the completed
+three-relator
+Fox cochain complex
+\[
+B\xrightarrow{d^0}B^7
+\xrightarrow{d^1}B^3,
+\]
+for $B=\mathbf Z_2$
+or $\mathbf Z_2(1)$.
+In the ordered
+seven-generator
+coordinate system
+and the ordered
+relation faces $(R_0,R_1,R_2)$,
+the \emph{complete}
+trivial-coefficient
+differentials are
+\begin{equation}\label{eq:dyadic-f134-trivial-fox-matrix}
+\boxed{
+d_{\bf1}^0=0,\qquad
+d_{\bf1}^1=
+\begin{pmatrix}
+0&-2/3&4/3&4/3&2/3&-1/3&-1/3\\
+0&4/3&-2/3&4/3&-1/3&-1/3&2/3\\
+0&4/3&4/3&-2/3&-1/3&2/3&-1/3
+\end{pmatrix}.
+}
+\end{equation}
+The \emph{complete}
+cyclotomic twisted
+differentials are
+\begin{equation}\label{eq:dyadic-f134-twisted-fox-matrix}
+\boxed{
+\begin{aligned}
+d_\vartheta^0(1)
+&=(0,-2,-2,-2,-4/3,-4/3,-4/3)^t,\\
+d_\vartheta^1
+&=
+\begin{pmatrix}
+0&0&-2&2&6/7&-9/7&3/7\\
+0&2&0&-2&3/7&27/7&-30/7\\
+0&-2&2&0&-9/7&-18/7&27/7
+\end{pmatrix}.
+\end{aligned}}
+\end{equation}
+Both are actual
+integral matrices
+over $\mathbf Z_2$,
+and
+\[
+d_{\bf1}^1d_{\bf1}^0
+=d_\vartheta^1d_\vartheta^0=0.
+\]
+The twisted matrix has
+the exact \emph{columnwise}
+trace-zero identity
+\begin{equation}\label{eq:dyadic-f134-cyclotomic-fox-zero-trace}
+\boxed{\qquad
+(1,1,1)d_\vartheta^1=0,
+\qquad
+\det\begin{pmatrix}
+-9/7&3/7\\
+27/7&-30/7
+\end{pmatrix}
+=\frac{27}{7}\in\mathbf Z_2^\times.
+\qquad}
+\end{equation}
+The trivial matrix has
+\[
+(1,1,1)d_{\bf1}^1
+=(0,2,2,2,0,0,0)
+\]
+and a rank-two
+unit minor
+\begin{equation}\label{eq:dyadic-f134-trivial-two-row-unit}
+\det\begin{pmatrix}
+-1/3&-1/3\\
+-1/3&2/3
+\end{pmatrix}
+=-\frac13\in\mathbf Z_2^\times.
+\end{equation}
+These explicit
+relations determine
+the \emph{entire
+top-coboundary images}:
+\begin{equation}\label{eq:dyadic-f134-images-by-trace}
+\boxed{
+\begin{aligned}
+\operatorname{im}d_\vartheta^1
+&=\{q\in\mathbf Z_2^3:
+q_0+q_1+q_2=0\},\\
+\operatorname{im}d_{\bf1}^1
+&=\{q\in\mathbf Z_2^3:
+q_0+q_1+q_2\in2\mathbf Z_2\}.
+\end{aligned}}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The augmented
+trivial matrix is the
+three-by-seven row
+\eqref{eq:dyadic-f133-augmented-three-seven}.
+For the twisted
+matrix, compute each
+$\vartheta$-crossed
+derivation of the three
+explicit group words
+\eqref{eq:dyadic-f133-u-and-d-words}
+and
+\eqref{eq:dyadic-f133-three-wild-relators}.
+Use the inverse rule
+\[
+D(g^{-1})=-\vartheta(g)^{-1}D(g),
+\]
+the product rule,
+and the two cube-root
+factors from
+Lemma~\ref{lem:dyadic-f134-twisted-cubic-fox}.
+The values of the
+intermediate words are
+\[
+\vartheta(u_{0,i})=-1,\quad
+\vartheta(u_{1,i})=-1/3,\quad
+\vartheta(d_i)=1,\quad
+\vartheta(z_i)=-1,\quad
+\vartheta(g)=1.
+\]
+Commutator derivative
+and conjugation then give
+exactly
+\eqref{eq:dyadic-f134-twisted-fox-matrix};
+each relation evaluates
+to cyclotomic value one,
+so the completed Fox
+cochain formula applies.
+
+The two displayed
+$2\times2$ determinants
+are odd $2$-adic units.
+Thus in each complex
+the first two relation
+coordinates can be
+used to generate the
+rank-two trace-zero
+hyperplane integrally.
+For the twisted
+matrix every column
+already lies in that
+hyperplane and the
+unit minor proves
+that the image equals
+it.  For the trivial
+matrix the three
+$v_i$ columns generate
+the trace-zero
+hyperplane and any
+$a_i$ column has trace
+$2$.  Hence the image
+is exactly the full
+preimage of
+$2\mathbf Z_2$
+under the sum map.
+This proves
+\eqref{eq:dyadic-f134-images-by-trace}
+and the cochain identity.
+All asserted fractions
+have odd denominators,
+so there has been
+no inversion of $2$.
+\end{proof}
+
+\begin{theorem}[Primitive top-face trace and a Fox Bockstein degree shift]
+\label{thm:dyadic-f134-top-trace-bockstein-shift}
+Define a single
+integral linear
+functional on the
+three indexed
+wild faces:
+\begin{equation}\label{eq:dyadic-f134-primitive-top-functional}
+\boxed{\qquad
+\operatorname{Tr}_F:
+\mathbf Z_2^3\longrightarrow\mathbf Z_2,
+\qquad
+(q_0,q_1,q_2)\longmapsto q_0+q_1+q_2.
+\qquad}
+\end{equation}
+The same relation-face
+functional induces
+two different
+top-degree isomorphisms:
+\begin{equation}\label{eq:dyadic-f134-top-class-identifications}
+\boxed{
+\begin{aligned}
+H^2(P_F,\mathbf Z_2(1))
+&\xrightarrow[\sim]{\operatorname{Tr}_F}
+\mathbf Z_2,\\
+H^2(P_F,\mathbf Z_2)
+&\xrightarrow[\sim]{\operatorname{Tr}_F\bmod2}
+\mathbf Z/2\mathbf Z.
+\end{aligned}}
+\end{equation}
+Moreover the
+\emph{exact} two
+integral cochain
+homotopy types are
+\begin{equation}\label{eq:dyadic-f134-twisted-untwisted-normal-forms}
+\boxed{
+\begin{aligned}
+\mathcal C_{\rm Sch}^\bullet(P_F,\mathbf Z_2)
+\simeq{}&
+\mathbf Z_2[0]\oplus
+\mathbf Z_2^4[-1]\oplus
+[\mathbf Z_2\xrightarrow{\ 2\ }
+ \mathbf Z_2]_{[1,2]},\\
+\mathcal C_{\rm Sch}^\bullet(P_F,\mathbf Z_2(1))
+\simeq{}&
+[\mathbf Z_2\xrightarrow{\ 2\ }
+ \mathbf Z_2]_{[0,1]}
+\oplus\mathbf Z_2^4[-1]
+\oplus\mathbf Z_2[-2].
+\end{aligned}}
+\end{equation}
+Thus:
+\begin{equation}\label{eq:dyadic-f134-h0h1h2-explicit}
+\boxed{
+\begin{array}{c|ccc}
+&H^0&H^1&H^2\\ \hline
+\mathbf Z_2&
+\mathbf Z_2&
+\mathbf Z_2^4&
+\mathbf Z/2\\
+\mathbf Z_2(1)&
+0&
+\mathbf Z_2^4\oplus\mathbf Z/2&
+\mathbf Z_2 .
+\end{array}}
+\end{equation}
+The unique two-primary
+elementary pair
+moves from
+degrees $(1,2)$
+in the untwisted
+Fox complex to
+degrees $(0,1)$
+in the cyclotomic
+one.  This is a
+literal integral
+Fox--Bockstein
+\emph{degree shift},
+not a rational
+Euler-characteristic
+calculation.
+
+In the minimal
+five-generator Fox
+complex of
+Theorem~\ref{thm:dyadic-f133-integral-schreier-fox-chain},
+the top relation-face
+coordinate induced by
+the chosen primitive
+relation product
+$R_0R_1R_2$ is
+precisely
+$\operatorname{Tr}_F$.
+Its primitiveness is
+visible already
+in the unit minor
+of
+\eqref{eq:dyadic-f134-cyclotomic-fox-zero-trace};
+it does not depend
+on computing the
+nonlinear inverse
+Nielsen word
+$\alpha^{-1}$
+from fixed133.
+\end{theorem}
+
+\begin{proof}
+By
+\eqref{eq:dyadic-f134-images-by-trace},
+the quotient of
+$\mathbf Z_2^3$
+by the twisted
+top coboundaries
+is freely generated
+by the sum map,
+while for trivial
+coefficients its
+quotient is the
+sum modulo two.
+Since the
+seven-generator
+Schreier Fox
+complex is
+integrally chain
+equivalent to the
+genuine rank-five
+Demu\v{s}kin
+resolution by
+Theorem~\ref{thm:dyadic-f133-integral-schreier-fox-chain},
+these quotients
+compute the actual
+continuous local
+$H^2$ groups.
+
+The matrix
+$d_{\bf1}^1$
+has two unit
+Smith factors
+and one factor
+of $2$;
+$d_{\bf1}^0=0$,
+and its integral
+kernel is
+free of rank four.
+This gives the
+first elementary
+decomposition.
+The twisted
+$d_\vartheta^1$
+has two unit
+factors and
+zero third row,
+so its kernel
+is free of rank five.
+The degree-zero
+map has one
+nonzero Smith
+factor $2$,
+because
+\[
+d_\vartheta^0(1)
+=2(0,-1,-1,-1,-2/3,-2/3,-2/3)^t
+\]
+and the vector
+in parentheses
+is primitive
+over $\mathbf Z_2$.
+As $d_\vartheta^1
+d_\vartheta^0=0$,
+this degree-zero
+image belongs
+to the rank-five
+kernel.
+Cancelling the
+two degree-one--two
+unit pairs leaves
+the second
+displayed
+homotopy decomposition.
+The claimed
+cohomology groups
+follow at once.
+
+Under the
+group-level
+Tietze transformation,
+the primitive
+surviving relator
+is the product
+$R_0R_1R_2$
+before the two
+generator substitutions.
+For any crossed
+derivation, the
+cocycle value
+on a product
+of \emph{relation
+words with
+cyclotomic value one}
+is the sum of
+its values on the
+individual words.
+This makes the
+induced degree-two
+cochain coordinate
+literally
+$q_0+q_1+q_2$.
+The same
+additivity holds
+for the trivial
+coefficient action.
+The two primitive
+relation directions
+have been
+removed by
+integral Nielsen
+pivots, so the
+top sum remains
+the complete
+surviving face
+coordinate.
+\end{proof}
+
+\begin{corollary}[The Fox--Wu class in the marked five-generator basis]
+\label{cor:dyadic-f134-marked-wu}
+Let
+$(\chi_s,\chi_{a_0},
+\chi_{a_1},\chi_{a_2},
+\chi_{v_2})$
+be the mod-$2$
+basis dual to
+the five
+minimal generators
+from fixed133.
+The restriction of
+the canonical
+dyadic cyclotomic
+orientation
+has the explicit
+mod-four Wu class
+\begin{equation}\label{eq:dyadic-f134-marked-wu-class}
+\boxed{\qquad
+w_F=
+\frac{\vartheta-1}{2}\bmod2
+=\chi_{a_0}+
+\chi_{a_1}+\chi_{a_2}.
+\qquad}
+\end{equation}
+For every
+$\chi\in H^1(P_F,\mathbf F_2)$
+the full quadratic
+Fox cup form of
+\eqref{eq:dyadic-f133-cup-rank-five}
+satisfies
+\begin{equation}\label{eq:dyadic-f134-fox-wu-compatibility}
+\boxed{\qquad
+\beta_1(\chi)=
+\chi\smile\chi=
+\chi\smile w_F.
+\qquad}
+\end{equation}
+This is a
+source-native
+compatibility
+between the
+marked reciprocity
+orientation and
+the surviving
+relation's
+nonalternating
+Magnus symbol.
+\end{corollary}
+
+\begin{proof}
+In the
+seven-generator
+Schreier marking,
+$\vartheta(s)=1$,
+$\vartheta(a_i)=-1$,
+and
+$\vartheta(v_i)=-1/3
+\equiv1\bmod4$.
+The two
+Nielsen-eliminated
+$v$ directions
+are relator
+words and have
+cyclotomic value
+one, so the
+same character
+values descend
+to the five
+minimal generators.
+Reducing
+$(\vartheta-1)/2$
+modulo two gives
+the displayed
+sum of the
+three $a_i$
+dual coordinates.
+The mod-two
+Fox cup matrix
+of
+\eqref{eq:dyadic-f133-cup-rank-five}
+has diagonal
+ones exactly
+in those
+three coordinates
+and has its
+remaining
+hyperbolic block
+in $(s,v_2)$.
+Therefore
+$\chi\smile\chi$
+equals
+$\chi\smile w_F$
+for every $\chi$.
+The identification
+of $\beta_1$
+with the
+degree-one cup
+square is
+the standard
+mod-two
+Bockstein identity,
+also proved in
+Theorem~\ref{thm:dyadic-fox-wu-bockstein}.
+\end{proof}
+
+\begin{theorem}[The three-fold top-cell restriction diagram]
+\label{thm:dyadic-f134-top-transfer-three}
+Let $\Gamma=G_{\mathbf Q_2}$,
+$H=G_F$,
+$[F:\mathbf Q_2]=3$,
+and use the actual
+Roe--Turturean marked
+generators
+$(\sigma,\tau,x_0,x_1)$.
+For both rank-one
+coefficient systems
+$B=\mathbf Z_2$
+and $B=\mathbf Z_2(1)$,
+let
+\[
+\mathcal J_\Gamma^\bullet(B):
+\quad B\to B^4\to B^2
+\]
+be the marked
+two-face \emph{formal}
+Fox coefficient
+complex.
+In source-generator
+coordinates
+$(\sigma,\tau,x_0,x_1)$
+and face order
+(tame,wild),
+its literal
+completed Fox
+differentials are
+\begin{equation}\label{eq:dyadic-f134-full-marked-two-twist-rows}
+\boxed{
+\begin{aligned}
+d_{\Gamma,\bf1}^0&=0,&
+d_{\Gamma,\bf1}^1&=
+\begin{pmatrix}
+0&-1&0&0\\
+0&3&2&0
+\end{pmatrix},
+\\
+d_{\Gamma,\vartheta}^0(1)
+&=(0,0,-2,-4/3)^t,&
+d_{\Gamma,\vartheta}^1&=
+\begin{pmatrix}
+0&-1&0&0\\
+0&-3&0&0
+\end{pmatrix}.
+\end{aligned}}
+\end{equation}
+Define the global
+face functionals
+\begin{equation}\label{eq:dyadic-f134-global-marked-top-readout}
+\boxed{
+\begin{aligned}
+\operatorname{Tr}_{\Gamma,\bf1}(t,w)
+&=w+3t\pmod2,\\
+\operatorname{Tr}_{\Gamma,\vartheta}(t,w)
+&=w-3t\in\mathbf Z_2.
+\end{aligned}}
+\end{equation}
+They annihilate
+the appropriate
+degree-one
+Fox coboundaries,
+and induce
+isomorphisms from
+the marked
+two-face cokernels
+onto
+$\mathbf Z/2$
+and
+$\mathbf Z_2$,
+respectively.
+
+After normalizing
+a global top
+cochain to have
+zero tame-face
+coordinate, the
+index-three
+Schreier pullback
+of its wild-face
+value $c$ is the
+actual triple
+\begin{equation}\label{eq:dyadic-f134-three-face-restriction}
+\boxed{\qquad
+c\longmapsto(c,c,c)
+\quad\text{on }
+(R_0,R_1,R_2).
+\qquad}
+\end{equation}
+Hence the
+intrinsic local
+degree-two
+restriction
+satisfies, in
+the primitive
+marked top-cell
+readouts,
+\begin{equation}\label{eq:dyadic-f134-trace-restriction-three}
+\boxed{
+\begin{aligned}
+\operatorname{Tr}_{F,\vartheta}
+\circ\operatorname{res}_{F/\mathbf Q_2}
+&=
+3\operatorname{Tr}_{\Gamma,\vartheta},\\
+(\operatorname{Tr}_{F,\bf1}\bmod2)
+\circ\operatorname{res}_{F/\mathbf Q_2}
+&=
+3(\operatorname{Tr}_{\Gamma,\bf1}\bmod2)
+=
+\operatorname{Tr}_{\Gamma,\bf1}\bmod2.
+\end{aligned}}
+\end{equation}
+In particular the
+top cyclotomic
+restriction
+is an \emph{integral
+isomorphism}
+because $3$ is
+a unit at $2$.
+After the usual
+local fundamental
+class normalization,
+the same equation
+is the classical
+Tate invariant
+formula
+\begin{equation}\label{eq:dyadic-f134-local-tate-trace-normalization}
+\operatorname{inv}_{F}
+(\operatorname{res}_{F/\mathbf Q_2}x)
+=
+3\operatorname{inv}_{\mathbf Q_2}(x),
+\qquad
+\operatorname{inv}_{\mathbf Q_2}
+(\operatorname{cor}_{F/\mathbf Q_2}y)
+=
+\operatorname{inv}_{F}(y).
+\end{equation}
+The marked top-cell
+readouts are normalized
+by the chosen
+relative relation
+faces; identifying
+their generators
+with a given
+arithmetically
+normalized
+fundamental class
+is still a choice
+of a $2$-adic
+unit sign/scale.
+
+For precisely these
+two rank-one
+coefficient modules,
+the \emph{formal}
+full marked
+two-face complex
+has the same
+cohomology ledger
+as the intrinsic
+local Galois
+cochain complex:
+\begin{equation}\label{eq:dyadic-f134-global-rankone-ledgers}
+\begin{array}{c|ccc}
+&H^0&H^1&H^2\\ \hline
+\mathcal J_\Gamma(\mathbf Z_2)
+&\mathbf Z_2&\mathbf Z_2^2&\mathbf Z/2\\
+\mathcal J_\Gamma(\mathbf Z_2(1))
+&0&\mathbf Z_2^2\oplus\mathbf Z/2&
+\mathbf Z_2 .
+\end{array}
+\end{equation}
+The statement is
+\emph{coefficient-specific}:
+it does not assert
+that the naked
+two-relator marked
+complex is an
+exact projective
+resolution for
+all continuous
+$\Gamma$-modules.
+\end{theorem}
+
+\begin{proof}
+For a unit-valued
+cyclotomic character,
+every continuous
+crossed derivation
+to $\mathbf Z_2(1)$
+annihilates the
+pro-odd part of
+any procyclic
+source element.
+More generally,
+this holds for
+any rank-one
+$\mathbf Z_2$
+module whose
+action has
+pro-$2$ image:
+on the pro-odd
+part the action
+is trivial,
+and a continuous
+homomorphism
+from a pro-odd
+group to the
+additive pro-$2$
+group is zero.
+Consequently
+\begin{equation}\label{eq:dyadic-f134-omega2-crossed-derivation}
+\boxed{\qquad
+D(g^{\omega_2})=D(g)
+\qquad}
+\end{equation}
+when evaluating
+the completed
+marked Fox
+derivatives in
+either of these
+two coefficient
+modules.
+This \emph{does
+not} identify
+the actual
+group words
+$g^{\omega_2}$
+and $g$;
+it is only
+a statement
+about the
+specialized
+crossed derivation.
+
+For trivial
+coefficients,
+evaluating the
+literal tame
+and wild
+Roe--Turturean
+relations yields
+the rows
+$(0,-1,0,0)$
+and $(0,3,2,0)$.
+For the
+cyclotomic
+character, use
+\[
+\vartheta(\sigma)
+=\vartheta(\tau)=1,\quad
+\vartheta(x_0)=-1,\quad
+\vartheta(x_1)=-1/3
+\]
+and the same
+specialized
+$\omega_2$
+derivation lemma.
+Substitution in
+the auxiliary
+wild source words
+gives the rows
+$(0,-1,0,0)$
+and $(0,-3,0,0)$.
+The respective
+principal degree-zero
+coboundaries
+are
+$d^0=(\vartheta(g)-1)_g$,
+proving
+\eqref{eq:dyadic-f134-full-marked-two-twist-rows}.
+
+For trivial
+coefficients
+the tame row
+contains a unit,
+and the
+remaining wild
+row has one
+invariant factor
+$2$.  Its
+cokernel is
+$\mathbf Z/2$,
+detected by
+$w+3t$ mod two.
+For twisted
+coefficients
+the wild row
+is exactly
+three times
+the tame row,
+so the cokernel
+is freely
+generated by
+$w-3t$.
+The integral
+degree-zero
+map for the
+twist is twice
+a primitive
+vector; the
+usual elementary
+divisor argument
+therefore gives
+the ledgers
+\eqref{eq:dyadic-f134-global-rankone-ledgers}.
+They agree with
+local class
+field theory,
+integral Kummer
+theory, and Tate
+duality for
+$\mathbf Q_2$.
+
+The three-sheet
+covering has
+one copy of
+the genuine
+marked wild
+relation face
+above each
+coset representative
+$t_i=\tau^i$.
+Both coefficient
+actions send
+$\tau$ to one.
+Therefore a
+top cochain
+whose tame
+coordinate
+has been killed
+by the unit
+tame relation
+pivot and whose
+wild coordinate
+is $c$ pulls
+back to equal
+values $c$
+on all three
+lifted wild
+faces.
+The three
+tame-face
+cancellations
+and the two
+primitive wild
+Tietze
+cancellations
+preserve their
+total face
+coordinate,
+by the relation
+product
+$R_0R_1R_2$
+in fixed133.
+The resulting
+top trace is
+$3c$, proving
+\eqref{eq:dyadic-f134-trace-restriction-three}
+on the formal
+face cohomology
+quotients.
+
+For the actual
+Galois groups,
+the canonical
+cohomological
+restriction and
+corestriction
+satisfy
+$\operatorname{cor}
+\operatorname{res}=3$
+because $[F:\mathbf Q_2]=3$.
+The local
+fundamental
+class comparison
+is normalized
+by the standard
+Tate invariants,
+which obey
+\eqref{eq:dyadic-f134-local-tate-trace-normalization}
+\cite{NSW}.
+The marked
+cover comparison
+of fixed133
+is an actual
+Fox resolution
+of $H(2)$,
+so its
+top-face
+readout is
+primitive and
+nonzero.
+The explicit
+restriction of
+the global
+wild face
+therefore has
+nonzero primitive
+image and is
+an isomorphism
+after inverting
+the odd factor
+$3$.
+This reconciles
+the marked
+face normalization
+with the
+intrinsic
+local Galois
+invariant.
+No claim of
+a universally
+exact full-$\Gamma$
+group-algebra
+two-relator
+resolution has
+been made.
+\end{proof}
+
+\begin{corollary}[Fox--Tate finite certificate without inverse Nielsen words]
+\label{cor:dyadic-f134-primitive-trace-certificate}
+For the selected
+index-three
+$S_3$ Sylow
+preimage
+$H=G_{\mathbf Q_2(\sqrt[3]2)}$,
+the following
+finite marked
+source data
+determine the
+two integral
+top cohomology
+readouts,
+the ordinary
+and cyclotomic
+Bockstein
+placement, and
+the index-three
+restriction
+factor:
+\begin{equation}\label{eq:dyadic-f134-final-trace-certificate}
+\boxed{
+\begin{gathered}
+(d_{\bf1}^0,d_{\bf1}^1)
+=(0,J_{\bf1}),\\
+(d_{\vartheta}^0,d_{\vartheta}^1)
+=\bigl(
+(0,-2,-2,-2,-4/3,-4/3,-4/3)^t,
+J_{\vartheta}\bigr),\\
+\operatorname{Tr}_F=(1,1,1),
+\qquad
+\operatorname{Tr}_F\operatorname{res}
+=3\operatorname{Tr}_{\mathbf Q_2}.
+\end{gathered}}
+\end{equation}
+All displayed
+matrices are
+integral over
+$\mathbf Z_2$;
+the only
+denominators are
+odd units.
+The certificate
+recovers
+$H^2(H,\mathbf Z_2)
+=\mathbf F_2$
+and
+$H^2(H,\mathbf Z_2(1))
+=\mathbf Z_2$
+\emph{directly}
+from the three
+Schreier relation
+faces, without
+computing the
+full nonlinear
+Nielsen inverse
+$\alpha^{-1}$.
+It complements,
+rather than
+replaces, the
+group-level
+Schreier
+syzygy closure
+of fixed133.
+\end{corollary}
+
+\begin{proof}
+Theorem~\ref{thm:dyadic-f134-exact-two-fox-matrices}
+gives the two
+finite integral
+Fox rows and their
+top-coboundary
+images.
+Theorem~\ref{thm:dyadic-f134-top-trace-bockstein-shift}
+gives the primitive
+relation-face
+trace and both
+Bockstein placements.
+Theorem~\ref{thm:dyadic-f134-top-transfer-three}
+supplies the
+index-three
+compatibility.
+All source data
+are finite
+integral matrices
+and marked
+coset words;
+the inverse
+Nielsen relation
+is not required
+for these
+particular
+cohomological
+readouts.
+\end{proof}
+
+\begin{warning}[Scope of the relative Fox--Tate trace]
+\label{warn:dyadic-f134-rankone-trace-scope}
+The global
+two-relation
+marked complex
+is used
+\emph{only}
+for the two
+rank-one
+coefficient
+systems
+$\mathbf Z_2$
+and
+$\mathbf Z_2(1)$.
+On the
+index-three
+pro-$2$
+Schreier cover,
+the fixed133
+seven-generator
+complex is a
+genuine
+group-cohomological
+Fox resolution;
+its integral
+top trace is
+therefore exact.
+For a general
+higher-rank
+Galois family
+one cannot
+identify the
+complete
+full-group
+marked face
+cokernel with
+$H^2$ without
+checking the
+appropriate
+projective
+syzygy
+conditions.
+Nor does the
+sum-of-faces
+operation
+make a
+non-multiplicative
+corestriction
+into a
+strict
+cup-algebra
+homomorphism.
+The present
+certificate
+closes the
+two specified
+rank-one
+Fox--Tate
+readouts
+and their
+odd-index
+restriction
+normalization,
+not the
+global
+presentation-independent
+Fox gauge.
+\end{warning}
