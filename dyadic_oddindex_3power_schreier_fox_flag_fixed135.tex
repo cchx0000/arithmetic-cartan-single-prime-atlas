@@ -1,0 +1,2340 @@
+% Fixed135 standalone substantive section.
+% A 3-power tame radical tower; uniform odd-index Fox coefficient
+% matrix, exact primitive top-face parity, 9-sheet determinant audit,
+% marked finite-wreath group-level Nielsen/Tietze reduction, and
+% canonical nested transfer/idempotent flags.
+
+\subsection{Three-power odd-index towers: actual Schreier relators,
+primitive Fox parity, and strict nested Hecke flags}
+\label{subsec:dyadic-f135-3power-tower}
+
+The index-three comparison of fixed133--fixed134
+is the first stage of a genuinely recursive
+odd-index phenomenon.  To test the difference
+between a \emph{chosen} finite-index Fox gauge
+and a \emph{canonical} higher transfer operation,
+we use the tower
+\[
+K_0=\mathbf Q_2,\qquad
+K_r=\mathbf Q_2(\beta_r),\quad
+\beta_r^{3^r}=2,\quad
+\beta_{r-1}=\beta_r^3,\qquad r\ge1.
+\]
+Every step has index three,
+and the composite degree is
+$m_r=3^r$.
+On the one hand, the full marked
+two-relator source has a recursively
+computable, genuinely integral
+$m_r$-sheet Schreier--Fox carrier.
+Its trivial-coefficient Fox matrix
+has one explicit parity obstruction
+and no hidden higher integral
+elementary divisor.
+On the other hand, the canonical
+permutation module of the tower
+admits a \emph{transversal-independent}
+flag of \emph{strictly commuting}
+odd-index idempotents.
+In the first new nine-sheet stage,
+these produce the three integral
+ranks $1,2,6$.
+The two results give a
+concrete extension of the
+fixed134 comparison while
+distinguishing nested-cover
+coherence from the stronger
+nonnested or globally preferred
+minimal-Fox problem.
+
+Write
+\[
+\Gamma=G_{\mathbf Q_2},\qquad
+H_r=G_{K_r},\qquad
+m=3^r,\qquad
+\mathscr X_m=H_r\backslash\Gamma .
+\]
+For this subsection only,
+indices of the tame-root sheets
+belong to $\mathbf Z/m$.
+The polynomial $X^m-2$
+is Eisenstein over $\mathbf Q_2$.
+The $m$th roots of unity generate
+an unramified extension of
+degree
+\[
+f_r=\operatorname{ord}_{m}(2)
+=2\cdot3^{r-1},
+\]
+and the Galois closure
+$K_r(\zeta_m)$ has
+the tame affine group
+\begin{equation}\label{eq:dyadic-f135-tame-affine-group}
+\boxed{\quad
+D_m=C_m\rtimes C_{f_r},\qquad
+\tau:j\longmapsto j+1,\qquad
+\sigma:j\longmapsto u_mj,\quad
+2u_m\equiv1\pmod m.
+\quad}
+\end{equation}
+Here $\sigma$ has the geometric
+Frobenius normalization
+$\tau^\sigma=\tau^2$ of
+Roe--Turturean
+\cite{RoeTurtureanGQ2}.
+The permutation action
+of $\sigma$ has order
+$f_r$ and its pro-$2$
+part has order exactly
+two:
+\begin{equation}\label{eq:dyadic-f135-tame-involution}
+\boxed{\qquad
+u_m^{3^{r-1}}\equiv-1\pmod m.
+\qquad}
+\end{equation}
+
+\begin{lemma}[The actual $m$-sheet tame root quotient]
+\label{lem:dyadic-f135-tame-affine-root-quotient}
+For every $r\ge1$,
+$[K_r:\mathbf Q_2]=3^r$,
+the Galois closure described
+above has group $D_m$,
+and the marked wild generators
+$x_0,x_1$ map to the identity
+in this tame quotient.
+In the ordered nine-sheet
+case $m=9$, the marked
+permutations are explicitly
+\begin{equation}\label{eq:dyadic-f135-nine-tame-permutations}
+\boxed{\quad
+\tau=(0\,1\,2\,3\,4\,5\,6\,7\,8),\qquad
+\sigma:j\mapsto5j\bmod9,\qquad
+f_2=6.
+\quad}
+\end{equation}
+The intermediate quotient
+$\mathscr X_9\to\mathscr X_3$
+is $j\mapsto j\bmod3$.
+\end{lemma}
+
+\begin{proof}
+Eisenstein's criterion
+gives the odd degree
+$3^r$ and total tame
+ramification.
+Since $m$ is odd,
+the extension generated
+by $\zeta_m$ is
+unramified, and its
+degree is
+$\operatorname{ord}_m(2)$.
+The fact that $2$ is a
+primitive root modulo
+each power of three
+gives
+$\operatorname{ord}_{3^r}(2)
+=2\cdot3^{r-1}$.
+The finite tame Galois
+closure is generated
+by the translations of
+the roots
+$\beta_r\zeta_m^j$
+and Frobenius on
+$\zeta_m$, giving
+\eqref{eq:dyadic-f135-tame-affine-group}.
+Its wild inertia is
+trivial, so the
+marked wild generators
+map to the identity.
+The congruence
+$2^{3^{r-1}}\equiv-1
+\pmod{3^r}$
+gives
+\eqref{eq:dyadic-f135-tame-involution}.
+The nine-sheet
+formula and reduction
+modulo three follow
+immediately.
+\end{proof}
+
+Let $V_m=\mathbf Z_2^{\,m}$
+be the finite coset
+permutation lattice.
+Denote the permutation
+matrices of
+\eqref{eq:dyadic-f135-tame-affine-group}
+by $\Sigma_m,\Upsilon_m$.
+Put
+\begin{equation}\label{eq:dyadic-f135-coset-projector-and-augmentation}
+\boxed{
+P_m=\frac1m\sum_{j=0}^{m-1}\Upsilon_m^j
+=\frac1m\mathbf1_m\mathbf1_m^t,
+\qquad
+Q_m=I_m-P_m.
+}
+\end{equation}
+Both are integral
+idempotents over
+$\mathbf Z_2$.
+They commute with
+the full tame affine
+permutation action.
+
+\begin{theorem}[Uniform explicit $3^r$-sheet marked Fox differential]
+\label{thm:dyadic-f135-uniform-coinduced-fox}
+Let
+$\mathcal J_m^\bullet$
+be the \emph{literal}
+two-relator marked
+coefficient complex
+of the
+Roe--Turturean
+source evaluated
+in the coset
+permutation module
+$V_m$.
+In cochain
+degrees $0,1,2$
+it has free terms
+\[
+V_m\longrightarrow
+V_m^4\longrightarrow
+V_m^2.
+\]
+Write generator
+cochains as
+$(a,b,c,d)$ in
+the order
+$(\sigma,\tau,x_0,x_1)$,
+and relation cochains
+as (tame,wild).
+The complete
+integral differential
+matrices are
+\begin{equation}\label{eq:dyadic-f135-uniform-fox-differentials}
+\boxed{
+\begin{aligned}
+d_m^0(v)&=
+\bigl(
+(\Sigma_m-I_m)v,
+(\Upsilon_m-I_m)v,
+0,0\bigr),\\
+d_m^1(a,b,c,d)
+&=
+\left(
+\begin{aligned}
+&\Sigma_m^{-1}
+(\Upsilon_m-I_m)a\\
+&\quad+
+(\Sigma_m^{-1}-I_m-\Upsilon_m)b,
+\end{aligned}\right.\\[-2pt]
+&\hspace{3.5em}
+\left.
+\begin{aligned}
+&3P_m b+(4P_m-2I_m)c\\
+&\quad+
+(\Sigma_m^{-1}-P_m)d
+\end{aligned}
+\right).
+\end{aligned}}
+\end{equation}
+All coefficients belong to
+$\mathbf Z_2$:
+the only denominator
+is the odd unit $m$.
+The matrices satisfy
+$d_m^1d_m^0=0$
+\emph{exactly}.
+For $m=3$ they specialize
+to the coinduced
+fixed133 Fox row.
+For $m=9$ they give an
+explicit $18\times36$
+matrix, rather than
+a merely existential
+finite-cover carrier.
+\end{theorem}
+
+\begin{proof}
+Evaluate each marked
+word on the affine
+semidirect group
+$V_m\rtimes D_m$,
+with multiplication
+\[
+(A,v)(B,w)
+=(AB,v+Aw).
+\]
+The residual tame
+permutations have
+orders $m$ and
+$f_r=2\cdot3^{r-1}$.
+For a lift
+$(\Upsilon_m,b+c)$
+of the product
+$x_0\tau$,
+the $2$-primary
+idempotent power
+removes its
+odd permutation
+part and leaves
+the pure translation
+\[
+(x_0\tau)^{\omega_2}
+=(I_m,P_m(b+c)).
+\]
+The analogous formula
+for $x_1\tau$ is
+$(I_m,P_m(b+d))$.
+Because
+$f_r$ has exactly
+one factor of two,
+the $2$-primary
+part of
+$(\Sigma_m,a)$
+has permutation
+of order two.
+Its square,
+denoted $g_0$ in
+the marked wild
+words, is a pure
+translation.
+Therefore it
+centralizes all
+wild source
+translations.
+The auxiliary
+marked wild words
+reduce in this
+affine evaluation
+to
+\[
+d_0=P_m(b+c)-c,\qquad
+c_0=h_c=1,\qquad
+h_0=2c+4d_0.
+\]
+Finally
+$x_1^\sigma$
+evaluates to the
+translation
+$\Sigma_m^{-1}d$.
+Consequently the
+wild relation
+$h_0u_1^{-1}
+x_1^\sigma c_0$
+has translation
+\[
+2c+4(P_m(b+c)-c)
+-P_m(b+d)+\Sigma_m^{-1}d,
+\]
+which simplifies
+to the second
+component of
+\eqref{eq:dyadic-f135-uniform-fox-differentials}.
+The tame relation
+$\sigma^{-1}\tau
+\sigma\tau^{-2}$
+gives the first
+component by the
+crossed-derivation
+rule.
+The ordinary
+Fox--crossed-derivation
+identity makes this
+exactly the
+completed marked
+coefficient
+differential.
+Since each relation
+is the identity at
+the residual coset
+permutation
+representation,
+the principal
+coboundary satisfies
+$d_m^1d_m^0=0$.
+This may also be
+checked by the
+matrix relation
+$\Sigma_m^{-1}
+\Upsilon_m\Sigma_m
+=\Upsilon_m^2$
+and
+$P_m\Upsilon_m=P_m$.
+\end{proof}
+
+Define the integral
+\emph{relative
+top-face trace}
+on the
+$2m$-dimensional
+marked relation
+space by
+\begin{equation}\label{eq:dyadic-f135-uniform-top-face-parity}
+\boxed{\quad
+\Lambda_m(t,w)
+=3\sum_{i=0}^{m-1}t_i
+ +\sum_{i=0}^{m-1}w_i,
+\qquad (t,w)\in V_m^2 .
+\quad}
+\end{equation}
+It is important
+that $\Lambda_m$
+is a functional
+on the \emph{actual
+two-face marked
+cover}, not the
+fixed132
+coefficient-exchange
+Laplacian.
+
+\begin{theorem}[Exact analytic image and the unique dyadic Smith factor]
+\label{thm:dyadic-f135-analytic-smith-parity}
+For every $m=3^r$,
+the complete
+image of the
+marked Fox differential
+\eqref{eq:dyadic-f135-uniform-fox-differentials}
+is the \emph{exact}
+index-two sublattice
+\begin{equation}\label{eq:dyadic-f135-image-is-parity-kernel}
+\boxed{\qquad
+\operatorname{im}d_m^1
+=\bigl\{(t,w)\in
+\mathbf Z_2^{2m}:
+\Lambda_m(t,w)\in2\mathbf Z_2
+\bigr\}.
+\qquad}
+\end{equation}
+More precisely, set
+\begin{equation}\label{eq:dyadic-f135-discrete-anti-difference}
+\boxed{
+\mathsf R_m:=
+\frac1m\sum_{j=0}^{m-1}
+j\,\Upsilon_m^j,
+\qquad
+(\Upsilon_m-I_m)\mathsf R_m
+=Q_m.
+}
+\end{equation}
+For any target
+$(t,w)$ satisfying
+the parity condition,
+the following \emph{literal
+integral} source
+is a right inverse
+to the face
+differential on
+that target:
+\begin{equation}\label{eq:dyadic-f135-exact-face-solver}
+\boxed{
+\begin{aligned}
+a&=\mathsf R_m
+ \Sigma_m Q_m t,\\
+b&=-P_m t,\\
+c&=\tfrac12P_m(w+3t),\\
+d&=\Sigma_m Q_m w.
+\end{aligned}
+\qquad
+d_m^1(a,b,c,d)=(t,w).
+}
+\end{equation}
+The factor
+$1/2$ in the
+\emph{notation}
+for $c$ is not
+an inversion
+of two in the
+coefficient ring:
+$P_m(w+3t)$ is
+already divisible
+by two precisely
+under the
+displayed parity
+hypothesis.
+
+Consequently
+the \emph{integral
+Smith invariants}
+of $d_m^1$ are
+\begin{equation}\label{eq:dyadic-f135-all-3power-smith}
+\boxed{\quad
+\operatorname{SNF}_{\mathbf Z_2}(d_m^1)
+=(\underbrace{1,\dots,1}_{2m-1},2)
+\quad}
+\end{equation}
+with the remaining
+$4m-2m$ source
+columns zero.
+Equivalently,
+$\operatorname{rank}_{\mathbf F_2}
+(d_m^1\bmod2)=2m-1$
+and
+\[
+H^2(\mathcal J_m^\bullet)
+\cong\mathbf F_2,
+\quad
+[q]\longmapsto
+\Lambda_m(q)\bmod2.
+\]
+The degree-zero
+map has exactly
+$m-1$ integral
+unit Smith factors,
+so the complete
+formal cohomology
+ledger is
+\begin{equation}\label{eq:dyadic-f135-formal-m-cohomology}
+\boxed{\quad
+H^0(\mathcal J_m^\bullet)=
+\mathbf Z_2,\qquad
+H^1(\mathcal J_m^\bullet)=
+\mathbf Z_2^{m+1},\qquad
+H^2(\mathcal J_m^\bullet)=
+\mathbf F_2.
+\quad}
+\end{equation}
+These are
+\emph{analytically
+derived}, and
+do not rely on
+postulating an
+unseen higher
+Fox syzygy.
+Their
+identification
+with the actual
+field cohomology
+is addressed by
+the group-level
+Schreier theorem
+below.
+\end{theorem}
+
+\begin{proof}
+Write $\mathbf1^t$
+for the sum
+of coordinates.
+Every tame coset
+permutation preserves
+this functional,
+so
+\[
+\mathbf1^tP_m
+=\mathbf1^t,\quad
+\mathbf1^tQ_m=0,\quad
+\mathbf1^t\Sigma_m^{-1}
+=\mathbf1^t,\quad
+\mathbf1^t\Upsilon_m
+=\mathbf1^t.
+\]
+Applying
+$\Lambda_m$ to
+\eqref{eq:dyadic-f135-uniform-fox-differentials}
+then gives
+\begin{equation}\label{eq:dyadic-f135-face-trace-boundary}
+\boxed{\quad
+\Lambda_m d_m^1(a,b,c,d)
+=2\sum_i c_i.
+\quad}
+\end{equation}
+Thus the
+image is contained
+in the asserted
+parity sublattice.
+
+The finite
+geometric-sum
+identity
+\[
+(\Upsilon_m-I_m)
+\sum_{j=0}^{m-1}
+j\Upsilon_m^j
+=
+mI_m-\sum_{j=0}^{m-1}
+\Upsilon_m^j
+\]
+proves
+\eqref{eq:dyadic-f135-discrete-anti-difference}.
+Because $m$ is odd,
+$\mathsf R_m$
+is integral,
+and
+$\Upsilon_m-I_m$
+is invertible
+on the augmentation
+summand $Q_mV_m$.
+For any target
+with even
+$\Lambda_m$,
+the coefficient
+$\tfrac12P_m(w+3t)$
+belongs to
+$\mathbf Z_2^m$,
+since $m$ is odd
+and every
+coordinate of
+the constant
+vector $P_m(w+3t)$
+is $\Lambda_m(t,w)/m$.
+Substitute the
+four source
+formulas of
+\eqref{eq:dyadic-f135-exact-face-solver}.
+In the tame row,
+\[
+\Sigma_m^{-1}
+(\Upsilon_m-I_m)
+\mathsf R_m\Sigma_mQ_mt
+=Q_mt,
+\]
+and
+$(\Sigma_m^{-1}-I_m-\Upsilon_m)
+(-P_mt)=P_mt$.
+The tame output
+is therefore $t$.
+In the wild row,
+\[
+3P_mb=-3P_mt,\quad
+(4P_m-2I_m)c
+=P_m(w+3t),\quad
+(\Sigma_m^{-1}-P_m)d
+=Q_mw.
+\]
+The wild output
+is $w$.
+This proves the
+reverse inclusion
+and the exact
+image formula.
+
+The parity
+functional is
+primitive, so
+its kernel
+modulo two
+has index two.
+Therefore the
+cokernel of
+$d_m^1$ is
+exactly $\mathbf F_2$,
+and the only
+nonunit Smith
+factor is $2$;
+the mod-two
+rank is $2m-1$.
+For the
+degree-zero map,
+the $\tau$
+component is
+$\Upsilon_m-I_m$,
+whose restriction
+to $Q_mV_m$
+is invertible
+by
+\eqref{eq:dyadic-f135-discrete-anti-difference}.
+Its kernel
+is exactly the
+constant line.
+It follows that
+$d_m^0$ has
+$m-1$ unit
+factors and a
+saturated image
+in $\ker d_m^1$.
+The remaining
+degree-one
+cohomology is
+free of rank
+$4m-2m-(m-1)=m+1$,
+giving
+\eqref{eq:dyadic-f135-formal-m-cohomology}.
+\end{proof}
+
+\begin{corollary}[The first new nine-sheet determinant certificate]
+\label{cor:dyadic-f135-nine-minor-certificate}
+At $m=9$ put
+\[
+\Sigma=\Sigma_9,\quad
+\Upsilon=\Upsilon_9,\quad
+J_9=\mathbf1_9\mathbf1_9^t.
+\]
+Multiply the bottom
+nine wild-face
+rows of $d_9^1$
+by the odd unit
+$9$.
+The resulting
+\emph{integer}
+$18\times36$
+matrix is the
+following explicit
+block matrix
+(each block is
+$9\times9$):
+\begin{equation}\label{eq:dyadic-f135-nine-block-fox}
+\boxed{
+\mathscr D_9=
+\begin{pmatrix}
+\Sigma^{-1}(\Upsilon-I)&
+ \Sigma^{-1}-I-\Upsilon&
+ 0&0\\
+0&3J_9&
+4J_9-18I&
+9\Sigma^{-1}-J_9
+\end{pmatrix}.
+}
+\end{equation}
+Order the
+36 source
+coordinates as
+$(\sigma_0,\ldots,\sigma_8,
+\tau_0,\ldots,\tau_8,
+x_{0,0},\ldots,x_{0,8},
+x_{1,0},\ldots,x_{1,8})$,
+and the
+18 target rows
+as nine tame
+followed by
+nine wild.
+Choose the
+following
+\emph{one-based}
+17 source columns,
+listed in this order:
+\begin{equation}\label{eq:dyadic-f135-nine-pivot-column-set}
+\mathcal C_{17}=
+(1,2,3,4,5,6,7,8,\,
+18,\,
+28,29,30,31,32,33,34,35).
+\end{equation}
+These columns
+are the
+eight nonterminal
+$\sigma$ edges,
+the one
+non-tree $\tau$
+edge, and
+the eight
+nonterminal
+$x_1$ edges;
+\emph{none}
+is one of the
+eight $\tau$
+spanning-tree
+edges.
+Taking the nine
+tame rows
+$(1,\ldots,9)$
+and eight
+wild rows
+$(11,\ldots,18)$
+gives the
+exact odd
+unit minor
+\begin{equation}\label{eq:dyadic-f135-nine-17minor}
+\boxed{
+\det\mathscr D_9[
+(1,\ldots,9,11,\ldots,18),
+\mathcal C_{17}]
+=-3^{14}.
+}
+\end{equation}
+Adding the final
+source column
+$27$ (the
+$x_{0,8}$ edge)
+and the missing
+wild row $10$
+gives the
+full determinant
+\begin{equation}\label{eq:dyadic-f135-nine-18minor}
+\boxed{
+\det\mathscr D_9[
+(1,\ldots,18),
+(\mathcal C_{17},27)]
+=-2\cdot3^{16}.
+}
+\end{equation}
+Thus the selected
+\emph{true}
+nine-sheet
+Fox differential
+has 17 unit
+directions and
+one exact
+two-primary
+top direction.
+After contracting
+the eight
+$\tau$ tree edges,
+the integral
+source has
+28 generators
+and 18 relation
+faces; its
+augmented
+Fox matrix
+has Smith factors
+\[
+(\underbrace{1,\ldots,1}_{17},2).
+\]
+\end{corollary}
+
+\begin{proof}
+The block formula
+is
+\eqref{eq:dyadic-f135-uniform-fox-differentials}
+with $P_9=J_9/9$,
+after the declared
+odd-unit row
+scaling.
+The two
+integer determinants
+are evaluated by
+ordinary fraction-free
+elimination using
+\eqref{eq:dyadic-f135-nine-tame-permutations};
+the exact matrices
+and both selected
+minors are part
+of the
+independent Sage
+audit for this
+version.
+For the
+intrinsic proof
+of the Smith
+factors without
+any determinant
+calculation, use
+Theorem~\ref{thm:dyadic-f135-analytic-smith-parity}.
+The displayed
+odd minor additionally
+certifies the
+\emph{specific}
+17 source pivots
+used in the
+group-level
+Tietze construction
+below.
+\end{proof}
+
+\begin{theorem}[Uniform pro-$2$ Schreier--Tietze reduction for the $3$-power tower]
+\label{thm:dyadic-f135-actual-3power-pro2-schreier}
+For every $r\ge1$
+with $m=3^r$,
+the maximal pro-$2$
+local Galois group
+$P_r=G_{K_r}(2)$
+has an
+\emph{actual marked}
+Schreier source with
+\begin{equation}\label{eq:dyadic-f135-general-schreier-counts}
+\boxed{\qquad
+3m+1\text{ completed pro-$2$
+generators},\qquad
+2m\text{ indexed relations}.
+\qquad}
+\end{equation}
+Choose the
+tree edges
+$\tau:0\to1,\ldots,
+\tau:m-2\to m-1$.
+The
+$3m+1$
+Schreier
+source generators
+are
+\begin{equation}\label{eq:dyadic-f135-general-schreier-words}
+\boxed{
+\begin{gathered}
+s_i=
+\tau^i\sigma
+\tau^{-(2i\bmod m)}
+\quad(0\le i<m),\\
+t=\tau^m,\qquad
+w_{i,j}=
+\tau^i x_j\tau^{-i}
+\quad(0\le i<m,\ j=0,1).
+\end{gathered}}
+\end{equation}
+The $2m$
+completed relation
+words are defined
+without ambiguity
+as the actual
+Reidemeister--Schreier
+rewrites of
+$\tau^ir_t\tau^{-i}$
+and
+$\tau^ir_{\rm wild}\tau^{-i}$
+in the
+Roe--Turturean
+\emph{marked}
+profinite presentation,
+followed by the
+maximal pro-$2$
+quotient.
+They remain
+finite-jet
+computable at
+every specified
+finite pro-$2$
+precision.
+
+Exactly $2m-1$
+of these
+relations are
+\emph{primitive}
+independent
+pro-$2$ Frattini
+directions:
+all $m$ indexed
+tame relations
+and any fixed
+$m-1$ of the
+$m$ indexed
+wild relations
+can be selected.
+Their
+linearized
+integral Fox
+minor is a
+unit.
+Consequently
+one may replace
+$2m-1$
+source generator
+letters by these
+$2m-1$
+relation words
+through a
+completed
+free pro-$2$
+Nielsen
+automorphism,
+then kill the
+corresponding
+generator/relation
+pairs.
+The resulting
+\emph{actual}
+minimal
+presentation is
+\begin{equation}\label{eq:dyadic-f135-mplus2-one-relator}
+\boxed{
+P_r\cong
+\langle
+y_1,\ldots,y_{m+2}
+\mid \mathscr R_r
+\rangle_{\mathrm{pro}-2}.
+}
+\end{equation}
+Its relator
+$\mathscr R_r$
+is the image of
+the unique
+surviving indexed
+wild relation
+under the inverse
+Nielsen change,
+with the
+$2m-1$ cancelled
+letters set
+to one.
+
+For $m=9$,
+the explicit
+unit minor
+\eqref{eq:dyadic-f135-nine-17minor}
+certifies the
+concrete choice
+\emph{all nine tame
+relations, wild
+relations indexed
+$1,\ldots,8$},
+and generator
+pivots
+\[
+s_0,\ldots,s_7,\quad
+t,\quad
+w_{0,1},\ldots,w_{7,1}.
+\]
+The eleven
+retained
+source generators
+are then
+\begin{equation}\label{eq:dyadic-f135-nine-retained-generators}
+\boxed{\qquad
+s_8,\quad
+w_{0,0},\ldots,w_{8,0},
+\quad w_{8,1}.
+\qquad}
+\end{equation}
+This is the first
+\emph{new}
+nine-sheet
+group-level
+odd-index Fox
+reduction
+beyond fixed133.
+
+The minimal
+relator's exact
+closed finite
+word in the
+retained
+generators is
+not asserted
+to exist.
+Its inverse
+limit is however
+computable
+in every finite
+pro-$2$ word
+quotient.
+It represents
+the standard
+local Demu\v{s}kin
+group of
+rank $m+2$,
+invariant $q=2$,
+and full
+cyclotomic
+orientation image.
+In an
+\emph{additional}
+(normal-form)
+Demu\v{s}kin
+basis it has
+the familiar
+rank-odd
+representative
+\begin{equation}\label{eq:dyadic-f135-standard-3power-normal-form}
+y_1^2y_2^4
+[y_2,y_3]
+[y_4,y_5]\cdots
+[y_{m+1},y_{m+2}],
+\end{equation}
+whose quadratic
+Fox cup matrix
+is nondegenerate.
+This normal-form
+change is not
+claimed to
+coincide with
+the marked
+Schreier--Nielsen
+change above.
+\end{theorem}
+
+\begin{proof}
+The finite tame
+quotient
+$D_m$ has an
+$m$-point coset
+action.
+Apply profinite
+Reidemeister--Schreier
+rewriting to the
+marked
+four-generator,
+two-relator
+Roe--Turturean
+presentation using
+the coset
+representatives
+$1,\tau,\ldots,
+\tau^{m-1}$.
+The standard
+spanning-tree count
+gives
+$1+m(4-1)=3m+1$
+free generators.
+Every global
+marked relation
+has one lift
+at each coset
+vertex, hence
+there are
+$2m$ indexed
+relation words,
+whose source
+coordinates
+are precisely
+\eqref{eq:dyadic-f135-general-schreier-words}.
+The words
+containing
+$\omega_2$
+are interpreted
+by their
+continuous
+profinite powers
+before taking
+the pro-$2$
+quotient.
+
+The marked
+wild pro-$2$
+normal-closure
+condition is
+essential.
+To see that the
+indexed relations
+still describe
+the \emph{actual}
+maximal pro-$2$
+subgroup,
+test them on an
+arbitrary finite
+$2$-group $Q$.
+A finite quotient
+of the subgroup
+to $Q$ induces,
+by the chosen
+$m$ cosets,
+a wreath
+representation
+of $\Gamma$
+into
+$Q^m\rtimes D_m$,
+with every marked
+wild generator
+in the normal
+$2$-group $Q^m$.
+Its wild normal
+closure is
+therefore a
+$2$-group, so
+the induced
+finite quotient
+is admissible
+for the
+Roe--Turturean
+marked source.
+Conversely,
+each finite
+$Q$-valued
+solution to
+the indexed
+Schreier relations
+produces this
+admissible
+wreath quotient.
+The universal
+finite $2$-group
+quotient functors
+agree, yielding
+the \emph{actual}
+maximal pro-$2$
+presentation
+\eqref{eq:dyadic-f135-general-schreier-counts}.
+No naked
+unmarked
+full-group
+two-relator
+presentation
+has been
+substituted
+at this step.
+
+At the
+pro-$2$
+Frattini
+level, the
+abelianized Fox
+matrix of this
+cover is
+identified,
+after the
+$m-1$ tree-edge
+unit cancellations,
+with the
+completed
+coinduced
+Fox matrix
+\eqref{eq:dyadic-f135-uniform-fox-differentials}.
+Its mod-two
+rank is $2m-1$
+by
+Theorem~\ref{thm:dyadic-f135-analytic-smith-parity}.
+More precisely,
+the $m$ tame
+relation rows
+span a
+primitive
+rank-$m$
+direct summand:
+the $\sigma$
+columns supply
+the augmentation
+directions because
+$\Upsilon_m-I_m$
+is invertible
+on $Q_mV_m$,
+and the one
+non-tree $\tau$
+column supplies
+the constant
+direction.
+Modulo that
+tame relation
+summand, the
+wild $x_1$
+block reduces to
+$\Sigma_m^{-1}-P_m$,
+whose image is
+exactly the
+$m-1$ dimensional
+augmentation module.
+Any $m-1$
+indexed wild
+relation rows
+span the dual
+of this
+augmentation
+module.
+Thus all
+$m$ tame plus
+$m-1$ wild
+relations
+are Frattini
+independent;
+a suitable
+$(2m-1)\times
+(2m-1)$
+completed Fox
+minor is an
+odd unit.
+The explicit
+nine-sheet
+instance is
+\eqref{eq:dyadic-f135-nine-17minor}.
+
+Keep the
+$m+2$
+complementary
+generator
+letters.
+The map on the
+free pro-$2$
+source sending
+the selected
+$2m-1$
+letters to
+the selected
+relation words
+and fixing
+the complementary
+letters has
+invertible
+Frattini linear
+part.
+The pro-$2$
+Burnside basis
+theorem makes
+it surjective;
+the finitely
+generated free
+pro-$2$ group
+is Hopfian,
+so it is a
+continuous
+automorphism.
+In the new
+basis, the
+selected
+relations are
+generator
+letters and
+can be
+killed by
+actual
+pro-$2$
+Tietze operations,
+leaving exactly
+$m+2$ generators
+and one
+relation.
+This proves
+\eqref{eq:dyadic-f135-mplus2-one-relator}
+and the
+specific
+nine-sheet
+choice.
+
+Every
+pro-$2$ Nielsen
+inverse can be
+evaluated
+in compatible
+finite pro-$2$
+quotients;
+continuous
+$\omega_2$
+powers of
+the marked
+source become
+finite powers
+at each finite
+stage.
+This proves
+the stated
+recursive
+effectivity.
+Finally
+$K_r/\mathbf Q_2$
+has odd degree,
+hence intersects
+the cyclotomic
+$2$-power
+extension
+trivially.
+It contains
+$\mu_2$
+but not
+$\mu_4$,
+so its
+canonical
+orientation
+has full image
+$\mathbf Z_2^\times$.
+Local
+Demu\v{s}kin
+theory
+\cite{LabuteClassification,NSW}
+gives rank
+$[K_r:\mathbf Q_2]+2
+=m+2$,
+$q=2$, and
+the additional
+standard normal
+form
+\eqref{eq:dyadic-f135-standard-3power-normal-form}.
+The marked
+inverse-limit
+relator is
+not identified
+with that
+standard word
+without its
+further
+normal-form
+change.
+\end{proof}
+
+\begin{theorem}[Uniform integral covering-to-minimal Fox chain equivalence]
+\label{thm:dyadic-f135-uniform-integral-fox-tietze}
+Let $M$ be any
+finite projective
+complete
+coefficient
+module for
+$H_r$ whose
+action factors
+through the
+maximal pro-$2$
+quotient $P_r$.
+Let
+$C_{\mathrm{cov},m}^\bullet(H_r,M)$
+denote the
+\emph{actual}
+$m$-sheet
+marked
+Reidemeister--Schreier
+cochain complex
+with degrees
+$(m,4m,2m)$.
+Let
+\[
+C_{\min,r}^\bullet(P_r,M):
+\qquad
+M\longrightarrow
+M^{m+2}\longrightarrow M
+\]
+be the
+completed Fox
+complex of
+the chosen
+minimal
+rank-$(m+2)$
+one-relator
+presentation
+\eqref{eq:dyadic-f135-mplus2-one-relator}.
+Then the
+chosen
+Schreier tree
+and the
+$2m-1$
+pro-$2$ Nielsen
+pivots construct
+a strict integral
+chain isomorphism
+\begin{equation}\label{eq:dyadic-f135-general-fox-chain-split}
+\boxed{
+\begin{aligned}
+C_{\mathrm{cov},m}^\bullet(H_r,M)
+\cong{}&
+C_{\min,r}^\bullet(P_r,M)\\
+&\oplus
+[M^{m-1}\xrightarrow{\,I\,}
+ M^{m-1}]_{[0,1]}\\
+&\oplus
+[M^{2m-1}\xrightarrow{\,I\,}
+ M^{2m-1}]_{[1,2]}.
+\end{aligned}}
+\end{equation}
+The degree-wise
+ranks match:
+\[
+(m,4m,2m)
+=
+(1,m+2,1)
++(m-1,m-1,0)
++(0,2m-1,2m-1).
+\]
+Since $P_r$
+is a local
+Demu\v{s}kin
+group,
+$C_{\min,r}^\bullet$
+computes
+$R\Gamma(H_r,M)$
+and is compatible
+with derived
+coefficient
+base change.
+For the new
+nine-sheet case
+$m=9$,
+the explicit
+decomposition is
+\begin{equation}\label{eq:dyadic-f135-nine-fox-chain-split}
+\boxed{
+C_{\mathrm{cov},9}^\bullet
+\cong
+C_{\min,2}^\bullet
+\oplus
+[M^8\xrightarrow I M^8]_{[0,1]}
+\oplus
+[M^{17}\xrightarrow I M^{17}]_{[1,2]},
+}
+\end{equation}
+with minimal
+degree-wise
+ranks $(1,11,1)$.
+
+The entire
+comparison is
+\emph{recursively
+native-explicit}
+in each prescribed
+finite pro-$2$
+word/coefficient
+jet, but depends
+on the Schreier
+tree, ordered
+relation pivots,
+and inverse
+Nielsen basis
+map.  This is
+a genuine
+group-level
+integral
+Fox syzygy
+comparison
+for the
+selected
+$3$-power
+radical tower,
+not a
+presentation-independent
+strict gauge
+for all
+odd-index
+local covers.
+\end{theorem}
+
+\begin{proof}
+The actual
+group presentation
+and chosen
+pro-$2$
+Nielsen
+automorphism are
+Theorem~\ref{thm:dyadic-f135-actual-3power-pro2-schreier}.
+The $m-1$
+spanning-tree
+edges give
+literal unit
+vertex--edge
+Fox pivots,
+so they split
+$m-1$
+contractible
+degree-zero--one
+pairs.
+The remaining
+$3m+1$
+generator
+letters and
+$2m$ indexed
+relators form
+the true
+completed
+pro-$2$
+Schreier
+group source.
+The selected
+$2m-1$
+relation words
+are a free
+pro-$2$
+basis replacement.
+Its completed
+Fox chain
+Jacobian is
+invertible,
+by the Fox
+chain rule
+and the
+inverse Nielsen
+automorphism.
+In the new
+basis each
+selected
+relation is
+literally a
+generator,
+with Fox
+derivative one
+in its own
+coordinate.
+Successive
+completed
+Fox row/column
+operations
+therefore split
+$2m-1$
+contractible
+degree-one--two
+pairs.
+The surviving
+relation is
+$\mathscr R_r$,
+and its
+minimal
+Fox complex
+is the remaining
+summand.
+All operations
+are integral
+over
+$\mathbf Z_2[[P_r]]$:
+no division by
+two occurs.
+The Demu\v{s}kin
+duality
+resolution theorem
+makes the
+one-relator
+complex a
+length-two
+projective
+resolution,
+so this
+source-level
+chain isomorphism
+computes
+continuous
+cohomology
+for every
+coefficient
+module
+factoring through
+$P_r$.
+Finite
+Frattini
+quotients
+and continuity
+of completed
+Fox derivatives
+supply the
+declared
+finite-jet
+effectivity.
+\end{proof}
+
+\begin{theorem}[Strict nested odd-index Hecke flags]
+\label{thm:dyadic-f135-nested-hecke-flags}
+Fix $r\ge1$,
+$m=3^r$,
+and consider
+the chain of
+subgroups
+\[
+\Gamma=H_0\supset
+H_1\supset\cdots\supset H_r,
+\qquad
+[H_{i-1}:H_i]=3.
+\]
+Let
+\[
+\pi_i:
+\mathscr X_m=H_r\backslash\Gamma
+\longrightarrow
+H_i\backslash\Gamma,
+\qquad
+0\le i\le r
+\]
+be the
+canonical
+$\Gamma$-equivariant
+coset projections.
+The fiber
+of $\pi_i$
+has cardinal
+$3^{r-i}$.
+For an arbitrary
+complete local
+$\mathbf Z_2$-algebra
+$A$ put
+$V=A[\mathscr X_m]$.
+Define the
+\emph{finite
+fiber-average}
+operator
+\begin{equation}\label{eq:dyadic-f135-flag-fiber-averages}
+\boxed{\quad
+E_i=
+\frac1{3^{r-i}}
+\,\pi_i^*\pi_{i,!}:
+V\longrightarrow V,
+\qquad 0\le i\le r,
+\quad}
+\end{equation}
+where $\pi_{i,!}$
+sums the
+coefficients
+over each
+fiber and
+$\pi_i^*$
+copies a
+coefficient
+back to
+that fiber.
+Then all $E_i$
+are
+\emph{integral
+$\Gamma$-equivariant
+idempotents}, and
+for every
+$i,j$,
+\begin{equation}\label{eq:dyadic-f135-strict-flag-composition}
+\boxed{\qquad
+E_iE_j=E_jE_i
+=E_{\min(i,j)}.
+\qquad}
+\end{equation}
+The difference
+operators
+\begin{equation}\label{eq:dyadic-f135-flag-primitive-layers}
+\boxed{
+D_0=E_0,\qquad
+D_i=E_i-E_{i-1}
+\ (1\le i\le r)
+}
+\end{equation}
+are pairwise
+orthogonal
+idempotents,
+sum to one,
+and have
+\emph{exact}
+projective
+ranks
+\begin{equation}\label{eq:dyadic-f135-flag-layer-ranks}
+\boxed{\qquad
+\operatorname{rank}_A D_0=1,
+\qquad
+\operatorname{rank}_A D_i
+=3^i-3^{i-1}
+\quad(i\ge1).
+\qquad}
+\end{equation}
+In the
+new nine-sheet
+case $r=2$,
+with coset
+coordinate
+$j\in\mathbf Z/9$,
+\begin{equation}\label{eq:dyadic-f135-nine-explicit-flag}
+\boxed{
+\begin{aligned}
+E_0&=\tfrac19
+\mathbf1_9\mathbf1_9^t,\\
+(E_1)_{jk}
+&=\begin{cases}
+1/3,&j\equiv k\pmod3,\\
+0,&j\not\equiv k\pmod3,
+\end{cases}\\
+E_2&=I_9,\qquad
+(D_0,D_1,D_2)
+=(E_0,E_1-E_0,I_9-E_1),\\
+(\operatorname{rank}D_0,
+\operatorname{rank}D_1,
+\operatorname{rank}D_2)
+&=(1,2,6).
+\end{aligned}}
+\end{equation}
+All identities
+are literal
+equalities of
+$9\times9$
+integral matrices;
+their matrix
+entries contain
+no factor $1/2$.
+
+Let $B$ be any
+finite projective
+complete $A$-module
+with continuous
+$\Gamma$-action.
+There is an
+intrinsic
+coinduction
+identification
+\begin{equation}\label{eq:dyadic-f135-coinduced-complete-flag}
+\operatorname{Coind}_{H_r}^\Gamma
+(\operatorname{Res}_{H_r}^\Gamma B)
+\simeq B\otimes_A V.
+\end{equation}
+Thus
+$1_B\otimes D_i$
+defines an exact
+$\Gamma$-equivariant
+coefficient
+decomposition.
+The operators
+are \emph{strict
+cochain maps}
+on both
+the continuous
+bar complex
+and the finite
+marked
+two-relator
+Fox complex:
+they commute
+literally with
+every differential.
+Whenever the
+restriction
+$B|_{H_r}$
+has pro-$2$
+image, the
+group-level
+completion of
+Theorem~\ref{thm:dyadic-f135-uniform-integral-fox-tietze}
+and Shapiro give
+the \emph{sectorwise}
+derived
+decomposition
+\begin{equation}\label{eq:dyadic-f135-derived-layer-decomposition}
+\boxed{\quad
+R\Gamma(H_r,B|_{H_r})
+\simeq
+\bigoplus_{i=0}^r
+R\Gamma\bigl(
+\Gamma,
+B\otimes_A \operatorname{im}D_i
+\bigr).
+\quad}
+\end{equation}
+The $D_0$
+summand is
+$R\Gamma(\Gamma,B)$,
+and the
+composite
+odd-index
+restriction--corestriction
+projector is
+exactly the
+constant-sheet
+$D_0$.
+
+These
+identities provide
+\emph{strict
+associativity}
+of the nested
+odd-index
+Hecke projector
+system:
+reparenthesizing
+a tower of
+fiber sums
+changes no
+map and
+requires no
+higher homotopy
+filler.
+They are
+independent of
+the chosen
+Schreier
+transversals;
+a change of
+transversal
+conjugates all
+coordinate
+matrices by the
+same
+coefficient-transport
+change of basis.
+They do
+\emph{not}
+claim the same
+strict
+composition for
+crossing,
+nonnested
+Sylow
+preimages.
+\end{theorem}
+
+\begin{proof}
+Because the
+$\pi_i$ are
+maps of finite
+$\Gamma$-sets,
+the fiber sums
+$\pi_{i,!}$
+and pullbacks
+$\pi_i^*$
+are
+$\Gamma$-equivariant.
+Every fiber
+has odd
+cardinality,
+so its inverse
+exists in $A$.
+The composite
+$\pi_{i,!}\pi_i^*$
+is multiplication
+by $3^{r-i}$;
+therefore
+$E_i$ is an
+idempotent.
+For $i\le j$,
+each fiber of
+$\pi_i$ is a
+disjoint union
+of equal-size
+fibers of
+$\pi_j$.
+Averaging
+inside the
+smaller
+fibers and
+then in the
+larger one
+is exactly
+the larger
+average,
+regardless of
+the order.
+This proves
+\eqref{eq:dyadic-f135-strict-flag-composition}.
+The $D_i$
+therefore form
+pairwise
+orthogonal
+idempotents
+whose direct
+sum is identity.
+Their images
+are the new
+layers added
+by the
+successive
+fiber-constant
+functions;
+their ranks
+are the
+differences
+$3^i-3^{i-1}$.
+The nine-sheet
+formulas follow
+by writing
+$\pi_1(j)=j\bmod3$.
+
+For a
+$\Gamma$-module
+$B$, the
+standard
+finite-index
+coinduction
+trivialization
+uses the
+already present
+$\Gamma$-action
+on $B$ to
+identify
+the fiber
+module with
+$B\otimes A[\mathscr X_m]$.
+Under this
+identification
+the $\Gamma$
+action is
+diagonal.
+The coefficient
+projectors
+$1_B\otimes D_i$
+commute with
+this action.
+Consequently
+they induce
+strict
+cochain
+projections
+on the
+continuous
+bar complex.
+Completed
+Fox cochain
+matrices are
+finite sums
+of coefficient
+group-action
+operators,
+including
+limits of
+profinite powers;
+they therefore
+commute with
+these same
+projectors.
+This gives
+the strict
+finite
+Fox splitting.
+
+Shapiro's
+lemma
+identifies
+the complete
+coinduced
+bar complex
+with
+$R\Gamma(H_r,B|_{H_r})$.
+If $B|_{H_r}$
+has pro-$2$
+image,
+Theorem~\ref{thm:dyadic-f135-uniform-integral-fox-tietze}
+identifies the
+literal $m$-sheet
+marked complex
+with an
+actual finite
+Fox resolution
+of $P_r$,
+so the finite
+direct summands
+also compute
+the intrinsic
+derived
+cohomology.
+The constant
+summand equals
+$B$, hence its
+cohomology is
+$R\Gamma(\Gamma,B)$,
+and the
+integral average
+$E_0$ is
+restriction
+followed by
+normalized
+corestriction
+under Shapiro.
+The strict
+composition
+identity proves
+the asserted
+nested higher
+coherence.
+A change of
+coset sections
+only changes
+the chosen
+coordinate
+trivialization,
+not the
+intrinsic
+fiber maps.
+\end{proof}
+
+\begin{corollary}[Full nine-sheet integral arithmetic cohomology ledger]
+\label{cor:dyadic-f135-nine-arithmetic-ledger}
+For the concrete
+two-step tower
+\[
+K_0=\mathbf Q_2,\quad
+K_1=\mathbf Q_2(2^{1/3}),\quad
+K_2=\mathbf Q_2(2^{1/9}),
+\]
+the complete
+low-degree
+integral
+arithmetic
+cohomology
+for the trivial
+and cyclotomic
+rank-one
+lattices is
+\begin{equation}\label{eq:dyadic-f135-nine-h0h1h2-ledgers}
+\boxed{
+\begin{array}{c|ccc|ccc}
+&\multicolumn{3}{c|}{\mathbf Z_2}
+&\multicolumn{3}{c}{\mathbf Z_2(1)}\\
+& H^0&H^1&H^2&H^0&H^1&H^2\\ \hline
+K_0&
+\mathbf Z_2&
+\mathbf Z_2^2&
+\mathbf F_2&
+0&\mathbf Z_2^2\oplus\mathbf F_2&\mathbf Z_2\\
+K_1&
+\mathbf Z_2&
+\mathbf Z_2^4&
+\mathbf F_2&
+0&\mathbf Z_2^4\oplus\mathbf F_2&\mathbf Z_2\\
+K_2&
+\mathbf Z_2&
+\mathbf Z_2^{10}&
+\mathbf F_2&
+0&\mathbf Z_2^{10}\oplus\mathbf F_2&\mathbf Z_2
+\end{array}}
+\end{equation}
+The
+strict
+rank-$(1,2,6)$
+projector flag
+selects
+exactly
+\[
+\begin{aligned}
+&\operatorname{rank}_{\mathbf Z_2}
+H^1(K_0,\cdot)=2,\\
+&\operatorname{rank}_{\mathbf Z_2}
+\text{new layer }K_1/K_0=2,\\
+&\operatorname{rank}_{\mathbf Z_2}
+\text{new layer }K_2/K_1=6,
+\end{aligned}
+\]
+for both twists.
+Every $H^0$
+or $H^2$
+class and
+every
+$\mathbf F_2$
+torsion class
+of
+$H^1(-,\mathbf Z_2(1))$
+lies in the
+\emph{oldest}
+constant-sheet
+summand.
+The new
+rank-two and
+rank-six
+summands have
+cohomology
+concentrated
+in degree one:
+\begin{equation}\label{eq:dyadic-f135-new-layer-degree-one-only}
+\boxed{
+R\Gamma(\Gamma,\operatorname{im}D_1(\nu))
+\simeq\mathbf Z_2^2[-1],
+\quad
+R\Gamma(\Gamma,\operatorname{im}D_2(\nu))
+\simeq\mathbf Z_2^6[-1],
+\quad
+\nu\in\{0,1\},
+}
+\end{equation}
+where $(\nu)$
+denotes tensoring
+with the
+$\nu$th
+cyclotomic twist.
+In particular
+the rank-six
+newest layer
+is the actual
+integral
+Shapiro-induced
+fiber augmentation:
+\begin{equation}\label{eq:dyadic-f135-new-six-layer-induction}
+\boxed{\quad
+\operatorname{im}D_2
+\simeq
+\operatorname{Ind}_{H_1}^\Gamma
+\ker\bigl(
+\mathbf Z_2[H_1/H_2]
+\xrightarrow{\rm sum}
+\mathbf Z_2
+\bigr).
+\quad}
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+Every $K_i$
+is a finite
+dyadic field
+of odd degree
+$3^i$,
+hence contains
+exactly $\mu_2$
+among its
+$2$-power
+roots of unity.
+Local class
+field theory,
+Kummer theory
+and integral
+Tate duality
+give
+\[
+H^1(G_{K_i},\mathbf Z_2)
+\simeq\mathbf Z_2^{3^i+1},
+\quad
+H^2(G_{K_i},\mathbf Z_2)
+\simeq\mathbf F_2,
+\]
+and
+\[
+H^1(G_{K_i},\mathbf Z_2(1))
+\simeq\mathbf Z_2^{3^i+1}
+\oplus\mathbf F_2,
+\quad
+H^2(G_{K_i},\mathbf Z_2(1))
+\simeq\mathbf Z_2 .
+\]
+These give
+\eqref{eq:dyadic-f135-nine-h0h1h2-ledgers}.
+Odd-index
+restriction is
+split injective
+in every
+cohomological
+degree, with
+left inverse
+normalized
+corestriction.
+Since the
+displayed
+$H^0$ and
+$H^2$ groups
+have constant
+rank/order,
+restriction
+is an
+isomorphism
+on them;
+for $\mathbf Z_2(1)$,
+restriction
+on $H^2$
+is multiplication
+by $3$ or $9$
+under normalized
+local Tate
+invariants,
+hence still
+a $2$-adic
+unit.
+Likewise
+the unique
+$\mathbf F_2$
+torsion in
+cyclotomic
+$H^1$
+is preserved
+by odd-index
+restriction.
+Thus the two
+new projective
+layers have
+no degree-zero,
+degree-two
+or degree-one
+torsion
+cohomology.
+Their degree-one
+free ranks
+are the
+differences
+$4-2=2$ and
+$10-4=6$.
+Since the
+bar/Fox
+carriers are
+perfect over
+the discrete
+valuation ring
+$\mathbf Z_2$,
+these ledgers
+give the
+derived
+identifications
+\eqref{eq:dyadic-f135-new-layer-degree-one-only}.
+Finally
+$\operatorname{im}D_2$
+consists of
+functions with
+zero sum
+inside each
+fiber of
+$\mathscr X_9\to\mathscr X_3$.
+This is exactly
+the induction
+from $H_1$
+of the
+two-dimensional
+fiber augmentation
+module of
+$H_1/H_2$,
+proving
+\eqref{eq:dyadic-f135-new-six-layer-induction}.
+\end{proof}
+
+\begin{warning}[Why nested odd-index coherence does not settle crossing Sylows]
+\label{warn:dyadic-f135-crossing-sylow-firewall}
+The composition
+law
+\eqref{eq:dyadic-f135-strict-flag-composition}
+uses \emph{nested}
+odd-index coset
+maps, so the
+fiber sizes
+at every stage
+are units in
+$\mathbf Z_2$.
+For two
+\emph{distinct}
+Sylow-$2$
+subgroups
+$S,S'$ inside
+the same
+$S_3$ quotient,
+their index-three
+preimages
+$H,H'$ are
+not nested;
+their
+intersection is
+the inverse
+image of
+$S\cap S'=\{1\}$,
+hence
+\[
+[\Gamma:H\cap H']=6.
+\]
+A universal
+constant-fiber
+average across
+this common
+refinement
+would require
+division by
+two and is
+\emph{not}
+an integral
+$\mathbf Z_2$
+operator.
+Already for
+$C_2$ the
+augmentation sequence
+\[
+0\to
+\ker(\varepsilon:
+\mathbf Z_2[C_2]\to
+\mathbf Z_2)
+\to
+\mathbf Z_2[C_2]
+\xrightarrow{\varepsilon}
+\mathbf Z_2\to0
+\]
+does not admit a
+$C_2$-equivariant
+splitting:
+the invariant
+constant vector
+has augmentation
+two, not one.
+Thus strict
+odd-index
+nested projector
+flags cannot
+be extended
+\emph{by the same
+averaging formula}
+to arbitrary
+nonnested
+Sylow intersections.
+
+Nor does the
+uniform
+$3$-power
+Schreier--Nielsen
+algorithm
+select one
+canonical
+marked minimal
+Fox basis
+independently
+of every choice
+of transversal,
+local field
+or residual
+quotient.
+It supplies
+genuine
+group-level
+finite-jet
+chain
+comparisons
+throughout
+the chosen
+$3$-power
+tame radical
+tower and
+strict
+coherence of
+its nested
+transfer
+idempotents.
+The full
+arithmetic
+Cartan
+derived
+faithful atlas
+remains
+unconditional;
+global
+presentation-independent
+strict
+gauge coherence
+across
+\emph{crossing}
+residual
+coverings
+remains a
+stronger
+separate
+problem.
+\end{warning}
