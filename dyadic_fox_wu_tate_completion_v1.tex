@@ -335,6 +335,65 @@ and the claimed groups follow by Smith
 normal form.
 \end{proof}
 
+\begin{corollary}[Exact cyclotomic-power depth at $\mathbf Q_2$]
+\label{cor:dyadic-q2-cyclotomic-power-depth}
+Retain the marked generators $(a,s,y)$ of
+Proposition~\ref{prop:dyadic-q2-explicit-anchor}.
+For any odd integer $k\ge1$, let
+$\psi_k=\theta_{\mathbf Q_2}^{\,k}$.  Its entire
+twisted top Fox row is
+\begin{equation}\label{eq:dyadic-q2-cyclotomic-power-row}
+J_{\psi_k}=(0,\ 3-3^k,\ 0).
+\end{equation}
+For $k=1$ this row is zero.  For every odd
+$k\ge3$ its first nonvanishing depth is
+\[
+a(\psi_k)=2+v_2(k-1),
+\]
+and therefore
+\begin{equation}\label{eq:dyadic-q2-cyclotomic-power-lifting}
+L_m^{\psi_k}(P_{\mathbf Q_2})=
+\begin{cases}
+H^1(P_{\mathbf Q_2},\mathbf F_2),
+ &m\le 2+v_2(k-1),\\
+\operatorname{span}_{\mathbf F_2}
+   \{\chi_a,\chi_y\},
+ &m>2+v_2(k-1).
+\end{cases}
+\end{equation}
+In particular
+\[
+H^2(G_{\mathbf Q_2},\mathbb Z_2(k))
+\cong \mathbb Z_2/2^{\,2+v_2(k-1)}\mathbb Z_2
+\qquad(k\ge3\text{ odd}),
+\]
+while $H^2(G_{\mathbf Q_2},\mathbb Z_2(1))
+\cong\mathbb Z_2$.
+The exponent $2+v_2(k-1)$ is an exact
+orientation-sensitive $2$-adic lifting depth,
+not a new invariant of the untwisted group.
+\end{corollary}
+
+\begin{proof}
+For odd $k$ one has
+$\psi_k(a)=-1$, $\psi_k(s)=1$,
+and $\psi_k(y)=-3^{-k}$.
+The first Fox derivative of $a^2$
+evaluates to $1+\psi_k(a)=0$.
+The $y$-derivative of $s^4[s,y]$
+vanishes because $\psi_k(s)=1$.
+Finally the $s$-derivative evaluates to
+$4+\psi_k(y)^{-1}-1=3-3^k$.
+This proves \eqref{eq:dyadic-q2-cyclotomic-power-row}.
+For even $n=k-1\ge2$, the $2$-adic
+lifting-the-exponent formula gives
+$v_2(3^n-1)=2+v_2(n)$.
+The leading Fox row therefore reduces to
+the $\chi_s$ coordinate, and
+Theorem~\ref{thm:dyadic-twisted-fox-lifting-depth}
+gives the precise filtration and top
+cohomology claimed.
+\end{proof}
 \begin{proposition}[Transfer-normalized integral Fox--Tate pairing]
 \label{prop:dyadic-sylow-fox-tate-pairing}
 Let $E/\mathbf Q_2$ be finite, let
