@@ -1,8 +1,9 @@
 # Arithmetic Cartan single-prime atlas
 
-**Current integrated TeX manuscript: [fixed132 — quadratic-étale crossed wild transport, dyadic return parity and Schreier exchange elimination](arithmetic_cartan_representations_closure_fixed132_crossed_etale_schreier_exchange.tex)** (October 2026).
+**Latest integrated main manuscript: [fixed133 — actual index-three pro-2 Schreier relators and integral minimal Fox syzygy closure](arithmetic_cartan_representations_closure_fixed133_s3_minimal_schreier_fox_syzygy.tex)** (October 2026).
 
-Earlier complete sources remain preserved:
+Previous complete manuscripts are preserved:
+[fixed132](arithmetic_cartan_representations_closure_fixed132_crossed_etale_schreier_exchange.tex),
 [fixed131](arithmetic_cartan_representations_closure_fixed131_universal_tame_wild_obstruction.tex),
 [fixed130](arithmetic_cartan_representations_closure_fixed130_s3_adjoint_tame_analytic_smith.tex),
 [fixed129](arithmetic_cartan_representations_closure_fixed129_s3_natural_strict_integral_hecke.tex),
@@ -13,74 +14,98 @@ Earlier complete sources remain preserved:
 [fixed124](arithmetic_cartan_representations_closure_fixed124_dyadic_streamlined.tex),
 and [fixed123](arithmetic_cartan_representations_closure_fixed123_streamlined.tex).
 
-## The new fixed132 result
+## Fixed133: first genuine group-relator (not coefficient-only) Schreier--Fox closure
 
-Continue on the full completed framed residual deformation family
+Continue on the **real non-pro-2 S3 quotient** of $G_{\mathbb Q_2}$ with Sylow preimage
 \[
-G_{\mathbb Q_2}\twoheadrightarrow
-S_3\simeq\mathrm{GL}_2(\mathbb F_2),
+H=G_F,\quad F=\mathbb Q_2(\sqrt[3]{2}),\quad
+[\Gamma:H]=3,\quad P_F=H(2).
 \]
-not only on its fixed tame representation. Write the actual tame lifts
-\(X=\rho(\tau)\), \(Y=\rho(\sigma)\).
-The fixed131 tame relation proves
-\(X^3=1\), \(X^2+X+1=0\), \(Y^2=q\in A^\times\)
-and the **integral native frame**
-\[
-M_2(A)=C\oplus CY,\qquad
-C=A[X]\simeq A[T]/(T^2+T+1),\quad
-\iota(X)=X^2.
-\]
+The previous fixed128–132 computations did not fully identify the three Schreier wild relations with a minimal relation module. Fixed133 closes this **specific marked** pro-2 group-relator interface.
 
-1. **A complete crossed quadratic-étale multiplication and inverse.** For \(a,b,c,d\in C\),
+1. **Actual three-sheet marked Reidemeister–Schreier relation words.**
+   Before tame elimination the covering has ten Schreier generators
    \[
-   (a+bY)(c+dY)
-   =(ac+qb\iota(d))+(ad+b\iota(c))Y,
+   s_0=\sigma,\ s_1=\tau\sigma\tau^{-2},\
+   s_2=\tau^2\sigma\tau^{-1},\
+   t=\tau^3,\
+   w_{ij}=\tau^i x_j\tau^{-i}.
+   \]
+   The three indexed tame relators are precisely
+   \[
+   s_0^{-1}s_1,\quad
+   s_2^{-1}ts_0t^{-1},\quad
+   s_1^{-1}s_2t^{-1}.
+   \]
+   In the maximal pro-2 quotient they force $s_0=s_1=s_2=s$ and $t=1$.
+   The indexed wild relators are then **literal completed pro-2 words**
+   $R_i=H_i u_{1,i}^{-1}s^{-1}v_{2i}s c_i$,
+   with all auxiliary words written explicitly in the integrated manuscript and the [standalone proof](dyadic_s3_pro2_schreier_fox_tietze_fixed133.tex).
+   In particular
+   \[
+   u_{j,i}=(w_{i,j}w_{i+1,j}w_{i+2,j})^{1/3},
+   \]
+   where cyclic indices are valid **after** $t=1$.
+   Finite wreath quotients preserve the original Roe–Turturean marked wild pro-2 condition. This is an actual presentation of $P_F$, not a false bare-two-relator presentation of the full absolute Galois group.
+
+2. **Two primitive wild relation directions and a complete five-generator / one-relator reduction.**
+   The genuine three-by-seven augmented Fox matrix has
+   \[
+   \varepsilon(\partial_{a_k}R_i)=4/3-2\delta_{ik},
    \quad
-   (a+bY)^{-1}
-   =\frac{\iota(a)-bY}{N(a)-qN(b)}.
+   \varepsilon(\partial_{v_k}R_i)=\delta_{k,2i}-1/3,\quad
+   \varepsilon(\partial_s R_i)=0.
    \]
-   Thus the previously abstract four adjoint \(M_0/M_1\) transport blocks are now explicit, integral rational functions of transport-native coefficients, with unit denominators only.
-
-2. **Precise quadratic return defect and an extra factor of two.** The wild noncentral component \(b\) satisfies the exact commutator
-   \([a+bY,X]=b(X^2-X)Y\).
-   The diagonal \(M_0\) transport differs from the identity only at order \(b^2\). For arbitrary group elements, the exact two-step projected return defects obey
+   The $(R_1,R_2)$ vs $(v_0,v_1)$ determinant is **$-1/3$**, a $2$-adic unit. Hence the map replacing $v_0,v_1$ by $R_1,R_2$ is a true automorphism of the free pro-2 group (pro-p Burnside basis theorem). Its inverse gives a choice-dependent but finite-jet-computable one-relator presentation
    \[
-   \mathscr F_{00}\in\mathfrak J^2,\qquad
-   \mathscr F_{11}\in2\mathfrak J^2,
+   P_F\simeq\langle s,a_0,a_1,a_2,v_2\mid \mathscr R_F\rangle_{\mathrm{pro}-2}.
    \]
-   where \(\mathfrak J\) is the wild off-isotypic ideal. The paper gives both complete closed expressions. **In characteristic two the projected \(M_1\) diagonal block is exactly multiplicative even in a nonsplit family**; the \(M_0\) block can still show genuine quadratic return. A concrete test over \(\mathbb F_2[u,v]/(u^2,v^2)\) has
-   \(\mathscr F_{00}(I+uY,I+vXY)(X)=uv I\neq0\) and \(\mathscr F_{11}=0\). It is a matrix-carrier example, not an unsupported claim of a complete Galois deformation.
 
-3. **Actual index-three Schreier exchange identities.** For \(w_{ij}=\tau^ix_j\tau^{-i}\),
+3. **The literal surviving degree-two Fox symbol is nondegenerate.**
+   Adding $R_0R_1R_2$ has the exact integral first Fox row $(0,2,2,2,0,0,0)$, and the surviving mod-two quadratic symbol is
    \[
-   \rho(w_{ij})=a_j+b_jX^{2i}Y,\qquad
-   b_{0j}+b_{1j}+b_{2j}=0.
+   \boxed{\sigma_2(\mathscr R_F)
+   =A_0^2+A_1^2+A_2^2+SV+VS}.
    \]
-   The \(3\times3\) quadratic diagonal-return array has **every row and column sum zero**, integrally at all orders. If \(a_j=1\), it becomes the exact complete-graph \(K_3\) Laplacian:
+   Its cup matrix, in the ordered basis $(s,a_0,a_1,a_2,v_2)$, is
    \[
-   \mathscr K_{i\ell}(z)=
-   \frac{qN(b_j)}{(1-qN(b_j))^2}
-   (3\delta_{i\ell}-1)(z-\iota(z)).
+   B_F=
+   \begin{pmatrix}
+   0&0&0&0&1\\
+   0&1&0&0&0\\
+   0&0&1&0&0\\
+   0&0&0&1&0\\
+   1&0&0&0&0
+   \end{pmatrix},\qquad\det_{\mathbb F_2}B_F=1.
    \]
+   This is the nonalternating rank-five dyadic Demuškin form, and its augmented Fox ideal is exactly $(2)$.
 
-4. **Elimination of two of the four wild split equations.** The actual Roe–Turturean wild matrix relation, projected onto the \(CY\) part, has an invertible \(2\times2\) Jacobian in the second wild off-isotypic coordinate \(b_1\). A formal implicit-function/Hensel argument uniquely solves \(b_1=\mathcal G(b_0;\text{tame and diagonal data})\), with
+4. **An explicit six-by-ten integral three-sheet Fox certificate.**
+   Coinduce the trivial $H$-lattice along the three cosets. The genuine full marked Fox two-skeleton has degrees $(3,12,6)$ and admits two primitive tree-edge contractions. The remaining six-by-ten augmented face matrix, after multiplying its three wild rows by the odd unit $3$, has **mod-two rank five**. Explicit minors of size five and six have determinants **$-3$ and $-18$**. Thus its Smith factors are $(1,1,1,1,1,2)$, recovering
    \[
-   \mathcal G(0)=0,\qquad b_1\in\mathfrak m(b_0).
+   (H^0,H^1,H^2)(H,\mathbb Z_2)
+   =(\mathbb Z_2,\mathbb Z_2^4,\mathbb F_2).
    \]
-   Consequently, **on the full complete genuine residual deformation ring**, the scheme-theoretic fixed131 tame-isotypic split ideal is
+
+5. **Actual completed group-algebra Fox chain cancellation.**
+   For *any* complete coefficient module $M$ with $H$-action factoring through $P_F$, the marked covering two-complex admits an integral chain change
    \[
-   \boxed{\mathfrak I_{\mathrm{split}}=(\eta_0,\xi_0)},
+   \boxed{
+   C_{\mathrm{cover}}^\bullet(H,M)
+   \cong C_{\mathrm{Fox}}^\bullet(P_F,M)
+   \oplus[M^2\xrightarrow{1}M^2]_{[0,1]}
+   \oplus[M^5\xrightarrow{1}M^5]_{[1,2]}.}
    \]
-   where \(b_0=\eta_0+\xi_0X\). Two scalar generators suffice, and fixed131 already shows they are linearly independent at the residual point. The full proof includes a finite-precision terminating Hensel row algorithm for \(b_1\bmod\mathfrak m^t\). The ideal is not asserted to be regular or to define a smooth quotient.
+   The seven cancellations are exactly two tree edges, three tame Nielsen pairs and two wild Nielsen pairs. Over $\mathbb Z_2[[P_F]]$, the remaining single relation gives the genuine exact length-two Demuškin resolution. Its Fox Jacobian transition comes from the explicit marked Schreier scan and the invertible pro-2 Nielsen automorphism; every prescribed finite pro-2 word/coefficient jet can be evaluated by a terminating quotient computation. This is a **choice-dependent integral group-relator bridge** for the selected $S_3$ Sylow preimage and therefore applies across all coefficient sectors restricted to this fixed $P_F$.
 
-5. **One-source control and the remaining actual syzygy frontier.** After the complete marked wild relation is imposed, the first wild off-isotypic packet \(b_0\) controls both wild generators' off-block transport, all six Schreier conjugates, and their quadratic return arrays. The resulting finite coefficient exchange identities are **not** identities among relators in \(\mathbb Z_2[[G_F(2)]]\). Constructing the explicit minimal rank-five Demuškin Fox relation and integral degree-two syzygy comparison remains a stronger open task.
+## Proof source and independent reproducibility
 
-## Sources and reproducibility
+- [Complete fixed133 pro-2 Schreier, Nielsen and Fox theorem insertion](dyadic_s3_pro2_schreier_fox_tietze_fixed133.tex) — already integrated verbatim in the linked main TeX.
+- [SageMath 10.9 audit: group Schreier relations, degree-two Magnus, full coinduced Fox matrix and finite wreath checks](checks/fixed133_s3_pro2_schreier_fox_tietze.sage).
+- The earlier [fixed132 crossed-étale wild and Schreier exchange work](dyadic_s3_crossed_etale_schreier_exchange_fixed132.tex) is retained intact, but its exchange identities are no longer mistaken for the group relations themselves.
 
-The standalone [fixed132 crossed-étale / Schreier exchange proof](dyadic_s3_crossed_etale_schreier_exchange_fixed132.tex) is included verbatim in the complete main TeX.
+During authoring, the three indexed group-word identities were checked in 144 finite wreath/affine cases, the quadratic Magnus cup matrix was independently calculated with all seven generators, and the exact augmented Fox minors were verified. The Sage script is provided for local reproduction and is **not** claimed to have been executed in CI. Routine iterations remain TeX-only unless PDF is requested.
 
-Two SageMath 10.9 regression sources were committed:
-- [Crossed multiplication, four blocks, dyadic return factor and \(K_3\) curvature](checks/fixed132_s3_crossed_schreier_return.sage).
-- [Finite-level literal marked-word regression for second-wild elimination](checks/fixed132_s3_wild_elimination_finite_levels.sage).
+## The remaining (strictly stronger) frontier
 
-Independent modular matrix checks during authoring covered 125 general crossed-algebra inverses/blocks, 342 general-alpha Schreier quadratic returns and zero sums modulo \(256\), all nine normalized \(K_3\) entries in 40 cases, and the marked-wild relation at moduli \(8\) and \(16\). These repository Sage sources are provided for reproduction and are **not** claimed to have run as CI. Routine iterations remain TeX-only unless PDF is specifically requested.
+Fixed133 settles a genuine source-level Schreier-to-minimal Fox relation and degree-two syzygy comparison **for the chosen index-three field $F=\mathbb Q_2(\sqrt[3]{2})$**. The selected Nielsen inverse is an effective pro-2 *inverse-limit* word, not a universally finite ordinary word. It is not canonical under arbitrary markings and does not by itself supply a uniform presentation for every finite dyadic extension or every non-pro-2 residual image. A global, presentation-independent minimal Fox gauge across all such fields remains a separate problem. The original all-Sylow/Cayley–Hamilton derived faithful finite-atlas theorem is unaffected.
