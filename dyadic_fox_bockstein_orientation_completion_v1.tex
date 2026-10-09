@@ -1,0 +1,328 @@
+% Versioned self-contained section source; integrated verbatim into fixed124.
+\subsection{Dyadic Fox--Bockstein--orientation completion}
+\label{subsec:dyadic-fox-orientation}
+
+The odd-prime symplectic normal form does not extend verbatim to
+$p=2$: a square term already contributes in Magnus degree two and
+need not vanish in the cup form.  More importantly, for the
+exceptional Demu\v{s}kin invariant $q=2$, the quadratic Fox form and
+the ordinary integral exponent-sum/Bockstein information do not
+record the canonical dualizing-orientation image.  We now close this
+dyadic classification gap without changing the finite Fox
+resolution or the all-Sylow descent \cite{LabuteClassification,NSW}.
+
+\begin{theorem}[Four dyadic Demu\v{s}kin forms and their quadratic symbols]
+\label{thm:dyadic-relator-cases}
+Let $P$ be an infinite finitely generated Demu\v{s}kin pro-$2$
+group of rank $d$, with invariant $q=q(P)$, and write
+$[x,y]=x^{-1}y^{-1}xy$.  In a suitable minimal presentation
+$P=\langle x_1,\ldots,x_d\mid r\rangle_{\mathrm{pro}-2}$,
+the relation $r$ is in exactly one of the following normal-form
+families:
+\begin{enumerate}[label=\textnormal{(\roman*)}]
+\item If $q\ne2$, then $d$ is even and
+\[
+r=x_1^q[x_1,x_2][x_3,x_4]\cdots[x_{d-1},x_d],
+\qquad q=0\ \text{or}\ q=2^f,\ f\ge2.
+\]
+\item If $q=2$, $d$ is odd and $d\ge3$, then
+\[
+r=x_1^2x_2^{2^f}[x_2,x_3][x_4,x_5]\cdots[x_{d-1},x_d],
+\quad f\in\{2,3,\ldots,\infty\}.
+\]
+\item If $q=2$, $d$ is even and the canonical-orientation
+image has square-index $2$, then
+\[
+r=x_1^{2+2^f}[x_1,x_2][x_3,x_4]\cdots[x_{d-1},x_d],
+\quad f\in\{2,3,\ldots,\infty\}.
+\]
+\item If $q=2$, $d\ge4$ is even and the canonical-orientation
+image has square-index $4$, then
+\[
+r=x_1^2[x_1,x_2]x_3^{2^f}[x_3,x_4]\cdots[x_{d-1},x_d],
+\quad f\in\{2,3,\ldots\}.
+\]
+\end{enumerate}
+Here $2^\infty=0$ means that the corresponding factor is absent.
+With $C_{ij}=X_iX_j+X_jX_i\in\mathbf F_2\langle X_1,\ldots,X_d\rangle$,
+their degree-two Magnus symbols are
+\begin{equation}\label{eq:dyadic-quadratic-symbols}
+\sigma_2(r)=
+\begin{cases}
+\displaystyle\sum_{j=1}^{d/2}C_{2j-1,2j}, &(i),\\[2pt]
+\displaystyle X_1^2+\sum_{j=1}^{(d-1)/2}C_{2j,2j+1},
+ &(ii),\\[2pt]
+\displaystyle X_1^2+\sum_{j=1}^{d/2}C_{2j-1,2j},
+ &(iii),(iv).
+\end{cases}
+\end{equation}
+The induced Fox cup form is nondegenerate, but in cases
+(ii)--(iv) it is \emph{nonalternating}: $\chi_1^2=\omega$.
+
+For $P=G_K(2)$ with $K/\mathbf Q_2$ finite,
+one always has $q\ge2$, $d=[K:\mathbf Q_2]+2$,
+and an open orientation image, so any occurring $f$ is finite.
+\end{theorem}
+
+\begin{proof}
+The four presentations and the square-index distinction are
+the Demu\v{s}kin--Serre--Labute classification
+\cite{LabuteClassification,NSW}.
+Over $\mathbf F_2$ one has
+$\mathcal M([x_i,x_j])=1+C_{ij}+O(\deg3)$ and
+$\mathcal M(x_i^{2^f})=1+X_i^{2^f}$.
+For $f\ge2$ the latter does not enter quadratic degree.
+The factors $x_1^2$ and $x_1^{2+2^f}$, however,
+both contribute $X_1^2$.
+This proves \eqref{eq:dyadic-quadratic-symbols}.
+The quadratic Fox cup theorem
+(Theorem~\ref{thm:quadratic-fox-cup})
+identifies its coefficients with the cup matrix.
+Its blocks are symplectic $2$-blocks together,
+in the exceptional cases, with either the isolated
+diagonal $1$ or the nonalternating block
+$\bigl(\begin{smallmatrix}1&1\\1&0\end{smallmatrix}\bigr)$;
+in all cases the form is nondegenerate.
+For the local assertion, $\mu_2\subset K$ implies that
+$G_K(2)$ is Demu\v{s}kin, and its dualizing character
+is cyclotomic.  Its image in $\mathbb Z_2^\times$ is open
+because $K$ is finite.
+\end{proof}
+
+Let $\partial_i$ be the completed \emph{left} Fox derivative,
+and for a continuous character $\theta:P\to\mathbb Z_2^\times$
+write
+\[
+\varepsilon_\theta:\mathbb Z_2[[F_d]]\longrightarrow\mathbb Z_2,
+\quad x_i\longmapsto\theta(x_i)
+\]
+for the associated twisted augmentation.  The system
+\begin{equation}\label{eq:dyadic-twisted-fox-orientation}
+\boxed{\quad\varepsilon_\theta(\partial_i r)=0
+\quad(1\le i\le d)\quad}
+\end{equation}
+says that every continuous $\theta$-crossed derivation of
+the free pro-$2$ group vanishes on the relator.  It is
+presentation-covariant, although its coordinates are not
+generator-independent.
+
+\begin{theorem}[Canonical dyadic orientation from twisted Fox equations]
+\label{thm:dyadic-twisted-fox-orientation}
+On each normal form of Theorem~\ref{thm:dyadic-relator-cases},
+Equation~\eqref{eq:dyadic-twisted-fox-orientation} admits
+a unique solution in generator values
+$\theta(x_i)\in\mathbb Z_2^\times$.
+It is the canonical dualizing orientation $\theta_P$.
+All unmentioned generator values are $1$, and the nontrivial
+values are
+\begin{align}
+\textnormal{(i)}\quad&
+ \theta(x_1)=1,\quad
+ \theta(x_2)=(1-q)^{-1};\label{eq:dyadic-orientation-i}\\
+\textnormal{(ii)}\quad&
+ \theta(x_1)=-1,\quad\theta(x_2)=1,\quad
+ \theta(x_3)=(1-2^f)^{-1};\label{eq:dyadic-orientation-ii}\\
+\textnormal{(iii)}\quad&
+ \theta(x_1)=1,\quad
+ \theta(x_2)=(-1-2^f)^{-1};
+ \label{eq:dyadic-orientation-iii}\\
+\textnormal{(iv)}\quad&
+ \theta(x_1)=1,\quad\theta(x_2)=-1,\quad
+ \theta(x_3)=1,\quad\theta(x_4)=(1-2^f)^{-1}.
+ \label{eq:dyadic-orientation-iv}
+\end{align}
+The corresponding closed orientation images are
+\begin{equation}\label{eq:dyadic-orientation-images}
+\begin{aligned}
+\textnormal{(i)}\quad&
+ 1+q\mathbb Z_2\ (q\ge4),\quad\{1\}\ (q=0),\\
+\textnormal{(ii)}\quad&
+ \{\pm1\}(1+2^f\mathbb Z_2),\\
+\textnormal{(iii)}\quad&
+ \overline{\langle(-1-2^f)^{-1}\rangle},\\
+\textnormal{(iv)}\quad&
+ \{\pm1\}(1+2^f\mathbb Z_2).
+\end{aligned}
+\end{equation}
+For $f=\infty$ use $1+2^f\mathbb Z_2=\{1\}$ and
+$(-1-2^f)^{-1}=-1$.
+\end{theorem}
+
+\begin{proof}
+With the commutator convention above,
+\[
+\varepsilon_\theta(\partial_x[x,y])
+=\theta(x)^{-1}(\theta(y)^{-1}-1),
+\quad
+\varepsilon_\theta(\partial_y[x,y])
+=\theta(x)^{-1}\theta(y)^{-1}(\theta(x)-1).
+\]
+Multiplication by a preceding word only adds a unit factor.
+A pure commutator block therefore forces both orientation
+values to $1$.  In a block $x^m[x,y]$, the $y$-derivative
+forces $\theta(x)=1$, after which the $x$-derivative
+becomes $m+\theta(y)^{-1}-1$; hence
+$\theta(y)=(1-m)^{-1}$.
+For the odd-rank family, the first derivative of $x_1^2$
+forces $\theta(x_1)=-1$, then the $(x_2,x_3)$ block
+forces $\theta(x_2)=1$ and
+$\theta(x_3)=(1-2^f)^{-1}$.
+For family (iv), the first squared commutator block gives
+$(\theta(x_1),\theta(x_2))=(1,-1)$,
+followed by the ordinary $x_3^{2^f}[x_3,x_4]$ block.
+This gives the four displayed lists and proves uniqueness.
+The Fox identity $r-1=\sum_i\partial_i r\,(x_i-1)$
+ensures that the resulting map kills $r$, and
+the known canonical orientation in Labute's classification
+has precisely these normal-form values
+\cite{LabuteClassification,NSW}.
+For finite $f$, $(1-2^f)^{-1}$ generates
+$1+2^f\mathbb Z_2$ topologically, as does
+$(1-q)^{-1}$ when $q\ge4$.
+The remaining image claims are immediate.
+\end{proof}
+
+\begin{corollary}[Finite classification-faithful dyadic symbol]
+\label{thm:dyadic-classification-certificate}
+The presentation-covariant certificate
+\begin{equation}\label{eq:dyadic-classification-certificate}
+\boxed{\quad
+\mathfrak C_2(P)=
+\bigl(d,\,[\sigma_2(r)],\,
+\mathfrak q(P),\,\operatorname{im}\theta_P\bigr)
+\quad}
+\end{equation}
+determines the isomorphism class of every
+Demu\v{s}kin pro-$2$ group in
+Theorem~\ref{thm:dyadic-relator-cases}.
+Here $\mathfrak q(P)$ is the ideal of the augmented
+integral first Fox derivatives and $\theta_P$
+is determined by the twisted Fox system.
+On all $q=2$ normal forms one has
+$\mathfrak q(P)=(2)$ and the same diagonal-square
+information; the orientation image records the extra
+Labute index and parameter $f$.
+\end{corollary}
+
+\begin{proof}
+The quadratic Fox theorem gives the mod-$2$ cup form,
+and the augmented first derivatives give the
+abelianization's torsion exponent ideal.
+Theorem~\ref{thm:dyadic-twisted-fox-orientation}
+recovers the canonical orientation.
+Labute's classification makes $(d,\operatorname{im}\theta_P)$
+a complete isomorphism invariant in the finite-rank
+Demu\v{s}kin sector \cite{LabuteClassification};
+the displayed richer certificate is therefore faithful.
+The individual matrix coordinates need not be
+presentation-invariant.
+\end{proof}
+
+\begin{proposition}[The explicit $G_{\mathbf Q_2}(2)$ anchor]
+\label{prop:dyadic-q2-explicit-anchor}
+Let
+\[
+P_{\mathbf Q_2}=G_{\mathbf Q_2}(2)
+=\langle a,s,y\mid a^2s^4[s,y]\rangle_{\mathrm{pro}-2}.
+\]
+For the Magnus variables $A,S,Y$, the mod-$2$
+Fox--Cartan and integral Fox--Bockstein data are
+\begin{equation}\label{eq:dyadic-q2-anchor-data}
+\begin{gathered}
+\sigma_2(r)=A^2+SY+YS,\qquad
+B_{\rm cup}=
+ \begin{pmatrix}1&0&0\\0&0&1\\0&1&0\end{pmatrix},\\
+\lambda(r)=(2,4,0),\quad \mathfrak q(P_{\mathbf Q_2})=(2),\\
+\beta_1(\chi_a)=\omega,\qquad
+\beta_1(\chi_s)=\beta_1(\chi_y)=0,\\
+(\theta(a),\theta(s),\theta(y))=
+(-1,1,-1/3),\quad
+\operatorname{im}\theta=\mathbb Z_2^\times.
+\end{gathered}
+\end{equation}
+For trivial integral coefficients, its finite
+Fox cochain complex is
+\[
+\mathbb Z_2\xrightarrow{0}\mathbb Z_2^3
+ \xrightarrow{(2,4,0)}\mathbb Z_2.
+\]
+Its lifting filtration satisfies
+$L_1=H^1(P_{\mathbf Q_2},\mathbf F_2)$ and
+$L_m=\operatorname{span}_{\mathbf F_2}
+\{\chi_s,\chi_y\}$ for every $m\ge2$.
+\end{proposition}
+
+\begin{proof}
+The displayed relator is the rank-$3$, $q=2$,
+$f=2$ normal form for $G_{\mathbf Q_2}(2)$
+\cite{LabuteClassification,NSW,RoeTurtureanGQ2}.
+Modulo $2$, $a^2$ contributes $A^2$,
+$s^4$ has no quadratic term, and $[s,y]$
+contributes $SY+YS$.
+The quadratic Fox cup theorem gives the matrix.
+The exponent sums are $(2,4,0)$.
+In the integral trivial-coefficient Fox complex,
+a $1$-cochain $(u,v,w)$ is closed modulo $2^m$
+exactly when $2u+4v\equiv0\pmod{2^m}$.
+For $m=2$, dividing its coboundary by $2$
+gives the ordinary Bockstein $(1,0,0)$ mod $2$;
+for all $m\ge2$, precisely the reductions with
+$u=0$ lift, proving the filtration.
+Finally the twisted Fox equations imply
+$\theta(a)=-1$, $\theta(s)=1$ and
+$4+\theta(y)^{-1}-1=0$, so
+$\theta(y)=-1/3$.
+Its image together with $-1$ is
+$\{\pm1\}(1+4\mathbb Z_2)=\mathbb Z_2^\times$.
+\end{proof}
+
+\begin{warning}[The ordinary dyadic Bockstein depth is insufficient]
+\label{warn:dyadic-bockstein-depth-insufficient}
+For each finite $f\ge2$, the rank-three relations
+\[
+r_f=x_1^2x_2^{2^f}[x_2,x_3]
+\]
+have the same $\sigma_2(r_f)$, integral
+Fox ideal $(2)$, first Bockstein, and full
+untwisted lifting filtration
+\[
+L_1=H^1(P_f,\mathbf F_2),\qquad
+L_m=\operatorname{span}\{\chi_2,\chi_3\}
+\quad(m\ge2).
+\]
+Nevertheless their orientation images
+$\{\pm1\}(1+2^f\mathbb Z_2)$ vary with $f$.
+Thus the original odd-prime symbol
+$(d,\sigma_2,\mathfrak q)$ does not classify
+the exceptional dyadic groups.
+The missing input is the \emph{twisted}
+Fox orientation, not another untwisted
+Bockstein depth.
+\end{warning}
+
+\begin{remark}[Interface with all-Sylow finite closure]
+\label{rem:dyadic-all-sylow-interface}
+For any residual sector at $p=2$, the preimage
+$H$ of a residual Sylow $2$-subgroup has odd
+index in $G_K$ and is the absolute Galois
+group of a finite dyadic extension $K_H$.
+Because $\mu_2\subset K_H$, the maximal
+pro-$2$ quotient $H(2)$ is always
+Demu\v{s}kin, not the free branch.
+Choosing the normal form determined by its
+cyclotomic orientation and evaluating its
+completed Fox derivatives gives exactly
+the bounded finite-free coefficient chart
+of Theorem~\ref{thm:family-sylow-fox}.
+The odd index supplies the integral
+transfer idempotent from
+Theorem~\ref{thm:sylow-fox-retract}.
+Hence the additional dyadic classification
+data alter only the explicit finite
+Fox matrices, not perfectness, derived base
+change, Cayley--Hamilton transport, or
+the recursive globalization theorem.
+The maximal pro-$2$ presentation is not
+misidentified with a marked presentation
+of the entire absolute Galois group.
+\end{remark}
