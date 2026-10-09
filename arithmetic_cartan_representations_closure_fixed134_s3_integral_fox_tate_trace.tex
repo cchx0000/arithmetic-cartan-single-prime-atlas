@@ -14291,6 +14291,505 @@ also proved in
 Theorem~\ref{thm:dyadic-fox-wu-bockstein}.
 \end{proof}
 
+\begin{theorem}[Strict three-sheet Fox--Shapiro projector on the full residual sector]
+\label{thm:dyadic-f134-strict-hecke-coinduced-chain}
+Let
+$\Gamma=G_{\mathbf Q_2}$,
+$H=G_{\mathbf Q_2(\sqrt[3]2)}$,
+and let $B$ be a finite
+projective complete
+$\mathbf Z_2$-coefficient
+$\Gamma$-module whose
+restriction to $H$
+has pro-$2$ image.
+In particular $B$
+may be the full
+universal rank-two
+residual $S_3$
+coefficient module,
+its adjoint, a
+finite tensor
+construction, or
+either of the
+rank-one modules
+$\mathbf Z_2$ and
+$\mathbf Z_2(1)$.
+Put
+\begin{equation}\label{eq:dyadic-f134-coinduced-permutation-bundle}
+V=\operatorname{Coind}_H^\Gamma
+(\operatorname{Res}_H^\Gamma B)
+\simeq B\otimes_{\mathbf Z_2}
+\mathbf Z_2[\Gamma/H].
+\end{equation}
+In the three-sheet
+trivialization
+fixed by $t_i=\tau^i$,
+let $\mathbf1=(1,1,1)^t$
+and define
+\begin{equation}\label{eq:dyadic-f134-average-three-sheet}
+\boxed{
+\begin{gathered}
+\iota_B:B\longrightarrow V,\quad
+b\longmapsto (b,b,b),\\
+p_B:V\longrightarrow B,\quad
+(b_0,b_1,b_2)
+\longmapsto\tfrac13(b_0+b_1+b_2),\\
+P_3=\iota_Bp_B=
+\frac13
+\begin{pmatrix}
+1&1&1\\
+1&1&1\\
+1&1&1
+\end{pmatrix},
+\qquad P_3^2=P_3.
+\end{gathered}}
+\end{equation}
+The two maps
+$\iota_B,p_B$ are
+\emph{$\Gamma$-equivariant}
+and $p_B\iota_B=1$.
+
+Let $\mathcal J_\Gamma^\bullet(-)$
+denote the \emph{literal
+four-generator,
+two-marked-relator}
+Fox coefficient complex
+in cohomological degrees
+$0,1,2$.  There is an
+exact chain identification
+\begin{equation}\label{eq:dyadic-f134-coinduced-cover-equality}
+\boxed{\quad
+\mathcal J_\Gamma^\bullet(V)
+\cong
+C_{\mathrm{cover}}^\bullet(H,B)
+\quad}
+\end{equation}
+with the actual
+three-sheet Schreier
+cochain complex of
+Theorem~\ref{thm:dyadic-f133-integral-schreier-fox-chain}.
+Under it the
+idempotent $P_3$
+acts \emph{strictly}
+in every degree:
+\begin{equation}\label{eq:dyadic-f134-hecke-degree-idempotents}
+\boxed{
+\begin{aligned}
+\mathsf E^0&=P_3\otimes 1_B,\\
+\mathsf E^1&=\operatorname{diag}
+(P_3,P_3,P_3,P_3)\otimes1_B,\\
+\mathsf E^2&=\operatorname{diag}
+(P_3,P_3)\otimes1_B.
+\end{aligned}}
+\end{equation}
+They obey the
+complete chain
+intertwining
+identities
+\begin{equation}\label{eq:dyadic-f134-strict-hecke-chain}
+\boxed{\quad
+\mathsf E^1d^0=d^0\mathsf E^0,
+\qquad
+\mathsf E^2d^1=d^1\mathsf E^1,
+\qquad
+(\mathsf E^k)^2=\mathsf E^k.
+\quad}
+\end{equation}
+
+Let
+\[
+V_{\mathrm{aug}}=\ker p_B.
+\]
+The ordered vectors
+\begin{equation}\label{eq:dyadic-f134-two-augmentation-cosets}
+e_2-e_0,\qquad e_1-e_0
+\end{equation}
+form a $\mathbf Z_2$
+basis of the
+rank-two
+augmentation
+lattice of the
+three-sheet
+permutation module.
+In this basis the
+tame matrices are
+exactly
+\[
+\Sigma_{\mathrm{aug}}
+=\begin{pmatrix}0&1\\1&0\end{pmatrix},
+\qquad
+\Upsilon_{\mathrm{aug}}
+=\begin{pmatrix}-1&-1\\1&0\end{pmatrix},
+\]
+the fixed natural
+$S_3$ representation
+$T$ of
+\eqref{eq:dyadic-s3-integral-matrices}.
+Consequently
+\begin{equation}\label{eq:dyadic-f134-universal-coinduced-split}
+\boxed{
+\begin{aligned}
+V&\simeq B\oplus(B\otimes T),\\
+C_{\mathrm{cover}}^\bullet(H,B)
+&\cong
+\mathcal J_\Gamma^\bullet(B)
+\oplus
+\mathcal J_\Gamma^\bullet(B\otimes T).
+\end{aligned}}
+\end{equation}
+The second line is a
+\emph{strict integral
+cochain isomorphism},
+not just an abstract
+splitting of the
+cohomology groups.
+Its first summand is
+the image of
+\eqref{eq:dyadic-f134-hecke-degree-idempotents}
+and its second is
+the complementary
+strict kernel.
+
+Moreover
+$\mathcal J_\Gamma^\bullet(B)$
+\emph{computes}
+$R\Gamma(\Gamma,B)$
+on this entire
+residual sector:
+\begin{equation}\label{eq:dyadic-f134-sectorwise-full-marked-completeness}
+\boxed{\quad
+\mathcal J_\Gamma^\bullet(B)
+\simeq R\Gamma(\Gamma,B),
+\qquad
+\mathsf E
+\simeq\tfrac13
+\operatorname{res}_H^\Gamma
+\operatorname{cor}_H^\Gamma
+\quad\text{in }D(\mathbf Z_2).
+\quad}
+\end{equation}
+These comparisons
+commute with
+derived complete
+coefficient base change
+on the selected
+residual coefficient
+charts.
+They are
+\emph{coefficient-sector}
+results, not a
+claim that the
+bare two-relator
+full-group
+resolution is
+exact over
+$\mathbf Z_2[[\Gamma]]$
+for arbitrary
+residual images.
+
+For the two
+rank-one twists,
+the complementary
+rank-two summands
+also have explicit
+perfect cohomology
+type:
+\begin{equation}\label{eq:dyadic-f134-augmented-tate-ledger}
+\boxed{\quad
+\begin{aligned}
+\mathcal J_\Gamma^\bullet(T)
+&\simeq\mathbf Z_2^2[-1],\\
+\mathcal J_\Gamma^\bullet(T(1))
+&\simeq\mathbf Z_2^2[-1]
+\quad\text{in }D(\mathbf Z_2).
+\end{aligned}}
+\end{equation}
+The first equivalence
+has the explicit
+integral strong
+contraction of
+Theorem~\ref{thm:dyadic-s3-natural-strict-retract};
+the second follows
+from the new
+Fox--Tate
+top traces and
+the integral
+$3$-fold splitting,
+without requiring
+a preferred
+strict contraction.
+
+In the cyclotomic
+rank-one case,
+the primitive
+relation-face
+functional
+$\operatorname{Tr}_F$
+is exactly
+\emph{three times
+the average}
+on the wild
+relation-face
+coordinates.
+The complementary
+augmentation
+subcomplex carries
+no degree-two
+cohomology.
+Thus the full
+fundamental-class
+line is retained
+in the
+\emph{constant
+coset} direction.
+\end{theorem}
+
+\begin{proof}
+The global
+$\Gamma$ action
+on the coinduced
+module can be
+written, because
+$B$ already has
+a $\Gamma$ action,
+as the tensor
+product of the
+given action
+$\rho_B$ and the
+three-coset
+permutation action.
+This follows by
+rescaling the
+usual coinduced
+function values at
+$t_i$ by the
+transport matrices
+$\rho_B(t_i)$.
+The uniform vector
+$\mathbf1$ and
+the sum functional
+are preserved by
+every coset
+permutation, so
+$\iota_B$ and
+$p_B$ are
+$\Gamma$-equivariant;
+$3$ is invertible
+in $\mathbf Z_2$.
+
+Completed Fox
+differentiation
+is functorial in
+the coefficient
+module.
+The three
+cochain maps
+induced by
+$P_3$ on $V$,
+$V^4$ and $V^2$
+therefore commute
+with all completed
+tame and wild
+relation Fox
+differentials,
+including the
+profinite $\omega_2$
+power evaluations.
+This proves
+\eqref{eq:dyadic-f134-strict-hecke-chain}.
+
+The Fox--Shapiro
+identification
+\eqref{eq:dyadic-f134-coinduced-cover-equality}
+is the literal
+finite-cover
+version of the
+Fox chain rule:
+each of the
+two global
+relation faces
+lifts to three
+indexed relation
+faces, and each
+of the four
+global generators
+lifts to three
+indexed edges.
+The resulting
+cochain degrees
+are $(3,12,6)$.
+After tree,
+tame and wild
+Tietze eliminations,
+Theorem~\ref{thm:dyadic-f133-integral-schreier-fox-chain}
+identifies this
+complex with
+the genuine
+perfect Fox
+resolution of
+$P_F$, plus
+seven explicit
+contractible pairs.
+Since $B|_H$
+has pro-$2$ image,
+it factors
+through $P_F$,
+so this resolution
+computes
+$R\Gamma(H,B|_H)$.
+
+The augmentation
+lattice
+$\ker(\sum:
+\mathbf Z_2^3\to\mathbf Z_2)$
+is complementary
+to the constant
+line because
+$3$ is a unit.
+The two vectors
+in
+\eqref{eq:dyadic-f134-two-augmentation-cosets}
+form its
+integral basis.
+Applying the
+coset permutation
+matrices
+\eqref{eq:dyadic-f133-three-sheet-actions}
+gives the two
+displayed $S_3$
+matrices.
+Thus
+$V_{\rm aug}=B\otimes T$
+and
+\eqref{eq:dyadic-f134-universal-coinduced-split}
+follows by applying
+the Fox cochain
+construction to
+the direct-sum
+decomposition
+$V=B\oplus V_{\rm aug}$.
+
+Under Shapiro's
+lemma,
+the diagonal
+module map
+$\iota_B$ gives
+restriction,
+while the
+sum map
+$3p_B$ gives
+corestriction.
+Therefore
+$P_3=\iota_Bp_B$
+represents the
+normalized
+index-three
+restriction--corestriction
+idempotent on
+$R\Gamma(H,B)$.
+Because its
+coinduced
+three-sheet complex
+is already
+a genuine
+resolution,
+every direct
+summand of it
+is also a genuine
+perfect cochain
+carrier.
+Shapiro and
+the exact
+coefficient
+splitting identify
+the constant
+summand with
+$R\Gamma(\Gamma,B)$.
+This proves
+\eqref{eq:dyadic-f134-sectorwise-full-marked-completeness}
+without
+asserting a
+projective
+two-relator
+resolution for
+the entire
+completed
+full-group
+algebra.
+
+For $B=\mathbf Z_2$
+or $\mathbf Z_2(1)$,
+the fixed133 and
+fixed134 Fox
+ledgers give
+\[
+\begin{array}{c|ccc}
+&H^0&H^1&H^2\\ \hline
+H,\mathbf Z_2&
+\mathbf Z_2&\mathbf Z_2^4&\mathbf F_2\\
+\Gamma,\mathbf Z_2&
+\mathbf Z_2&\mathbf Z_2^2&\mathbf F_2\\
+H,\mathbf Z_2(1)&
+0&\mathbf Z_2^4\oplus\mathbf F_2&\mathbf Z_2\\
+\Gamma,\mathbf Z_2(1)&
+0&\mathbf Z_2^2\oplus\mathbf F_2&\mathbf Z_2 .
+\end{array}
+\]
+Restriction is
+split injective,
+with left inverse
+$\tfrac13\operatorname{cor}$.
+On the degree-two
+twisted line it
+multiplies by three,
+an invertible
+$2$-adic unit.
+On both
+degree-one
+torsion groups
+it is an
+isomorphism
+because the
+groups have order
+two and restriction
+is injective.
+Thus the complementary
+complex has zero
+cohomology outside
+degree one and
+free degree-one
+cohomology of
+rank two.
+A bounded
+perfect complex
+over the discrete
+valuation ring
+$\mathbf Z_2$
+with these
+cohomology groups
+is isomorphic
+in the derived
+category to
+$\mathbf Z_2^2[-1]$.
+The fixed129
+strong contraction
+provides the
+explicit version
+when $B$ is trivial.
+Finally the
+primitive
+sum functional
+on the three
+wild relator
+faces equals
+$3p_B$, so it
+vanishes on
+the augmentation
+summand.
+This proves
+the last assertion.
+\end{proof}
+
 \begin{theorem}[The three-fold top-cell restriction diagram]
 \label{thm:dyadic-f134-top-transfer-three}
 Let $\Gamma=G_{\mathbf Q_2}$,
