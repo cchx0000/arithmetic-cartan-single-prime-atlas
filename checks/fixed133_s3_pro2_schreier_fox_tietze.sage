@@ -53,10 +53,10 @@ d1 = block_matrix([
   [A,B,zero_matrix(QQ,3,3),zero_matrix(QQ,3,3)],
   [zero_matrix(QQ,3,3),3*Q,4*Q-2*I,S-Q]])
 assert d1*d0 == zero_matrix(QQ,6,3)
-assert (matrix(QQ,6,10, D) ==
-        matrix(QQ,6,10,
-          [3*x if (i//10)>=3 else x
-           for i,x in enumerate(d1.matrix_from_columns(tree_cols).list())]))
+J_covered = d1.matrix_from_columns(tree_cols)
+for r in range(6):
+    for c in range(10):
+        assert D[r,c] == (3 if r>=3 else 1)*J_covered[r,c]
 
 # The exact augmented wild Fox rows, in generator order
 # (s,a0,a1,a2,v0,v1,v2).
