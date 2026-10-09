@@ -117,7 +117,10 @@ The following are genuine
 pro-$2$ group words,
 with $1/3\in\mathbf Z_2$
 acting by continuous
-pro-$2$ powering:
+pro-$2$ powering
+\emph{after} the tame
+Tietze elimination
+$t=1$:
 \begin{equation}\label{eq:dyadic-f133-u-and-d-words}
 \boxed{
 \begin{aligned}
@@ -203,10 +206,31 @@ the exact group identity
 \begin{equation}\label{eq:dyadic-f133-threefold-wild-cycle}
 \boxed{\quad
 \tau^i(x_j\tau)^3\tau^{-i}
-=w_{i,j}w_{i+1,j}w_{i+2,j}\tau^3.
+=\widetilde w_{i,j}\widetilde w_{i+1,j}
+ \widetilde w_{i+2,j}\tau^3,
+\quad
+\widetilde w_{k,j}:=
+\tau^k x_j\tau^{-k}\ (k\in\mathbf Z).
 \quad}
 \end{equation}
-Its right-hand side
+This is an exact
+identity \emph{before}
+taking the pro-$2$
+quotient.  The
+extended indices
+obey
+$\widetilde w_{k+3,j}
+=t\widetilde w_{k,j}t^{-1}$,
+where $t=\tau^3$.
+Only \emph{after}
+the tame relation
+forces $t=1$
+may all indices
+be read modulo three,
+giving the displayed
+cyclic packets in
+\eqref{eq:dyadic-f133-u-and-d-words}.
+The right-hand side
 belongs to $H$.
 The continuous
 $\omega_2$ power
@@ -462,13 +486,13 @@ zero or unchanged
 exponent sums.
 In particular
 \[
-\varepsilon(H_i)
+[H_i]_{\mathrm{ab}}
 =2[a_i]+4([u_{0,i}]-[a_i])
 =\frac43\sum_k[a_k]-2[a_i],
 \]
 while
-$\varepsilon(u_{1,i}^{-1}
-s^{-1}v_{2i}s)
+$[u_{1,i}^{-1}
+s^{-1}v_{2i}s]_{\mathrm{ab}}
 =-\frac13\sum_k[v_k]+[v_{2i}]$.
 This proves
 \eqref{eq:dyadic-f133-augmented-three-seven}.
