@@ -9566,6 +9566,260 @@ well.  This proves all
 assertions.
 \end{proof}
 
+\begin{theorem}[A fully native universal tame frame in four transport matrices]
+\label{thm:dyadic-f131-native-tame-four-frame}
+For any complete framed
+$S_3$ residual deformation
+over $A$, let
+$X=\rho_A(\tau)$ and
+$Y=\rho_A(\sigma)$.
+The tame rigidity theorem
+gives
+\[
+X^2+X+I_2=0,
+\qquad Y^{-1}XY=X^2.
+\]
+Then the four matrices
+\begin{equation}\label{eq:dyadic-f131-universal-native-frame}
+\boxed{\qquad
+\mathcal B_A=(I_2,X,Y,XY)
+\qquad}
+\end{equation}
+form an \emph{integral
+$A$-basis of the entire}
+rank-four algebra
+$M_2(A)$.
+Indeed the matrix with
+their row-major vectorizations
+as columns reduces to
+\begin{equation}\label{eq:dyadic-f131-native-frame-residue}
+\mathsf B_{\rm res}=
+\begin{pmatrix}
+1&-1&0&-1\\
+0&-1&1&-1\\
+0&1&1&0\\
+1&0&0&1
+\end{pmatrix},
+\qquad
+\boxed{\det\mathsf B_{\rm res}=-3
+\in\mathbf Z_2^\times}.
+\end{equation}
+In this \emph{transport-native}
+basis the tame projector
+has the exact global
+matrix, for \emph{every}
+framed deformation:
+\begin{equation}\label{eq:dyadic-f131-universal-diagonal-projector}
+\boxed{\qquad
+[\Pi_A]_{\mathcal B_A}
+=\operatorname{diag}(1,1,0,0),
+\qquad
+M_{0,A}=A I_2\oplus AX,
+\quad
+M_{1,A}=AY\oplus AXY.
+\qquad}
+\end{equation}
+Moreover both tame
+generator actions are
+strictly block diagonal,
+with their complete
+integral matrices
+\begin{equation}\label{eq:dyadic-f131-universal-block-actions}
+\boxed{
+\begin{aligned}
+[\operatorname{Ad}_X]_{\mathcal B_A}
+&=
+\operatorname{diag}\left(
+ I_2,\
+ \begin{pmatrix}-1&1\\-1&0\end{pmatrix}
+ \right),\\[2pt]
+[\operatorname{Ad}_Y]_{\mathcal B_A}
+&=
+\operatorname{diag}\left(
+ \begin{pmatrix}1&-1\\0&-1\end{pmatrix},
+ \begin{pmatrix}1&-1\\0&-1\end{pmatrix}
+ \right).
+\end{aligned}}
+\end{equation}
+In particular
+\begin{equation}\label{eq:dyadic-f131-frobenius-square-scalar}
+\boxed{\qquad Y^2\in A^\times I_2. \qquad}
+\end{equation}
+No matrix logarithm,
+period-module chart,
+universal Fox syzygy,
+or binomial power
+extraction is needed
+to construct this
+four-dimensional
+native tame frame.
+
+For $j=0,1$ the wild
+generator matrix has
+a unique expansion
+\begin{equation}\label{eq:dyadic-f131-wild-native-components}
+\boxed{
+X_j=a_j I_2+b_j X
++\eta_jY+\xi_jXY,
+\qquad
+a_j,b_j,\eta_j,\xi_j\in A.
+}
+\end{equation}
+The \emph{exact} split
+ideal is therefore
+given by the four
+native scalar
+equations
+\begin{equation}\label{eq:dyadic-f131-four-scalar-split-ideal}
+\boxed{\qquad
+\mathfrak I_{\rm split}
+=(\eta_0,\xi_0,\eta_1,\xi_1)
+\subset R_{\bar\rho}^{\square}.
+\qquad}
+\end{equation}
+They are finite
+matrix/minor
+expressions on
+the complete
+residual chart.
+Only two independent
+linear equations
+remain at the
+residual tangent
+point, as quantified
+in
+Corollary~\ref{cor:dyadic-f131-split-tangent-codimension}.
+No global regular-sequence
+claim is implicit.
+\end{theorem}
+
+\begin{proof}
+At the residual
+$S_3$ matrices
+$U,S$, the
+row-major matrix
+with columns
+$\operatorname{vec}(I_2)$,
+$\operatorname{vec}(U)$,
+$\operatorname{vec}(S)$,
+$\operatorname{vec}(US)$
+is
+\eqref{eq:dyadic-f131-native-frame-residue}
+and has determinant
+$-3$, an odd unit.
+Thus its lift
+$\mathsf B_A$
+is invertible
+over every complete
+local $A$ with
+the chosen residual
+marking.
+The first two
+basis matrices
+commute with
+$X$ and belong
+to $\operatorname{im}\Pi_A$.
+From $Y^{-1}XY=X^2$
+one obtains
+\[
+XY=YX^2,\qquad
+YX=X^2Y,\qquad
+XYX^{-1}=X^2Y.
+\]
+Hence conjugation
+by $X$ acts on the
+second pair by
+\[
+\operatorname{Ad}_X(Y)
+=X^2Y=-Y-XY,\qquad
+\operatorname{Ad}_X(XY)=Y.
+\]
+These equations
+give the first
+matrix of
+\eqref{eq:dyadic-f131-universal-block-actions}.
+Its second block
+has order three
+and satisfies
+$I+C+C^2=0$.
+Therefore the
+Reynolds average
+vanishes on
+$AY\oplus AXY$
+and is identity
+on $AI_2\oplus AX$,
+proving the
+diagonal projector.
+
+The normalizer
+action of $Y$ on
+the rank-two
+algebra $A[X]$
+has order two;
+the tame relation
+and $X^3=1$
+give
+$YXY^{-1}=X^2$.
+Thus
+\[
+\operatorname{Ad}_Y(X)
+=-I_2-X,\qquad
+\operatorname{Ad}_Y(Y)=Y,\qquad
+\operatorname{Ad}_Y(XY)
+=X^2Y=-Y-XY,
+\]
+proving the
+second matrix in
+\eqref{eq:dyadic-f131-universal-block-actions}.
+Its square is the
+identity on the
+\emph{entire}
+basis of $M_2(A)$.
+Hence
+$\operatorname{Ad}_{Y^2}$
+is trivial on
+$M_2(A)$, and
+its centralizer
+consists of scalars.
+Since $Y$ is
+invertible,
+$Y^2$ is a
+scalar unit.
+
+Finally the
+basis gives
+the unique
+expansion of
+each wild matrix.
+By the diagonal
+projector just proved,
+\[
+(1-\Pi_A)X_j
+=\eta_jY+\xi_jXY.
+\]
+Therefore the
+matrix centralizer
+equations of
+Theorem~\ref{thm:dyadic-f131-universal-split-locus}
+are equivalent
+to $\eta_j=\xi_j=0$
+for $j=0,1$,
+proving the
+explicit four-equation
+ideal formula.
+Every coordinate
+is recovered by
+inverting the
+unit determinant
+$\det\mathsf B_A$,
+so it is an
+integral finite
+matrix expression
+on the whole
+completed residual
+chart.
+\end{proof}
+
 \begin{theorem}[Exact wild equations for the universal split locus]
 \label{thm:dyadic-f131-universal-split-locus}
 Let $R_{\bar\rho}^{\square}$ be
