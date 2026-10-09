@@ -1,0 +1,896 @@
+% Fixed131: family-level tame C3 projector, its exact wild-descent ideal,
+% a first-order nonextendability witness, and curved two-block transport.
+% This subsection is integrated verbatim into the full fixed131 manuscript.
+
+\subsection{The universal tame projector and its wild descent obstruction}
+\label{subsec:dyadic-s3-universal-tame-projector}
+
+Version fixed130 proves a canonical decomposition for the
+\emph{fixed} tame $S_3$ adjoint lattice.  It does not imply
+that the resulting projector is a map of Galois
+representations after arbitrary framed deformation:
+the wild generators need not preserve its image.
+We now separate two questions:
+\emph{(a)} whether a canonical $C_3$ projector exists
+integrally over the full completed residual ring, and
+\emph{(b)} exactly where that projector descends to
+an invariant coefficient decomposition.
+Both questions admit finite residual-jet formulas.
+The answer to (a) is positive; the answer to (b)
+is an explicit closed proper locus.
+
+Let
+\[
+\bar\rho:\Gamma=G_{\mathbf Q_2}
+\twoheadrightarrow S_3
+\simeq\mathrm{GL}_2(\mathbf F_2)
+\]
+be the residual representation of
+Theorem~\ref{thm:dyadic-s3-integral-sector}.
+Let $(A,\mathfrak m,k)$ be a complete
+Noetherian local $\mathcal O_E$-algebra,
+with a framed lift
+$\rho_A:\Gamma\to\mathrm{GL}_2(A)$
+whose reduction is $\bar\rho$.
+Write
+\[
+X=\rho_A(\tau),\quad
+Y=\rho_A(\sigma),\quad
+X_j=\rho_A(x_j)\ (j=0,1),
+\qquad
+\bar X=\bar U,\quad
+\bar Y=\bar S,\quad
+\bar X_j=I_2.
+\]
+The marked tame relation remains
+\begin{equation}\label{eq:dyadic-f131-tame-relation}
+Y^{-1}XY=X^2.
+\end{equation}
+
+\begin{theorem}[Canonical integral order-three extraction in every residual family]
+\label{thm:dyadic-f131-canonical-tame-extraction}
+Put $Q=X^3-I_2\in M_2(\mathfrak m)$.
+The binomial series
+\begin{equation}\label{eq:dyadic-f131-tame-root}
+u_A:=(X^3)^{1/3}
+=\sum_{j\ge0}\binom{1/3}{j}Q^j
+\in I_2+M_2(\mathfrak m)
+\end{equation}
+converges $\mathfrak m$-adically
+and is integral over $A$.
+The matrix
+\begin{equation}\label{eq:dyadic-f131-odd-tame-matrix}
+\boxed{\qquad
+z_A=Xu_A^{-1}
+\qquad}
+\end{equation}
+is the unique order-three
+component of $X$ in its
+procyclic closure.  It satisfies
+\begin{equation}\label{eq:dyadic-f131-cubic-etale}
+\boxed{\qquad
+z_A^3=I_2,\qquad
+z_A^2+z_A+I_2=0,\qquad
+z_A\bmod\mathfrak m=\bar U.
+\qquad}
+\end{equation}
+The algebra
+\begin{equation}\label{eq:dyadic-f131-canonical-tame-etale-algebra}
+\mathcal C_A:=A[z_A]\subseteq M_2(A)
+\simeq A[T]/(T^2+T+1)
+\end{equation}
+is a finite étale $A$-algebra
+of rank two and is exactly the
+centralizer of $z_A$ in $M_2(A)$.
+
+On $M_A=\operatorname{End}_A(A^2)$
+define the intrinsic tame Reynolds operator
+\begin{equation}\label{eq:dyadic-f131-universal-tame-projector}
+\boxed{\qquad
+\Pi_A=\frac13
+\left(I+\operatorname{Ad}_{z_A}
++\operatorname{Ad}_{z_A^2}\right).
+\qquad}
+\end{equation}
+It is a strict integral idempotent,
+with finite projective direct summands
+\begin{equation}\label{eq:dyadic-f131-universal-tame-summands}
+M_A=M_{0,A}\oplus M_{1,A},
+\qquad M_{0,A}=\mathcal C_A=\operatorname{im}\Pi_A,
+\qquad M_{1,A}=\ker\Pi_A,
+\end{equation}
+both of rank two.
+This construction commutes with
+continuous local coefficient base
+change.  For every $t\ge1$ the
+full matrix $z_A$, its tame
+projector, and the two summands
+are computable modulo
+$\mathfrak m^t$ using only the
+$j<t$ terms of
+\eqref{eq:dyadic-f131-tame-root}
+and finite unit-matrix inversion.
+
+Furthermore the full tame relation
+\eqref{eq:dyadic-f131-tame-relation}
+forces
+\begin{equation}\label{eq:dyadic-f131-sigma-tame-normalization}
+\boxed{\qquad
+Y^{-1}z_A Y=z_A^2,
+\quad
+[\operatorname{Ad}_Y,\Pi_A]=0,
+\quad
+[\operatorname{Ad}_X,\Pi_A]=0.
+\qquad}
+\end{equation}
+Thus the potential failure of
+Galois-equivariant splitting comes
+\emph{only} from wild transport.
+\end{theorem}
+
+\begin{proof}
+The matrix $Q=X^3-I_2$ lies in
+$M_2(\mathfrak m)$ because the
+residual tame matrix has order
+three.  The coefficients
+$\binom{1/3}{j}\in\mathbf Z_2$
+are integral and the $j$th
+summand belongs to
+$M_2(\mathfrak m^j)$.
+The usual binomial identity,
+valid for powers of the single
+commuting matrix $Q$, proves
+$u_A^3=X^3$.
+Since $u_A$ is a power series
+in $X$, it commutes with $X$,
+so $z_A^3=I_2$.
+Its reduction is $\bar U$.
+The matrix $z_A-I_2$ is invertible:
+its reduction $\bar U-I_2$
+has determinant one.
+Multiplying
+$(z_A-I_2)(z_A^2+z_A+I_2)=0$
+by its inverse proves the
+quadratic polynomial in
+\eqref{eq:dyadic-f131-cubic-etale}.
+
+The polynomial $T^2+T+1$
+is separable in residue
+characteristic two; its
+derivative $2T+1$ is a unit.
+The map
+$A[T]/(T^2+T+1)\to M_2(A)$
+sending $T$ to $z_A$
+is injective, since
+$I_2,z_A$ are linearly
+independent after reduction.
+It is a finite étale rank-two
+algebra.
+More concretely, for the
+first framed basis vector $e_1$,
+the pair $(e_1,z_A e_1)$
+is an $A$-basis because its
+reduction is a basis for
+$\bar U$.  In this cyclic basis,
+every matrix commuting with $z_A$
+is a unique $A$-linear
+polynomial of degree at most
+one in $z_A$.
+This proves the centralizer
+claim and its rank.
+
+The conjugation
+$\operatorname{Ad}_{z_A}$
+has order three, so its
+Reynolds average is an
+idempotent over $A$.
+Its image is precisely the
+centralizer $\mathcal C_A$.
+Its reduction is the rank-two
+idempotent of
+Theorem~\ref{thm:dyadic-s3-adjoint-unimodular-splitting};
+the complementary summand is
+therefore finite free of rank
+two by Nakayama and local
+projectivity.
+All constructions use integral
+convergent power series and
+unit matrices and hence commute
+with completed local base
+change.  Terms of order
+$j\ge t$ vanish modulo
+$\mathfrak m^t$.
+
+Finally tame conjugation
+commutes with taking the
+unique pro-$2$ cubic root,
+so \eqref{eq:dyadic-f131-tame-relation}
+gives
+$Y^{-1}u_A Y=u_A^2$.
+Dividing the relation for $X$
+by this one proves
+$Y^{-1}z_A Y=z_A^2$.
+Conjugation by $Y$ therefore
+normalizes the cyclic
+order-three adjoint action,
+and commutes with its
+Reynolds projector.
+The matrix $X$ commutes with
+its own odd component $z_A$,
+so its adjoint action does as
+well.  This proves all
+assertions.
+\end{proof}
+
+\begin{theorem}[Exact wild equations for the universal split locus]
+\label{thm:dyadic-f131-universal-split-locus}
+Let $R_{\bar\rho}^{\square}$ be
+the framed complete local
+Galois deformation ring
+and form $z^\square,\Pi^\square$
+using Theorem~\ref{thm:dyadic-f131-canonical-tame-extraction}.
+Let $\mathfrak I_{\rm split}$
+be the closed ideal of
+$R_{\bar\rho}^{\square}$
+generated by the matrix entries of
+\begin{equation}\label{eq:dyadic-f131-wild-split-equations}
+\boxed{\qquad
+[X_0,z^\square],\qquad
+[X_1,z^\square].
+\qquad}
+\end{equation}
+Equivalently, by
+\eqref{eq:dyadic-f131-universal-tame-summands},
+the ideal is generated by
+the two rank-two block
+components
+\begin{equation}\label{eq:dyadic-f131-wild-split-projector-equations}
+\boxed{\qquad
+(1-\Pi^\square)X_0,\qquad
+(1-\Pi^\square)X_1,
+\qquad}
+\end{equation}
+where $\Pi^\square$ acts
+on the \emph{matrix} algebra.
+On any framed deformation
+over a complete local $A$,
+the following are equivalent:
+\begin{enumerate}[label=\textnormal{(\roman*)}]
+\item $\operatorname{Ad}_{\rho_A(g)}$
+commutes with $\Pi_A$
+for every $g\in\Gamma$;
+\item both blocks $M_{0,A}$ and
+$M_{1,A}$ of
+\eqref{eq:dyadic-f131-universal-tame-summands}
+are $\Gamma$-subrepresentations;
+\item $X_0,X_1$ commute with $z_A$;
+\item every marked generator
+normalizes the finite étale
+algebra $\mathcal C_A$,
+hence
+\[
+\rho_A(\Gamma)\subseteq
+N_{\mathrm{GL}_2(A)}(\mathcal C_A).
+\]
+\end{enumerate}
+Therefore
+\begin{equation}\label{eq:dyadic-f131-split-ring}
+R_{\rm split}:=
+R_{\bar\rho}^{\square}/\mathfrak I_{\rm split}
+\end{equation}
+represents the \emph{exact}
+tame-isotypic split
+subfunctor of the framed
+residual deformation functor.
+
+Over $R_{\rm split}$ there
+is an integral Galois-equivariant
+coefficient decomposition,
+stable under all derived
+base changes within the
+split subfunctor:
+\begin{equation}\label{eq:dyadic-f131-split-cochains}
+R\Gamma(\Gamma,M_{R_{\rm split}})
+\simeq
+R\Gamma(\Gamma,M_{0,R_{\rm split}})
+\oplus
+R\Gamma(\Gamma,M_{1,R_{\rm split}}).
+\end{equation}
+The same splitting applies
+to the all-Sylow finite
+perfect coefficient carrier.
+This does \emph{not} assert
+the fixed130 constant Smith
+normal form on the entire
+split family.
+
+The étale algebra
+$\mathcal C_A$ makes $A^2$
+a free rank-one
+$\mathcal C_A$-module.
+On the split locus the
+index-two Galois subgroup
+$G_{\mathbf Q_2(\zeta_3)}$
+acts $\mathcal C_A$-linearly
+and the other coset
+acts through the
+nontrivial involution
+$z_A\mapsto z_A^2$.
+Thus the split locus is
+precisely the associated
+rank-one étale-toric/
+semilinear normalizer
+realization, not an
+arbitrary extension of
+the fixed $S_3$ matrix frame.
+\end{theorem}
+
+\begin{proof}
+The equivalence of (i)
+and (ii) is idempotent
+linear algebra.
+By
+\eqref{eq:dyadic-f131-sigma-tame-normalization},
+$\sigma$ and $\tau$
+already commute with
+$\Pi_A$ on the adjoint
+module.
+Suppose that an individual
+wild matrix $X_j$, whose
+residue is $I_2$, satisfies
+$[\operatorname{Ad}_{X_j},\Pi_A]=0$.
+Then $\operatorname{Ad}_{X_j}$
+preserves
+$\mathcal C_A=\operatorname{im}\Pi_A$,
+so $X_j z_A X_j^{-1}$
+lies in $\mathcal C_A$,
+is a cubic root of one,
+and reduces to $\bar U$.
+As $3z_A^2$ is a unit
+in the commutative
+$\mathfrak m$-complete
+algebra $\mathcal C_A$,
+the root lifting the given
+residue is unique.
+Consequently
+$X_jz_AX_j^{-1}=z_A$.
+Conversely, if $X_j$
+commutes with $z_A$,
+its adjoint action
+commutes with the
+Reynolds projector.
+This proves (i)--(iii).
+
+Every marked generator
+normalizes $\mathcal C_A$
+if (iii) holds, because
+$\sigma$ acts on it by
+$z_A\mapsto z_A^2$,
+while $\tau,x_0,x_1$
+centralize it.
+Conversely, if a wild
+$X_j$ normalizes
+$\mathcal C_A$, the
+same unique-root argument
+shows it centralizes $z_A$.
+This proves (iv) and the
+functorial vanishing
+criterion.
+Since all equations are
+entries of matrices over
+the complete universal
+deformation ring,
+they define the stated
+closed represented subfunctor.
+The equivalent projected
+form follows from
+$\ker\operatorname{ad}(z_A)
+=\mathcal C_A=\operatorname{im}\Pi_A$.
+
+Over that quotient the two
+idempotent summands are
+preserved by $\Gamma$.
+Ordinary continuous cochains
+and the perfect all-Sylow
+carrier are additive in
+the coefficient module,
+giving the displayed
+derived splitting.
+Its base-change
+compatibility follows
+because the idempotent and
+all actions are defined
+already over $R_{\rm split}$.
+
+The cyclic basis
+$(e_1,z_Ae_1)$ makes
+$A^2$ a free rank-one
+module over $\mathcal C_A$.
+The normalizer acts either
+linearly over $\mathcal C_A$
+or semilinearly under its
+unique nontrivial étale
+involution.  The tame
+generator $\sigma$ acts
+semilinearly, while the
+even-parity index-two
+subgroup is generated
+inside the normalizer
+by $\tau$, the wild
+generators and
+$\sigma^2$ and therefore
+acts linearly.
+This proves the final
+description without
+claiming a global
+minimal Fox basis.
+\end{proof}
+
+\begin{theorem}[A genuine wild first-order obstruction and failure of universal splitting]
+\label{thm:dyadic-f131-first-order-nosplit}
+Let
+$k=\mathbf F_2$ and
+$A_\epsilon=k[\epsilon]/(\epsilon^2)$.
+Reduce the fixed matrices
+$S,U,V$ of
+Theorem~\ref{thm:dyadic-s3-adjoint-unimodular-splitting}
+modulo two:
+\begin{equation}\label{eq:dyadic-f131-wild-counterexample-matrices}
+\bar S=
+\begin{pmatrix}0&1\\1&0\end{pmatrix},
+\quad
+\bar U=
+\begin{pmatrix}1&1\\1&0\end{pmatrix},
+\quad
+\bar V=
+\begin{pmatrix}1&1\\0&1\end{pmatrix}.
+\end{equation}
+The marked generator assignment
+\begin{equation}\label{eq:dyadic-f131-wild-counterexample-rep}
+\boxed{\quad
+\rho_\epsilon(\sigma)=\bar S,\quad
+\rho_\epsilon(\tau)=\bar U,\quad
+\rho_\epsilon(x_0)=I_2+\epsilon\bar V,\quad
+\rho_\epsilon(x_1)=I_2
+\quad}
+\end{equation}
+satisfies the literal
+Roe--Turturean tame and
+wild relations, including
+the marked pro-$2$ wild
+normal-closure condition.
+It therefore defines a
+genuine continuous
+$G_{\mathbf Q_2}$ residual
+deformation.
+
+Its canonical odd tame
+component is
+$z_\epsilon=\bar U$.
+However
+\begin{equation}\label{eq:dyadic-f131-nonzero-wild-commutator}
+\boxed{\quad
+[\bar V,\bar U]=\bar V\ne0,\qquad
+[\rho_\epsilon(x_0),z_\epsilon]
+=\epsilon\bar V\ne0.
+\quad}
+\end{equation}
+Thus $\rho_\epsilon$ lies
+outside the split locus of
+Theorem~\ref{thm:dyadic-f131-universal-split-locus}.
+
+Moreover this failure
+cannot be repaired by
+replacing the canonical
+projector with \emph{any}
+Galois-equivariant
+idempotent
+$E_\epsilon$ that reduces
+to the fixed130 tame
+projector $\Pi_0$.
+Hence the fixed130
+$\operatorname{ad}T=M_0\oplus M_1$
+splitting does \emph{not}
+extend to the unrestricted
+universal framed
+$S_3$ deformation space,
+even after deforming the
+projector itself.
+\end{theorem}
+
+\begin{proof}
+Over the dual-number ring
+one has
+$\bar U^3=I_2$ and
+$\bar S^{-1}\bar U\bar S
+=\bar U^2$.
+Also
+\[
+\bar V+\operatorname{Ad}_{\bar U}\bar V
++\operatorname{Ad}_{\bar U^2}\bar V=0.
+\]
+Therefore
+\[
+\bigl((I_2+\epsilon\bar V)\bar U\bigr)^3
+=I_2
+\]
+and the $\omega_2$
+component of
+$\rho_\epsilon(x_0\tau)$
+is the identity.
+Similarly the
+$\omega_2$ component
+of $\bar U$ is the
+identity, whereas
+$\bar S^{\omega_2}=\bar S$.
+Consequently the literal
+marked auxiliary words
+satisfy
+\[
+u_0=u_1=1,\quad
+d_0=x_0^{-1}=x_0,\quad
+g_0=\sigma^2=1,\quad
+c_0=h_c=1.
+\]
+Because $x_0^2=1$ and
+$d_0=x_0$, the remaining
+word $h_0$ is also one.
+The full wild relator
+$h_0u_1^{-1}x_1^\sigma c_0$
+is therefore one, and the
+tame relator was checked
+above.
+The wild images lie in the
+normal subgroup
+$1+\epsilon M_2(k)$,
+which is an elementary
+abelian $2$-group.
+The marked pro-$2$
+condition is automatic.
+The universal property
+of the marked
+Roe--Turturean presentation
+then gives an actual
+continuous Galois
+representation.
+
+Since $\rho_\epsilon(\tau)$
+has exact order three,
+its pro-$2$ component
+is one and
+$z_\epsilon=\bar U$.
+Direct characteristic-two
+matrix multiplication gives
+$[\bar V,\bar U]=\bar V$,
+proving
+\eqref{eq:dyadic-f131-nonzero-wild-commutator}.
+
+Suppose that
+$E_\epsilon=\Pi_0+\epsilon D$
+were a Galois-equivariant
+idempotent reducing to
+$\Pi_0$.
+As an action on the
+adjoint module,
+\[
+\operatorname{Ad}_{\rho_\epsilon(x_0)}
+=I+\epsilon\operatorname{ad}_{\bar V}.
+\]
+Commutation with $E_\epsilon$
+would imply, already
+at order $\epsilon$,
+\[
+[\operatorname{ad}_{\bar V},\Pi_0]=0.
+\]
+But $\Pi_0(\bar U)=\bar U$,
+$\operatorname{ad}_{\bar V}(\bar U)=\bar V$,
+and $\Pi_0(\bar V)=0$,
+so this commutator maps
+$\bar U$ to the nonzero
+matrix $\bar V$.
+This contradiction is
+independent of $D$ and
+proves the strong
+nonextendability.
+\end{proof}
+
+\begin{corollary}[Exact first-order codimension of the split subfunctor]
+\label{cor:dyadic-f131-split-tangent-codimension}
+At the residual $S_3$
+point over $\mathbf F_2$,
+the first-order split
+condition on a framed
+Galois cocycle $c$ is
+\begin{equation}\label{eq:dyadic-f131-tangent-wild-character}
+\boxed{\quad
+\kappa_{\rm wild}([c])
+:=(I-\bar\Pi_0)c(x_0)=0
+\quad\text{in }\bar M_1.
+\quad}
+\end{equation}
+The map
+\[
+\kappa_{\rm wild}:
+H^1(\Gamma,\operatorname{ad}\bar T)
+\longrightarrow\bar M_1
+\cong\mathbf F_2^2
+\]
+is a \emph{surjection}
+with kernel
+$H^1(\Gamma,\bar M_0)$.
+Thus there is a short
+exact sequence
+\begin{equation}\label{eq:dyadic-f131-tangent-exact-sequence}
+\boxed{
+0\to H^1(\Gamma,\bar M_0)
+\longrightarrow
+H^1(\Gamma,\operatorname{ad}\bar T)
+\xrightarrow{\;\kappa_{\rm wild}\;}
+\bar M_1\to0.
+}
+\end{equation}
+The unframed residual
+tangent dimensions are
+\[
+\dim_{\mathbf F_2}H^1(\Gamma,\operatorname{ad}\bar T)=6,
+\qquad
+\dim_{\mathbf F_2}\ker\kappa_{\rm wild}=4.
+\]
+The corresponding framed
+tangent dimensions are
+$9$ and $7$, respectively.
+Hence the tame-isotypic
+split subfunctor is a
+\emph{proper} closed
+subfunctor, with tangent
+codimension exactly two.
+No assertion that its
+global defining ideal is
+a regular sequence is made.
+\end{corollary}
+
+\begin{proof}
+At the residual point
+the wild generators
+act trivially, so
+$c(x_j)$ is unchanged
+under infinitesimal
+conjugation.
+Differentiating the
+commutator equations
+\eqref{eq:dyadic-f131-wild-split-equations}
+gives
+$[c(x_j),\bar U]=0$,
+equivalently
+$(I-\bar\Pi_0)c(x_j)=0$.
+The fixed130 blockwise
+linearized relations show
+that the $\bar M_1$
+component of $c(x_1)$
+is already zero for
+\emph{every} global
+cocycle, whereas the
+$\bar M_1$ component of
+$c(x_0)$ is unrestricted.
+Indeed the $\bar M_1$
+wild differential reduces
+to $\bar S^{-1}c(x_1)$
+in characteristic two.
+The norm-zero natural
+block of fixed129
+identifies its $H^1$
+with $\bar M_1$ by
+evaluation at $x_0$.
+Consequently
+$\kappa_{\rm wild}$
+is the canonical
+projection onto the
+$\bar M_1$ summand of
+the fixed130
+decomposition, giving
+the short exact
+sequence.
+
+The fixed130 $M_0$
+Fox complex has
+$H^1$ of dimension
+four after mod-two
+reduction: its three
+integral free directions
+and its one top-degree
+$2$-torsion Bockstein
+direction.
+The $\bar M_1$
+complex contributes two
+additional dimensions.
+Thus the full unframed
+$H^1$ dimension is six
+and the kernel has
+dimension four.
+The residual adjoint
+invariants are scalars
+of dimension one, so
+the degree-zero
+coboundary image has
+dimension $4-1=3$.
+Adding these gauge
+directions gives the
+framed tangent
+dimensions $9$ and $7$.
+The explicit deformation
+of
+Theorem~\ref{thm:dyadic-f131-first-order-nosplit}
+realizes a nonzero
+obstruction class, so
+the ideal is genuinely
+proper.
+\end{proof}
+
+\begin{theorem}[Exact curved two-block Cartan multiplication]
+\label{thm:dyadic-f131-curved-tame-transport}
+For an arbitrary framed
+deformation over $A$,
+retain its canonical tame
+projector $\Pi=\Pi_A$
+and put
+$P_0=\Pi$, $P_1=I-\Pi$.
+For $g\in\Gamma$ define
+\[
+\mathcal R(g)=\operatorname{Ad}_{\rho_A(g)}
+\quad\text{on }M_A,
+\qquad
+\mathcal R_{ab}(g)=P_a\mathcal R(g)P_b,
+\quad a,b\in\{0,1\}.
+\]
+Write
+\begin{equation}\label{eq:dyadic-f131-curved-two-blocks}
+\mathcal R(g)=
+\begin{pmatrix}
+A_g&B_g\\ C_g&D_g
+\end{pmatrix}
+\quad\text{on }M_{0,A}\oplus M_{1,A}.
+\end{equation}
+The true profinite
+transport remains
+multiplicatively flat,
+but its two truncated
+diagonal carriers obey
+the \emph{exact} formulas
+\begin{equation}\label{eq:dyadic-f131-curved-block-products}
+\boxed{
+\begin{aligned}
+A_{gh}&=A_gA_h+B_gC_h,\\
+B_{gh}&=A_gB_h+B_gD_h,\\
+C_{gh}&=C_gA_h+D_gC_h,\\
+D_{gh}&=C_gB_h+D_gD_h.
+\end{aligned}}
+\end{equation}
+In particular
+\begin{equation}\label{eq:dyadic-f131-two-step-return-curvature}
+\boxed{\quad
+\mathscr F_{00}(g,h)
+:=A_{gh}-A_gA_h=B_gC_h,
+\quad
+\mathscr F_{11}(g,h)
+:=D_{gh}-D_gD_h=C_gB_h.
+\quad}
+\end{equation}
+Both diagonal defects
+vanish on the split
+locus, but outside it
+the off-diagonal
+wild transport is a
+genuine first-order
+source of possible
+two-step return defects.
+The off-diagonal blocks
+vanish identically for
+$\sigma$ and $\tau$,
+and all their nonzero
+sources are carried by
+wild words.
+
+For any finite residual
+precision $\mathfrak m^t$,
+each block matrix,
+its product formula,
+and the projectors
+are finite computations
+from the marked
+transport matrices,
+\eqref{eq:dyadic-f131-tame-root}
+truncated at $j<t$,
+and unit-matrix
+inverses.
+These formulas define
+a \emph{source-faithful
+curved two-block
+coefficient chart} on
+the unrestricted
+$S_3$ residual family.
+They are a
+finite arithmetic
+transport identity,
+not an assertion of
+additional analytic
+differential equations.
+\end{theorem}
+
+\begin{proof}
+The group law is
+$\mathcal R(gh)
+=\mathcal R(g)\mathcal R(h)$.
+Insert $P_0+P_1=I$
+between the two factors
+and project to each of
+the four pairs of block
+degrees.  This gives
+\eqref{eq:dyadic-f131-curved-block-products}
+and
+\eqref{eq:dyadic-f131-two-step-return-curvature}
+exactly, with no
+approximation.
+By
+\eqref{eq:dyadic-f131-sigma-tame-normalization},
+the $\sigma,\tau$
+transport preserves
+both tame summands.
+Their off-diagonal
+blocks therefore vanish.
+Vanishing of all wild
+off-diagonal blocks is
+equivalent to the split
+criterion of
+Theorem~\ref{thm:dyadic-f131-universal-split-locus}.
+The stated finite-jet
+effectivity follows
+from the binomial
+tail estimate and
+ordinary finite
+matrix multiplication.
+\end{proof}
+
+\begin{remark}[Two distinct meanings of closure]
+\label{rem:dyadic-f131-split-versus-global-atlas}
+The universal tame
+\emph{matrix projector}
+exists over the full
+residual deformation
+ring.  A
+\emph{Galois-equivariant
+decomposition} by that
+projector exists
+precisely on the
+wild-centralizer
+subfunctor, and a
+genuine first-order
+counterexample shows
+that the latter is
+proper.
+By contrast the
+all-Sylow perfect
+cochain carrier and
+the Cayley--Hamilton
+full-transport
+realization exist
+over the whole
+framed residual
+sector regardless
+of this failure.
+Therefore failure of
+a strict tame
+eigensplitting does
+not reopen the
+derived faithful
+finite-atlas theorem.
+Nor does the curved
+block identity
+provide the still
+missing canonical
+Schreier-to-minimal-
+Demu\v{s}kin Fox
+syzygy comparison
+for arbitrary
+non-pro-$2$
+deformation families.
+\end{remark}
