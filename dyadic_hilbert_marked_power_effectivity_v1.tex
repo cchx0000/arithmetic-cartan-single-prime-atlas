@@ -137,6 +137,116 @@ coordinate issue}, not a failure of finite
 Galois cohomology or local duality.
 \end{remark}
 
+\begin{theorem}[Exact integral rank-one dyadic residual deformation ring]
+\label{thm:dyadic-q2-rankone-integral-ring}
+Let $\bar\rho=\mathbf1$ be the trivial
+rank-one residual representation
+of $G_{\mathbf Q_2}$ over $k_E$.
+The framed universal deformation ring
+over $\mathcal O_E$ is
+\begin{equation}\label{eq:dyadic-q2-rankone-integral-ring}
+\boxed{\quad
+R_{\mathbf1}^{\square}
+\simeq
+\mathcal O_E[[u,v,w]]/
+\bigl(u(u+2)\bigr).
+\quad}
+\end{equation}
+Under the canonical normal form of
+Proposition~\ref{prop:dyadic-q2-explicit-anchor},
+the universal character is explicitly
+\begin{equation}\label{eq:dyadic-q2-rankone-transport}
+\rho(a)=(1+u)(1+v)^{-2},\qquad
+\rho(s)=1+v,\qquad
+\rho(y)=1+w.
+\end{equation}
+The displayed ring is a hypersurface
+complete intersection and is finite
+free of rank two over
+$\mathcal O_E[[v,w]]$, with basis
+$\{1,u\}$.  Its closed residual
+fiber is
+\begin{equation}\label{eq:dyadic-q2-rankone-special-fiber}
+R_{\mathbf1}^{\square}/\varpi_E
+\simeq
+k_E[[u,v,w]]/(u^2),
+\end{equation}
+which is nonreduced.  After
+inverting $2$ in the integral
+ring, the two branches $u=0$
+and $u=-2$ split by the explicit
+idempotent $e=-u/2$.
+
+The quadratic obstruction $u^2$
+on the residual fiber is exactly
+the nonzero Fox cup square
+$\chi_a\smile\chi_a=\omega$:
+a first-order residual deformation
+with $u=\varepsilon$, $v=w=0$
+over $k_E[\varepsilon]/(\varepsilon^2)$
+does not lift with that first-order
+part to $k_E[\varepsilon]/(\varepsilon^3)$.
+Thus dyadic $H^2$ has a literal
+integral hypersurface manifestation,
+even though its characteristic-zero
+rank-one adjoint obstruction vanishes.
+\end{theorem}
+
+\begin{proof}
+Every rank-one lift of the trivial
+residual representation has image
+in $1+\mathfrak m_A$, a pro-$2$
+group, and hence factors through
+the maximal pro-$2$ quotient
+$P_{\mathbf Q_2}$.
+Abelianizing its defining relation
+$a^2s^4[s,y]=1$ gives
+$\rho(a)^2\rho(s)^4=1$.
+Put
+\[
+1+u=\rho(a)\rho(s)^2,\qquad
+1+v=\rho(s),\qquad
+1+w=\rho(y).
+\]
+This change of complete local
+variables has inverse
+\eqref{eq:dyadic-q2-rankone-transport}.
+The defining relation becomes
+$(1+u)^2=1$, equivalently
+$u(u+2)=0$, proving the exact
+representing-ring identification.
+
+Because $u^2+2u$ is a monic
+distinguished polynomial of degree
+two in $u$, Weierstrass division
+gives the claimed free basis over
+$\mathcal O_E[[v,w]]$.
+The hypersurface equation is a
+nonzero divisor in its regular
+power-series ambient ring, so it
+is a complete intersection.
+Reduction modulo $\varpi_E$ gives
+$u^2=0$, and in the localization
+$R_{\mathbf1}^{\square}[1/2]$
+the element $-u/2$ is idempotent
+since $u^2=-2u$.
+It separates $u=0$ and $u=-2$.
+
+Finally, in characteristic two
+$u=\varepsilon$ solves $u^2=0$
+modulo $\varepsilon^2$, but a
+lift of the same first-order term
+has square $\varepsilon^2\ne0$
+modulo $\varepsilon^3$, independent
+of its second-order correction.
+The Fox quadratic symbol
+$A^2+SY+YS$ already identifies
+the coefficient of this first
+obstruction with
+$\chi_a\smile\chi_a=\omega$,
+as asserted.
+\end{proof}
+
 \begin{theorem}[Residue-sector formula for the profinite $2$-power projection]
 \label{thm:dyadic-omega2-power-formula}
 Let $(A,\mathfrak m,k)$ be a complete Noetherian
