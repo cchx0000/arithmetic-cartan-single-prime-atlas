@@ -17271,6 +17271,467 @@ the stated
 nested relations.
 \end{proof}
 
+\begin{theorem}[The full three-power family of odd-index Sylow--Fox towers]
+\label{thm:dyadic-f135-all-three-power-sylow-towers}
+For every integer
+$k\ge1$, choose
+$\alpha_k^{\,3^k}=2$
+and set
+\begin{equation}\label{eq:dyadic-f135-uniform-three-power-fields}
+\boxed{
+\begin{gathered}
+F_k=\mathbf Q_2(\alpha_k),\\
+U_{3^{k-1}}=
+\text{the unramified degree-}3^{k-1}
+\text{ extension of }\mathbf Q_2,\\
+K_k=F_kU_{3^{k-1}},\qquad
+n_k=[K_k:\mathbf Q_2]=3^{2k-1}.
+\end{gathered}}
+\end{equation}
+Then the Galois
+closure
+$L_k=F_k(\zeta_{3^k})$
+has tame quotient
+\begin{equation}\label{eq:dyadic-f135-uniform-tame-quotient}
+\boxed{
+\operatorname{Gal}(L_k/\mathbf Q_2)
+\simeq C_{3^k}\rtimes
+C_{2\cdot3^{k-1}},
+\qquad
+\sigma^{-1}\tau\sigma=\tau^2.
+}
+\end{equation}
+The subgroup
+$\langle\sigma^{3^{k-1}}\rangle$
+is a Sylow $2$-subgroup;
+its fixed field is
+precisely $K_k$.
+Thus $G_{K_k}$
+is the \emph{true}
+Sylow preimage
+of index $n_k$,
+not merely a
+chosen odd-degree
+radical subgroup.
+
+Let $V_k=\mathbf Z_2^{n_k}$
+be the coinduced
+trivial permutation
+lattice.
+Its tame inertia
+$\Upsilon_k$
+has exactly
+$r_k=3^{k-1}$
+orbits, each of
+length $3^k$,
+and $\Sigma_k$
+permutes those
+orbits cyclically.
+The normalized
+odd-inertia projector
+\[
+P_k=\frac1{3^k}
+\sum_{a=0}^{3^k-1}\Upsilon_k^a
+\]
+is integral
+of rank $r_k$.
+For the true
+marked coinduced
+two-relator
+Fox differential,
+one has the
+\emph{same}
+symbolic formula
+\eqref{eq:dyadic-f135-27sheet-fox-matrix}
+with
+$(n,\Sigma_n,\Upsilon_n,P_n)$
+replaced by
+$(n_k,\Sigma_k,\Upsilon_k,P_k)$.
+The entire
+Smith calculation
+therefore extends
+without a new
+finite matrix
+search:
+\begin{equation}\label{eq:dyadic-f135-uniform-odd-Smith}
+\boxed{
+\operatorname{SNF}(d_k^1)
+=(1^{2n_k-1},2),
+\qquad
+\operatorname{SNF}(d_k^0)
+=(1^{n_k-1},0).
+}
+\end{equation}
+The actual
+marked group
+Schreier relators
+have mod-two
+primitive row
+rank $2n_k-1$,
+so the
+pro-$2$ Burnside
+criterion gives
+a finite-stage
+computable
+\emph{one-relator}
+presentation of
+$G_{K_k}(2)$
+with $n_k+2$
+minimal generators,
+and its genuine
+integral
+Demu\v{s}kin
+Fox chain
+resolution after
+$n_k-1$
+tree contractions
+and $2n_k-1$
+relation cancellations.
+
+There is a
+chain of
+$2k-1$ nested
+odd-index-three
+fields
+\begin{equation}\label{eq:dyadic-f135-uniform-field-chain}
+\mathbf Q_2
+\subset F_1\subset\cdots\subset F_k
+\subset F_kU_3\subset\cdots
+\subset F_kU_{3^{k-1}}=K_k,
+\end{equation}
+where the
+second segment
+is empty for
+$k=1$.
+The successive
+normalized
+coset-average
+idempotents
+are strictly
+commuting cochain
+endomorphisms,
+and their
+orthogonal layers
+have exact
+integral ranks
+\begin{equation}\label{eq:dyadic-f135-uniform-hecke-ranks}
+\boxed{\qquad
+1,\ 2,\ 6,\ 18,\ \ldots,\
+2\cdot3^{2k-2},
+\qquad
+1+\sum_{j=1}^{2k-1}
+2\cdot3^{j-1}
+=n_k.
+\qquad}
+\end{equation}
+For trivial
+integral coefficients
+the nonconstant
+layers have
+cohomology in
+degree one only,
+with free ranks
+$2\cdot3^{j-1}$,
+while the unique
+top $\mathbf F_2$
+class is carried
+by the constant
+coset line.
+The same free
+primitive-layer
+ranks hold for
+cyclotomic coefficients.
+The coefficient-uniform
+coinduced
+chain completeness
+holds on any
+framed residual
+sector whose
+restriction to
+the Sylow
+preimage $G_{K_k}$
+has pro-$2$ image.
+
+This is an
+\emph{infinite,
+explicit odd-index
+family} within
+the same marked
+tame source,
+not a
+classification
+of all finite
+dyadic extensions.
+Its minimal
+Fox bases remain
+choice-dependent
+and finite-jet
+computable.
+\end{theorem}
+
+\begin{proof}
+The polynomial
+$X^{3^k}-2$
+is Eisenstein
+and gives a
+totally tame
+extension of
+degree $3^k$.
+The cyclotomic
+factor is
+unramified,
+of degree
+\[
+\operatorname{ord}_{3^k}(2)
+=2\cdot3^{k-1},
+\]
+by the elementary
+lifting-the-exponent
+formula for
+$2^{2\cdot3^j}-1$.
+The Galois
+closure therefore
+has the displayed
+semidirect product.
+The unique
+order-two subgroup
+of its chosen
+Frobenius
+complement is
+$\langle\sigma^{3^{k-1}}\rangle$.
+It fixes the
+chosen radical
+root and
+the unramified
+degree-$3^{k-1}$
+subfield, so
+its fixed field
+is $K_k$ and
+its index is
+$3^k3^{k-1}
+=3^{2k-1}$.
+
+The inertia
+subgroup
+$C_{3^k}$
+acts freely
+in each orbit
+of the
+$G_{K_k}\backslash\Gamma$
+coset set.
+There are
+$r_k=3^{k-1}$
+orbits, and
+the remaining
+Frobenius quotient
+permutes them
+as a single
+cyclic orbit.
+Because the
+residual Frobenius
+has order
+$2\cdot3^{k-1}$,
+its pro-$2$
+component has
+linear order
+two.
+Thus the affine
+marked-word
+proof of
+Theorem~\ref{thm:dyadic-f135-27sheet-fox-block-formula}
+uses precisely
+the same
+identities:
+the pro-$2$
+inertia projection
+is the normalized
+$3^k$-cycle norm,
+the square of
+the pro-$2$
+Frobenius
+component is
+a pure translation,
+and its conjugation
+of a wild translation
+is trivial.
+This gives
+the full
+symbolic Fox
+matrix for
+every $k$.
+
+The integral
+Smith proof of
+Theorem~\ref{thm:dyadic-f135-smith-9-27}
+only uses the
+odd-order inertia
+projector,
+the invertibility
+of $\Upsilon-I$
+on its complement,
+the invertibility
+of $\Sigma^{-1}-2I$
+on its invariant
+part, and the
+cyclic permutation
+of an
+\emph{odd} number
+$r_k$ of inertia
+orbits.
+All four
+properties remain
+true, and the
+same calculation
+gives $n_k$
+tame units,
+$n_k-r_k$
+wild units,
+$r_k-1$
+additional
+wild units,
+and a final
+factor two.
+The degree-zero
+image has
+$n_k-1$
+primitive
+unit directions.
+This proves
+\eqref{eq:dyadic-f135-uniform-odd-Smith}.
+
+For the genuine
+pro-$2$ group
+presentation,
+the marked
+finite-wreath
+argument from
+Theorem~\ref{thm:dyadic-f135-group-fox-9-27}
+works unchanged.
+The odd tame
+element $\tau^{3^k}$
+must vanish
+in every finite
+pro-$2$ quotient
+of the Sylow
+preimage:
+its conjugate
+by the Sylow
+element
+$\sigma^{3^{k-1}}$
+is its
+$2^{3^{k-1}}$th
+power, an
+even power.
+A finite
+$2$-group
+element cannot
+be conjugate
+to a positive
+even power
+unless it is
+trivial.
+Therefore
+the tame pro-odd
+source condition
+causes no
+additional
+pro-$2$
+relation.
+All induced
+wild images
+belong to the
+pro-$2$ base
+of the finite
+wreath quotient,
+so the genuine
+Schreier relation
+functor is
+as stated.
+The augmented
+Fox rank then
+gives the
+same primitive
+pro-$2$
+Nielsen--Tietze
+elimination.
+Since $K_k$
+has odd
+degree,
+its cyclotomic
+orientation
+is full and
+$q(K_k)=2$,
+while its
+Demu\v{s}kin
+generator rank
+is $n_k+2$;
+the remaining
+one-relator
+Fox resolution
+is exact.
+
+Finally the
+field chain
+\eqref{eq:dyadic-f135-uniform-field-chain}
+has successive
+degrees three.
+Each intermediate
+quotient of
+the full coset
+set is
+$\Gamma$-equivariant.
+Averaging along
+its fibers
+is integral,
+idempotent,
+and strictly
+compatible
+with all
+completed Fox
+differentials.
+Their nested
+differences
+have ranks
+$3^j-3^{j-1}
+=2\cdot3^{j-1}$,
+giving
+\eqref{eq:dyadic-f135-uniform-hecke-ranks}.
+Odd-index
+restriction and
+normalized
+corestriction
+split
+cohomology
+at every stage.
+Local
+class field
+theory,
+Kummer theory
+and integral
+Tate duality
+show that the
+degree-zero and
+top classes
+occur only
+in the constant
+summand;
+the positive
+primitive layers
+have the stated
+free degree-one
+ranks.
+The complete
+coefficient
+comparison follows
+from the actual
+pro-$2$
+Schreier--Fox
+resolution and
+strict constant-coset
+projection, as in
+Theorem~\ref{thm:dyadic-f135-four-heeke-projectors}.
+\end{proof}
+
 \begin{warning}[Odd degree is not automatically a Sylow preimage]
 \label{warn:dyadic-f135-nine-versus-27}
 The degree-nine
