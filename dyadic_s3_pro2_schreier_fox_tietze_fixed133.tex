@@ -1,0 +1,1690 @@
+% Fixed133 independent substantive insertion.
+% Exact marked 3-sheet Reidemeister-Schreier presentation of
+% H(2), integral Fox/Shapiro augmentation, primitive pro-2
+% Nielsen/Tietze eliminations, the rank-five quadratic cup matrix,
+% and the complete coefficient-natural degree-two Fox chain split.
+
+\subsection{Actual pro-$2$ Schreier relations and an integral
+five-generator Fox reduction in the index-three dyadic field}
+\label{subsec:dyadic-f133-actual-syzygy}
+
+The fixed132 zero-sum Schreier exchange identities
+are coefficient-level consequences of finite
+tame conjugacy.  They are \emph{not}
+the relations of $G_F(2)$.
+We now construct the relations themselves
+by applying marked Reidemeister--Schreier
+rewriting to the genuine Roe--Turturean
+presentation of $G_{\mathbf Q_2}$.
+For the specific index-three field
+$F=\mathbf Q_2(\sqrt[3]2)$,
+the result is a complete finite
+\emph{pro-$2$ group presentation}.
+Two successive integral unit-Fox
+eliminations reduce its six indexed
+relations to one rank-five Demu\v{s}kin
+relation, with explicit quadratic
+Magnus symbol.  The same transformations
+split the finite coefficient
+Fox complex \emph{in degree two},
+so in this chosen non-pro-$2$
+residual sector the former
+Schreier relation-syzygy gap
+is closed up to a
+marked, finite-jet-computable
+change of minimal generators.
+
+Throughout put
+\[
+\Gamma=G_{\mathbf Q_2},\quad
+H=G_F,\quad
+P_F=H(2)=G_F(2).
+\]
+Let $\sigma,\tau,x_0,x_1$
+be the marked Roe--Turturean
+generators as in
+Theorem~\ref{thm:dyadic-q2-marked-word-jet-solver}.
+The genuine quotient
+$\Gamma\twoheadrightarrow S_3$
+sends $\sigma$ to a
+transposition, $\tau$ to
+a three-cycle and
+$x_0,x_1$ to the identity.
+The right coset representatives
+are $t_i=\tau^i$ for
+$i\in\{0,1,2\}$.
+
+\begin{theorem}[Marked three-sheet Schreier relators]
+\label{thm:dyadic-f133-schreier-pro2-presentation}
+In the Schreier presentation
+before eliminating its tame
+direction, use the ten
+pro-$2$ source generators
+\begin{equation}\label{eq:dyadic-f133-ten-schreier-generators}
+\boxed{
+\begin{gathered}
+s_0=\sigma,\quad
+s_1=\tau\sigma\tau^{-2},
+\quad
+s_2=\tau^2\sigma\tau^{-1},
+\quad t=\tau^3,\\
+w_{ij}=\tau^i x_j\tau^{-i}
+\quad(i=0,1,2;\ j=0,1).
+\end{gathered}}
+\end{equation}
+The three \emph{literal}
+Reidemeister--Schreier
+rewrites of the tame
+relator
+$r_t=\sigma^{-1}\tau\sigma\tau^{-2}$
+are
+\begin{equation}\label{eq:dyadic-f133-three-tame-relators}
+\boxed{
+r_{t,0}=s_0^{-1}s_1,\quad
+r_{t,1}=s_2^{-1}t s_0t^{-1},
+\quad
+r_{t,2}=s_1^{-1}s_2t^{-1}.
+}
+\end{equation}
+In every pro-$2$
+target they imply
+\begin{equation}\label{eq:dyadic-f133-tame-elimination}
+\boxed{\qquad
+s_1=s_2=s_0=:s,\qquad t=1.
+\qquad}
+\end{equation}
+More precisely the
+first and third relations
+give $s_1=s_0$ and
+$s_2=s_0t$, and
+the second then becomes
+$s^{-1}ts=t^2$.
+No nontrivial element
+of a finite $2$-group
+can be conjugate to its
+square, so $t=1$ in
+the universal pro-$2$
+quotient.
+
+After this \emph{exact}
+tame elimination, put
+\[
+a_i=w_{i0},\qquad
+v_i=w_{i1},\qquad
+i\in\mathbf Z/3.
+\]
+The following are genuine
+pro-$2$ group words,
+with $1/3\in\mathbf Z_2$
+acting by continuous
+pro-$2$ powering:
+\begin{equation}\label{eq:dyadic-f133-u-and-d-words}
+\boxed{
+\begin{aligned}
+u_{j,i}
+ &=\bigl(w_{i,j}w_{i+1,j}
+              w_{i+2,j}\bigr)^{1/3},
+ & d_i&=u_{0,i}a_i^{-1},\\
+z_i&=s^{-1}a_{2i}s,
+ & c_i&=[d_i,z_i],\\
+g&=s^2,&
+D_i&=g^{-1}d_i g,\\
+h_i&=[D_i,d_i],
+ &H_i&=(g^{-1}a_i g)\,
+       a_iD_i d_i^3h_i.
+\end{aligned}}
+\end{equation}
+The indexed wild
+Roe--Turturean relators
+are the three explicit
+pro-$2$ words
+\begin{equation}\label{eq:dyadic-f133-three-wild-relators}
+\boxed{\quad
+R_i
+=H_i\,u_{1,i}^{-1}\,
+s^{-1}v_{2i}s\,c_i,
+\qquad i=0,1,2
+\quad(\text{indices mod }3).
+\quad}
+\end{equation}
+They give the exact
+seven-generator,
+three-relator pro-$2$
+presentation
+\begin{equation}\label{eq:dyadic-f133-seven-three-presentation}
+\boxed{\quad
+P_F\cong
+\Bigl\langle
+s,a_0,a_1,a_2,v_0,v_1,v_2
+\ \Bigm|\
+R_0,R_1,R_2
+\Bigr\rangle_{\mathrm{pro}-2}.
+\quad}
+\end{equation}
+This is a \emph{group-level}
+presentation of the actual
+maximal pro-$2$ Galois
+group, not a coefficient
+exchange identity.
+\end{theorem}
+
+\begin{proof}
+The Schreier formula
+for the chosen right
+coset representatives is
+$t_i g=h_{i,g}t_{j(i,g)}$.
+Before using the tame
+relation, the three
+$\sigma$ edges are
+$s_0,s_1,s_2$;
+the third $\tau$ edge
+is $t=\tau^3$;
+the two earlier $\tau$
+edges belong to a
+spanning tree and
+give no generator.
+Each wild $x_j$ yields
+the three loops $w_{ij}$.
+This gives ten
+Schreier generators.
+Applying the
+Schreier word scan to
+$r_t=\sigma^{-1}\tau
+\sigma\tau^{-2}$ from
+initial cosets $0,1,2$
+gives exactly
+\eqref{eq:dyadic-f133-three-tame-relators}.
+The stated elimination
+follows by the
+element-order argument.
+
+For the wild words, note
+the exact group identity
+\begin{equation}\label{eq:dyadic-f133-threefold-wild-cycle}
+\boxed{\quad
+\tau^i(x_j\tau)^3\tau^{-i}
+=w_{i,j}w_{i+1,j}w_{i+2,j}\tau^3.
+\quad}
+\end{equation}
+Its right-hand side
+belongs to $H$.
+The continuous
+$\omega_2$ power
+$u_j=(x_j\tau)^{\omega_2}$
+belongs to the
+marked wild
+pro-$2$ normal
+subgroup.
+Its third power
+differs from
+$(x_j\tau)^3$
+by a pro-odd
+element in the
+same procyclic
+closure.  This
+pro-odd component
+dies in $P_F$.
+After $t=\tau^3=1$,
+the unique pro-$2$
+cube root gives
+precisely $u_{j,i}$
+in
+\eqref{eq:dyadic-f133-u-and-d-words}.
+The remaining
+wild auxiliary
+words are products,
+inverses,
+conjugates and
+commutators.
+The Schreier
+coset action of
+$\sigma$ is
+$i\mapsto2i$;
+after tame
+elimination its
+edge value is $s$.
+Thus
+$\tau^i x_0^\sigma\tau^{-i}$
+rewrites as
+$s^{-1}a_{2i}s$,
+and
+$\tau^i x_1^\sigma\tau^{-i}$
+as $s^{-1}v_{2i}s$.
+The word $\sigma^2$
+has the common
+Schreier value $s^2$.
+Substituting these
+expressions into
+the actual marked
+wild relation
+$h_0u_1^{-1}x_1^\sigma c_0$
+gives the
+three words $R_i$
+\eqref{eq:dyadic-f133-three-wild-relators}.
+
+For clarity, the
+\emph{marked pro-$2$
+condition} has not
+been discarded
+silently.  A
+finite quotient
+$H\to Q$ with
+$Q$ a $2$-group
+induces the usual
+finite wreath
+representation
+$\Gamma\to Q^3\rtimes S_3$:
+its three coordinates
+are the chosen
+Schreier cosets.
+The images of
+$x_0,x_1$ lie in
+the base $Q^3$,
+whose normal
+closure is a
+$2$-group.
+Thus every
+such wreath
+quotient is
+admissible for
+the marked
+Roe--Turturean
+presentation
+\cite{RoeTurtureanGQ2}.
+Conversely a solution
+of the indexed
+Schreier relators
+in an arbitrary
+finite $2$-group
+produces this
+admissible finite
+wreath quotient.
+The two finite
+quotient functors
+therefore coincide.
+Passing to their
+inverse limit proves
+the claimed
+\emph{exact}
+pro-$2$ presentation
+\eqref{eq:dyadic-f133-seven-three-presentation}.
+This argument uses
+the actual marked
+source, not the
+generally false
+assumption that
+its two naked
+word relations
+alone present
+the full absolute
+Galois group.
+\end{proof}
+
+\begin{theorem}[Exact augmented Fox row and a unit pro-$2$ Tietze minor]
+\label{thm:dyadic-f133-primitive-wild-fox-minor}
+Order the seven
+post-tame generators
+as
+$(s,a_0,a_1,a_2,v_0,v_1,v_2)$.
+For the three
+\emph{actual}
+pro-$2$ relators
+$R_i$, the
+augmented completed
+Fox Jacobian is
+\begin{equation}\label{eq:dyadic-f133-augmented-three-seven}
+\boxed{
+\varepsilon\!\left(
+\frac{\partial R_i}
+     {\partial s}\right)=0,
+\quad
+\varepsilon\!\left(
+\frac{\partial R_i}
+     {\partial a_k}\right)
+=\frac43-2\delta_{ik},
+\quad
+\varepsilon\!\left(
+\frac{\partial R_i}
+     {\partial v_k}\right)
+=\delta_{k,\,2i}-\frac13.
+}
+\end{equation}
+In particular
+\begin{equation}\label{eq:dyadic-f133-wild-modtwo-relations}
+\boxed{
+\begin{aligned}
+\bar R_0&=\bar v_1+\bar v_2,\\
+\bar R_1&=\bar v_0+\bar v_1,\\
+\bar R_2&=\bar v_0+\bar v_2
+\end{aligned}
+\quad
+\text{in }F_7/\Phi(F_7)
+\cong\mathbf F_2^7.
+}
+\end{equation}
+The $2\times2$
+Fox submatrix of
+$(R_1,R_2)$ against
+$(v_0,v_1)$ has
+the exact unit
+determinant
+\begin{equation}\label{eq:dyadic-f133-wild-nielsen-unit}
+\boxed{
+\det
+\begin{pmatrix}
+-1/3&-1/3\\
+-1/3&2/3
+\end{pmatrix}
+=-\frac13
+\in\mathbf Z_2^\times.
+}
+\end{equation}
+
+Consequently the
+assignment of
+free pro-$2$
+generators
+\begin{equation}\label{eq:dyadic-f133-nielsen-basis-change}
+\boxed{
+\begin{aligned}
+&s\mapsto s,\qquad
+a_i\mapsto a_i\ (i=0,1,2),\qquad
+v_2\mapsto v_2,\\
+&v_0\mapsto R_1,\qquad
+v_1\mapsto R_2
+\end{aligned}}
+\end{equation}
+defines an
+\emph{automorphism}
+$\alpha$ of the
+free pro-$2$
+group $F_7$.
+Let $\operatorname{ev}_{0}$
+mean substitution
+$v_0=v_1=1$
+in the \emph{new}
+generator coordinates.
+Then the five-generator
+relator
+\begin{equation}\label{eq:dyadic-f133-one-relator-algorithm}
+\boxed{\qquad
+\mathscr R_F:=
+\operatorname{ev}_{0}
+\Bigl(\alpha^{-1}(R_0R_1R_2)\Bigr)
+\in\widehat F_{2}(s,a_0,a_1,a_2,v_2)
+\qquad}
+\end{equation}
+gives the exact
+\emph{minimal}
+pro-$2$ presentation
+\begin{equation}\label{eq:dyadic-f133-five-one-presentation}
+\boxed{\quad
+P_F\cong
+\langle s,a_0,a_1,a_2,v_2
+\mid \mathscr R_F\rangle_{\mathrm{pro}-2}.
+\quad}
+\end{equation}
+The inverse
+$\alpha^{-1}$
+and $\mathscr R_F$
+are recursively
+computable in
+every finite
+Zassenhaus/Frattini
+quotient of the
+free pro-$2$
+group, using
+only the three
+explicit indexed
+words and
+continuous $1/3$
+powering.
+No closed finite
+abstract-word formula
+for all its higher
+pro-$2$ digits
+is claimed.
+\end{theorem}
+
+\begin{proof}
+The abelian
+exponent sums
+of $u_{j,i}$
+are one third
+the sum of
+the three
+corresponding
+wild generators.
+All commutators
+and conjugations
+have the expected
+zero or unchanged
+exponent sums.
+In particular
+\[
+\varepsilon(H_i)
+=2[a_i]+4([u_{0,i}]-[a_i])
+=\frac43\sum_k[a_k]-2[a_i],
+\]
+while
+$\varepsilon(u_{1,i}^{-1}
+s^{-1}v_{2i}s)
+=-\frac13\sum_k[v_k]+[v_{2i}]$.
+This proves
+\eqref{eq:dyadic-f133-augmented-three-seven}.
+Modulo two,
+$4/3$ and $-2$
+vanish while
+$-1/3=1$.
+This yields
+\eqref{eq:dyadic-f133-wild-modtwo-relations}
+and the displayed
+unit minor.
+
+The images of
+the seven new
+words in
+$F_7/\Phi(F_7)$
+are a basis
+because the
+two-by-two
+block in
+\eqref{eq:dyadic-f133-wild-nielsen-unit}
+is invertible
+modulo two,
+while the
+other five
+generators are
+unchanged.
+The pro-$2$
+Burnside basis
+theorem therefore
+makes
+\eqref{eq:dyadic-f133-nielsen-basis-change}
+a surjective
+endomorphism
+of the finitely
+generated free
+pro-$2$ group;
+the Hopfian
+property makes
+it an automorphism.
+Under its inverse,
+the first two
+relators $R_1,R_2$
+become the new
+generators
+$v_0,v_1$.
+Killing these
+relators eliminates
+those generators
+integrally and
+leaves the image
+of $R_0$ as
+the only relation.
+Multiplying by
+$R_1R_2$ before
+the substitution
+does not change
+the normal
+closure, and
+makes the
+quadratic Magnus
+calculation
+transparent.
+This gives
+\eqref{eq:dyadic-f133-five-one-presentation}.
+
+For each fixed
+finite pro-$2$
+quotient of
+the source free
+group, exponent
+$1/3$ is a
+well-defined
+finite power
+with exponent
+inverse to three
+modulo the
+relevant group
+exponent.
+The induced
+basis automorphism
+is bijective
+on that finite
+quotient, and
+its inverse
+can be computed
+by finite
+enumeration or
+successive
+Frattini lifts.
+Taking compatible
+quotients
+determines
+$\alpha^{-1}$
+in the inverse
+limit, giving
+the stated
+finite-stage
+effectivity.
+\end{proof}
+
+\begin{theorem}[The surviving marked quadratic Fox--Demu\v{s}kin symbol]
+\label{thm:dyadic-f133-explicit-five-cup-symbol}
+Write $S,A_0,A_1,A_2,V$
+for the mod-$2$
+Magnus variables
+corresponding to
+the five generators
+$(s,a_0,a_1,a_2,v_2)$.
+The unique remaining
+relator
+$\mathscr R_F$
+has the exact
+integral augmented
+linear data
+\begin{equation}\label{eq:dyadic-f133-minimal-linear-fox}
+\boxed{
+\varepsilon(\partial_s\mathscr R_F)=0,\qquad
+\varepsilon(\partial_{a_i}\mathscr R_F)=2
+\quad(i=0,1,2),\qquad
+\varepsilon(\partial_{v_2}\mathscr R_F)=0.
+}
+\end{equation}
+Its degree-two
+mod-$2$ Magnus
+symbol is
+\begin{equation}\label{eq:dyadic-f133-minimal-quadratic-fox}
+\boxed{\qquad
+\sigma_2(\mathscr R_F)
+=A_0^2+A_1^2+A_2^2+SV+VS.
+\qquad}
+\end{equation}
+The resulting
+cohomological
+cup matrix is
+\begin{equation}\label{eq:dyadic-f133-cup-rank-five}
+\boxed{
+B_F=
+\begin{pmatrix}
+0&0&0&0&1\\
+0&1&0&0&0\\
+0&0&1&0&0\\
+0&0&0&1&0\\
+1&0&0&0&0
+\end{pmatrix},
+\qquad
+\det_{\mathbf F_2}B_F=1.
+}
+\end{equation}
+In the
+$\mathbf F_2$
+cohomology basis
+\begin{equation}\label{eq:dyadic-f133-demushkin-cup-change}
+\boxed{
+a_\star=a_0+a_1+a_2,\quad
+b_\star=a_0+a_1,\quad
+c_\star=a_1+a_2,\quad
+s,\quad v_2,
+}
+\end{equation}
+the symmetric
+cup form is
+$\langle1\rangle
+\oplus H\oplus H$,
+where
+$H=\begin{psmallmatrix}0&1\\1&0\end{psmallmatrix}$.
+Thus this is
+a nondegenerate
+\emph{nonalternating}
+rank-five dyadic
+Demu\v{s}kin form.
+The integral
+first Fox ideal
+is precisely $(2)$,
+so the five-generator
+relation has
+\[
+P_F^{\mathrm{ab}}
+\cong\mathbf Z_2^{\,4}
+\oplus\mathbf Z/2\mathbf Z.
+\]
+These two
+independent
+calculations
+match the known
+$[F:\mathbf Q_2]+2=5$,
+$q(F)=2$,
+full-orientation
+local Demu\v{s}kin
+classification, but
+do \emph{not}
+rely on that
+classification
+to establish
+nondegeneracy.
+\end{theorem}
+
+\begin{proof}
+Adding the exact
+augmented first
+Fox rows from
+\eqref{eq:dyadic-f133-augmented-three-seven}
+gives
+\[
+\varepsilon(\partial(R_0R_1R_2))
+=(0,2,2,2,0,0,0).
+\]
+The entries in
+the two subsequently
+eliminated variables
+$v_0,v_1$ vanish
+\emph{integrally}.
+Consequently the
+pro-$2$ Nielsen
+elimination does
+not alter these
+linear values,
+which proves
+\eqref{eq:dyadic-f133-minimal-linear-fox}.
+
+For the quadratic
+symbol, work in
+the truncated
+noncommutative
+Magnus algebra
+$\mathbf F_2
+\langle\!\langle
+S,A_0,A_1,A_2,
+V_0,V_1,V_2
+\rangle\!\rangle/
+(\mathrm{degree}\ge3)$.
+For a pro-$2$
+word with expansion
+$1+L+Q+O(3)$,
+continuous cubic
+rooting satisfies
+\begin{equation}\label{eq:dyadic-f133-magnus-one-third}
+\boxed{\quad
+(1+L+Q)^{1/3}
+=1+L+Q+L^2
+\pmod{(\deg\ge3),2}.
+\quad}
+\end{equation}
+Indeed $\binom{1/3}{1}$
+and $\binom{1/3}{2}=-1/9$
+are both odd
+$2$-adic integers.
+Use this identity,
+the ordered
+commutator convention
+and the indexed
+word formulas
+\eqref{eq:dyadic-f133-u-and-d-words}
+and
+\eqref{eq:dyadic-f133-three-wild-relators}
+to expand
+$R_0R_1R_2$
+through Magnus
+degree two.
+Its linear
+coefficients in
+all three
+$V_i$ are
+\emph{exactly}
+zero; therefore
+replacing
+$V_0,V_1,V_2$
+by their
+common degree-one
+class $V$
+cannot change
+its quadratic
+term even when
+the eliminated
+group generators
+have higher-order
+nonlinear
+corrections.
+The resulting
+quadratic expression
+is exactly
+\[
+A_0^2+A_1^2+A_2^2+SV+VS,
+\]
+which proves
+\eqref{eq:dyadic-f133-minimal-quadratic-fox}.
+It is also
+reproduced by the
+standalone finite
+Magnus/Fox
+verification
+attached to
+this version.
+
+The ordered
+quadratic Fox--cup
+comparison
+of
+Theorem~\ref{thm:quadratic-fox-cup}
+gives the matrix
+\eqref{eq:dyadic-f133-cup-rank-five}.
+Its determinant
+is one.
+The three
+$A_i$ squares
+give a rank-three
+identity form,
+while $(S,V)$
+form an
+independent
+hyperbolic pair.
+In the proposed
+new basis
+$a_\star$
+has self-pairing
+one and is
+orthogonal to
+$b_\star,c_\star$;
+those two
+have zero squares
+and pair to one.
+The final pair
+$(s,v_2)$ is
+hyperbolic and
+orthogonal to
+all three.
+This is the
+displayed
+$\langle1\rangle
+\oplus H\oplus H$
+normal form.
+Finally the
+linear exponent
+row is $(0,2,2,2,0)$,
+whose Smith ideal
+is $(2)$, giving
+the abelianization
+formula.
+\end{proof}
+
+\begin{theorem}[Integral three-sheet Fox--Shapiro matrix and five unit pivots]
+\label{thm:dyadic-f133-cover-fox-shapiro-matrix}
+The original
+marked two-relator
+presentation has a
+three-sheet
+Schreier Fox
+$2$-skeleton
+with three vertices,
+twelve generating
+edges and six
+indexed relation
+faces.  Let
+$T=\mathbf Z_2$
+be the trivial
+$H$-coefficient
+lattice.
+Via
+coinduction,
+\[
+V=\operatorname{Coind}_H^\Gamma T
+\cong\mathbf Z_2^3
+\]
+has the marked
+generator actions
+\begin{equation}\label{eq:dyadic-f133-three-sheet-actions}
+\boxed{
+\Sigma=
+\begin{pmatrix}
+1&0&0\\0&0&1\\0&1&0
+\end{pmatrix},
+\qquad
+\Upsilon=
+\begin{pmatrix}
+0&1&0\\0&0&1\\1&0&0
+\end{pmatrix},
+\qquad
+\rho_V(x_0)=\rho_V(x_1)=I_3.
+}
+\end{equation}
+Put $N=I+\Upsilon+\Upsilon^2$
+and $P=N/3$.
+In coordinates $(a,b,c,d)\in V^4$
+for the four marked
+generator cochains,
+the complete
+coefficient Fox
+differentiels are
+\begin{equation}\label{eq:dyadic-f133-coinduced-full-fox}
+\boxed{
+\begin{aligned}
+d^0(v)
+ &=\bigl((\Sigma-I)v,
+       (\Upsilon-I)v,0,0\bigr),\\
+d^1(a,b,c,d)
+ &=\Bigl(
+ \Sigma^{-1}(\Upsilon-I)a+
+  (\Sigma^{-1}-I-\Upsilon)b,\\
+ &\hspace{2.9em}
+ 3Pb+(4P-2I)c+
+      (\Sigma^{-1}-P)d
+ \Bigr).
+\end{aligned}}
+\end{equation}
+The two $\tau$
+spanning-tree edges,
+corresponding to
+cochain coordinates
+$b_0,b_1$, have
+unit vertex--edge
+boundary.
+Contract them,
+and order the ten
+remaining edge
+cochains as
+\[
+(s_0,s_1,s_2,t,
+a_0,a_1,a_2,v_0,v_1,v_2).
+\]
+After multiplying
+the three wild
+face rows by
+the $2$-adic unit
+$3$, the exact
+augmented integral
+Fox matrix is
+\begin{equation}\label{eq:dyadic-f133-six-ten-fox-matrix}
+\boxed{
+\mathsf J^{(3)}_{6,10}=
+\begin{pmatrix}
+-1&1&0&0&0&0&0&0&0&0\\
+1&0&-1&0&0&0&0&0&0&0\\
+0&-1&1&-1&0&0&0&0&0&0\\ \hline
+0&0&0&3&-2&4&4&2&-1&-1\\
+0&0&0&3&4&-2&4&-1&-1&2\\
+0&0&0&3&4&4&-2&-1&2&-1
+\end{pmatrix}.
+}
+\end{equation}
+Its mod-two rank
+is exactly five.
+Two explicit
+integral minors,
+using one-based
+column indices,
+are
+\begin{equation}\label{eq:dyadic-f133-fox-minor-certificates}
+\boxed{
+\begin{aligned}
+\det\bigl(
+\mathsf J^{(3)}_{\{1,\dots,5\},
+ \{1,2,4,8,9\}}\bigr)&=-3,\\
+\det\bigl(
+\mathsf J^{(3)}_{\{1,\dots,6\},
+ \{1,2,4,5,8,9\}}\bigr)&=-18.
+\end{aligned}}
+\end{equation}
+Therefore the
+exact $2$-adic
+Smith factors of
+the augmented
+face differential
+are
+\begin{equation}\label{eq:dyadic-f133-fox-six-ten-smith}
+\boxed{\quad
+(1,1,1,1,1,2).
+\quad}
+\end{equation}
+After the two
+spanning-tree
+contractions,
+the integral
+cohomology of
+this finite
+three-sheet
+coefficient complex
+is
+\begin{equation}\label{eq:dyadic-f133-h-trivial-ledger}
+\boxed{\quad
+H^0(H,\mathbf Z_2)=\mathbf Z_2,\quad
+H^1(H,\mathbf Z_2)=\mathbf Z_2^4,\quad
+H^2(H,\mathbf Z_2)=\mathbf F_2.
+\quad}
+\end{equation}
+The first five
+unit pivots are
+the precise
+linear shadow of
+the three tame
+and two wild
+group-level
+Tietze eliminations
+above.
+\end{theorem}
+
+\begin{proof}
+Coinduction
+identifies the
+three coset fibers
+with the three
+coordinates of
+$V$.  The Schreier
+table
+\eqref{eq:dyadic-s3-schreier-table}
+gives the
+$\Sigma,\Upsilon$
+matrices.
+On the
+affine semidirect
+extension
+$V\rtimes S_3$,
+one has
+$\Sigma^2=I$,
+$\Upsilon^3=I$,
+$\Sigma^{-1}\Upsilon\Sigma
+=\Upsilon^2$.
+For an arbitrary
+translation $b+c$,
+the $\omega_2$
+projection of
+$(\Upsilon,b+c)$
+is the pure
+translation
+$(I,P(b+c))$,
+since the
+cube is
+$(I,N(b+c))$
+and three is
+invertible.
+Thus, in the
+literal marked
+wild relator,
+the affine
+auxiliary translation
+is
+$d_0=Pb+(P-I)c$.
+The remaining
+commutators of
+pure translations
+vanish.
+The wild
+relation evaluates
+to
+\[
+2c+4d_0-P(b+d)
++\Sigma^{-1}d
+=
+3Pb+(4P-2I)c+
+(\Sigma^{-1}-P)d.
+\]
+The tame relation
+evaluates to the
+first component of
+\eqref{eq:dyadic-f133-coinduced-full-fox}.
+This gives the
+full completed
+Fox differential
+by the crossed
+derivation--Fox
+identity.
+
+The first
+two $\tau$ edge
+values of
+$(\Upsilon-I)v$
+are $v_1-v_0$
+and $v_2-v_1$,
+which form
+a primitive
+rank-two vertex
+coboundary.
+Use them to
+cancel the
+two tree edges.
+Set their
+cochain values
+to zero in
+the chosen
+strict gauge,
+and retain the
+third $\tau$
+edge as the
+$t=\tau^3$
+generator.
+Applying the
+row-unit change
+which multiplies
+the three wild
+faces by three
+gives exactly
+\eqref{eq:dyadic-f133-six-ten-fox-matrix}.
+Its first
+three rows
+are the augmented
+Fox rows of
+\eqref{eq:dyadic-f133-three-tame-relators};
+its last three
+rows are the
+indexed wild
+rows before
+tame elimination.
+
+Direct
+mod-two row
+reduction gives
+rank five,
+with pivot
+columns
+$\{1,2,4,8,9\}$.
+The first
+displayed minor
+is an odd
+unit.
+Every
+$6\times6$
+minor is
+even because
+the mod-two
+rank is five;
+the second
+displayed
+minor has
+valuation exactly
+one.  The Smith
+invariants are
+therefore five
+units and one
+factor two.
+The remaining
+degree-zero
+and degree-one
+ranks give
+$H^0=\mathbf Z_2$,
+$H^1=\mathbf Z_2^4$,
+and $H^2=\mathbf F_2$,
+also agreeing
+with local
+class field
+theory for the
+degree-three
+dyadic field.
+\end{proof}
+
+\begin{theorem}[An integral Fox--Shapiro chain equivalence through degree two]
+\label{thm:dyadic-f133-integral-schreier-fox-chain}
+Let
+\[
+\Lambda_F=\mathbf Z_2[[P_F]]
+\]
+be the completed
+pro-$2$ group algebra,
+and let $M$ be
+\emph{any} finite
+projective complete
+coefficient module
+whose $H$ action
+factors continuously
+through $P_F$.
+Let
+$C_{\rm cov}^\bullet(H,M)$
+be the three-sheet
+marked
+Reidemeister--Schreier
+Fox $2$-skeleton:
+three vertex copies
+of $M$,
+twelve generating-edge
+copies, and six
+indexed relation-face
+copies, with
+\emph{all} Fox
+derivatives evaluated
+in $M$.
+Let
+\[
+C_{\rm min}^\bullet(P_F,M):
+\qquad
+M\longrightarrow M^5\longrightarrow M
+\]
+be the standard
+completed Fox
+complex of
+the \emph{actual}
+one-relator
+pro-$2$
+presentation
+\eqref{eq:dyadic-f133-five-one-presentation}.
+Then there is a
+\emph{chosen strict
+integral chain
+isomorphism}
+\begin{equation}\label{eq:dyadic-f133-integral-chain-split}
+\boxed{
+\begin{aligned}
+C_{\rm cov}^\bullet(H,M)
+\cong {}&
+C_{\rm min}^\bullet(P_F,M)\\
+&\oplus
+\bigl[M^2\xrightarrow{I}M^2\bigr]_{[0,1]}
+\oplus
+\bigl[M^5\xrightarrow{I}M^5\bigr]_{[1,2]}.
+\end{aligned}}
+\end{equation}
+The degree-wise
+ranks on the
+two sides are
+exactly $(3,12,6)$.
+Every elementary
+chain transformation
+is integral over
+$\Lambda_F$:
+the two spanning-tree
+pivots, three
+tame Nielsen
+pivots, and
+two wild pro-$2$
+Nielsen pivots
+are all units.
+The changes are
+specified by the
+Reidemeister--Schreier
+word scan,
+\eqref{eq:dyadic-f133-three-tame-relators},
+\eqref{eq:dyadic-f133-three-wild-relators},
+and the pro-$2$
+automorphism
+\eqref{eq:dyadic-f133-nielsen-basis-change};
+their completed
+degree-one matrices
+are the associated
+Fox Jacobians.
+
+The minimal complex
+is an \emph{exact}
+length-two
+projective
+resolution after
+passing to
+$\Lambda_F$,
+because $P_F$ is
+a rank-five
+Demu\v{s}kin group.
+Consequently
+\begin{equation}\label{eq:dyadic-f133-complete-derived-fact}
+\boxed{\quad
+C_{\rm cov}^\bullet(H,M)
+\simeq R\Gamma(H,M)
+\simeq C_{\rm min}^\bullet(P_F,M),
+\quad}
+\end{equation}
+compatibly with
+derived coefficient
+base change.
+In the entire
+framed residual
+$S_3$ family,
+the restricted
+universal
+coefficient
+representation of
+$H$ has pro-$2$
+image, so the
+comparison applies
+\emph{uniformly}
+to those
+coefficient charts,
+not just to
+the fixed natural
+or adjoint
+$S_3$ lattice.
+
+Moreover the
+change is
+\emph{recursively
+native-explicit}
+at every prescribed
+finite pro-$2$
+word or coefficient
+jet: compute the
+inverse of the
+seven-generator
+basis automorphism
+in the finite
+source quotient,
+evaluate its
+completed Fox
+derivatives, and
+cancel the five
+declared unit
+relation pivots.
+The group-algebra
+degree-two syzygy
+problem for this
+\emph{specific}
+$P_F$ is thereby
+reduced to the
+single genuine
+Demu\v{s}kin
+relation and
+not to an
+uncontrolled
+three-relator
+complex.
+
+The selected
+inverse and
+strict matrices
+depend on the
+marked generators,
+ordered cosets
+and elimination
+order.  No
+canonical
+presentation-independent
+comparison is
+claimed for
+arbitrary dyadic
+fields or
+arbitrary
+non-pro-$2$
+residual
+quotients.
+\end{theorem}
+
+\begin{proof}
+Schreier
+rewriting is a
+literal change
+of cellular
+coordinates
+on the
+finite-index
+cover of the
+marked relation
+$2$-complex.
+For the three
+chosen cosets
+it gives
+cochain degrees
+$(3,12,6)$
+with the
+specified
+indexed edge
+and face
+coordinates.
+The two
+tree edges
+$\tau:0\to1$
+and $\tau:1\to2$
+have identity
+vertex--edge
+coboundaries.
+Cancelling those
+two contractible
+degree-zero--one
+pairs leaves
+one vertex,
+ten edges and
+six faces.
+
+The tame
+relations
+\eqref{eq:dyadic-f133-three-tame-relators}
+first replace
+$s_1$ by $s_0$,
+then $s_2$ by
+$s_0t$,
+and finally kill
+$t$ with the
+pro-$2$ relation
+$t^s=t^2$.
+Each corresponding
+augmented Fox
+pivot is a
+$2$-adic unit;
+the actual
+completed
+Fox pivot
+lies in
+$\Lambda_F^\times$,
+because this
+ring is local
+with maximal
+ideal generated
+by two and the
+augmentation
+ideal.
+The corresponding
+three relation-face
+and generating-edge
+pairs therefore
+split as identity
+degree-one--two
+chain summands.
+Their remaining
+relation words
+are precisely
+the seven-generator
+$R_0,R_1,R_2$.
+
+For the two
+wild pivots,
+Theorem~\ref{thm:dyadic-f133-primitive-wild-fox-minor}
+provides the
+\emph{actual pro-$2$
+free-group
+automorphism}
+$\alpha$.
+Its completed
+Fox Jacobian is
+invertible over
+the relevant
+completed group
+algebra by the
+Fox chain rule
+and the
+inverse automorphism.
+In the new
+free basis the
+relations $R_1,R_2$
+become two
+generator letters.
+The resulting
+$2\times2$
+relation-to-generator
+Fox block is
+the identity.
+After elementary
+row operations
+it splits as
+two further
+contractible
+degree-one--two
+pairs.
+The sole
+remaining
+relation is
+$\mathscr R_F$.
+All of these
+are genuine
+pro-$2$ Tietze
+operations and
+hence induce
+literal Fox
+chain changes;
+none is a
+mere numerical
+Smith reduction.
+
+The remaining
+three-term Fox
+complex is the
+minimal one-relator
+Demu\v{s}kin
+resolution.
+Its exactness
+over $\Lambda_F$
+follows from
+the finite-rank
+pro-$2$
+Poincar\'e
+duality property
+of $P_F$
+\cite{LabuteClassification,NSW}.
+The two cancelled
+tree pairs and
+five cancelled
+relation--edge
+pairs produce
+exactly
+\eqref{eq:dyadic-f133-integral-chain-split}.
+Applying
+continuous Hom
+to any complete
+coefficient
+module gives
+the cochain
+version and
+compatibility
+with coefficient
+base change.
+On the residual
+$S_3$ chart,
+the Sylow
+preimage $H$
+has residual
+image $C_2$;
+its universal
+framed
+congruence kernel
+is pro-$2$,
+so its full
+image is pro-$2$.
+Thus the
+factorization
+through $P_F$
+is valid across
+that entire
+residual sector.
+
+For finite-stage
+effectivity,
+the Reidemeister--Schreier
+rewriting of each
+marked word
+is finite, and
+each continuous
+$1/3$ power
+is a finite
+integer power
+in any fixed
+finite pro-$2$
+quotient.
+The inverse
+of the pro-$2$
+basis automorphism
+is computable
+in these finite
+quotients by
+its bijective
+finite action.
+Completed Fox
+differentiation
+is continuous
+and can be
+evaluated at
+each chosen
+finite jet;
+the five
+unit pivots
+are inverted
+by geometric
+series in
+the complete
+local group
+algebra.
+Hence every
+requested
+finite-stage
+chain matrix
+terminates.
+The chosen
+inverse-limit
+maps give the
+claimed
+strict integral
+chain equivalence,
+with no assertion
+of a universally
+finite ordinary
+word for
+$\mathscr R_F$.
+\end{proof}
+
+\begin{corollary}[Closure of the fixed $S_3$ Schreier syzygy frontier]
+\label{cor:dyadic-f133-fixed-s3-syzygy-closure}
+For
+$F=\mathbf Q_2(\sqrt[3]2)$,
+the three wild
+Schreier relators
+in fixed128
+are now reduced
+by \emph{actual}
+pro-$2$ relation
+changes to the
+single minimal
+Demu\v{s}kin relator
+$\mathscr R_F$.
+The surviving
+second Fox row
+has a computed
+nondegenerate
+rank-five
+cup symbol,
+the exact
+integral first
+Fox ideal $(2)$,
+and a complete
+length-two
+projective
+resolution over
+$\mathbf Z_2[[P_F]]$.
+For all
+continuous
+restricted
+coefficient
+representations
+factoring through
+$P_F$, the
+index-three
+Schreier
+covering
+cochain complex
+and the
+minimal Fox
+complex are
+strictly
+chain-equivalent
+after exactly
+seven declared
+contractible
+cancellations.
+
+This resolves
+the \emph{group
+relation-syzygy}
+problem for the
+selected genuine
+non-pro-$2$
+$S_3$ residual
+sector, not
+merely the
+previous natural
+and adjoint
+coefficient
+examples.
+It is a
+\emph{choice-dependent}
+finite-jet-computable
+bridge.
+A functorial
+minimal Fox
+coordinate
+system
+simultaneously
+covering every
+non-pro-$2$
+residual
+quotient and
+every dyadic
+base field
+is a distinct
+stronger problem.
+\end{corollary}
+
+\begin{proof}
+The group
+presentation,
+the two unit
+Nielsen eliminations
+and the
+one-relator
+symbol are
+Theorems~\ref{thm:dyadic-f133-schreier-pro2-presentation},
+\ref{thm:dyadic-f133-primitive-wild-fox-minor},
+and
+\ref{thm:dyadic-f133-explicit-five-cup-symbol}.
+The coefficient-uniform
+group-algebra
+Fox chain
+equivalence is
+Theorem~\ref{thm:dyadic-f133-integral-schreier-fox-chain}.
+No additional
+independent
+relation or
+coefficient
+hypothesis is
+needed.
+\end{proof}
+
+\begin{warning}[Marked finite-quotient universality versus global strictness]
+\label{warn:dyadic-f133-pro2-marked-scope}
+The explicit
+presentation is
+for the
+\emph{maximal
+pro-$2$ quotient
+of one chosen
+index-three
+Sylow preimage}
+$H=G_F$.
+Its proof uses
+the actual
+marked pro-$2$
+normal-closure
+condition of
+Roe--Turturean,
+carried through
+finite wreath
+quotients.
+It is not
+the false
+unmarked
+interpretation
+of the two
+full-group
+word relators.
+The resulting
+strict
+Fox--Shapiro
+equivalence is
+integral and
+valid for
+all $H$-coefficient
+systems
+factoring
+through $P_F$,
+but its marked
+inverse automorphism
+and elimination
+gauge are
+not naturally
+independent
+of Schreier
+choices.
+No uniform
+closed finite
+word formula
+over the
+entire
+family of
+dyadic fields,
+or preferred
+raw Herr
+strict
+representative,
+follows from
+this computation.
+\end{warning}
