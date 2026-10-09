@@ -66,7 +66,12 @@ z_A=Xu_A^{-1}
 \end{equation}
 is the unique order-three
 component of $X$ in its
-procyclic closure.  It satisfies
+procyclic closure.  Moreover the
+\emph{exact marked tame relation}
+forces $u_A=I_2$ and $z_A=X$.
+In particular the full universal
+rank-two tame matrix already
+has exact order three; it satisfies
 \begin{equation}\label{eq:dyadic-f131-cubic-etale}
 \boxed{\qquad
 z_A^3=I_2,\qquad
@@ -102,14 +107,21 @@ M_A=M_{0,A}\oplus M_{1,A},
 both of rank two.
 This construction commutes with
 continuous local coefficient base
-change.  For every $t\ge1$ the
-full matrix $z_A$, its tame
-projector, and the two summands
-are computable modulo
-$\mathfrak m^t$ using only the
-$j<t$ terms of
+change.  On the genuine
+marked residual deformation ring
+$z_A=X$, so the tame
+projector is already a
+\emph{finite polynomial} in
+$X$ and its adjoint action,
+with denominator the unit $3$
+only.  The binomial formula
 \eqref{eq:dyadic-f131-tame-root}
-and finite unit-matrix inversion.
+remains a compatible calculation
+of the pro-$2$ part, which is
+identically $I_2$ here.
+There is no tame power-series
+solve, even before passing
+to finite precision.
 
 Furthermore the full tame relation
 \eqref{eq:dyadic-f131-tame-relation}
@@ -201,14 +213,38 @@ change.  Terms of order
 $j\ge t$ vanish modulo
 $\mathfrak m^t$.
 
-Finally tame conjugation
-commutes with taking the
-unique pro-$2$ cubic root,
-so \eqref{eq:dyadic-f131-tame-relation}
-gives
-$Y^{-1}u_A Y=u_A^2$.
-Dividing the relation for $X$
-by this one proves
+Finally the exact tame relation
+also proves the stronger
+\emph{rigidity} claim.
+Let $d=\det X\in A^\times$.
+Conjugating and taking
+determinants in
+\eqref{eq:dyadic-f131-tame-relation}
+gives $d=d^2$, hence $d=1$.
+Put $t=\operatorname{tr}X$.
+The two sides of the tame
+relation have equal trace,
+so Cayley--Hamilton yields
+\[
+t=\operatorname{tr}(X^2)=t^2-2d=t^2-2,
+\qquad (t-2)(t+1)=0.
+\]
+Since $\bar t=\operatorname{tr}(\bar U)=1$
+in residue characteristic two,
+$t-2$ is a unit.
+Therefore $t=-1$.
+Cayley--Hamilton now gives
+$X^2+X+I_2=0$ and $X^3=I_2$.
+Consequently the unique
+pro-$2$ cubic root of $X^3$
+in \eqref{eq:dyadic-f131-tame-root}
+is $u_A=I_2$, and
+$z_A=X$ identically.
+In particular the claimed
+tame projector is \emph{finite
+polynomial} on the full
+marked deformation ring.
+The tame relation directly gives
 $Y^{-1}z_A Y=z_A^2$.
 Conjugation by $Y$ therefore
 normalizes the cyclic
@@ -797,11 +833,17 @@ its product formula,
 and the projectors
 are finite computations
 from the marked
-transport matrices,
-\eqref{eq:dyadic-f131-tame-root}
-truncated at $j<t$,
-and unit-matrix
-inverses.
+transport matrices
+and unit-matrix inverses.
+The tame projector itself
+is already polynomial
+on this marked residual
+sector, without any
+binomial truncation;
+only other marked
+profinite word evaluations
+may require the fixed126
+finite-jet procedure.
 These formulas define
 a \emph{source-faithful
 curved two-block
