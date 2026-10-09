@@ -45,7 +45,7 @@ assert minor6.det() == -18
 assert sorted(abs(x) for x in D.elementary_divisors()) == [1,1,1,1,1,2]
 
 # Integrality of the genuine three-sheet coinduced unscaled differential.
-Q = matrix(QQ,3,3,N)/3
+Q = matrix(QQ,N)/3
 d0 = block_matrix([[S-I],[U-I],
                    [zero_matrix(QQ,3,3)],
                    [zero_matrix(QQ,3,3)]])
@@ -67,7 +67,12 @@ Fw = matrix(QQ,3,7,lambda i,j:
 assert Fw.matrix_from_rows_and_columns([1,2],[4,5]).det() == -QQ(1)/3
 assert Fw.column(0) == vector(QQ,[0,0,0])
 assert Fw[0]+Fw[1]+Fw[2] == vector(QQ,[0,2,2,2,0,0,0])
-assert matrix(GF(2),Fw).rank() == 2
+# Rational entries have odd denominators; reduce them 2-integrally.
+Fw2 = matrix(GF(2),3,7,[
+    GF(2)(ZZ(x.numerator()) % 2) / GF(2)(ZZ(x.denominator()) % 2)
+    for x in Fw.list()
+])
+assert Fw2.rank() == 2
 
 # Truncated characteristic-two Magnus noncommutative algebra,
 # generators (s,a0,a1,a2,v0,v1,v2).
