@@ -788,6 +788,212 @@ in the companion
 Sage source.
 \end{proof}
 
+
+\begin{theorem}[Uniform cyclotomic Fox row and primitive top-face trace]
+\label{thm:dyadic-f135-uniform-fox-tate-trace}
+In the actual $(1+2n)$-generator,
+$n$-relation pro-$2$ presentation
+\eqref{eq:dyadic-f135-tower-n-two-n-relators},
+let $\theta$ denote the local
+cyclotomic orientation.  Its marked
+values are
+\[
+\theta(s)=1,\qquad
+\theta(a_j)=-1,\qquad
+\theta(v_j)=-1/3.
+\]
+Put
+\[
+c=-1/3,\qquad
+\lambda_n=\frac{c-1}{c^n-1}
+=\frac{4\cdot3^{n-1}}{3^n+1}
+\in\mathbf Z_2^\times.
+\]
+For a $\theta$-crossed derivation
+$D$, write $A_j=D(a_j)$ and
+$V_j=D(v_j)$.
+The complete twisted Fox row of
+the $i$th indexed wild relator is
+\begin{equation}\label{eq:dyadic-f135-uniform-twisted-fox}
+\boxed{
+\begin{aligned}
+D(R_i)={}&
+2\left(\sum_{r=0}^{n-1}
+(-1)^rA_{i+r}-A_i\right)\\
+&+3\lambda_n
+\sum_{r=0}^{n-1}c^rV_{i+r}
+-3V_{\overline2 i}.
+\end{aligned}}
+\end{equation}
+In particular, the sum of these
+$n$ twisted Fox rows vanishes
+\emph{integrally, columnwise}.
+The $(n-1)$-square wild $v$
+minor is a unit modulo two, and
+so the full twisted top-image is
+exactly the kernel of the
+primitive face sum
+\begin{equation}\label{eq:dyadic-f135-uniform-face-trace}
+\boxed{
+\operatorname{Tr}_{F_n}:
+\mathbf Z_2^n\longrightarrow
+\mathbf Z_2,\qquad
+(q_i)\longmapsto\sum_iq_i.
+}
+\end{equation}
+For trivial coefficients the
+same trace has image
+$2\mathbf Z_2$ on top coboundaries.
+Thus
+\begin{equation}\label{eq:dyadic-f135-uniform-tate-ledgers}
+\boxed{
+\begin{array}{c|ccc}
+ &H^0&H^1&H^2\\\hline
+\mathbf Z_2&
+\mathbf Z_2&
+\mathbf Z_2^{n+1}&\mathbf F_2\\
+\mathbf Z_2(1)&
+0&\mathbf Z_2^{n+1}
+\oplus\mathbf F_2&\mathbf Z_2 .
+\end{array}}
+\end{equation}
+The Wu/Bockstein class in the
+minimal marked basis is
+\[
+w_{F_n}=\sum_{i=0}^{n-1}
+\chi_{a_i},\qquad
+\chi^2=\chi\smile w_{F_n}.
+\]
+For $F_{3^j}\subset F_{3^k}$,
+$j\le k$, the compatible
+primitive cyclotomic top-face
+traces satisfy
+\begin{equation}\label{eq:dyadic-f135-top-tate-transitivity}
+\boxed{
+\operatorname{Tr}_{F_{3^k}}
+\operatorname{res}_{F_{3^k}/F_{3^j}}
+=3^{k-j}\operatorname{Tr}_{F_{3^j}}.
+}
+\end{equation}
+The analogous trivial-coefficient
+formula holds modulo two.
+This is the exact odd-degree
+local Tate invariant multiplier.
+\end{theorem}
+
+\begin{proof}
+The orientation of a cyclic
+$a$ packet is $-1$ and its
+pro-$2$ $1/n$ root has the
+same orientation; its twisted
+Fox derivative factor is one.
+A cyclic $v$ packet has
+orientation $c^n$, and the
+$1/n$ root has orientation $c$,
+giving the scalar factor
+$\lambda_n$.
+For odd $n$,
+$v_2(3^n+1)=2$;
+hence $\lambda_n$ is integral
+and is a $2$-adic unit.
+
+Put $D_i=D(d_i)$.
+By the inverse and product
+Fox rules,
+\[
+D_i=\sum_r(-1)^rA_{i+r}-A_i.
+\]
+The other marked factors have
+orientations
+$\theta(d_i)=1$,
+$\theta(z_i)=-1$ and
+$\theta(u_{1,i})=c$.
+Consequently
+\[
+D([d_i,z_i])=-2D_i,
+\quad
+D(H_i)=-4D(s)+4D_i.
+\]
+The inverse $u_{1,i}^{-1}$
+contributes $3D(u_{1,i})$;
+the conjugate
+$s^{-1}v_{\overline2 i}s$
+contributes
+$-3V_{\overline2 i}+4D(s)$.
+The two $D(s)$ terms cancel.
+Adding the last commutator
+gives the displayed row.
+
+The alternating sum
+$\sum_{r=0}^{n-1}(-1)^r$
+equals one, so
+$\sum_iD_i=0$.
+Moreover
+$\lambda_n\sum_r c^r=1$,
+and $i\mapsto\overline2 i$
+permutes $\mathbf Z/n$.
+Summing the $n$ rows
+therefore gives zero
+on every generator.
+Modulo two the orientation
+is trivial, hence the
+$v$-minor has the same
+unit reduction as
+\eqref{eq:dyadic-f135-wild-n-minus1-minor}.
+The top twisted image is
+the sum-zero hyperplane.
+For trivial coefficients,
+the unit minor gives the
+same hyperplane while the
+sum of the $a_j$ columns
+is exactly two, giving the
+preimage of $2\mathbf Z_2$.
+
+For the twist the first
+differential is
+\[
+1\longmapsto
+(0,-2,\ldots,-2,
+-4/3,\ldots,-4/3)^t,
+\]
+with one Smith factor two.
+The twisted second
+differential has $n-1$
+unit factors and one zero
+face direction.  For the
+trivial complex, the
+second differential has
+$n-1$ units and one
+factor two while $d^0=0$.
+This proves the integral
+cohomology ledgers.
+The mod-four orientation
+reduces to the three-power
+sum of the $\chi_{a_i}$;
+the nonalternating quadratic
+symbol of
+\eqref{eq:dyadic-f135-uniform-magnus-quadratic}
+identifies it with the
+Wu characteristic class.
+
+Finally compatible Schreier
+covers pull back a marked
+top face to $3^{k-j}$
+copies.  The primitive
+relation-face sum therefore
+multiplies by $3^{k-j}$.
+The strict coinduced
+idempotents of
+Theorem~\ref{thm:dyadic-f135-nine-hecke-tower}
+identify that source
+operation with derived
+restriction.  Since the
+index is odd it agrees
+with the local Tate
+fundamental-class
+normalization.
+\end{proof}
+
 \begin{theorem}[Strict nested odd-index projectors: ranks $1,2,6$]
 \label{thm:dyadic-f135-nine-hecke-tower}
 On the nine-sheet
