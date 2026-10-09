@@ -1,63 +1,101 @@
 # Arithmetic Cartan single-prime atlas
 
-**Latest integrated manuscript: [fixed128 — genuine non-pro-2 S3 Sylow–Schreier–Hecke and marked Jacobian certificate](arithmetic_cartan_representations_closure_fixed128_s3_sylow_schreier_hecke.tex)** (October 2026).
+**Current integrated TeX manuscript: [fixed129 — strict integral natural-$S_3$ marked contraction and Schreier/Hecke cochain projector](arithmetic_cartan_representations_closure_fixed129_s3_natural_strict_integral_hecke.tex)** (October 2026).
 
-Prior full manuscripts are preserved:
+Earlier complete manuscripts are retained:
+[fixed128](arithmetic_cartan_representations_closure_fixed128_s3_sylow_schreier_hecke.tex),
 [fixed127](arithmetic_cartan_representations_closure_fixed127_exact_hilbert_full_marked_fox_bridge.tex),
 [fixed126](arithmetic_cartan_representations_closure_fixed126_dyadic_hilbert_marked_power_streamlined.tex),
 [fixed125](arithmetic_cartan_representations_closure_fixed125_dyadic_wu_tate_streamlined.tex),
-[fixed124](arithmetic_cartan_representations_closure_fixed124_dyadic_streamlined.tex), and
-[fixed123](arithmetic_cartan_representations_closure_fixed123_streamlined.tex).
+[fixed124](arithmetic_cartan_representations_closure_fixed124_dyadic_streamlined.tex),
+and [fixed123](arithmetic_cartan_representations_closure_fixed123_streamlined.tex).
 
-## New in fixed128
+## Fixed129: substantive advances over fixed128
 
-This version crosses **the remaining pro-2-image boundary in one genuine residual example**, without claiming a universal full-group resolution.
+This version stays in the **genuine non-pro-2 residual sector**
+\[
+\Gamma=G_{\mathbb Q_2}\twoheadrightarrow S_3,\quad
+H=G_{\mathbb Q_2(\sqrt[3]{2})},\quad[\Gamma:H]=3,
+\]
+but switches from the fixed128 adjoint Smith audit to the natural integral lattice
+\[
+T=\mathbb Z_2^2,\qquad
+S=\begin{pmatrix}0&1\\1&0\end{pmatrix},\quad
+U=\begin{pmatrix}-1&-1\\1&0\end{pmatrix}.
+\]
+The key extra property is the **exact integral tame norm-zero identity**
+\(I+U+U^2=0\).
 
-1. **A real S3 / GL2(F2) local Galois sector.** For
+1. **Complete natural-coefficient marked $4\times8$ Fox matrix.**
+   For crossed-derivation generator values $(a,b,c,d)$ at $(\sigma,\tau,x_0,x_1)$, the two relation blocks are exactly
    \[
-   L=\mathbb Q_2(\sqrt[3]{2},\zeta_3),\quad
-   \Gamma=G_{\mathbb Q_2},\quad
-   H=G_{\mathbb Q_2(\sqrt[3]{2})},
+   d^1(a,b,c,d)=
+   (S^{-1}(U-I)a+(S^{-1}-I-U)b,\;-2c+S^{-1}d),
    \]
-   the quotient \(\Gamma\to\operatorname{Gal}(L/\mathbb Q_2)\simeq S_3\) is tame and the Sylow-2 preimage has odd index three. The integral standard 2-dimensional carrier is
+   while $d^0(v)=((S-I)v,(U-I)v,0,0)$.
+   Both the tame $\sigma$ and wild $x_1$ blocks of $d^1$ are invertible over $\mathbb Z_2$.
+
+2. **Closed strict integral deformation retract.**
+   The finite full-marked coefficient complex has an explicit chain-homotopy equivalence
    \[
-   S_0=\begin{pmatrix}0&1\\1&0\end{pmatrix},
-   \quad U_0=\begin{pmatrix}-1&-1\\1&0\end{pmatrix}.
+   \mathcal J^\bullet_{\Gamma,\mathrm{nat}}(T)\simeq T[-1].
    \]
-   The maximal pro-2 quotient of \(H\) is a rank-five, \(q=2\) Demuškin group with full orientation image.
-
-2. **Exact finite Schreier table and degree-one integral corestriction.** Right coset representatives \(1,\tau,\tau^2\) yield the literal Schreier words \(\sigma,\tau^3,\tau^i x_j\tau^{-i}\) (six wild conjugates). On the standard \(T=\mathbb Z_2^2\), corestriction kills the tame values of a cocycle and gives
+   The retraction maps are \(p(a,b,c,d)=c\),
+   \(i(t)=(0,0,t,2St)\), with
    \[
-   (\operatorname{cor}c)(x_j)=
-   \sum_{i=0}^2 U_0^{-i}c(\tau^ix_j\tau^{-i}).
+   h^1(a,b,c,d)=(U-I)^{-1}b,\quad
+   h^2(u,w)=((S^{-1}(U-I))^{-1}u,0,0,Sw).
    \]
-   The all-arity bar formula is included; it is not mislabeled as a minimal Fox change-of-basis map.
+   All denominators are odd (powers of three), so the contraction is genuinely integral at $p=2$.
+   Every continuous global cocycle has a unique gauge-normalized representative with values
+   \(c_t(\sigma)=c_t(\tau)=0\),
+   \(c_t(x_0)=t\), \(c_t(x_1)=2St\).
 
-3. **A genuine nonnormal integral Hecke projector.** On \(R\Gamma(H,T)\), put \(A=\operatorname{res}\operatorname{cor}\), \(\mathsf T_{\rm Hk}=A-I\). Then
+3. **Explicit nonnormal Sylow projector on eight Schreier evaluation words.**
+   Put \(w_{ij}=\tau^i x_j\tau^{-i}\in H\), \(i=0,1,2\), \(j=0,1\).
+   The integral formula
    \[
-   A^2=3A,\quad \mathsf T_{\rm Hk}^2=\mathsf T_{\rm Hk}+2I,\quad
-   e_H=\frac{I+\mathsf T_{\rm Hk}}3.
+   \Phi_H(c)=\frac13\sum_{i=0}^{2}U^{-i}c(w_{i0})
    \]
-   The nontrivial double coset is \(\operatorname{cor}_N^H\circ(\tau)_*\circ\operatorname{res}_N^H\), with \(N=G_L\). It uses no division by two. The exact natural-lattice cohomology ledgers are
+   is a left inverse to restriction on $H^1$.
+   Exact generator values of the restricted normalized cocycle give a concrete rank-two block projector
    \[
-   (H^0,H^1,H^2)(\Gamma,T)=(0,\mathbb Z_2^2,0),
-   \quad
-   (H^0,H^1,H^2)(H,T)=(\mathbb Z_2,\mathbb Z_2^7,\mathbb F_2).
+   E_{\rm Sch}=I_{\rm Sch}P_{\rm Sch}\in M_{16}(\mathbb Z_2),\qquad
+   E_{\rm Sch}^2=E_{\rm Sch},
    \]
-   Thus \(e_H\) kills the degree-zero and degree-two classes of \(H\), and projects its rank-seven \(H^1\) to rank two.
+   with the complete $16\times16$ construction in the TeX.
+   Consequently
+   \(H^1(H,T)\cong\mathbb Z_2^2\oplus\mathbb Z_2^5\),
+   with the first factor exactly the descended submodule.
 
-4. **The first native, non-pro-2, second-degree marked coefficient certificate.** For \(M=\operatorname{ad}T\),
-   \[
-   (H^0,H^1,H^2)(\Gamma,M)
-      =(\mathbb Z_2,\mathbb Z_2^5,\mathbb F_2),\qquad
-   (\dim H^0,\dim H^1,\dim H^2)(\Gamma,M/2)=(1,6,1).
-   \]
-   The actual full Roe–Turturean marked two-relation Jacobian is an **8 by 16 integral matrix**. Its mod-2 rank is 7. The one-based columns \(\{1,2,5,6,9,13,14,15\}\) have a displayed mod-4 submatrix of determinant \(2\bmod4\). Therefore its Smith factors are \(1^7,2\), and the full marked coefficient complex has the precise local cohomology above. A finite (noncanonical) integral homotopy comparison with the Sylow–Fox retract follows by elementary-divisor reduction.
+4. **Strict bar-cochain representative of derived Hecke/Sylow descent.**
+   The same degree-one evaluation defines strict cochain maps
+   \(p_H:C^\bullet(H,T)\to T[-1]\),
+   \(i_H:T[-1]\to C^\bullet(H,T)\)
+   with \(p_Hi_H=1\).
+   The strict idempotent
+   \(\Pi_H=i_Hp_H\) represents
+   \(\frac13\operatorname{res}\operatorname{cor}\)
+   in the derived category.  The representative
+   \(\mathsf T_{\rm Hk}^{\rm str}=3\Pi_H-I\)
+   satisfies \((\mathsf T_{\rm Hk}^{\rm str})^2
+   =\mathsf T_{\rm Hk}^{\rm str}+2I\)
+   **as an actual cochain identity**, not merely on cohomology.
+   Explicit strict maps between the finite marked complex and the bar-cochain Sylow summand compose to the projector and to the given marked contraction homotopy.
 
-## Scope of the new theorem
+## Independent proof source / verification
 
-The computation proves a **coefficient-specific** full-marked/Fox derived comparison for the standard tame S3 adjoint carrier. It does not claim that the two Roe–Turturean relators give a universally exact projective resolution of \(\mathbb Z_2\) over \(\mathbb Z_2[[G_{\mathbb Q_2}]]\). A general direct, canonical Schreier-to-minimal-Demuškin integral chain map, including its relation syzygies, remains open for arbitrary non-pro-2 residual sectors. The prime-uniform all-Sylow/Cayley–Hamilton derived existence theorem is preserved.
+The standalone insertion [fixed129 natural integral Schreier/Hecke proof](dyadic_s3_natural_integral_strict_transfer_retract_fixed129.tex) is included verbatim in the integrated manuscript.
 
-The **[fixed128 standalone insert](dyadic_s3_sylow_schreier_hecke_jacobian_fixed128.tex)** is fully integrated into the linked mother TeX. Earlier standalone inserts remain in the repository for provenance.
+An accompanying [SageMath 10.9 exact-matrix audit](checks/fixed129_s3_natural_integral_retract.sage) checks the full differential, all strong-retract homotopy identities, 2-adic integrality of every matrix, the 16-by-16 Schreier projector, and its literal Hecke polynomial. The new identities were also checked independently modulo $2^8$ during manuscript development. The repository script is provided for local reproduction; it is not being represented as a CI run.
 
-Routine revisions are TeX-only unless PDF is requested.
+## Precisely retained frontier
+
+Fixed129 **does not** identify the eight Schreier evaluation words with a chosen minimal five-generator Demuškin presentation of
+\(P_H=G_{\mathbb Q_2(\sqrt[3]{2})}(2)\), nor provide the associated complete integral relation-module syzygies.
+The explicit strict projector applies to the fixed natural coefficient lattice $T$ and its descended bar-cochain summand.
+It does not automatically apply to $\operatorname{ad}T$, whose tame $C_3$ invariants are nonzero; the fixed128 adjoint Smith certificate remains a separate result.
+A uniform direct finite **minimal-Fox-to-Schreier** second-degree comparison for arbitrary non-pro-2 residual sectors therefore remains open.
+The unconditional all-Sylow/Cayley–Hamilton derived faithful atlas is preserved.
+
+Routine revisions are TeX-only unless a PDF is specifically requested.
