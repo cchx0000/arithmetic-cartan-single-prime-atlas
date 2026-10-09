@@ -1,0 +1,646 @@
+% fixed127 substantive insertion: reciprocity-marked Hilbert--Fox dictionary
+% and the strict full-group marked Jacobian / pro-2 Fox chain comparison.
+% This section is independent of all prior draft-file names and is included
+% verbatim in the fixed127 master manuscript.
+
+\subsection{Exact reciprocity marking and a strict dyadic marked-to-Fox bridge}
+\label{subsec:dyadic-reciprocity-nielsen-bridge}
+
+The abstract quadratic Fox form does not by itself fix a Kummer basis,
+but the full reciprocity marking does.  On residual sectors with pro-$2$
+image the marked tame direction also becomes contractible, leaving a
+literal integral equivalence between the completed full-group
+two-relation Jacobian and the genuine one-relator Fox resolution.
+The resulting bridge is stronger than a comparison through the
+intrinsic derived category, but is specific to the pro-$2$ residual
+sectors of $G_{\mathbf Q_2}$.
+
+\begin{theorem}[Exact reciprocity completion of the dyadic Hilbert--Fox basis]
+\label{thm:dyadic-exact-hilbert-reciprocity-marking}
+Fix the arithmetic local reciprocity map
+$\operatorname{rec}:\mathbf Q_2^\times\to
+G_{\mathbf Q_2}^{\mathrm{ab}}$,
+so that $\operatorname{rec}(2)$ is arithmetic
+Frobenius.  In the Roe--Turturean fully marked
+Demu\v{s}kin identification
+\cite{RoeTurtureanGQ2}, the pro-$2$
+abelianizations of the standard generators satisfy
+\begin{equation}\label{eq:dyadic-reciprocity-generator-images}
+\boxed{\quad
+\bar a=\operatorname{rec}(-4),\qquad
+\bar s=\operatorname{rec}(1/2),\qquad
+\bar y=\operatorname{rec}(-3).
+\quad}
+\end{equation}
+Consequently the Hilbert--Fox relation
+\eqref{eq:q2-kummer-fox-markings}
+has \emph{zero} residual shear:
+\begin{equation}\label{eq:dyadic-exact-kummer-fox}
+\boxed{\quad
+\kappa_{-1}=\chi_a,\qquad
+\kappa_5=\chi_s,\qquad
+\kappa_2=\chi_y.
+\quad}
+\end{equation}
+More explicitly, for the ordered generators $(a,s,y)$
+and ordered square classes $(-1,5,2)$, the matrix
+of quadratic-character evaluations is exactly $I_3$:
+\begin{equation}\label{eq:dyadic-exact-hilbert-evaluation}
+\bigl(\kappa_u(g)\bigr)_{
+u\in(-1,5,2),\ g\in(a,s,y)}
+=
+\begin{pmatrix}1&0&0\\0&1&0\\0&0&1\end{pmatrix},
+\end{equation}
+where $1\in\mathbf F_2$ means Hilbert symbol $-1$.
+Writing a square class as
+$u=(-1)^b5^c2^h$ with $b,c,h\in\mathbf F_2$,
+the Hilbert pairing between
+$u=(-1)^b5^c2^h$ and
+$v=(-1)^{b'}5^{c'}2^{h'}$ becomes
+\begin{equation}\label{eq:dyadic-square-class-hilbert-polar}
+\boxed{\quad
+(u,v)_2=(-1)^{\,bb'+ch'+hc'}.
+\quad}
+\end{equation}
+This is exactly the bilinear pairing supplied by the
+Fox degree-two symbol $A^2+SY+YS$.
+\end{theorem}
+
+\begin{proof}
+The reciprocity identities
+\eqref{eq:dyadic-reciprocity-generator-images}
+are the marked abelianization of
+Roe--Turturean, Lemma~3.5
+\cite{RoeTurtureanGQ2}, and supply precisely
+the information not read from the abstract cup matrix.
+For a Kummer character, the evaluation on
+$\operatorname{rec}(v)$ is the sign of the
+quadratic norm-residue Hilbert symbol $(u,v)_2$;
+using the opposite reciprocity normalization
+would invert $\operatorname{rec}(v)$, but has
+no effect on a quadratic character.
+Apply Equation~\eqref{eq:q2-hilbert-explicit}
+to the pairs
+\[
+ (u,v),\qquad
+ u\in\{-1,5,2\},\quad
+ v\in\{-4,1/2,-3\}.
+\]
+For $u=-1$, the symbols are $(-1,+1,+1)$;
+for $u=5$, they are $(+1,-1,+1)$;
+and for $u=2$, they are $(+1,+1,-1)$.
+In particular,
+$(2,1/2)_2=(2,2)_2=+1$, which fixes the
+formerly undetermined value
+$\kappa_2(s)=0$.
+This gives \eqref{eq:dyadic-exact-hilbert-evaluation}
+and \eqref{eq:dyadic-exact-kummer-fox}.
+Finally the Hilbert pairing in the square-class
+basis $(-1,5,2)$ has matrix
+\eqref{eq:q2-hilbert-fox-matrix}.
+Multiplying by the two coordinate column vectors
+gives exactly
+\eqref{eq:dyadic-square-class-hilbert-polar}.
+\end{proof}
+
+\begin{corollary}[Exact full-marked pro-$2$ Kummer coordinates]
+\label{cor:dyadic-full-marked-kummer-coordinates}
+Under the Nielsen transform
+\begin{equation}\label{eq:dyadic-nielsen-full-generator-map}
+\sigma=s,\qquad x_1=y,\qquad
+x_0=s^{-2}a^{-1},
+\qquad
+a=x_0^{-1}\sigma^{-2},
+\end{equation}
+the pro-$2$ abelianized generator markings are
+\begin{equation}\label{eq:dyadic-full-pro2-reciprocity}
+\bar x_0=\operatorname{rec}(-1),\qquad
+\bar\sigma=\operatorname{rec}(1/2),\qquad
+\bar x_1=\operatorname{rec}(-3).
+\end{equation}
+Hence the three quadratic Kummer classes
+are the dual basis of $(x_0,\sigma,x_1)$
+in the order $(-1,5,2)$:
+\begin{equation}\label{eq:dyadic-full-generator-evaluation}
+\bigl(\kappa_u(g)\bigr)_{u=(-1,5,2),\,g=(x_0,\sigma,x_1)}
+=I_3.
+\end{equation}
+In this ordering the mod-$2$ quadratic Fox
+symbol of the full-marked pro-$2$ relation
+is
+\[
+X_0^2+X_1\Sigma+\Sigma X_1.
+\]
+The $\nu_{\rm ur}$ and $\theta$ markings,
+together with the fixed reciprocity classes,
+therefore remove the last Hilbert--Fox
+basis ambiguity without changing the
+underlying cup form.
+\end{corollary}
+
+\begin{proof}
+On abelianizations the identity
+$x_0=s^{-2}a^{-1}$ gives
+\[
+ \bar x_0=
+ \operatorname{rec}\bigl((1/2)^{-2}(-4)^{-1}\bigr)
+ =\operatorname{rec}(-1).
+\]
+The two other identities follow immediately from
+\eqref{eq:dyadic-reciprocity-generator-images}.
+The Hilbert computations in
+Theorem~\ref{thm:dyadic-exact-hilbert-reciprocity-marking}
+then prove \eqref{eq:dyadic-full-generator-evaluation}.
+For the quadratic relation, in the notation
+$P_0=x_0^{\sigma^2}x_0$ and
+$Q_0=[x_1,\sigma]$, its degree-two Magnus terms
+are $X_0^2$ and $X_1\Sigma+\Sigma X_1$:
+conjugation by $\sigma^2$ changes the
+degree-one Magnus component of $x_0$
+only in degree at least three.
+\end{proof}
+
+\begin{theorem}[Pro-$2$ residual compression of the marked full group]
+\label{thm:dyadic-full-marked-pro2-compression}
+Let $E/\mathbf Q_2$ be finite,
+$\bar\rho:G_{\mathbf Q_2}\to\mathrm{GL}_r(k_E)$
+be a genuine residual representation
+whose finite image is a $2$-group,
+and let $A$ be a complete Noetherian
+local $\mathcal O_E$-algebra with residue
+field $k_E$.  Every framed continuous
+lift $\rho_A$ of $\bar\rho$ has pro-$2$
+image and factors through
+$P=G_{\mathbf Q_2}(2)$.
+In the Roe--Turturean full marked presentation
+\cite{RoeTurtureanGQ2}, the identities
+\begin{equation}\label{eq:dyadic-pro2-marked-specialization}
+\rho_A(\tau)=I_r,\qquad
+\rho_A(\sigma^{\omega_2})=\rho_A(\sigma),
+\qquad
+\rho_A((x_i\tau)^{\omega_2})=\rho_A(x_i)
+\quad (i=0,1)
+\end{equation}
+hold.  The tame relator is thereby eliminated,
+and the full marked wild relator becomes
+\begin{equation}\label{eq:dyadic-full-pro2-relator}
+\boxed{\quad
+R=P_0Q_0,\quad
+P_0=x_0^{\sigma^2}x_0,\quad
+Q_0=[x_1,\sigma].
+\quad}
+\end{equation}
+This gives an equality of framed deformation
+functors and therefore an isomorphism of
+complete local representing rings
+\begin{equation}\label{eq:dyadic-pro2-deformation-ring-equality}
+R^\square_{\bar\rho}(G_{\mathbf Q_2})
+\xrightarrow{\;\sim\;}
+R^\square_{\bar\rho}(P).
+\end{equation}
+The two full-group marked equations on
+this residual sector are ordinary
+finite-word matrix equations once the
+canonical pro-$2$ specialization is made.
+No infinite profinite binomial series is
+needed \emph{on this sector}; outside
+pro-$2$ residual sectors, the formula of
+Theorem~\ref{thm:dyadic-omega2-power-formula}
+is still necessary.
+\end{theorem}
+
+\begin{proof}
+Reduction identifies the image of $\rho_A$
+modulo $\mathfrak m_A$ with the finite
+$2$-group $\operatorname{im}\bar\rho$.
+The congruence kernel of
+$\mathrm{GL}_r(A)\to\mathrm{GL}_r(k_E)$
+is pro-$2$ for the maximal-ideal
+topology.  Therefore the compact image
+$\rho_A(G_{\mathbf Q_2})$ is an extension
+of pro-$2$ groups and is pro-$2$.
+The universal property of the maximal
+pro-$2$ quotient proves factorization.
+
+In a pro-$2$ group, a relation
+$g^{-1}tg=t^2$ forces $t=1$:
+in any finite $2$-group quotient, a
+nontrivial element cannot be conjugate
+to its square since the two have
+different orders.  Apply this to the
+tame relation
+$\tau^\sigma=\tau^2$.
+The profinite idempotent $\omega_2$
+acts as the identity on all pro-$2$
+elements, so
+$\sigma_2=\sigma$ and
+$u_i=(x_i\tau)^{\omega_2}=x_i$.
+The remaining marked words then simplify
+successively as
+$d_0=c_0=d_g=h_c=1$,
+$g_0=\sigma^2$, and
+$h_0=x_0^{\sigma^2}x_0$.
+The full wild relation
+$h_0u_1^{-1}x_1^\sigma c_0=1$
+is precisely
+\eqref{eq:dyadic-full-pro2-relator}.
+The marked condition on the normal closure
+of $x_0,x_1$ is automatically satisfied
+in every pro-$2$ quotient.
+Conversely every representation of the
+one-relator pro-$2$ group in this residual
+chart defines an admissible full-group
+marked representation by putting
+$\tau=1$.  Hence the framed lift functors
+are naturally isomorphic on every
+Artinian coefficient algebra; continuity
+and completeness give
+\eqref{eq:dyadic-pro2-deformation-ring-equality}.
+The last assertion follows since all
+remaining operations in $P_0Q_0$
+are ordinary finite words.
+\end{proof}
+
+\begin{theorem}[Strict integral Nielsen--Fox chain equivalence]
+\label{thm:dyadic-strict-nielsen-fox-chain}
+Retain Theorem~\ref{thm:dyadic-full-marked-pro2-compression},
+let $B$ be a complete local coefficient algebra,
+and let $M$ be a finite projective $B$-module
+with continuous $P$-action.
+Set
+\[
+S=\rho_M(s),\quad A_0=\rho_M(a),\quad
+X_0=\rho_M(x_0)=S^{-2}A_0^{-1},
+\quad
+\Sigma=\rho_M(\sigma)=S,
+\]
+and let $Q_0=[x_1,\sigma]$ as above.
+For a degree-one standard Fox coordinate
+$(v_a,v_s,v_y)\in M^3$ define
+\begin{equation}\label{eq:dyadic-strict-nielsen-s1}
+\mathsf N^1(v_a,v_s,v_y)=
+\left(
+ -S^{-2}A_0^{-1}v_a
+ -(S^{-1}+S^{-2})v_s,\quad
+ v_s,\quad v_y
+\right),
+\end{equation}
+where the target is in $(x_0,\sigma,x_1)$
+coordinate order.  Put
+\begin{equation}\label{eq:dyadic-strict-nielsen-s2}
+\mathsf N^0=\operatorname{id}_M,\qquad
+\mathsf N^2=-\rho_M(Q_0)^{-1}.
+\end{equation}
+Then $\mathsf N^\bullet$ is an \emph{invertible
+strict integral chain map} from the
+standard one-relator Fox complex of
+$a^2s^4[s,y]$ to the marked pro-$2$
+Fox complex of $P_0Q_0$:
+\begin{equation}\label{eq:dyadic-strict-nielsen-chain-square}
+\mathsf N^1 d_{\rm std}^0
+=d_{\rm mark}^0\mathsf N^0,
+\qquad
+d_{\rm mark}^1\mathsf N^1
+=\mathsf N^2d_{\rm std}^1.
+\end{equation}
+Its degree-one inverse is explicit:
+\begin{equation}\label{eq:dyadic-strict-nielsen-inverse}
+\begin{aligned}
+v_s&=v_\sigma,\qquad v_y=v_{x_1},\\
+v_a&=-X_0^{-1}v_{x_0}
+     -X_0^{-1}(\Sigma^{-1}+\Sigma^{-2})v_\sigma.
+\end{aligned}
+\end{equation}
+The chain isomorphism commutes strictly with
+integral coefficient base change and
+preserves the intrinsic cup pairing
+on cohomology.  The chosen Fox diagonals
+need not be strictly identified as
+multiplicative chain maps.
+\end{theorem}
+
+\begin{proof}
+For the left crossed-derivation convention,
+$c(gh)=c(g)+\rho_M(g)c(h)$ and
+$c(g^{-1})=-\rho_M(g)^{-1}c(g)$.
+By the Nielsen identity
+$x_0=s^{-2}a^{-1}$, direct evaluation gives
+\[
+c(x_0)=
+ -(S^{-1}+S^{-2})c(s)
+ -S^{-2}A_0^{-1}c(a),
+\]
+which is exactly
+\eqref{eq:dyadic-strict-nielsen-s1}.
+The inverse word
+$a=x_0^{-1}\sigma^{-2}$
+gives \eqref{eq:dyadic-strict-nielsen-inverse}.
+For a principal degree-zero coboundary
+$c(g)=(\rho_M(g)-1)v$,
+both sides evaluate on the same group
+elements, proving the first identity of
+\eqref{eq:dyadic-strict-nielsen-chain-square}.
+
+The relation words satisfy the exact
+\emph{free-group} identity
+\begin{equation}\label{eq:dyadic-nielsen-relator-conjugacy}
+r_{\rm std}=a^2s^4[s,y]
+          =(Q_0P_0)^{-1},\qquad
+r_{\rm mark}=P_0Q_0
+          =Q_0^{-1}r_{\rm std}^{-1}Q_0
+\end{equation}
+after replacing $a=x_0^{-1}\sigma^{-2}$,
+$s=\sigma$, and $y=x_1$.
+Because $\rho_M(r_{\rm std})=1$,
+the crossed-derivation identity yields
+\[
+c(r_{\rm mark})
+=-\rho_M(Q_0)^{-1}c(r_{\rm std}).
+\]
+Evaluation of arbitrary generator
+$1$-cochains on the corresponding
+free relator is precisely the completed
+Fox differential $d^1$.
+This proves the second identity of
+\eqref{eq:dyadic-strict-nielsen-chain-square}
+without requiring the generator values
+to be cocycles.
+Both $\mathsf N^1$ and $\mathsf N^2$
+are invertible integral matrices
+over $B$ and involve only transport
+matrices and their inverses; therefore
+base change is strict.
+The invariant cup product is that of
+$R\Gamma(P,M)$ (or its paired coefficient
+objects); identifying both Fox complexes
+with the same intrinsic cochains
+shows that cup classes agree.
+\end{proof}
+
+\begin{theorem}[Tame-block contraction of the full marked Jacobian]
+\label{thm:dyadic-tame-jacobian-fox-splitting}
+Let $B$ and $M$ be as in
+Theorem~\ref{thm:dyadic-strict-nielsen-fox-chain},
+with the coefficient action factoring through $P$.
+On the genuine pro-$2$ residual chart,
+let $\mathcal J^\bullet_{\rm full}(M)$ be
+the three-term \emph{linearized marked
+relation complex}, with
+\[
+\mathcal J^0=M,\qquad
+\mathcal J^1=M^4
+\ \text{in coordinates }(\sigma,\tau,x_0,x_1),
+\qquad
+\mathcal J^2=M^2
+\ \text{in the tame/wild relation order}.
+\]
+The degree-one differential evaluates
+left crossed derivations on the
+two full marked relators, and the
+degree-zero differential is the
+usual principal-cocycle map.
+Writing $\Sigma=\rho_M(\sigma)$,
+put
+\begin{equation}\label{eq:dyadic-tame-L-unit}
+\mathsf L=\Sigma^{-1}-2I_M
+\in\operatorname{Aut}_B(M).
+\end{equation}
+After reordering degree-one coordinates as
+$(x_0,\sigma,x_1;\tau)$, the marked
+relation differential has block matrix
+\begin{equation}\label{eq:dyadic-full-jacobian-block}
+d^1_{\rm full}
+=
+\begin{pmatrix}
+ 0&\mathsf L\\
+ d^1_{\rm mark}&\mathsf B_\tau
+\end{pmatrix},
+\end{equation}
+where $\mathsf B_\tau:M\to M$ is the
+finite-word derivative of the wild
+relation in the tame direction at
+$\tau=1$.
+The output change
+\begin{equation}\label{eq:dyadic-tame-row-elimination}
+(u_{\rm tame},u_{\rm wild})
+\longmapsto
+\bigl(u_{\rm tame},
+u_{\rm wild}-\mathsf B_\tau\mathsf L^{-1}u_{\rm tame}\bigr)
+\end{equation}
+is integral and invertible.
+It yields an actual chain isomorphism
+\begin{equation}\label{eq:dyadic-full-marked-chain-splitting}
+\boxed{\quad
+\mathcal J^\bullet_{\rm full}(M)
+\cong
+C^\bullet_{\rm Fox}(P,M)
+\oplus
+\bigl(0\to M
+  \xrightarrow{\ \mathsf L\ }M\to0\bigr),
+\quad}
+\end{equation}
+with the acyclic summand supported in
+cohomological degrees $1$ and $2$.
+Composing with
+Theorem~\ref{thm:dyadic-strict-nielsen-fox-chain}
+gives a \emph{direct integral chain-level
+comparison} between the marked
+full-$G_{\mathbf Q_2}$ Jacobian and the
+standard dyadic Demu\v{s}kin Fox--Spencer
+coefficient complex.
+
+In this pro-$2$ image sector the full
+two-relator marked Jacobian is therefore
+cohomologically Fox-complete in degrees
+$0,1,2$ and computes
+$R\Gamma(G_{\mathbf Q_2},M)$.
+This conclusion is \emph{not} extended to
+arbitrary residual images, for which
+the fixed full-group marked relator
+Jacobian may retain higher syzygies
+and the all-Sylow derived construction
+remains necessary.
+\end{theorem}
+
+\begin{proof}
+At a genuine pro-$2$ representation the
+tame generator $\tau$ acts as the identity,
+and by Theorem~\ref{thm:dyadic-full-marked-pro2-compression}
+every occurrence of $\omega_2$ in the
+marked relations is the identity
+operation on the ambient pro-$2$
+deformation sector, including first-order
+semidirect extensions by $M$.
+The tame relation can be written as
+\[
+ r_t=\sigma^{-1}\tau\sigma\tau^{-2}=1.
+\]
+For an arbitrary crossed derivation $c$
+with $c(\sigma)=v_\sigma$ and
+$c(\tau)=v_\tau$, and
+$\rho_M(\tau)=I$, one calculates
+\[
+ c(r_t)=(\Sigma^{-1}-2I_M)v_\tau;
+\]
+all $v_\sigma$ terms cancel.
+Modulo the maximal ideal of $B$,
+the reduction of $\mathsf L$ is
+$\bar\Sigma^{-1}$ since $2=0$ there,
+hence $\mathsf L$ is invertible over
+the complete local ring $B$.
+The derivative of the wild relation
+with $\tau$ fixed equal to $1$ is
+the Fox derivative of $P_0Q_0$;
+its derivative with respect to
+$v_\tau$ is by definition
+$\mathsf B_\tau$.  This proves the
+block display
+\eqref{eq:dyadic-full-jacobian-block}.
+The row operation
+\eqref{eq:dyadic-tame-row-elimination}
+kills $\mathsf B_\tau$ without changing
+the first Fox block.
+
+Since $\tau$ acts trivially on $M$,
+the degree-zero principal cocycle has
+$v_\tau=(\rho_M(\tau)-1)v=0$;
+hence the row/column decomposition
+also splits the entire complex,
+not only its degree-one differential.
+The one-block complex with differential
+$\mathsf L$ is contractible, yielding
+\eqref{eq:dyadic-full-marked-chain-splitting}.
+The Nielsen chain maps above then give
+the explicit comparison in the standard
+$a,s,y$ coordinates.
+The standard Fox resolution of the
+Demu\v{s}kin group $P$ computes
+$R\Gamma(P,M)$ by
+Theorem~\ref{thm:fox-spencer-demushkin},
+and inflation from $P$ computes
+$R\Gamma(G_{\mathbf Q_2},M)$ for
+pro-$2$ coefficient actions by
+Theorem~\ref{thm:sylow-fox-retract}.
+No claim about the naive marked complex
+on other residual sectors is used.
+\end{proof}
+
+\begin{corollary}[Exact full-group rank-one hypersurface elimination]
+\label{cor:dyadic-full-rankone-tame-elimination}
+For the trivial residual rank-one
+representation $\bar\rho=\mathbf1$,
+write the four marked scalar generator
+matrices as
+\[
+\Sigma=1+z_\sigma,\quad
+T=1+z_\tau,\quad
+X_0=1+z_0,\quad
+X_1=1+z_1.
+\]
+The completed full-group tame and wild
+marked relation ideal is
+\begin{equation}\label{eq:dyadic-full-rankone-two-relator-ideal}
+\boxed{\quad
+I_{\rm marked}
+=(z_\tau,\ z_0(z_0+2))
+\subseteq
+\mathcal O_E[[z_\sigma,z_\tau,z_0,z_1]].
+\quad}
+\end{equation}
+Thus the full-group marked
+complete local presentation is already
+a regular sequence, with a contractible
+tame variable and one genuine
+dyadic hypersurface:
+\[
+R^\square_{\mathbf1}
+\cong
+\mathcal O_E[[z_\sigma,z_0,z_1]]/
+(z_0(z_0+2)).
+\]
+Under the Nielsen coordinate transform
+\begin{equation}\label{eq:dyadic-rankone-u-z0-change}
+ 1+u=X_0^{-1},\qquad
+ u=-\frac{z_0}{1+z_0},
+\end{equation}
+the identity of ideals is
+\begin{equation}\label{eq:dyadic-rankone-hypersurface-comparison}
+u(u+2)=-\frac{z_0(z_0+2)}{(1+z_0)^2}.
+\end{equation}
+Consequently the two full-group marked
+relations and the one-relator
+Demu\v{s}kin deformation hypersurface
+of Theorem~\ref{thm:dyadic-q2-rankone-integral-ring}
+agree \emph{integrally and scheme-theoretically},
+not merely on their tangent spaces
+or after inverting $2$.
+\end{corollary}
+
+\begin{proof}
+Every scalar lift of $\mathbf1$ takes
+values in the pro-$2$ principal units.
+Conjugation is trivial, and the tame
+relation $\tau^\sigma=\tau^2$
+therefore becomes $T=T^2$,
+equivalently $z_\tau=0$ since
+$T\in1+\mathfrak m_A$ is invertible.
+All $\omega_2$ powers act as the identity
+on these principal units.
+With $T=1$, the wild relation
+reduces to $P_0Q_0$ and, for scalar
+commuting matrices, to $X_0^2=1$.
+Thus its equation is exactly
+$z_0(z_0+2)=0$ modulo $z_\tau$.
+Elementary ideal elimination gives
+\eqref{eq:dyadic-full-rankone-two-relator-ideal}
+in the complete local ambient
+power-series ring; the tame relation
+has the explicit unit multiple
+$T^{-2}(T-T^2)$ of $z_\tau$,
+and the wild relation differs from
+$X_0^2-1$ by an element of
+$(z_\tau)$.  Both generators form
+a regular sequence.
+Finally
+$a=x_0^{-1}\sigma^{-2}$ and $s=\sigma$
+give $a s^2=x_0^{-1}$ in the
+scalar quotient, so
+$1+u=\rho(a)\rho(s)^2=X_0^{-1}$.
+The displayed rational power-series
+identity
+\eqref{eq:dyadic-rankone-hypersurface-comparison}
+is integral because $1+z_0$ is a
+unit in the completed local ring.
+This proves the exact identification.
+\end{proof}
+
+\begin{remark}[Sharp scope of the direct integral bridge]
+\label{rem:dyadic-full-chain-bridge-scope}
+If $\operatorname{im}\bar\rho$ is a
+$2$-group, its Sylow preimage
+in Theorem~\ref{thm:sylow-fox-retract}
+is all of $G_{\mathbf Q_2}$.
+The present chain equivalence therefore
+makes the pointwise Sylow--Fox
+comparison completely native on
+these sectors, without choosing
+a chain homotopy inverse of a raw
+Herr representative.
+For a general residual image,
+the Sylow preimage is a proper
+finite-index subgroup; the
+full-group marked relation
+Jacobian need not be cohomologically
+complete, and an explicit
+degree-two integral comparison
+requires actual Schreier
+relations and syzygy control.
+The all-Sylow/derived construction
+retains the unconditional result.
+Neither this restriction nor the
+finite-jet profinite-power formula
+of fixed126 is a claim of a uniform
+four-generator full-group
+cohomological Fox resolution
+for all residual sectors.
+\end{remark}
