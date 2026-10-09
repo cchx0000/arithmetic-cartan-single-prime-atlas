@@ -1,66 +1,63 @@
 # Arithmetic Cartan single-prime atlas
 
-**Current integrated manuscript: [fixed127 — Exact dyadic reciprocity and strict full-marked/Nielsen–Fox bridge](arithmetic_cartan_representations_closure_fixed127_exact_hilbert_full_marked_fox_bridge.tex)** (October 2026).
+**Latest integrated manuscript: [fixed128 — genuine non-pro-2 S3 Sylow–Schreier–Hecke and marked Jacobian certificate](arithmetic_cartan_representations_closure_fixed128_s3_sylow_schreier_hecke.tex)** (October 2026).
 
-Earlier integrated TeX versions are retained:
+Prior full manuscripts are preserved:
+[fixed127](arithmetic_cartan_representations_closure_fixed127_exact_hilbert_full_marked_fox_bridge.tex),
 [fixed126](arithmetic_cartan_representations_closure_fixed126_dyadic_hilbert_marked_power_streamlined.tex),
 [fixed125](arithmetic_cartan_representations_closure_fixed125_dyadic_wu_tate_streamlined.tex),
 [fixed124](arithmetic_cartan_representations_closure_fixed124_dyadic_streamlined.tex), and
 [fixed123](arithmetic_cartan_representations_closure_fixed123_streamlined.tex).
 
-## What's newly proved in fixed127
+## New in fixed128
 
-**1. The last Hilbert–Fox coordinate shear is exactly zero.**
-The full Roe–Turturean arithmetic-reciprocity marking fixes the pro-2 abelianizations of the standard Demuškin generators:
-\[
-\bar a=\operatorname{rec}(-4),\quad
-\bar s=\operatorname{rec}(1/2),\quad
-\bar y=\operatorname{rec}(-3).
-\]
-Hilbert evaluation gives \(\kappa_{-1}=\chi_a\), \(\kappa_5=\chi_s\), \(\kappa_2=\chi_y\), with no remaining \(\epsilon\). Thus the square-class Hilbert pairing is the Fox formula \((u,v)_2=(-1)^{bb'+ch'+hc'}\) in the coordinates \(u=(-1)^b5^c2^h\), \(v=(-1)^{b'}5^{c'}2^{h'}\).
-Under the literal Nielsen change \(\sigma=s\), \(x_1=y\), \(x_0=s^{-2}a^{-1}\), the marked generator classes are \(\operatorname{rec}(1/2)\), \(\operatorname{rec}(-3)\), and \(\operatorname{rec}(-1)\).
+This version crosses **the remaining pro-2-image boundary in one genuine residual example**, without claiming a universal full-group resolution.
 
-**2. Exact compression of the full-GQ2 marked presentation on pro-2 residual image sectors.**
-If \(\operatorname{im}\bar\rho\) is a 2-group, every integral framed deformation lift has pro-2 image, the tame generator satisfies \(\tau=1\), and every \(\omega_2\)-power is the identity on this sector. The full marked relators reduce to the three-generator relation
-\[
- R=P_0Q_0,\qquad P_0=x_0^{\sigma^2}x_0,\qquad Q_0=[x_1,\sigma].
-\]
-The corresponding full-group and maximal-pro-2 framed deformation rings coincide on the complete residual sector.
+1. **A real S3 / GL2(F2) local Galois sector.** For
+   \[
+   L=\mathbb Q_2(\sqrt[3]{2},\zeta_3),\quad
+   \Gamma=G_{\mathbb Q_2},\quad
+   H=G_{\mathbb Q_2(\sqrt[3]{2})},
+   \]
+   the quotient \(\Gamma\to\operatorname{Gal}(L/\mathbb Q_2)\simeq S_3\) is tame and the Sylow-2 preimage has odd index three. The integral standard 2-dimensional carrier is
+   \[
+   S_0=\begin{pmatrix}0&1\\1&0\end{pmatrix},
+   \quad U_0=\begin{pmatrix}-1&-1\\1&0\end{pmatrix}.
+   \]
+   The maximal pro-2 quotient of \(H\) is a rank-five, \(q=2\) Demuškin group with full orientation image.
 
-**3. Closed integral chain equivalence, not just an abstract zigzag.**
-The relation identity
-\[
-R=Q_0^{-1}(a^2s^4[s,y])^{-1}Q_0
-\]
-under \(a=x_0^{-1}\sigma^{-2},s=\sigma,y=x_1\)
-gives an explicit strict Nielsen–Fox cochain isomorphism in degrees 0, 1 and 2.
-The complete marked pro-2 Fox differential is written as a literal finite noncommutative derivative row. The full tame/wild Jacobian splits as
-\[
-\begin{pmatrix}0&L\\d_{\rm mark}^1&B_\tau\end{pmatrix},
-\quad
-L=\rho_M(\sigma)^{-1}-2I,
-\]
-where \(L\) is a unit and \(B_\tau\) has a closed formula in the marked transport matrices. Row elimination leaves the standard Demuškin Fox perfect complex plus a contractible tame block.
-This gives a direct integral full-group marked-Jacobian-to-Sylow–Fox chain comparison **when the residual image is a 2-group**.
+2. **Exact finite Schreier table and degree-one integral corestriction.** Right coset representatives \(1,\tau,\tau^2\) yield the literal Schreier words \(\sigma,\tau^3,\tau^i x_j\tau^{-i}\) (six wild conjugates). On the standard \(T=\mathbb Z_2^2\), corestriction kills the tame values of a cocycle and gives
+   \[
+   (\operatorname{cor}c)(x_j)=
+   \sum_{i=0}^2 U_0^{-i}c(\tau^ix_j\tau^{-i}).
+   \]
+   The all-arity bar formula is included; it is not mislabeled as a minimal Fox change-of-basis map.
 
-**4. Complete rank-one marked equations and exact Jacobian.**
-On the trivial residual rank-one chart the literal scalar full-group relations are \(r_t=T^{-1}\) and \(r_{\rm wild}=X_0^2T^3\). Their complete relation ideal is
-\[
-(z_\tau,\ z_0(z_0+2)),
-\]
-giving the same hypersurface deformation ring as fixed126. The exact integral adjoint cochain Jacobian in \((\sigma,\tau,x_0,x_1)\) coordinates is
-\[
-\begin{pmatrix}0&-1&0&0\\0&3&2&0\end{pmatrix},
-\]
-whose cohomology is \(H^1=\mathcal O_E^2\), \(H^2=\mathcal O_E/2\mathcal O_E\). After reduction to \(k_E\), the tangent dimension jumps to 3 and the obstruction dimension is 1.
+3. **A genuine nonnormal integral Hecke projector.** On \(R\Gamma(H,T)\), put \(A=\operatorname{res}\operatorname{cor}\), \(\mathsf T_{\rm Hk}=A-I\). Then
+   \[
+   A^2=3A,\quad \mathsf T_{\rm Hk}^2=\mathsf T_{\rm Hk}+2I,\quad
+   e_H=\frac{I+\mathsf T_{\rm Hk}}3.
+   \]
+   The nontrivial double coset is \(\operatorname{cor}_N^H\circ(\tau)_*\circ\operatorname{res}_N^H\), with \(N=G_L\). It uses no division by two. The exact natural-lattice cohomology ledgers are
+   \[
+   (H^0,H^1,H^2)(\Gamma,T)=(0,\mathbb Z_2^2,0),
+   \quad
+   (H^0,H^1,H^2)(H,T)=(\mathbb Z_2,\mathbb Z_2^7,\mathbb F_2).
+   \]
+   Thus \(e_H\) kills the degree-zero and degree-two classes of \(H\), and projects its rank-seven \(H^1\) to rank two.
 
-## Source sections and scope
+4. **The first native, non-pro-2, second-degree marked coefficient certificate.** For \(M=\operatorname{ad}T\),
+   \[
+   (H^0,H^1,H^2)(\Gamma,M)
+      =(\mathbb Z_2,\mathbb Z_2^5,\mathbb F_2),\qquad
+   (\dim H^0,\dim H^1,\dim H^2)(\Gamma,M/2)=(1,6,1).
+   \]
+   The actual full Roe–Turturean marked two-relation Jacobian is an **8 by 16 integral matrix**. Its mod-2 rank is 7. The one-based columns \(\{1,2,5,6,9,13,14,15\}\) have a displayed mod-4 submatrix of determinant \(2\bmod4\). Therefore its Smith factors are \(1^7,2\), and the full marked coefficient complex has the precise local cohomology above. A finite (noncanonical) integral homotopy comparison with the Sylow–Fox retract follows by elementary-divisor reduction.
 
-The standalone source [dyadic reciprocity and strict Nielsen–Fox bridge](dyadic_reciprocity_sylow_nielsen_bridge_v1.tex) is included verbatim in fixed127. The previous separate insertions remain available:
-[dyadic classification](dyadic_fox_bockstein_orientation_completion_v1.tex),
-[Fox–Wu–Tate](dyadic_fox_wu_tate_completion_v1.tex),
-and [Hilbert-marked profinite-power formulas](dyadic_hilbert_marked_power_effectivity_v1.tex).
+## Scope of the new theorem
 
-The bridge above is *not* claimed on arbitrary non-pro-2 residual images: those require a finite-index Sylow preimage, restriction/corestriction and a further Schreier/syzygy comparison. The broader all-Sylow/Cayley–Hamilton derived finite-atlas results are unchanged. Formal profinite idempotent matrix powers on non-pro-2 residual sectors still use the finite-jet binomial construction of fixed126.
+The computation proves a **coefficient-specific** full-marked/Fox derived comparison for the standard tame S3 adjoint carrier. It does not claim that the two Roe–Turturean relators give a universally exact projective resolution of \(\mathbb Z_2\) over \(\mathbb Z_2[[G_{\mathbb Q_2}]]\). A general direct, canonical Schreier-to-minimal-Demuškin integral chain map, including its relation syzygies, remains open for arbitrary non-pro-2 residual sectors. The prime-uniform all-Sylow/Cayley–Hamilton derived existence theorem is preserved.
 
-Routine revisions are TeX-only unless a PDF is specifically requested.
+The **[fixed128 standalone insert](dyadic_s3_sylow_schreier_hecke_jacobian_fixed128.tex)** is fully integrated into the linked mother TeX. Earlier standalone inserts remain in the repository for provenance.
+
+Routine revisions are TeX-only unless PDF is requested.
