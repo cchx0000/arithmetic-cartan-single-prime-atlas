@@ -9770,6 +9770,304 @@ claiming a global
 minimal Fox basis.
 \end{proof}
 
+\begin{theorem}[A semilinear rank-one description of the entire split subfunctor]
+\label{thm:dyadic-f131-toric-semilinear-description}
+Keep the complete split
+deformation ring
+$R_{\rm split}$ of
+Theorem~\ref{thm:dyadic-f131-universal-split-locus}
+and let $A$ be any
+complete local point of it.
+Put
+\[
+\Gamma'=
+G_{\mathbf Q_2(\zeta_3)}
+\triangleleft\Gamma,\qquad
+\mathcal C=A[z_A],\qquad
+\iota(z_A)=z_A^2.
+\]
+Fix the framed cyclic
+vector $e_1\in A^2$.
+The map
+\[
+\mathcal C\longrightarrow A^2,
+\qquad a\longmapsto a e_1
+\]
+is an isomorphism
+of rank-one
+$\mathcal C$-modules.
+Under this identification
+the restriction of $\rho_A$
+to $\Gamma'$ is exactly
+multiplication by a
+continuous character
+\begin{equation}\label{eq:dyadic-f131-toric-character}
+\chi:\Gamma'\longrightarrow\mathcal C^\times,
+\qquad
+\rho_A(h)=m_{\chi(h)}
+\quad(h\in\Gamma').
+\end{equation}
+The other Galois coset
+has the explicit form
+\begin{equation}\label{eq:dyadic-f131-semilinear-sigma}
+\rho_A(\sigma)=m_b\circ\iota,
+\qquad b\in\mathcal C^\times.
+\end{equation}
+Conversely, rank-one
+$\mathcal C$-valued
+character data $(\chi,b)$
+give a split framed
+representation precisely
+when their residual
+marking agrees with
+$\bar\rho$ and
+\begin{equation}\label{eq:dyadic-f131-semilinear-character-conditions}
+\boxed{
+\begin{aligned}
+\chi(\sigma h\sigma^{-1})
+ &=\iota(\chi(h))
+ &&(h\in\Gamma'),\\
+b\,\iota(b)&=\chi(\sigma^2).
+\end{aligned}}
+\end{equation}
+Thus the split locus
+is a genuine
+\emph{quadratic-étale
+rank-one/semilinear
+descent locus},
+not merely a
+set-theoretic
+centralizer condition.
+
+Moreover the two
+adjoint summands
+have the exact
+integral realizations
+\begin{equation}\label{eq:dyadic-f131-skew-endo-split}
+\boxed{\quad
+\operatorname{End}_A(A^2)
+=
+\underbrace{\{m_a:a\in\mathcal C\}}_{M_{0,A}}
+\ \oplus\
+\underbrace{\{m_c\circ\iota:c\in\mathcal C\}}_{M_{1,A}},
+\quad}
+\end{equation}
+and the conjugation
+action on them is:
+\begin{equation}\label{eq:dyadic-f131-skew-endo-actions}
+\boxed{
+\begin{array}{c|cc}
+& h\in\Gamma'&\sigma\\ \hline
+M_0:\ a
+ &a&\iota(a)\\
+M_1:\ c
+ &(\chi(h)/\iota\chi(h))c&
+ (b/\iota(b))\,\iota(c).
+\end{array}}
+\end{equation}
+In particular
+$M_{0,A}$ has
+the \emph{same}
+integral permutation
+action as in fixed130,
+for \emph{every}
+split deformation:
+\begin{equation}\label{eq:dyadic-f131-family-shapiro-m0}
+\boxed{\quad
+M_{0,A}
+\simeq\operatorname{Ind}_{\Gamma'}^\Gamma A,
+\qquad
+R\Gamma(\Gamma,M_{0,A})
+\simeq R\Gamma(\Gamma',A).
+\quad}
+\end{equation}
+This is a derived
+Shapiro isomorphism
+over the complete
+coefficient algebra $A$;
+it does not require
+the cohomology of $A$
+to have constant
+rank or to be
+$A$-flat.
+The second summand
+has a generally
+\emph{nontrivial}
+rank-one
+$\mathcal C$-valued
+wild character
+$\chi/\iota\chi$.
+Consequently it
+need not be a
+constant natural-$T$
+summand away from
+the original
+fixed tame point.
+\end{theorem}
+
+\begin{proof}
+The cyclic-basis
+argument of
+Theorem~\ref{thm:dyadic-f131-canonical-tame-extraction}
+makes $A^2$ a free
+rank-one $\mathcal C$-module.
+On the split locus
+the full image
+normalizes $\mathcal C$.
+The kernel of its
+residual involution
+character is
+$\Gamma'$, so
+each $h\in\Gamma'$
+acts $\mathcal C$-linearly
+and is multiplication
+by a unique unit
+$\chi(h)$.  The map
+$\chi$ is continuous
+and multiplicative.
+The marked generator
+$\sigma$ acts by the
+nontrivial étale
+involution, hence
+has the form
+$m_b\circ\iota$
+for an invertible
+coefficient $b$.
+The displayed
+relations are exactly
+the conjugation
+and square identities
+for this index-two
+group extension.
+They suffice to
+reconstruct a continuous
+representation of
+$\Gamma$ from
+$\chi$ and $b$,
+because every element
+has a unique
+expression in
+$\Gamma'$ or
+$\sigma\Gamma'$.
+The framed residual
+condition picks out
+the prescribed
+component.
+
+For a quadratic
+étale Galois
+algebra $\mathcal C/A$,
+the two families
+of $A$-linear
+operators $m_a$
+and $m_c\circ\iota$
+span and are
+independent in
+$\operatorname{End}_A(\mathcal C)$.
+This can be checked
+after faithfully
+flat étale base
+change splitting
+$\mathcal C\simeq A\times A$,
+where they are
+the diagonal and
+off-diagonal
+matrix blocks,
+and hence descends.
+The conjugation
+by $z_A$ acts
+trivially on
+$m_a$ and by
+multiplication
+$z_A/\iota(z_A)=z_A^2$
+on $m_c\iota$.
+The tame average
+therefore fixes
+the former and
+kills the latter,
+giving
+\eqref{eq:dyadic-f131-skew-endo-split}.
+
+Conjugating these
+two kinds of
+operators by
+$m_{\chi(h)}$
+and $m_b\iota$
+gives the four
+exact formulas
+\eqref{eq:dyadic-f131-skew-endo-actions}.
+On the first
+summand $\Gamma'$
+acts trivially,
+and $\sigma$
+interchanges the
+two basis vectors
+$z_A,z_A^2$.
+Thus as a
+$\Gamma$-module
+$M_{0,A}$ is the
+permutation-induced
+rank-two module
+from the trivial
+$A$-module on
+$\Gamma'$, proving
+\eqref{eq:dyadic-f131-family-shapiro-m0}
+by integral
+Shapiro's lemma.
+No averaging by
+two or constant
+cohomology-rank
+assumption occurs.
+\end{proof}
+
+\begin{example}[A nontrivial integral wild point on the split locus]
+\label{ex:dyadic-f131-nontrivial-split-wild-point}
+Over $\mathbf Z_2$ keep
+the fixed matrices
+$S,U$ of
+\eqref{eq:dyadic-s3-integral-matrices}
+and assign
+\[
+\rho(\sigma)=S,\quad
+\rho(\tau)=U,\quad
+\rho(x_0)=-I_2,\quad
+\rho(x_1)=I_2.
+\]
+The wild generator
+$x_0$ has nontrivial
+order-two image,
+but it is central
+and hence commutes
+with the tame
+order-three matrix.
+Indeed
+$(x_0\tau)^{\omega_2}=-I_2$,
+$d_0=1$, and the
+literal marked
+wild relation
+reduces to
+$x_0^2=1$.
+The tame relation
+holds because
+$S^{-1}US=U^2$.
+The wild normal
+closure is the
+central $2$-group
+$\{\pm I_2\}$,
+so the marked
+pro-$2$ condition
+is satisfied.
+This therefore
+defines an
+actual integral
+Galois representation
+on the split
+subfunctor, different
+from the original
+finite $S_3$
+representation.
+\end{example}
+
 \begin{theorem}[A genuine wild first-order obstruction and failure of universal splitting]
 \label{thm:dyadic-f131-first-order-nosplit}
 Let
