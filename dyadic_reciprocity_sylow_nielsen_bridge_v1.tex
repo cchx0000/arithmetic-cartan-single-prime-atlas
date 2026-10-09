@@ -419,7 +419,22 @@ d^1_{\rm full}
 where $\mathsf B_\tau:M\to M$ is the
 finite-word derivative of the wild
 relation in the tame direction at
-$\tau=1$.
+$\tau=1$.  It also has the following
+\emph{closed transport formula}.  Put
+\[
+X=\rho_M(x_0),\quad
+G=\Sigma^2,\quad
+Z=\Sigma^{-1}X\Sigma,\quad
+P_0^\rho=G^{-1}XGX.
+\]
+Then
+\begin{equation}\label{eq:dyadic-wild-tau-jacobian-closed}
+\boxed{\quad
+\mathsf B_\tau
+=P_0^\rho(G^{-1}X+3X-I_M)
+ +(Z^{-1}-I_M)X.
+\quad}
+\end{equation}
 The output change
 \begin{equation}\label{eq:dyadic-tame-row-elimination}
 (u_{\rm tame},u_{\rm wild})
@@ -488,6 +503,28 @@ the reduction of $\mathsf L$ is
 $\bar\Sigma^{-1}$ since $2=0$ there,
 hence $\mathsf L$ is invertible over
 the complete local ring $B$.
+For completeness, the closed
+$\tau$-derivative in
+\eqref{eq:dyadic-wild-tau-jacobian-closed}
+is obtained directly from the literal
+Roe--Turturean auxiliary words.
+At $\tau=1$ and with $c(\tau)=v_\tau$
+and all other generator variations zero,
+\[
+c(d_0)=Xv_\tau,\qquad
+c(d_g)=G^{-1}Xv_\tau,\qquad
+c(h_c)=0,\qquad
+c(c_0)=(Z^{-1}-I_M)Xv_\tau.
+\]
+Since $h_0=(x_0^{g_0}x_0)d_gd_0^3h_c$
+and $u_1=x_1\tau$, the first two
+contributions to $c(r_{\rm wild})$ are
+$P_0^\rho(G^{-1}X+3X)v_\tau$
+and $-P_0^\rho v_\tau$, followed by
+the displayed contribution from $c_0$.
+This proves the closed formula
+without an unspecified Fox derivative.
+
 The derivative of the wild relation
 with $\tau$ fixed equal to $1$ is
 the Fox derivative of $P_0Q_0$;
@@ -585,7 +622,17 @@ therefore becomes $T=T^2$,
 equivalently $z_\tau=0$ since
 $T\in1+\mathfrak m_A$ is invertible.
 All $\omega_2$ powers act as the identity
-on these principal units.
+on these principal units.  More strongly,
+for arbitrary scalar $T$ near $1$ the
+\emph{literal} full marked tame and wild
+relations simplify exactly to
+\[
+r_t=T^{-1},\qquad
+r_{\rm wild}=X_0^2T^3.
+\]
+Indeed $d_0=d_g=T$, $h_c=c_0=1$,
+$h_0=X_0^2T^4$, and
+$u_1^{-1}x_1^\sigma=T^{-1}$.
 With $T=1$, the wild relation
 reduces to $P_0Q_0$ and, for scalar
 commuting matrices, to $X_0^2=1$.
