@@ -321,11 +321,20 @@ and ordinary integral powers of
 these marked words.
 
 Fix a genuine residual representation
-$\bar\rho:G_{\mathbf Q_2}\to\mathrm{GL}_r(k_E)$
-and its framed deformation ring
-$R_{\bar\rho}^{\square}$.
-On the completed residual matrix chart,
-each occurrence of $\omega_2$ has the
+$\bar\rho:G_{\mathbf Q_2}\to\mathrm{GL}_r(k_E)$,
+and choose integral lifts of its four
+residual generator matrices.
+Let
+\[
+ A_{\rm word}
+ =\mathcal O_E[[z_{\sigma,ij},z_{\tau,ij},
+                z_{0,ij},z_{1,ij}]]_{1\le i,j\le r}
+\]
+be the \emph{ambient} formally smooth
+completed matrix-coordinate ring on
+these four lifted generators.
+Each occurrence of $\omega_2$ on
+$A_{\rm word}$ has the
 convergent expression
 \eqref{eq:dyadic-omega2-binomial-power}.
 For every requested integer $t\ge1$:
@@ -347,11 +356,16 @@ differentiation;
 condition imposes no additional
 equation on any Artin lift with
 this genuine residual image;
+\item the quotient of the ambient
+$A_{\rm word}$ by the scalar entries
+of the two full convergent relation
+matrices is the completed framed
+deformation ring $R_{\bar\rho}^{\square}$;
 \item at the first-order residual
-thickening the kernel of this
-marked matrix Jacobian is
-canonically the framed cocycle
-space $Z^1(G_{\mathbf Q_2},
+thickening the kernel of the
+\emph{ambient} marked matrix
+Jacobian is canonically the framed
+cocycle space $Z^1(G_{\mathbf Q_2},
 \operatorname{ad}\bar\rho)$.
 Quotienting by infinitesimal
 conjugation gives
@@ -413,7 +427,14 @@ so is again a $2$-group.
 This is precisely the residual
 automaticity theorem
 (Theorem~\ref{thm:marked-residual-strictification}),
-giving (iii).
+giving (iii).  Because the Roe--Turturean
+presentation is universal among the
+marked finite quotients, the same
+residual automaticity identifies the
+functor of solutions to the completed
+two-relation equations in $A_{\rm word}$
+with the framed deformation functor.
+This proves (iv).
 
 On the dual-number thickening
 $k_E[\varepsilon]/(\varepsilon^2)$,
@@ -432,7 +453,7 @@ computed by (ii).  This identifies
 the tangent kernel with $Z^1$.
 Infinitesimal conjugation is
 exactly the coboundary action,
-giving (iv).
+giving (v).
 The last assertion follows from
 the distinction between formal
 relation equations and a complete
