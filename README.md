@@ -1,8 +1,9 @@
 # Arithmetic Cartan single-prime atlas
 
-**Latest complete integrated TeX manuscript: [fixed134 — Integral dyadic Fox–Tate top traces and strict three-sheet coinduced Hecke descent](arithmetic_cartan_representations_closure_fixed134_s3_integral_fox_tate_trace.tex)** (October 2026).
+**Latest integrated manuscript: [fixed135 — Uniform odd-index dyadic Schreier–Fox compilation and cross-Sylow coherence](arithmetic_cartan_representations_closure_fixed135_odd_sylow_fox_compiler.tex)** (October 2026).
 
-All earlier full versions are preserved:
+Every prior complete manuscript is retained:
+[fixed134](arithmetic_cartan_representations_closure_fixed134_s3_integral_fox_tate_trace.tex),
 [fixed133](arithmetic_cartan_representations_closure_fixed133_s3_minimal_schreier_fox_syzygy.tex),
 [fixed132](arithmetic_cartan_representations_closure_fixed132_crossed_etale_schreier_exchange.tex),
 [fixed131](arithmetic_cartan_representations_closure_fixed131_universal_tame_wild_obstruction.tex),
@@ -15,127 +16,89 @@ All earlier full versions are preserved:
 [fixed124](arithmetic_cartan_representations_closure_fixed124_dyadic_streamlined.tex),
 and [fixed123](arithmetic_cartan_representations_closure_fixed123_streamlined.tex).
 
-## Fixed134: source-owned integral Tate trace and an exact coefficient-uniform S3 projector
+## Fixed135: the main extension beyond the index-three S3 source
 
-Continue in the **same genuine non-pro-2 residual sector**
+Version fixed134 achieved exact integral Fox--Shapiro/Tate cohomology on the chosen $S_3$ residual quotient of $G_{\mathbb Q_2}$. Fixed135 identifies a **uniform odd-index marked pro-2 source compiler**, based on the externally verified Roe–Turturean presentation, with the original *normal pro-2 wild-closure requirement kept explicitly*.
+
+For **any** odd-index open $H\subset G_{\mathbb Q_2}$ of index $m$, this normal wild subgroup lies in $\operatorname{Core}_\Gamma(H)$. The actual marked Schreier cover then contains $m$ vertices, $4m$ directed generator edges and $2m$ indexed relation faces. Contracting a coset spanning tree leaves
 \[
-\Gamma=G_{\mathbb Q_2}\twoheadrightarrow S_3,\qquad
-H=G_F,\quad F=\mathbb Q_2(\sqrt[3]{2}),\quad[\Gamma:H]=3.
+d=3m+1\ \text{generators},\quad r=2m\ \text{relators}.
 \]
-Fixed133 gave the actual three-indexed wild Schreier relators and their pro-2 Nielsen reduction to the minimal five-generator one-relator Demuškin group \(P_F=H(2)\). Fixed134 supplies its complete rank-one **degree-two trace** and upgrades the index-three covering comparison into a strict cochain projector for the whole selected residual coefficient category.
 
-### Exact rank-one Fox--Tate matrices and a primitive three-face trace
+1. **Exact pro-2 subgroup presentation via finite wreath induction.** Every finite 2-group quotient of the rewritten Schreier relations induces an admissible finite wreath quotient of the original four-generator marked source, because the wild generator images lie in the normal 2-group base. Conversely the genuine $H(2)$ quotients satisfy those relations. This proves that the Schreier relator quotient is *exactly*
+   \[
+   \boxed{H(2)=G_F(2),\quad [F:\mathbb Q_2]=m}
+   \]
+   without silently discarding the marked wild condition or assuming that the two bare full-group relators present $G_{\mathbb Q_2}$.
 
-In the seven-generator, three-relator coordinates
-\((s,a_0,a_1,a_2,v_0,v_1,v_2)\), the cyclotomic orientation is
-\[
-\theta(s)=1,\quad\theta(a_i)=-1,\quad\theta(v_i)=-1/3.
-\]
-The full **twisted integral Fox row** is
-\[
-J_\theta=
-\begin{pmatrix}
-0&0&-2&2&6/7&-9/7&3/7\\
-0&2&0&-2&3/7&27/7&-30/7\\
-0&-2&2&0&-9/7&-18/7&27/7
-\end{pmatrix}.
-\]
-Its column sums vanish, and its indicated two-by-two minor is \(27/7\), a 2-adic unit. Therefore
-\[
-\operatorname{im}J_\theta
-=\ker\bigl(\operatorname{Tr}_F:\mathbb Z_2^3\to\mathbb Z_2\bigr),
-\quad \operatorname{Tr}_F(q_0,q_1,q_2)=q_0+q_1+q_2,
-\]
-and **\(H^2(P_F,\mathbb Z_2(1))\cong\mathbb Z_2\)** by the literal face sum.
+2. **Uniform primitive integral Fox/Nielsen elimination.** Local Demuškin duality gives minimal $H(2)$ generator rank $m+2$ and one defining relation. The actual $2m\times(3m+1)$ **augmented Fox matrix** therefore has rank
+   \[
+   \boxed{\operatorname{rank}_{\mathbb F_2}J_{\rm aug}=2m-1.}
+   \]
+   Selecting a $(2m-1)$-unit minor identifies an actual pro-2 free Nielsen basis in which precisely $2m-1$ indexed relators become generator letters. Their elimination gives a genuine, finite-jet-computable presentation with $m+2$ generators and one relation. For any coefficient module $B$ factoring through $H(2)$, the complete cover Fox complex has an **integral group-level chain decomposition**
+   \[
+   \boxed{
+   C^\bullet_{\rm cover}(H,B)\cong
+   C^\bullet_{\rm Fox}(H(2),B)
+   \oplus[B^{m-1}\xrightarrow{1}B^{m-1}]_{[0,1]}
+   \oplus[B^{2m-1}\xrightarrow{1}B^{2m-1}]_{[1,2]}.}
+   \]
+   All inverse Nielsen words and their Fox derivatives terminate in every specified finite pro-2 quotient/coefficient jet.
 
-For trivial coefficients, the equally explicit matrix \(J_{\mathbf1}\) instead has
-\[
-\operatorname{im}J_{\mathbf1}
-=\{q:\operatorname{Tr}_F(q)\in2\mathbb Z_2\},
-\]
-so **\(H^2(P_F,\mathbb Z_2)\cong\mathbb Z/2\)** by the same trace reduced mod two.
+3. **The literal four-generator/two-relator marked coefficient complex now covers *every* residual sector of $G_{\mathbb Q_2}$.** For any finite projective continuous 2-adic module $B$ over a complete local algebra with finite residual field, take $H$ to be the preimage of a Sylow-2 subgroup of its finite residual image. Then $m=[\Gamma:H]$ is odd and $\rho_B(H)$ is pro-2. The coinduced coefficient representation
+   \[
+   V=\operatorname{Coind}_H^\Gamma(B|_H)
+   \]
+   has a strict integral coset projector
+   \[
+   \boxed{P_H=\tfrac1m{\bf1}_m{\bf1}_m^t}.
+   \]
+   Coinduced Fox–Shapiro, the group-level odd-index compiler and Shapiro descent yield
+   \[
+   \boxed{\mathcal J^\bullet_{\Gamma,\rm marked}(B)
+       \simeq R\Gamma(G_{\mathbb Q_2},B)}
+   \]
+   on **every** such residual coefficient sector. This remains a *marked coefficientwise* result; there is no claim that the bare two-word full profinite relator complex is independently a universal finite free resolution over $\mathbb Z_2[[G_{\mathbb Q_2}]]$.
 
-Their complete Fox cochain homotopy types show the unique elementary Bockstein pair shifts degree:
-\[
-\begin{aligned}
-C^\bullet(P_F,\mathbb Z_2)
-&\simeq \mathbb Z_2[0]\oplus\mathbb Z_2^4[-1]
- \oplus[\mathbb Z_2\xrightarrow{2}\mathbb Z_2]_{[1,2]},\\
-C^\bullet(P_F,\mathbb Z_2(1))
-&\simeq [\mathbb Z_2\xrightarrow{2}\mathbb Z_2]_{[0,1]}
- \oplus\mathbb Z_2^4[-1]\oplus\mathbb Z_2[-2].
-\end{aligned}
-\]
-The marked mod-four Wu class is
-\(w_F=\chi_{a_0}+\chi_{a_1}+\chi_{a_2}\); it satisfies
-\(\chi^2=\chi\cup w_F\) for every mod-two \(H^1\) class, agreeing with the fixed133 nonalternating cup matrix.
+4. **One fixed marked Q2 cochain compiler for every finite dyadic $K$.** For any finite $K/\mathbb Q_2$, of odd or even degree, and any finite projective $G_K$ coefficient module $B$, finite-index coinduction $V_K=\operatorname{Coind}_{G_K}^{G_{\mathbb Q_2}}B$ gives
+   \[
+   \boxed{\mathcal J^\bullet_{G_{\mathbb Q_2},\rm marked}(V_K)
+     \simeq R\Gamma(G_K,B).}
+   \]
+   This is a finite *coefficient-cochain* reduction, not a claim that every $G_K$ has the same four-generator marked word presentation.
 
-### Full-group face rows and an exact factor-three restriction
+5. **Strict overlap coherence without intersecting Sylows.** For any two odd-index covers $H_i,H_j$ applicable to the same coefficient module, let $\iota_i$ and $p_i$ be their constant-coset embedding/normalized averaging. The strict maps $\Phi_{ji}=\iota_jp_i$ satisfy
+   \[
+   \boxed{\Phi_{kj}\Phi_{ji}=\Phi_{ki},\qquad
+   \Phi_{ij}\Phi_{ji}=E_i.}
+   \]
+   This works even when $H_i\cap H_j$ has even index, so there is no unnecessary common-Sylow assumption. After chosen minimal Fox contractions $C_i\rightleftarrows F_i$ with homotopy $h_i$, the first **explicit higher transition** is
+   \[
+   \mathfrak H_{kji}
+   =q_k\Phi_{kj}h_j\Phi_{ji}j_i,\qquad
+   T_{ki}-T_{kj}T_{ji}
+   =d\mathfrak H_{kji}+\mathfrak H_{kji}d.
+   \]
+   The projected layer is strictly coherent; preferred all-arity canonical minimal Fox Nielsen frames are not claimed.
 
-For the rank-one trivial/cyclotomic modules the Roe–Turturean full marked **two-relator** Fox rows, with source \((\sigma,\tau,x_0,x_1)\) and target (tame,wild), are
-\[
-J_{\Gamma,\mathbf1}=
-\begin{pmatrix}0&-1&0&0\\0&3&2&0\end{pmatrix},
-\qquad
-J_{\Gamma,\theta}=
-\begin{pmatrix}0&-1&0&0\\0&-3&0&0\end{pmatrix}.
-\]
-The global top-face functionals are \(w+3t\bmod2\) and \(w-3t\), respectively.
-After normalizing the tame face to zero, one wild face lifts to
-\((c,c,c)\) on the three Schreier sheets. Hence
-\[
-\operatorname{Tr}_{F,\theta}\operatorname{res}_{F/\mathbb Q_2}
-=3\operatorname{Tr}_{\Gamma,\theta},
-\]
-with the corresponding reduction modulo two for the trivial coefficient. This is the explicit source normalization of the local Tate invariant restriction/corestriction law.
+6. **A new independent index-five tame test.** Let
+   \[
+   F_5=\mathbb Q_2(\sqrt[5]2),\quad
+   \operatorname{Gal}(F_5(\zeta_5)/\mathbb Q_2)
+   \simeq C_5\rtimes C_4.
+   \]
+   Its genuine index-five Sylow cover has degrees $(5,20,10)$ and reduces to the seven-generator one-relator Demuškin group $G_{F_5}(2)$. An exact coinduced **$10\times20$ integer Fox matrix** is displayed in block-permutation form in the TeX. Its mod-2 rank is nine. A 9-by-9 minor is **$-125$**, and a 10-by-10 minor is **$-1250$**, proving the 2-adic Smith list
+   \[
+   \boxed{(1,1,1,1,1,1,1,1,1,2).}
+   \]
+   Additional cyclic tame cases of indices $3,15,17$ pass independent modulo-four unit-pivot tests, with exactly $2m-1$ unit directions and one factor 2.
 
-### Stronger theorem: strict Hecke/Fox projector for **all** residual S3 coefficient modules
+## Files and validation
 
-Let \(A\) be a complete local 2-adic coefficient algebra and \(B\) a finite projective continuous \(\Gamma\)-representation whose restriction to the selected \(H\) has pro-2 image. This includes the universal S3 residual framed family and its adjoints/tensor coefficient modules.
+The full substantive addition is preserved as
+[fixed135 general odd-index proof source](dyadic_general_odd_sylow_fox_coherence_fixed135.tex),
+included verbatim in the linked complete master TeX.
 
-The coinduced module
-\[
-V=\operatorname{Coind}_H^\Gamma(B|_H)
-\simeq B\otimes_{\mathbb Z_2}\mathbb Z_2[\Gamma/H]
-\]
-has the **integral strict coset projector**
-\[
-P_3=\tfrac13
-\begin{pmatrix}1&1&1\\1&1&1\\1&1&1\end{pmatrix}.
-\]
-It acts on the entire three-sheet marked Fox complex in degrees \(0,1,2\) through
-\[
-E^0=P_3,\qquad E^1=\operatorname{diag}(P_3,P_3,P_3,P_3),\qquad
-E^2=\operatorname{diag}(P_3,P_3).
-\]
-These are **literal commuting chain idempotents**. In the augmentation basis
-\(e_2-e_0,\ e_1-e_0\), the complementary 2-dimensional coset action is the natural integral \(S_3\) lattice \(T\) of fixed128–129. Thus
-\[
-\boxed{
-C_{\rm cover}^\bullet(H,B)
-\cong C_{\rm marked}^\bullet(\Gamma,B)
-\oplus C_{\rm marked}^\bullet(\Gamma,B\otimes T).
-}
-\]
-The genuine fixed133 group-level Schreier–Fox resolution of \(H(2)\), together with Shapiro and the odd index, proves **sectorwise coefficient completeness**
-\[
-C_{\rm marked}^\bullet(\Gamma,B)\simeq R\Gamma(\Gamma,B)
-\]
-through all three degrees; the selected strict cochain idempotent represents
-\(\frac13\operatorname{res}\operatorname{cor}\).
-For \(B=\mathbb Z_2\) and \(B=\mathbb Z_2(1)\), the augmentation complement has derived type \(\mathbb Z_2^2[-1]\); the fixed129 contraction gives a concrete homotopy in the untwisted case.
+The new [SageMath 10.9 exact matrix/regression script](checks/fixed135_odd_index_schreier_fox_compiler.sage) verifies the index-five integer minors, odd-index unit pivots for $m=3,5,15,17$, and strict cover-to-cover cochain maps at $m=3,5,15$ when executed. Independent modulo-256 arithmetic checks of the three index-changing cochain maps and 27 strict composition triples passed during authoring. This repository script is provided as reproducible source, **not** represented as CI-executed.
 
-**Scope:** This is a theorem on the fixed S3 residual sector and its pro-2 Sylow preimage, not a universal projective two-relator resolution over \(\mathbb Z_2[[G_{\mathbb Q_2}]]\) for arbitrary residual images. The unweighted top-face trace is specialized to the two rank-one coefficients; the cochain completeness and projector hold for the indicated arbitrary \(B\).
-
-## Sources and reproducibility
-
-The [independent fixed134 proof insertion](dyadic_s3_relative_fox_tate_trace_fixed134.tex) is integrated verbatim into the main TeX. Two reproduction scripts have been committed:
-
-- [Sage/Python exact twisted/trivial Fox matrices and Tate trace](checks/fixed134_s3_fox_tate_trace.sage).
-- [Sage exact coinduced three-sheet projector and natural-augmentation matrix splitting](checks/fixed134_s3_coinduced_strict_hecke.sage).
-
-During authoring, the rows, 2-adic unit minors, global/full-group marked rows, and degree-0/1/2 strict projector identities were independently checked in exact rational Python/SymPy. The repository Sage scripts are provided for independent reproduction and are not claimed as CI runs. Routine manuscript revisions remain TeX-only unless a PDF is requested.
-
-## Remaining frontier
-
-For this chosen index-three S3 extension, fixed133–fixed134 provide the group-level minimal Demuškin Fox resolution and a coefficient-uniform odd-index chain comparison. What remains stronger is a **canonical**, marking-independent and higher-coherent direct Schreier-to-minimal-Fox system covering *arbitrary* odd-index non-pro-2 residual quotients and finite dyadic base fields, with explicit changes of syzygy frames under transitions. The global all-Sylow/Cayley–Hamilton derived atlas remains unchanged.
+**Remaining boundary:** the native marked coefficient compiler is general on the $G_{\mathbb Q_2}$ source, and ordinary dyadic extension cohomology follows by coinduction. Still missing is a *single canonical, marking-independent minimal pro-2 presentation and all-arity closed higher-coherence chart* for every finite dyadic field and every changing residual image. The theorem's Nielsen inverses and minimal gauges are explicitly choice-dependent, though finite-jet-computable. Routine versions are TeX-only unless a PDF is explicitly requested.
