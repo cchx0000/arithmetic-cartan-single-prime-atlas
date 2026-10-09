@@ -731,6 +731,75 @@ unit in the completed local ring.
 This proves the exact identification.
 \end{proof}
 
+\begin{corollary}[The literal full-group rank-one Jacobian]
+\label{cor:dyadic-full-rankone-literal-jacobian}
+At the trivial rank-one integral character
+with coefficient module $M=\mathcal O_E$,
+the full marked two-relator cochain
+Jacobian is the exact integer matrix
+\begin{equation}\label{eq:dyadic-full-rankone-jacobian-matrix}
+d^1_{\rm full}:
+\mathcal O_E^4\longrightarrow\mathcal O_E^2,
+\qquad
+\boxed{\quad
+\begin{pmatrix}
+0&-1&0&0\\
+0&3&2&0
+\end{pmatrix},
+\quad}
+\end{equation}
+in $(\sigma,\tau,x_0,x_1)$
+source coordinates and
+$(r_t,r_{\rm wild})$ target order.
+Its preceding coboundary differential
+$d^0:\mathcal O_E\to\mathcal O_E^4$
+is zero.  Hence the full marked complex
+has cohomology
+\begin{equation}\label{eq:dyadic-full-rankone-jacobian-cohomology}
+H^0\simeq\mathcal O_E,\qquad
+H^1\simeq\mathcal O_E^2,\qquad
+H^2\simeq\mathcal O_E/2\mathcal O_E.
+\end{equation}
+After reduction to $k_E$ its first
+cohomology has dimension $3$ and
+its second has dimension $1$;
+the extra mod-$2$ tangent direction
+is exactly the integral hypersurface
+square obstruction.
+Thus a single $2\times4$ matrix
+simultaneously checks the full-group
+relation derivative, the
+Demu\v{s}kin Fox cohomology, and the
+singularity of the rank-one
+framed deformation ring.
+\end{corollary}
+
+\begin{proof}
+At the trivial scalar point the
+tame and wild relators are
+$r_t=T^{-1}$ and $r_{\rm wild}=X_0^2T^3$
+by the preceding corollary.
+Their first derivatives with
+respect to $(\sigma,\tau,x_0,x_1)$
+are exactly $(-1)$ in the tame
+$\tau$ column and $(3,2)$ in the
+wild $(\tau,x_0)$ columns;
+all other derivatives vanish.
+A rank-one adjoint action is trivial,
+so its principal coboundary $d^0$
+vanishes.
+The matrix has a unit pivot $-1$
+and a remaining invariant factor $2$.
+Its integral kernel has free rank $2$
+and its cokernel is $\mathcal O_E/2$.
+Modulo the residue uniformizer,
+the remaining factor $2$ vanishes,
+giving the stated degree-one and
+degree-two dimensions.  These agree
+with \eqref{eq:dyadic-q2-rankone-special-fiber}
+and \eqref{eq:dyadic-untwisted-tate-groups}.
+\end{proof}
+
 \begin{remark}[Sharp scope of the direct integral bridge]
 \label{rem:dyadic-full-chain-bridge-scope}
 If $\operatorname{im}\bar\rho$ is a
