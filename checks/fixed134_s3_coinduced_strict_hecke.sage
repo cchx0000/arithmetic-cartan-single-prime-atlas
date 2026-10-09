@@ -47,14 +47,15 @@ assert (E0.rank(),E1.rank(),E2.rank())==(1,4,2)
 one=vector(QQ,[1,1,1])
 b1=vector(QQ,[-1,0,1])
 b2=vector(QQ,[-1,1,0])
-B=matrix(QQ,3,3,[one,b1,b2]).transpose()
+B=matrix(QQ,[list(one),list(b1),list(b2)]).transpose()
 S=matrix(QQ,[[0,1],[1,0]])
 U=matrix(QQ,[[-1,-1],[1,0]])
 assert B.det()==-3
 assert B.inverse()*Sigma*B==block_diagonal_matrix([matrix(QQ,[[1]]),S])
 assert B.inverse()*Tau*B==block_diagonal_matrix([matrix(QQ,[[1]]),U])
 assert P*B.column(0)==B.column(0)
-assert P*B.column(1)==0 and P*B.column(2)==0
+assert P*B.column(1)==zero_vector(QQ,3)
+assert P*B.column(2)==zero_vector(QQ,3)
 
 D0=block_diagonal_matrix([B.inverse(),B.inverse(),
                           B.inverse(),B.inverse()])
