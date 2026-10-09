@@ -85,7 +85,7 @@ for r in [1,2,3]:
         for q in J.list()
     ])
     assert Jmod2.rank()==2*m-1
-    assert matrix(GF(2),m,4*m,d0).rank()==m-1
+    assert matrix(GF(2),4*m,m,[GF(2)(ZZ(q)) for q in d0.list()]).rank()==m-1
     lam=vector(QQ,[3]*m+[1]*m)
     wanted=vector(QQ,[0]*(2*m)+[2]*m+[0]*m)
     assert lam*J==wanted
