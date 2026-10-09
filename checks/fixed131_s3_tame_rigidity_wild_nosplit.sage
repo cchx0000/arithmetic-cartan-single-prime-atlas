@@ -17,6 +17,14 @@ for n in [2, 3, 4, 5, 6, 7, 8]:
     assert X.trace() == R(-1)
     assert X**2+X+one == 0
     assert X**3 == one
+    assert Y**2 == Y**2[0,0]*one  # Frobenius square is scalar.
+
+    # Universal transport-native End(T) basis I,X,Y,XY.
+    native=[one,X,Y,X*Y]
+    frame=matrix(R,4,4,[
+      native[j][i//2,i%2] for i in range(4) for j in range(4)
+    ])
+    assert frame.det().is_unit()
     # Exact projector, no infinite binomial series required.
     def proj(A):
         return R(3).inverse() * (
@@ -28,6 +36,10 @@ for n in [2, 3, 4, 5, 6, 7, 8]:
               matrix(R, [[0, 0], [0, 1]])]:
         assert proj(proj(b)) == proj(b)
         assert proj(b)*X == X*proj(b)
+    assert proj(one) == one
+    assert proj(X) == X
+    assert proj(Y) == zero_matrix(R,2)
+    assert proj(X*Y) == zero_matrix(R,2)
 
 # Genuine residual deformation with nonzero wild obstruction.
 F = GF(2)
