@@ -348,6 +348,65 @@ nonzero, as the next
 Schreier calculation shows.
 \end{proof}
 
+\begin{example}[A characteristic-two return detected at second order]
+\label{ex:dyadic-f132-char2-second-return}
+Let
+$A=\mathbf F_2[u,v]/(u^2,v^2)$
+and take $X,Y$ to be the
+standard matrices
+$\bar U,\bar S$ over $\mathbf F_2$,
+so $q=1$.
+Consider the invertible
+\emph{matrix transport
+elements}
+\[
+G=I_2+uY,\qquad
+H=I_2+vXY.
+\]
+Their invariant-block
+deviations have no
+first-order terms.
+Nevertheless the
+projected invariant
+two-step return
+is nonzero:
+\begin{equation}\label{eq:dyadic-f132-char2-nonzero-return}
+\boxed{\qquad
+\mathscr F_{00}(G,H)(X)
+=uv I_2\ne0,\qquad
+\mathscr F_{11}(G,H)=0.
+\qquad}
+\end{equation}
+Indeed $a_g=a_h=1$,
+$b_g=u$, $b_h=vX$,
+and their norms
+vanish because
+$u^2=v^2=0$.
+The coefficient in
+the first return
+formula is
+\[
+b_g\iota(b_h)+
+\iota(b_g)b_h
+=uv(X^2+X)=uv
+\]
+in characteristic
+two, while
+$X-\iota(X)=X-X^2=1$.
+The second block
+vanishes by the
+explicit factor two.
+This is a
+matrix-algebra
+test of the curved
+carrier; the
+arbitrary pair
+$G,H$ is \emph{not}
+claimed to satisfy
+the full marked
+Galois relations.
+\end{example}
+
 \begin{theorem}[Exact three-coset Schreier exchange and zero-sum curvature]
 \label{thm:dyadic-f132-schreier-exchange}
 For each wild source generator
@@ -625,8 +684,47 @@ tame/diagonal base.
 It is functorial
 under complete
 local coefficient
-base change and
-has the exact
+base change.
+More concretely,
+let $L$ be any
+integral lift of
+the invertible
+residual $2\times2$
+Jacobian in
+\eqref{eq:dyadic-f132-wild-off-jacobian-unit}.
+Starting from
+$b_1^{(1)}=0\bmod\mathfrak m$,
+the following
+\emph{Hensel row solver}
+is terminating at
+every fixed finite
+residual precision:
+\begin{equation}\label{eq:dyadic-f132-wild-hensel-row-algorithm}
+\boxed{
+b_1^{(r+1)}
+=b_1^{(r)}
+-L^{-1}F_1(b_0,b_1^{(r)})
+\pmod{\mathfrak m^{r+1}},
+\qquad r\ge1.
+}
+\end{equation}
+At the $r$th step
+every marked matrix
+word and profinite
+power is evaluated
+only modulo
+$\mathfrak m^{r+1}$
+using fixed126's
+finite binomial
+matrix procedure.
+For requested precision
+$t$ this algorithm
+terminates after
+$t-1$ lifting steps
+and yields the
+unique solution
+$b_1\bmod\mathfrak m^t$.
+It has the exact
 properties
 \begin{equation}\label{eq:dyadic-f132-wild-b1-order}
 \boxed{\quad
@@ -750,6 +848,38 @@ two $b_1$
 coordinates yields
 a unique compatible
 solution $b_1=\mathcal G$.
+To obtain a
+finite-order
+implementation,
+suppose a lift
+$b_1^{(r)}$ solves
+the off relation
+modulo $\mathfrak m^r$.
+Its defect lies
+in $\mathfrak m^r$.
+The derivative
+with respect to
+$b_1$ is congruent
+modulo $\mathfrak m$
+to the chosen
+unit matrix $L$,
+so the correction
+$-L^{-1}F_1$
+kills the defect
+modulo
+$\mathfrak m^{r+1}$.
+Nonlinear Taylor
+terms in the
+correction lie in
+$\mathfrak m^{2r}
+\subseteq
+\mathfrak m^{r+1}$
+for $r\ge1$.
+Induction proves
+\eqref{eq:dyadic-f132-wild-hensel-row-algorithm};
+completeness gives
+its unique inverse
+limit.
 If $b_0=b_1=0$,
 all wild generator
 matrices belong to
