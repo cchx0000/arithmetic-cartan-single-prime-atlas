@@ -1,0 +1,793 @@
+% Fixed129 independent substantive insertion.
+% A strict integral natural-coefficient marked Jacobian contraction,
+% Schreier evaluation projector and derived Hecke equivalence
+% on the genuine non-pro-2 S3 residual sector of fixed128.
+
+\subsection{Strict natural-coefficient descent in the non-pro-$2$ $S_3$ sector}
+\label{subsec:dyadic-s3-natural-strict-transfer}
+
+The coefficient-specific adjoint Smith certificate of
+Theorem~\ref{thm:dyadic-s3-marked-adjoint-jacobian}
+does not, by itself, give an explicit map to the
+Sylow-preimage cochains.  We now obtain a stronger,
+\emph{strict chain-level} result for the distinct
+natural rank-two coefficient lattice $T$.
+Unlike the adjoint module, the natural $S_3$ module
+satisfies the integral norm-zero relation
+$I+U_0+U_0^2=0$.  This kills the pro-$2$
+projection of every affine lift of the tame
+order-three generator, and is precisely the
+extra algebra needed for an integral closed
+formula at all chain degrees.
+
+Continue with $\Gamma=G_{\mathbf Q_2}$,
+$H=G_{\mathbf Q_2(\sqrt[3]{2})}$,
+$T=\mathbf Z_2^2$, and the fixed matrices
+\[
+S=S_0=\begin{pmatrix}0&1\\1&0\end{pmatrix},
+\qquad
+U=U_0=\begin{pmatrix}-1&-1\\1&0\end{pmatrix}
+\]
+of \eqref{eq:dyadic-s3-integral-matrices}.
+Write $I=I_2$ and put
+\begin{equation}\label{eq:dyadic-s3-natural-tame-blocks}
+\begin{aligned}
+R_\sigma&=S-I=
+\begin{pmatrix}-1&1\\1&-1\end{pmatrix},
+&
+R_\tau&=U-I=
+\begin{pmatrix}-2&-1\\1&-1\end{pmatrix},
+\\
+L_\sigma&=S^{-1}(U-I)
+=\begin{pmatrix}1&-1\\-2&-1\end{pmatrix},
+&
+L_\tau&=S^{-1}-I-U
+=\begin{pmatrix}0&2\\0&-1\end{pmatrix}.
+\end{aligned}
+\end{equation}
+The integral determinants are
+\begin{equation}\label{eq:dyadic-s3-natural-unit-dets}
+\det(R_\tau)=3,\qquad
+\det(L_\sigma)=-3,\qquad
+\det(S)=-1.
+\end{equation}
+All these are units in $\mathbf Z_2$.
+
+\begin{theorem}[Exact natural-coefficient full-marked Fox matrix]
+\label{thm:dyadic-s3-natural-full-marked-matrix}
+Let
+$\mathcal J^\bullet_{\Gamma,\mathrm{nat}}(T)$
+be the linear \emph{coefficient}
+crossed-derivation complex obtained
+from the full Roe--Turturean
+marked relations in the module $T$
+(not the adjoint tangent module
+$\operatorname{ad}T$):
+\begin{equation}\label{eq:dyadic-s3-natural-three-term-complex}
+T\xrightarrow{d^0}T^{\oplus4}
+\xrightarrow{d^1}T^{\oplus2},
+\end{equation}
+with degree-one source coordinates
+$(a,b,c,d)$, meaning values at
+$(\sigma,\tau,x_0,x_1)$, and target
+coordinates in the (tame,wild)
+relation order.  The \emph{complete
+integral} matrices are
+\begin{equation}\label{eq:dyadic-s3-natural-differentials}
+\boxed{
+\begin{aligned}
+d^0(v)&=(R_\sigma v,\ R_\tau v,\ 0,\ 0),
+\\
+d^1(a,b,c,d)
+&=(L_\sigma a+L_\tau b,\ -2c+S^{-1}d).
+\end{aligned}}
+\end{equation}
+Equivalently, in the ordinary
+coordinate basis the $4\times8$
+degree-one matrix is
+\begin{equation}\label{eq:dyadic-s3-natural-4x8-jacobian}
+\boxed{\quad
+d^1=
+\begin{pmatrix}
+ 1&-1&0&2&0&0&0&0\\
+ -2&-1&0&-1&0&0&0&0\\
+ 0&0&0&0&-2&0&0&1\\
+ 0&0&0&0&0&-2&1&0
+\end{pmatrix}.
+\quad}
+\end{equation}
+Both the tame block $L_\sigma$
+and the wild $x_1$ block
+$S^{-1}$ are invertible
+integrally, while the $\tau$
+component of $d^0$ is
+$R_\tau$, another integral unit.
+Thus the full coefficient complex
+has six unit elementary divisors
+(three in the tame $0$--$1$
+and $1$--$2$ elimination steps
+counted as two plus four, respectively)
+and its remaining degree-one
+cohomology is free of rank two:
+\begin{equation}\label{eq:dyadic-s3-natural-marked-cohomology}
+H^0(\mathcal J_{\Gamma,\mathrm{nat}})=0,
+\qquad
+H^1(\mathcal J_{\Gamma,\mathrm{nat}})
+\cong T,\qquad
+H^2(\mathcal J_{\Gamma,\mathrm{nat}})=0.
+\end{equation}
+These are the genuine integral
+$G_{\mathbf Q_2}$ cohomology groups
+of $T$ in
+Theorem~\ref{thm:dyadic-s3-integral-sector}.
+\end{theorem}
+
+\begin{proof}
+For the coefficient module $T$,
+a crossed derivation is a section
+of the affine semidirect group
+$T\rtimes_\rho S_3$, whose elements
+are written $(A,v)$ with law
+\[
+(A,v)(B,w)=(AB,\ v+Aw).
+\]
+On the four marked generators
+take $(S,a),(U,b),(I,c),(I,d)$.
+The tame relation is
+$r_t=\sigma^{-1}\tau\sigma\tau^{-2}$;
+the affine calculation gives
+\[
+c(r_t)
+=S^{-1}(U-I)a+(S^{-1}-I-U)b,
+\]
+exactly the first row block of
+\eqref{eq:dyadic-s3-natural-differentials}.
+
+The key cancellation is the exact
+integral identity
+\[
+I+U+U^2=0.
+\]
+For every $v\in T$,
+$(U,v)^3=(I,(I+U+U^2)v)=(I,0)$.
+Thus every affine $2$-primary
+projection $(U,v)^{\omega_2}$
+is exactly the identity, while
+the projection of $(S,a)$ is
+$(S,a)$ because its image
+is pro-$2$.
+Consequently, in the literal
+Roe--Turturean auxiliary words
+\eqref{eq:dyadic-omega2-binomial-power}
+and Theorem~\ref{thm:dyadic-q2-marked-word-jet-solver},
+\[
+\sigma_2=\sigma,\quad
+u_0=u_1=1,\quad
+d_0=x_0^{-1},\quad c_0=h_c=1.
+\]
+The wild generators act by pure
+translations; those translations
+commute, and $g_0=\sigma^2$
+acts trivially on the translation
+subgroup because its linear part
+is $S^2=I$.
+It follows exactly, not only
+modulo $2$, that
+\[
+h_0=(I,-2c),\qquad
+x_1^\sigma=(I,S^{-1}d),
+\]
+and hence
+$c(r_{\rm wild})=-2c+S^{-1}d$.
+This proves the full wild row.
+
+The expression for $d^0$
+is the principal crossed
+derivation $(\rho(g)-I)v$.
+The group relator identity implies
+$d^1d^0=0$; it also follows
+directly from
+\eqref{eq:dyadic-s3-natural-tame-blocks}.
+By \eqref{eq:dyadic-s3-natural-unit-dets}
+the tame $L_\sigma$ and wild
+$S^{-1}$ blocks give four
+independent unit pivots in
+$d^1$, hence $\operatorname{coker}d^1=0$.
+The $\tau$ block $R_\tau$
+of $d^0$ has two independent
+unit pivots, so the image
+of $d^0$ is a saturated rank-two
+submodule of $\ker d^1$.
+Thus $H^0=H^2=0$ and
+$H^1$ is free of rank
+$8-4-2=2$, as claimed.
+The identification with intrinsic
+cohomology is made explicit in
+the next theorem rather than
+assuming the marked relator
+complex is a full universal
+group-algebra resolution.
+\end{proof}
+
+\begin{theorem}[A strict integral deformation retract of the full marked complex]
+\label{thm:dyadic-s3-natural-strict-retract}
+Define maps of graded
+$\mathbf Z_2$-modules between
+$\mathcal J^\bullet_{\Gamma,\mathrm{nat}}(T)$
+and the single finite module
+$T[-1]$:
+\begin{equation}\label{eq:dyadic-s3-natural-pi-maps}
+\begin{aligned}
+p^1(a,b,c,d)&=c,
+ &p^0=p^2&=0,\\
+i^1(t)&=(0,0,t,2St),
+ &i^0=i^2&=0.
+\end{aligned}
+\end{equation}
+Define degree-minus-one
+maps $h^1:T^{\oplus4}\to T$ and
+$h^2:T^{\oplus2}\to T^{\oplus4}$
+by the \emph{closed integral}
+matrices
+\begin{equation}\label{eq:dyadic-s3-natural-explicit-homotopy}
+\boxed{
+\begin{aligned}
+h^1(a,b,c,d)&=(U-I)^{-1}b,
+\\
+h^2(u,w)&=(L_\sigma^{-1}u,\ 0,\ 0,\ Sw).
+\end{aligned}}
+\end{equation}
+Then $i,p$ are strict chain
+maps and
+\begin{equation}\label{eq:dyadic-s3-natural-contraction-identities}
+\boxed{\qquad
+p i=I_T,\qquad
+i p=I_{\mathcal J}-(d h+h d),
+\qquad
+h^1d^0=I_T,\quad d^1h^2=I_{T^2}.
+\qquad}
+\end{equation}
+In particular
+\begin{equation}\label{eq:dyadic-s3-natural-complex-retract}
+\mathcal J^\bullet_{\Gamma,\mathrm{nat}}(T)
+\ \simeq_{\mathrm{chain},\,\mathbf Z_2}\
+T[-1]
+\end{equation}
+is a \emph{strict, explicit
+integral chain-homotopy equivalence},
+not just a derived equivalence
+from coincident cohomology ranks.
+
+The class $t\in T$ corresponds
+to the unique normalized continuous
+$\Gamma$-cocycle $c_t$ satisfying
+\begin{equation}\label{eq:dyadic-s3-natural-normalized-cocycle}
+\boxed{
+c_t(\sigma)=c_t(\tau)=0,\qquad
+c_t(x_0)=t,\qquad
+c_t(x_1)=2St.
+}
+\end{equation}
+Every continuous $\Gamma$-cocycle
+with coefficients in $T$ is
+cohomologous to exactly one
+$c_t$.  Thus evaluation at the
+wild source generator $x_0$
+gives an intrinsic-to-the-marked-source
+isomorphism
+\begin{equation}\label{eq:dyadic-s3-natural-cohom-coordinate}
+H^1(\Gamma,T)\xrightarrow{\;\sim\;}T,
+\qquad[c]\longmapsto c(x_0),
+\end{equation}
+which is integral and requires
+no Fox-to-Herr parametrix.
+\end{theorem}
+
+\begin{proof}
+The $x_0$ action on $T$ is
+trivial, so $p^1d^0=0$.
+Equation
+\eqref{eq:dyadic-s3-natural-differentials}
+gives $d^1i^1=0$, while
+$p^1i^1=I_T$.
+Hence $i,p$ are chain maps
+and one-sided inverses.
+
+The tame block identity
+\[
+L_\sigma R_\sigma+
+L_\tau R_\tau=0
+\]
+follows from $d^1d^0=0$.
+Both $L_\sigma$ and $R_\tau$
+are invertible over $\mathbf Z_2$,
+so
+\[
+R_\sigma R_\tau^{-1}
+=-L_\sigma^{-1}L_\tau.
+\]
+Using this identity and
+\eqref{eq:dyadic-s3-natural-differentials},
+one checks for every
+$(a,b,c,d)\in T^4$:
+\[
+\begin{aligned}
+d^0h^1(a,b,c,d)&=
+(R_\sigma R_\tau^{-1}b,\ b,\ 0,\ 0),\\
+h^2d^1(a,b,c,d)&=
+(a+L_\sigma^{-1}L_\tau b,\
+ 0,\ 0,\ d-2Sc).
+\end{aligned}
+\]
+Their sum is exactly
+$(a,b,c,d)-i p(a,b,c,d)$.
+Likewise $h^1d^0=I_T$ and
+$d^1h^2=I_{T^2}$ because
+$L_\sigma^{-1}$, $(U-I)^{-1}$,
+and $S$ have integral entries.
+This proves all identities in
+\eqref{eq:dyadic-s3-natural-contraction-identities}.
+
+The generator values in
+\eqref{eq:dyadic-s3-natural-normalized-cocycle}
+satisfy both marked word
+relations by the exact affine
+calculation in
+Theorem~\ref{thm:dyadic-s3-natural-full-marked-matrix}.
+In each finite quotient
+$T/2^nT\rtimes S_3$, the normal
+closure of the images of the
+wild generators lies in the
+$2$-group $T/2^nT$;
+the pro-$2$ marked condition is
+therefore satisfied.  The
+Roe--Turturean presentation
+\cite{RoeTurtureanGQ2} supplies
+a compatible family of
+finite representations, whose
+inverse limit defines the
+continuous cocycle $c_t$.
+Conversely, every continuous
+cocycle determines a generator
+tuple satisfying the linearized
+marked relations, and the
+contraction above subtracts
+a unique principal cocycle
+to reach the displayed
+normalized tuple.
+As $x_0$ acts trivially,
+$c(x_0)$ is unchanged by a
+principal coboundary.
+This proves the uniqueness
+and the actual cohomology
+isomorphism.
+\end{proof}
+
+\begin{theorem}[Explicit index-three Sylow cocycle projector]
+\label{thm:dyadic-s3-explicit-cocycle-projector}
+Let
+$t_i=\tau^i$ for $i=0,1,2$
+be the right-coset representatives
+of Theorem~\ref{thm:dyadic-s3-schreier-corestriction},
+and write
+\[
+w_{ij}=\tau^i x_j\tau^{-i}\in H
+\qquad(i=0,1,2;\ j=0,1).
+\]
+For \emph{every} continuous
+$H$-cocycle $c\in Z^1(H,T)$
+define the finite integral
+Schreier-coordinate functional
+\begin{equation}\label{eq:dyadic-s3-strict-phi-functional}
+\boxed{\quad
+\Phi_H(c)=\frac13
+\sum_{i=0}^{2}U^{-i}c(w_{i0})\in T.
+\quad}
+\end{equation}
+This descends to an
+integral surjection on
+$H^1(H,T)$ because each
+$w_{i0}$ acts trivially
+on the coefficient lattice.
+The normalized global cocycles
+of \eqref{eq:dyadic-s3-natural-normalized-cocycle}
+satisfy
+\begin{equation}\label{eq:dyadic-s3-strict-res-values}
+\boxed{\quad
+\begin{gathered}
+(\operatorname{res}c_t)(\sigma)=0,\qquad
+(\operatorname{res}c_t)(\tau^3)=0,\\
+(\operatorname{res}c_t)(w_{i0})=U^i t,
+\qquad
+(\operatorname{res}c_t)(w_{i1})=2U^iS t,
+\quad i=0,1,2.
+\end{gathered}\quad}
+\end{equation}
+The restriction map is
+injective in degree one,
+and its left inverse is
+$\Phi_H$:
+\begin{equation}\label{eq:dyadic-s3-strict-res-phi}
+\Phi_H(\operatorname{res}c_t)=t.
+\end{equation}
+More strongly, for every
+$H$-\emph{cocycle}, not just
+its cohomology class,
+\begin{equation}\label{eq:dyadic-s3-strict-e-cocycle}
+\boxed{\quad
+\frac13\operatorname{res}
+\operatorname{cor}(c)
+=\operatorname{res}c_{\Phi_H(c)}
+\qquad\text{as literal }H
+\text{-cocycles}.\quad}
+\end{equation}
+
+In the eight displayed
+Schreier generator coordinates
+\[
+(\sigma,\tau^3,\
+w_{00},w_{10},w_{20},\
+w_{01},w_{11},w_{21}),
+\]
+the following \emph{entirely
+finite} block matrices describe
+the degree-one projector:
+\begin{equation}\label{eq:dyadic-s3-schreier-16x16-projector}
+\boxed{
+\begin{aligned}
+\mathsf I_{\rm Sch}&=
+\begin{pmatrix}
+0\\0\\I\\U\\U^2\\2S\\2US\\2U^2S
+\end{pmatrix}:T\longrightarrow T^8,\\[3pt]
+\mathsf P_{\rm Sch}&=\frac13
+\begin{pmatrix}
+0&0&I&U^{-1}&U^{-2}&0&0&0
+\end{pmatrix}:T^8\longrightarrow T,\\
+\mathsf E_{\rm Sch}
+&=\mathsf I_{\rm Sch}\mathsf P_{\rm Sch},
+\qquad
+\mathsf E_{\rm Sch}^2=\mathsf E_{\rm Sch}.
+\end{aligned}}
+\end{equation}
+Every block is an integral
+$2\times2$ matrix; the resulting
+$\mathsf E_{\rm Sch}$ is a
+strict rank-two $16\times16$
+projection on the ambient
+Schreier evaluation space.
+On actual cocycles it is
+\emph{exactly} the normalized
+restriction--corestriction
+operator.  On cohomology
+\begin{equation}\label{eq:dyadic-s3-h1-primitive-decomposition}
+\boxed{\quad
+H^1(H,T)
+=\operatorname{res}H^1(\Gamma,T)
+\oplus\ker\Phi_H
+\cong\mathbf Z_2^2
+\oplus\mathbf Z_2^5.
+\quad}
+\end{equation}
+The formula does not presume
+that these eight displayed
+Schreier words form a
+\emph{minimal} pro-$2$
+Demu\v{s}kin presentation.
+\end{theorem}
+
+\begin{proof}
+Every $w_{ij}$ lies in
+the wild normal subgroup
+of the marked Galois
+presentation and maps
+to the identity under $\rho_T$.
+Thus $\Phi_H$ kills
+$H$-coboundaries.
+The crossed-cocycle formula
+and $\rho_T(\tau)=U$ give
+\[
+c_t(\tau^i x_j\tau^{-i})
+=U^i c_t(x_j)
+\]
+because $c_t(\tau)=0$ and
+$\rho_T(x_j)=I$.
+This gives
+\eqref{eq:dyadic-s3-strict-res-values}
+and
+\eqref{eq:dyadic-s3-strict-res-phi}.
+
+For arbitrary $c\in Z^1(H,T)$,
+the element $\tau^3\in H$
+has pro-odd order and
+acts trivially on $T$.
+Continuity forces
+$c(\tau^3)=0$.
+The coset formula
+\eqref{eq:dyadic-s3-transfer-one}
+then gives
+\[
+(\operatorname{cor}c)(\sigma)
+=(I+U^{-1}+U^{-2})c(\sigma)=0,
+\quad
+(\operatorname{cor}c)(\tau)=0,
+\]
+and
+\[
+(\operatorname{cor}c)(x_0)
+=\sum_{i=0}^{2}U^{-i}c(w_{i0})
+=3\Phi_H(c).
+\]
+By the exact normalized-cocycle
+description in
+Theorem~\ref{thm:dyadic-s3-natural-strict-retract},
+a $\Gamma$-cocycle with
+zero tame-generator values
+is determined uniquely by
+its value at $x_0$ and
+is $c_t$ with that value.
+Thus $\operatorname{cor}c
+=c_{3\Phi_H(c)}$,
+and dividing by the odd
+unit $3$ gives the exact
+cocycle identity
+\eqref{eq:dyadic-s3-strict-e-cocycle}.
+
+Matrix multiplication shows
+\[
+\mathsf P_{\rm Sch}
+\mathsf I_{\rm Sch}
+=\tfrac13(I+U^{-1}U+U^{-2}U^2)
+=I,
+\]
+hence $\mathsf E_{\rm Sch}$
+is a strict integral
+idempotent of rank two.
+For actual $H$-cocycles,
+the matrix is the evaluation
+of \eqref{eq:dyadic-s3-strict-e-cocycle}.
+The rank-seven freeness of
+$H^1(H,T)$ from
+Theorem~\ref{thm:dyadic-s3-integral-sector}
+now gives the rank-five kernel
+and direct sum
+\eqref{eq:dyadic-s3-h1-primitive-decomposition}.
+\end{proof}
+
+\begin{theorem}[A strict integral bar-cochain Hecke representative]
+\label{thm:dyadic-s3-strict-bar-hecke-projector}
+Let $C^\bullet(H,T)$ be the
+normalized continuous $H$-bar
+cochain complex.  Extend
+\eqref{eq:dyadic-s3-strict-phi-functional}
+to \emph{arbitrary} continuous
+degree-one cochains
+$f:H\to T$, and set
+\[
+p_H^1(f)=\frac13\sum_{i=0}^{2}
+U^{-i}f(w_{i0}),\quad
+p_H^k=0\ (k\ne1).
+\]
+Define the chain map
+$i_H:T[-1]\to C^\bullet(H,T)$
+by $i_H^1(t)=\operatorname{res}c_t$,
+and $i_H^k=0$ for $k\ne1$.
+Then $p_H:C^\bullet(H,T)\to T[-1]$
+is a \emph{strict cochain map},
+$p_Hi_H=I_T$, and
+\begin{equation}\label{eq:dyadic-s3-strict-bar-projector}
+\boxed{\quad
+\Pi_H=i_Hp_H,\qquad
+\Pi_H^2=\Pi_H,\qquad
+\mathsf T_{\rm Hk}^{\rm str}=3\Pi_H-I.
+\quad}
+\end{equation}
+Both the idempotent identity
+and the Hecke polynomial hold
+as \emph{literal identities of
+integral cochain maps}:
+\begin{equation}\label{eq:dyadic-s3-strict-bar-hecke-polynomial}
+\boxed{\quad
+(\mathsf T_{\rm Hk}^{\rm str})^2
+=\mathsf T_{\rm Hk}^{\rm str}+2I.
+\quad}
+\end{equation}
+The strict operator
+$\Pi_H$ represents the
+\emph{canonical derived}
+Sylow idempotent:
+\begin{equation}\label{eq:dyadic-s3-bar-derived-equality}
+[\Pi_H]=
+\left[
+\tfrac13\operatorname{res}_H^\Gamma
+\operatorname{cor}_H^\Gamma
+\right]
+\quad
+\text{in }
+\operatorname{End}_{D(\mathbf Z_2)}
+R\Gamma(H,T).
+\end{equation}
+
+There is also an explicit
+integral chain-level comparison
+between the \emph{finite}
+full-marked coefficient
+complex and the \emph{image}
+of the Sylow bar-cochain
+projector.  With $i,p$ from
+Theorem~\ref{thm:dyadic-s3-natural-strict-retract},
+set
+\begin{equation}\label{eq:dyadic-s3-marked-to-sylow-chain-maps}
+\mathsf F=i_Hp:
+\mathcal J^\bullet_{\Gamma,\mathrm{nat}}
+\longrightarrow C^\bullet(H,T),
+\qquad
+\mathsf G=i p_H:
+C^\bullet(H,T)
+\longrightarrow\mathcal J^\bullet_{\Gamma,\mathrm{nat}}.
+\end{equation}
+These are \emph{strict integral}
+cochain maps and satisfy
+\begin{equation}\label{eq:dyadic-s3-marked-to-sylow-composites}
+\boxed{\quad
+\mathsf G\mathsf F=i p
+\simeq I_{\mathcal J}
+\ \text{by the explicit }h,
+\qquad
+\mathsf F\mathsf G=\Pi_H
+\ \text{strictly}.
+\quad}
+\end{equation}
+In particular the entire
+degree-one Hecke/Sylow
+summand is finite and
+directly reconstructed from
+the marked $x_0$-coordinate.
+This closes the natural-$T$
+\emph{integral descent chain}
+without selecting a
+five-generator Demu\v{s}kin
+Fox basis for $P_H$.
+
+The statement does \emph{not}
+upgrade the actual infinite
+bar complex to a globally
+finite free group-algebra
+resolution.  It identifies
+a \emph{strict finite
+cochain summand} of it.
+\end{theorem}
+
+\begin{proof}
+For a $0$-cochain $v\in T$,
+the continuous bar coboundary
+has
+\[
+(d^0v)(w_{i0})
+=(\rho_T(w_{i0})-I)v=0.
+\]
+Thus $p_H^1d^0=0$,
+and all other cochain
+map conditions for
+$p_H:C^\bullet(H,T)\to T[-1]$
+are automatic.
+The chosen $i_H^1(t)$
+is a continuous cocycle,
+so $i_H$ is a chain map.
+Equation
+\eqref{eq:dyadic-s3-strict-res-phi}
+gives $p_Hi_H=I_T$.
+Consequently $\Pi_H$
+is strictly idempotent.
+Expanding
+$(3\Pi_H-I)^2$
+using $\Pi_H^2=\Pi_H$
+gives
+\eqref{eq:dyadic-s3-strict-bar-hecke-polynomial}.
+
+To compare with the canonical
+derived transfer, define
+$p_\Gamma:C^\bullet(\Gamma,T)\to T[-1]$
+by $p_\Gamma^1(f)=f(x_0)$
+and zero in other degrees.
+It is a cochain map because
+$x_0$ acts trivially on $T$.
+Let $i_\Gamma^1(t)=c_t$.
+Theorem~\ref{thm:dyadic-s3-natural-strict-retract}
+proves $p_\Gamma i_\Gamma=I$
+and that $p_\Gamma$ and
+$i_\Gamma$ induce inverse
+isomorphisms on intrinsic
+$G_{\mathbf Q_2}$ cohomology.
+Hence their composites are
+identities in $D(\mathbf Z_2)$.
+
+The explicit degree-one
+corestriction formula
+\eqref{eq:dyadic-s3-transfer-one}
+holds for arbitrary
+continuous cochains as
+well as cocycles, and
+gives the \emph{strict}
+identity of cochain maps
+\[
+p_H=\tfrac13 p_\Gamma
+\,\operatorname{cor}_H^\Gamma,
+\qquad
+i_H=\operatorname{res}_H^\Gamma
+\,i_\Gamma.
+\]
+Consequently
+\[
+[\Pi_H]=
+\left[\operatorname{res}\,
+i_\Gamma\,\tfrac13p_\Gamma
+\operatorname{cor}\right]
+=\left[\tfrac13\operatorname{res}
+\operatorname{cor}\right]
+\]
+in the derived category,
+proving
+\eqref{eq:dyadic-s3-bar-derived-equality}.
+Finally all maps in
+\eqref{eq:dyadic-s3-marked-to-sylow-chain-maps}
+are composites of strict
+cochain maps, and
+$p_Hi_H=I$, $pi=I$
+imply
+\[
+\mathsf G\mathsf F
+=i(p_Hi_H)p=ip,\qquad
+\mathsf F\mathsf G
+=i_H(pi)p_H=i_Hp_H.
+\]
+The homotopy in
+\eqref{eq:dyadic-s3-natural-explicit-homotopy}
+satisfies $ip\simeq I_{\mathcal J}$
+over $\mathbf Z_2$,
+giving the claimed chain-level
+comparison.
+\end{proof}
+
+\begin{warning}[What is and is not native in fixed129]
+\label{warn:dyadic-s3-natural-minimal-fox-boundary}
+The natural-coefficient descent
+projector is now strict on
+the integral bar complex,
+is an actual finite
+$16\times16$ block matrix
+on the displayed Schreier
+generator-evaluation space,
+and is a strict chain
+summand equivalent to the
+finite full-marked
+coefficient Jacobian.
+Its image is the same
+derived object as the
+all-Sylow Fox retract.
+Nevertheless an
+\emph{explicit identification
+of the eight Schreier words
+with a specific minimal
+five-generator Demu\v{s}kin
+basis}, including the
+integer relation module,
+its Fox syzygies and the
+direct finite
+Schreier-to-minimal-Fox
+second-degree chain map,
+has not been constructed.
+Nor does the norm-zero
+identity hold for the
+adjoint $S_3$ module:
+$\operatorname{ad}T$ has
+nonzero tame $C_3$ invariants
+and requires the separate
+eight-by-sixteen Smith
+certificate of fixed128.
+The theorem is therefore
+a sharp result for the
+fixed natural coefficient
+carrier, not an assertion
+of an all-representation
+full-group Fox resolution.
+\end{warning}
