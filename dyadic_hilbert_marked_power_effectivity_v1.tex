@@ -1,0 +1,470 @@
+% Dyadic Hilbert-marked and pro-2 idempotent-power effectivity extension.
+% Standalone section; integrated into fixed126.
+
+\subsection{Hilbert-marked Fox coordinates and residual profinite-power effectivity}
+\label{subsec:dyadic-hilbert-marked-power}
+
+The dyadic Fox--Wu--Tate completion has two complementary native
+interfaces.  The first identifies the mod-$2$ Fox quadratic form in
+marked $G_{\mathbf Q_2}(2)$ coordinates with the classical explicit
+quadratic Hilbert pairing.  The second evaluates the profinite
+idempotent exponents appearing in the marked full-$G_{\mathbf Q_2}$
+presentation by convergent, residue-sector-specific \emph{integral}
+matrix power series.  Only finite jets are claimed to be polynomial;
+a global polynomial formula for the whole profinite-power operation
+is neither assumed nor needed.
+
+\begin{theorem}[Hilbert-marked Fox comparison at $\mathbf Q_2$]
+\label{thm:dyadic-fox-hilbert-marked}
+Choose the Roe--Turturean marked Demu\v{s}kin normalization
+\cite{RoeTurtureanGQ2}
+\[
+P=G_{\mathbf Q_2}(2)
+ =\langle a,s,y\mid a^2s^4[s,y]\rangle_{\mathrm{pro}-2},
+\]
+in which the unramified character
+$\nu_{\rm ur}:P\twoheadrightarrow\mathbb Z_2$
+takes values
+\begin{equation}\label{eq:q2-unramified-marking}
+ \nu_{\rm ur}(a)=-2,\qquad
+ \nu_{\rm ur}(s)=1,\qquad
+ \nu_{\rm ur}(y)=0.
+\end{equation}
+Let $\chi_a,\chi_s,\chi_y$ be the mod-$2$ characters
+dual to these generators, and let
+$\kappa_u\in H^1(G_{\mathbf Q_2},\mathbf F_2)
+=H^1(P,\mathbf F_2)$ denote the Kummer class
+of $u\in\mathbf Q_2^\times$.
+Then
+\begin{equation}\label{eq:q2-kummer-fox-markings}
+ \boxed{\quad
+ \kappa_{-1}=\chi_a,\qquad
+ \kappa_{5}=\chi_s,\qquad
+ \kappa_2=\chi_y+\epsilon\chi_s
+ \ \text{for a unique }\epsilon\in\mathbf F_2.
+ \quad}
+\end{equation}
+Thus the marked Fox basis and the Kummer basis
+$(-1,5,2)$ have the \emph{same} nonalternating cup matrix
+\begin{equation}\label{eq:q2-hilbert-fox-matrix}
+ B_{\mathbf Q_2}=
+ \begin{pmatrix}
+ 1&0&0\\
+ 0&0&1\\
+ 0&1&0
+ \end{pmatrix},
+\end{equation}
+where entry $1$ means Hilbert symbol $-1$.
+In particular, every quadratic Hilbert-symbol pairing on
+$\mathbf Q_2^\times/\mathbf Q_2^{\times2}$ is reconstructed
+from the completed Fox quadratic symbol and the two canonical
+markings $\theta_P\bmod4$ and $\nu_{\rm ur}\bmod2$.
+No claim is made that the third generator-dual character
+$\chi_y$ is \emph{literally} $\kappa_2$ without the
+additional one-bit marking $\epsilon$.
+\end{theorem}
+
+\begin{proof}
+The cyclotomic orientation values in
+Proposition~\ref{prop:dyadic-q2-explicit-anchor}
+are $(-1,1,-1/3)$ on $(a,s,y)$.
+Since $-1/3\equiv1\bmod4$, the Fox--Wu identity
+(Theorem~\ref{thm:dyadic-fox-wu-bockstein})
+gives
+\[
+ \kappa_{-1}=w_P=(\theta_P-1)/2\bmod2=\chi_a.
+\]
+The extension $\mathbf Q_2(\sqrt5)/\mathbf Q_2$
+is the unramified quadratic extension: for example,
+$t^2-t-1$ is irreducible modulo $2$ and has
+discriminant $5$.  Its Kummer character is
+therefore the unique nontrivial unramified quadratic
+character, namely $\nu_{\rm ur}\bmod2=\chi_s$
+by \eqref{eq:q2-unramified-marking}.
+
+Write $b=2^\beta v$ and $c=2^\gamma w$
+with $v,w$ odd.  The explicit dyadic
+Hilbert-symbol formula is
+\begin{equation}\label{eq:q2-hilbert-explicit}
+ (b,c)_2=(-1)^{
+ \varepsilon(v)\varepsilon(w)
+ +\beta\lambda(w)+\gamma\lambda(v)},
+ \quad
+ \varepsilon(v)=\frac{v-1}{2}\bmod2,\qquad
+ \lambda(v)=\frac{v^2-1}{8}\bmod2,
+\end{equation}
+as in the standard local reciprocity computation
+\cite{RoeTurtureanGQ2,NSW}.
+For $v=-1,5,1$ respectively, the pairs
+$(\varepsilon(v),\lambda(v))$ are
+$(1,0),(0,1),(0,0)$.
+Consequently the only nontrivial Hilbert
+pairings among $(-1,5,2)$ are
+\[
+ (-1,-1)_2=-1,\qquad
+ (5,2)_2=(2,5)_2=-1,
+\]
+giving \eqref{eq:q2-hilbert-fox-matrix}.
+This equals the independent Fox cup matrix
+of Proposition~\ref{prop:dyadic-q2-explicit-anchor}.
+
+Write $\kappa_2=u\chi_a+v\chi_s+w\chi_y$.
+Its pairing with $\kappa_{-1}=\chi_a$
+vanishes, hence $u=0$ by the Fox cup matrix.
+Its pairing with $\kappa_5=\chi_s$ is nonzero,
+hence $w=1$.
+Thus $\kappa_2=\chi_y+v\chi_s$,
+which proves \eqref{eq:q2-kummer-fox-markings}
+with $\epsilon=v$.
+Adding $\epsilon\chi_s$ to $\chi_y$ leaves the
+Fox cup matrix unchanged, as required.
+\end{proof}
+
+\begin{remark}[The remaining Hilbert-to-Fox bit is genuine marking data]
+\label{rem:q2-hilbert-shear-boundary}
+The mark $\epsilon$ in
+\eqref{eq:q2-kummer-fox-markings}
+depends on the chosen lift of the
+unramified coordinate and the remaining
+Fox generator, not on the abstract
+bilinear form.  In the chosen generator
+coordinates one can write
+$\epsilon=\kappa_2(s)$.
+Neither the Fox cup matrix nor the
+mod-$4$ orientation determines that value.
+This is a precisely isolated \emph{one-bit
+coordinate issue}, not a failure of finite
+Galois cohomology or local duality.
+\end{remark}
+
+\begin{theorem}[Residue-sector formula for the profinite $2$-power projection]
+\label{thm:dyadic-omega2-power-formula}
+Let $(A,\mathfrak m,k)$ be a complete Noetherian
+local $\mathcal O_E$-algebra with finite residue
+field $k$ of characteristic $2$, and let
+$X\in\mathrm{GL}_r(A)$ reduce to
+$\bar X\in\mathrm{GL}_r(k)$ of order
+\[
+ N=2^a m,\qquad m\text{ odd}.
+\]
+Let
+$\omega_2\in\widehat{\mathbf Z}
+=\prod_\ell\mathbf Z_\ell$ be the idempotent
+whose $2$-adic component is $1$ and whose
+other components are $0$.
+Choose any nonnegative integer $e<N$ with
+\begin{equation}\label{eq:dyadic-omega2-CRT}
+ e\equiv1\pmod{2^a},\qquad
+ e\equiv0\pmod m,
+\end{equation}
+where the first congruence is vacuous when $a=0$,
+and set
+\[
+ c=\frac{1-e}{N}\in\mathbb Z_2,
+ \qquad S=X^N-I_r\in M_r(\mathfrak m).
+\]
+Then the intrinsic profinite power is the
+following explicit convergent integral series:
+\begin{equation}\label{eq:dyadic-omega2-binomial-power}
+ \boxed{\quad
+ X^{\omega_2}
+ =X^e\sum_{j\ge0}
+   \binom cj (X^N-I_r)^j.
+ \quad}
+\end{equation}
+For every $t\ge1$ it has the finite-stage formula
+\begin{equation}\label{eq:dyadic-omega2-mod-t}
+ X^{\omega_2}\equiv
+ X^e\sum_{j=0}^{t-1}\binom cj S^j
+ \pmod{\mathfrak m^t}.
+\end{equation}
+The binomial coefficients lie in $\mathbb Z_2$
+and require no inversion of $2$.
+The result is independent of the chosen
+CRT representative $e$, commutes with
+conjugation, and is natural under continuous
+local coefficient base change preserving the
+residual chart.
+
+For a variation $H\in M_r(A)$, put
+\begin{equation}\label{eq:dyadic-omega2-power-derivative}
+ H_N=\sum_{\ell=0}^{N-1}
+  X^\ell H X^{N-1-\ell},\qquad
+ H_e=\sum_{\ell=0}^{e-1}
+  X^\ell H X^{e-1-\ell}.
+\end{equation}
+Then the full matrix Jacobian of the profinite
+power is represented by the convergent series
+\begin{equation}\label{eq:dyadic-omega2-jacobian}
+\begin{aligned}
+ D(X^{\omega_2})[H]
+ ={}&
+ H_e\sum_{j\ge0}\binom cj S^j\\
+ &+
+ X^e\sum_{j\ge1}\binom cj
+ \sum_{\ell=0}^{j-1}
+  S^\ell H_N S^{j-1-\ell}.
+\end{aligned}
+\end{equation}
+Modulo $\mathfrak m^t$, the first sum
+stops at $j=t-1$ and the second at $j=t$.
+Thus both the power operation and its
+noncommutative first derivative have
+terminating matrix formulas at every
+specified finite residual precision.
+\end{theorem}
+
+\begin{proof}
+The kernel of
+$\mathrm{GL}_r(A)\to\mathrm{GL}_r(k)$
+is pro-$2$ in the $\mathfrak m$-adic
+topology.  Hence the closure of the
+cyclic group generated by $X$ is a
+procyclic profinite group, whose odd-order
+factor has order $m$, while its remaining
+factor is pro-$2$.  Write its canonical
+commuting decomposition as
+$X=X_{(2)}X_{\rm odd}$.
+Then $X^N=X_{(2)}^N$ belongs to
+$1+M_r(\mathfrak m)$.
+The congruences
+\eqref{eq:dyadic-omega2-CRT} give
+$X_{\rm odd}^e=1$ and
+$e+Nc=1$ in $\mathbf Z_2$.
+Consequently
+\[
+ X^e(X^N)^c
+ =X_{(2)}^{e+Nc}X_{\rm odd}^e
+ =X_{(2)}=X^{\omega_2}.
+\]
+The usual binomial expression
+\[
+ (I_r+S)^c=\sum_{j\ge0}\binom cj S^j
+\]
+agrees with continuous $\mathbf Z_2$
+exponentiation: it follows by
+approximating $c$ with integers and
+using $\mathfrak m$-adic continuity.
+Since $S\in M_r(\mathfrak m)$,
+the $j$th summand lies in
+$M_r(\mathfrak m^j)$ and the
+series converges, giving
+\eqref{eq:dyadic-omega2-binomial-power}
+and \eqref{eq:dyadic-omega2-mod-t}.
+The equality with intrinsic
+$X^{\omega_2}$ proves independence,
+conjugation covariance, and naturality.
+
+For the derivative, the standard
+noncommutative power rule gives
+$D(X^N)[H]=H_N$ and
+$D(X^e)[H]=H_e$.
+Differentiate the convergent binomial
+series termwise, using
+\[
+ D(S^j)[H]=
+ \sum_{\ell=0}^{j-1}
+ S^\ell H_N S^{j-1-\ell},
+\]
+and apply the Leibniz rule for its
+leading factor $X^e$.  This is
+\eqref{eq:dyadic-omega2-jacobian}.
+The derivative of the $j$th binomial
+term has at least $j-1$ factors of
+$S\in\mathfrak m$, which gives
+the asserted exact truncation
+order modulo $\mathfrak m^t$.
+\end{proof}
+
+\begin{example}[Removal of an odd residual eigenvalue]
+\label{ex:dyadic-omega2-odd-teich}
+Let $E/\mathbf Q_2$ be unramified quadratic,
+so $\mathcal O_E$ contains a primitive
+third root of unity $\zeta_3$.
+For $A=\mathcal O_E[[z]]$ take the rank-one
+transport $X=\zeta_3(1+z)$.
+Its residual order is $N=3$.
+Choose $e=0$ and $c=1/3\in\mathbb Z_2$.
+The formula gives
+\[
+ X^{\omega_2}
+ =\left(X^3\right)^{1/3}
+ =\left((1+z)^3\right)^{1/3}
+ =1+z.
+\]
+Thus the explicit integral binomial
+calculus really removes the odd
+Teichm\"uller component while retaining
+the complete pro-$2$ deformation factor.
+\end{example}
+
+\begin{theorem}[Finite-jet full-$G_{\mathbf Q_2}$ marked word solver]
+\label{thm:dyadic-q2-marked-word-jet-solver}
+Assume the Roe--Turturean marked
+profinite presentation of $G_{\mathbf Q_2}$
+\cite{RoeTurtureanGQ2}, with generators
+$\sigma,\tau,x_0,x_1$, tame relation
+$\tau^\sigma=\tau^2$, one additional
+marked relation $r_{\rm wild}=1$,
+and the requirement that the normal
+closure of $x_0,x_1$ be pro-$2$.
+In the displayed marked word,
+the idempotent powers are
+\[
+ \sigma_2=\sigma^{\omega_2},
+ \qquad
+ u_i=(x_i\tau)^{\omega_2}\quad(i=0,1),
+\]
+and all remaining operations are
+finite products, inverses, conjugations,
+and ordinary integral powers of
+these marked words.
+
+Fix a genuine residual representation
+$\bar\rho:G_{\mathbf Q_2}\to\mathrm{GL}_r(k_E)$
+and its framed deformation ring
+$R_{\bar\rho}^{\square}$.
+On the completed residual matrix chart,
+each occurrence of $\omega_2$ has the
+convergent expression
+\eqref{eq:dyadic-omega2-binomial-power}.
+For every requested integer $t\ge1$:
+\begin{enumerate}[label=\textnormal{(\roman*)}]
+\item the full tame and marked wild
+matrix relation maps are evaluated
+modulo $\mathfrak m^t$ by a finite
+sequence of matrix products and
+the truncated binomial formula
+\eqref{eq:dyadic-omega2-mod-t};
+\item the entire first matrix Jacobian
+of both marked relations is computed
+modulo $\mathfrak m^t$ by the
+finite derivative formula
+\eqref{eq:dyadic-omega2-jacobian},
+product rules, and inverse-matrix
+differentiation;
+\item the pro-$2$ marked-normal-closure
+condition imposes no additional
+equation on any Artin lift with
+this genuine residual image;
+\item at the first-order residual
+thickening the kernel of this
+marked matrix Jacobian is
+canonically the framed cocycle
+space $Z^1(G_{\mathbf Q_2},
+\operatorname{ad}\bar\rho)$.
+Quotienting by infinitesimal
+conjugation gives
+$H^1(G_{\mathbf Q_2},
+\operatorname{ad}\bar\rho)$.
+\end{enumerate}
+This is a \emph{terminating
+formal-native algorithm} at every
+prescribed finite order.  It does
+not identify the naive two-relation
+Jacobian cokernel with $H^2$ or
+the naive two-relator Koszul complex
+with an integral group-resolution.
+The independent lci minimal-sequence
+and intrinsic derived-cochain
+constructions of
+Theorem~\ref{thm:word-lci-reduction}
+and Theorem~\ref{thm:family-sylow-fox}
+remain necessary for those statements.
+\end{theorem}
+
+\begin{proof}
+For each of the residual matrices of
+$\sigma,x_0\tau,x_1\tau$ its order in
+$\mathrm{GL}_r(k_E)$ is finite.
+Apply Theorem~\ref{thm:dyadic-omega2-power-formula}
+to these three matrices with their
+own CRT exponents.  Every occurrence
+of a profinite idempotent power in
+the Roe--Turturean relation becomes
+an integral convergent analytic
+matrix expression on the completed
+residual chart.
+Since the remaining word operations
+are finite, truncating each
+constituent to the requested
+$\mathfrak m$-adic order evaluates
+the relation matrices by finitely
+many operations.  The explicit
+Jacobian in
+\eqref{eq:dyadic-omega2-jacobian}
+and the ordinary matrix product,
+inverse, and conjugation rules
+prove (i)--(ii).
+
+The marked wild normal subgroup of
+$G_{\mathbf Q_2}$ is pro-$2$,
+so its image under the genuine
+residual representation is a
+finite $2$-group.  On every Artin
+local lift, the reduction kernel
+is a successive extension of
+additive groups in characteristic
+$2$, hence a $2$-group.
+The normal closure of the lifted
+wild image is therefore an
+extension of finite $2$-groups,
+so is again a $2$-group.
+This is precisely the residual
+automaticity theorem
+(Theorem~\ref{thm:marked-residual-strictification}),
+giving (iii).
+
+On the dual-number thickening
+$k_E[\varepsilon]/(\varepsilon^2)$,
+every lift is
+$\rho_\varepsilon(g)
+=(1+\varepsilon c(g))\bar\rho(g)$.
+The defining representation
+equation is the continuous
+crossed-cocycle equation
+$c(gh)=c(g)+g\cdot c(h)$.
+By the marked presentation and
+(iii), it is equivalent to the
+linearization of the two
+displayed marked relations,
+computed by (ii).  This identifies
+the tangent kernel with $Z^1$.
+Infinitesimal conjugation is
+exactly the coboundary action,
+giving (iv).
+The last assertion follows from
+the distinction between formal
+relation equations and a complete
+projective group resolution
+already made in
+Warning~\ref{warn:q2-marked-not-resolution}.
+\end{proof}
+
+\begin{warning}[Finite residual jets are not a globally polynomial presentation]
+\label{warn:dyadic-marked-word-not-algebraic-polynomial}
+The matrices in
+\eqref{eq:dyadic-omega2-binomial-power}
+are generally infinite convergent
+power series on one chosen completed
+residual chart.  Their reductions
+at each finite order are literal
+finite matrix expressions, but
+a single finite polynomial in
+unrestricted generic matrices
+does not follow.
+The exact native output of
+Theorem~\ref{thm:dyadic-q2-marked-word-jet-solver}
+is a recursively effective
+formal marked-word atlas, with
+strict integral tangent readout.
+Global finite-type algebraization,
+a uniform marked presentation for
+all dyadic $K$, and a preferred
+raw Herr-to-marked-word chain
+quasi-isomorphism remain stronger
+separate questions.  None is
+needed by the established
+all-Sylow--Cayley--Hamilton
+derived faithful atlas.
+\end{warning}
